@@ -1,0 +1,2921 @@
+[04-05-2021 12:04:02] [I] Server loaded. Type 'help' for help.
+[04-05-2021 12:04:28] [I] Maps:
+[04-05-2021 12:04:28] [I]   Ancient_Caldera: Default / 256x256
+[04-05-2021 12:04:28] [I]   Archipelago: Default / 500x500
+[04-05-2021 12:04:28] [I]   Debris_Field: Default / 400x400
+[04-05-2021 12:04:28] [I]   Fork: Default / 250x300
+[04-05-2021 12:04:28] [I]   Fortress: Default / 256x256
+[04-05-2021 12:04:28] [I]   Glacier: Default / 150x250
+[04-05-2021 12:04:28] [I]   Islands: Default / 256x256
+[04-05-2021 12:04:28] [I]   Labyrinth: Default / 200x200
+[04-05-2021 12:04:28] [I]   Maze: Default / 256x256
+[04-05-2021 12:04:28] [I]   Molten_Lake: Default / 400x400
+[04-05-2021 12:04:28] [I]   Mud_Flats: Default / 400x400
+[04-05-2021 12:04:28] [I]   Shattered: Default / 350x350
+[04-05-2021 12:04:28] [I]   Tendrils: Default / 300x300
+[04-05-2021 12:04:28] [I]   Triad: Default / 200x200
+[04-05-2021 12:04:28] [I]   Veins: Default / 350x200
+[04-05-2021 12:04:28] [I]   Wasteland: Default / 300x300
+[04-05-2021 12:04:28] [I] Map directory: D:\Mindustry-Server\config\maps
+[04-05-2021 12:05:25] [I] Loading map...
+[04-05-2021 12:05:26] [I] Map loaded.
+[04-05-2021 12:05:26] [I] Opened a server on port 6567.
+[04-05-2021 12:11:44] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 12:11:44] [I] Selected next map to be Molten Lake.
+[04-05-2021 12:14:11] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-05-2021 12:15:15] [I] Whitelist:
+[04-05-2021 12:15:15] [I] - Teeler
+[04-05-2021 12:15:29] [E] Command not found. Did you mean "host"?
+[04-05-2021 12:15:34] [I] All config values:
+[04-05-2021 12:15:34] [I] | name: Server
+[04-05-2021 12:15:34] [I] | | The server name as displayed on clients.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | desc: off
+[04-05-2021 12:15:34] [I] | | The server description, displayed under the name. Max 100 characters.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | port: 6567
+[04-05-2021 12:15:34] [I] | | The port to host on.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | autoUpdate: false
+[04-05-2021 12:15:34] [I] | | Whether to auto-update and exit when a new bleeding-edge update arrives.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | showConnectMessages: true
+[04-05-2021 12:15:34] [I] | | Whether to display connect/disconnect messages.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | enableVotekick: true
+[04-05-2021 12:15:34] [I] | | Whether votekick is enabled.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | startCommands: 
+[04-05-2021 12:15:34] [I] | | Commands run at startup. This should be a comma-separated list.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | crashReport: false
+[04-05-2021 12:15:34] [I] | | Whether to send crash reports.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | logging: true
+[04-05-2021 12:15:34] [I] | | Whether to log everything to files.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | strict: true
+[04-05-2021 12:15:34] [I] | | Whether strict mode is on - corrects positions and prevents duplicate UUIDs.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | antiSpam: true
+[04-05-2021 12:15:34] [I] | | Whether spammers are automatically kicked and rate-limited.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | interactRateWindow: 6
+[04-05-2021 12:15:34] [I] | | Block interaction rate limit window, in seconds.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | interactRateLimit: 25
+[04-05-2021 12:15:34] [I] | | Block interaction rate limit.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | interactRateKick: 60
+[04-05-2021 12:15:34] [I] | | How many times a player must interact inside the window to get kicked.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | messageRateLimit: 0
+[04-05-2021 12:15:34] [I] | | Message rate limit in seconds. 0 to disable.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | messageSpamKick: 3
+[04-05-2021 12:15:34] [I] | | How many times a player must send a message before the cooldown to get kicked. 0 to disable.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | socketInput: false
+[04-05-2021 12:15:34] [I] | | Allows a local application to control this server through a local TCP socket.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | socketInputPort: 6859
+[04-05-2021 12:15:34] [I] | | The port for socket input.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | socketInputAddress: localhost
+[04-05-2021 12:15:34] [I] | | The bind address for socket input.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | allowCustomClients: false
+[04-05-2021 12:15:34] [I] | | Whether custom clients are allowed to connect.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | whitelist: false
+[04-05-2021 12:15:34] [I] | | Whether the whitelist is used.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | motd: off
+[04-05-2021 12:15:34] [I] | | The message displayed to people on connection.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | autosave: false
+[04-05-2021 12:15:34] [I] | | Whether the periodically save the map when playing.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | autosaveAmount: 10
+[04-05-2021 12:15:34] [I] | | The maximum amount of autosaves. Older ones get replaced.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | autosaveSpacing: 300
+[04-05-2021 12:15:34] [I] | | Spacing between autosaves in seconds.
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:15:34] [I] | debug: false
+[04-05-2021 12:15:34] [I] | | Enable debug logging
+[04-05-2021 12:15:34] [I] |
+[04-05-2021 12:17:41] [I] Game over! Reached wave 2 with 1 players online on map Molten Lake.
+[04-05-2021 12:17:41] [I] Selected next map to be Maze.
+[04-05-2021 12:21:34] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-05-2021 12:21:46] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-05-2021 12:21:53] [I] SpaceCheddar: HEY YOu
+[04-05-2021 12:22:00] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-05-2021 12:22:18] [I] SpaceCheddar: build stuff
+[04-05-2021 12:23:43] [I] SpaceCheddar: Why this map?
+[04-05-2021 12:24:13] [I] SpaceCheddar: Theres a broken glitched enemy I think
+[04-05-2021 12:25:04] [I] Teeler: Oh
+[04-05-2021 12:25:11] [I] SpaceCheddar: Its gone now
+[04-05-2021 12:25:15] [I] Teeler: Um, fsr it picked a random one
+[04-05-2021 12:25:41] [I] SpaceCheddar: ¯\_(ツ)_/¯
+[04-05-2021 12:25:56] [I] Teeler: brb
+[04-05-2021 12:25:56] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-05-2021 12:28:23] [I] Game over! Reached wave 5 with 1 players online on map Maze.
+[04-05-2021 12:28:23] [I] Selected next map to be Fork.
+[04-05-2021 12:41:59] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-05-2021 12:42:58] [I] SpaceCheddar: what are you doing?
+[04-05-2021 12:43:05] [I] Teeler: Adding more turrets
+[04-05-2021 12:43:38] [I] SpaceCheddar: No copper
+[04-05-2021 12:43:43] [I] SpaceCheddar: Graphite better
+[04-05-2021 12:44:22] [I] SpaceCheddar: hrmmph, not much coal. I need to start getting some silicon and plastanium
+[04-05-2021 12:46:08] [I] Teeler: hmmph
+[04-05-2021 12:46:12] [I] Teeler: Perhaps not copper walls
+[04-05-2021 12:46:19] [I] SpaceCheddar: For now yes
+[04-05-2021 12:46:35] [I] SpaceCheddar: Not enough titainum
+[04-05-2021 12:46:43] [I] SpaceCheddar: I cant spell.
+[04-05-2021 12:47:32] [I] Teeler: Agh
+[04-05-2021 12:47:34] [I] Teeler: I died
+[04-05-2021 12:47:34] [I] SpaceCheddar: teeler now they all come here
+[04-05-2021 12:48:41] [I] SpaceCheddar: TYLER add an overflow gate on the right wall, the graphite
+[04-05-2021 12:51:57] [I] SpaceCheddar: increase this defense
+[04-05-2021 12:52:09] [I] SpaceCheddar: bad tyler lol
+[04-05-2021 12:52:14] [I] SpaceCheddar: I do resources
+[04-05-2021 12:53:16] [I] SpaceCheddar: TYLER
+[04-05-2021 12:53:53] [I] SpaceCheddar: FIX THIS
+[04-05-2021 12:58:01] [I] SpaceCheddar: Tyler they take the path of least resistence
+[04-05-2021 12:58:13] [I] SpaceCheddar: ei. over here
+[04-05-2021 12:58:47] [I] SpaceCheddar: Huh. theres no scrap on this map
+[04-05-2021 12:58:48] [I] Teeler: I need graphite turrets
+[04-05-2021 12:59:52] [I] SpaceCheddar: PAY ATTENTION
+[04-05-2021 13:00:01] [I] Game over! Reached wave 15 with 2 players online on map Fork.
+[04-05-2021 13:00:01] [I] Selected next map to be Mud Flats.
+[04-05-2021 13:00:44] [I] SpaceCheddar: VOICE
+[04-05-2021 13:01:53] [I] SpaceCheddar: Get lead and graphite
+[04-05-2021 13:02:52] [I] SpaceCheddar: Lead tyler, lead
+[04-05-2021 13:04:51] [I] Teeler: Titanium?
+[04-05-2021 13:04:57] [I] SpaceCheddar: LEAD
+[04-05-2021 13:04:59] [I] Teeler: Or lead
+[04-05-2021 13:05:00] [I] SpaceCheddar: and yes
+[04-05-2021 13:05:00] [I] Teeler: ok
+[04-05-2021 13:05:20] [I] SpaceCheddar: Not a good map for walls, buuld little outposts]
+[04-05-2021 13:07:59] [I] SpaceCheddar: Build more outposts I will get silicon
+[04-05-2021 13:09:05] [I] SpaceCheddar: Ok?
+[04-05-2021 13:09:12] [I] Teeler: Oka
+[04-05-2021 13:11:29] [I] SpaceCheddar: Tyler I said walls are a bad idea
+[04-05-2021 13:11:36] [I] SpaceCheddar: Too much space to cover
+[04-05-2021 13:12:50] [I] SpaceCheddar: SILICON IS HERE!
+[04-05-2021 13:12:55] [I] Teeler: YAY
+[04-05-2021 13:13:01] [I] SpaceCheddar: EN MASSE
+[04-05-2021 13:13:10] [I] SpaceCheddar: but slowly coming
+[04-05-2021 13:14:03] [I] SpaceCheddar: sand is so hard to get enough of
+[04-05-2021 13:16:58] [I] SpaceCheddar: Oh and thorium is here
+[04-05-2021 13:18:40] [I] SpaceCheddar: Metaglass, anyone?
+[04-05-2021 13:21:17] [I] SpaceCheddar: Tyler did you read what scorches do?
+[04-05-2021 13:27:01] [I] SpaceCheddar: Tyler, this wont portect us soon enough. We'll need more
+[04-05-2021 13:27:16] [I] SpaceCheddar: Wanna do that?
+[04-05-2021 13:27:22] [I] Teeler: Okay
+[04-05-2021 13:27:26] [I] SpaceCheddar: Thanks
+[04-05-2021 13:27:28] [I] Teeler: Up front there?
+[04-05-2021 13:27:33] [I] SpaceCheddar: Just somewhere
+[04-05-2021 13:31:05] [I] SpaceCheddar: Tyler thers a lot of air attacks over in the industrial district. Taken care of
+[04-05-2021 13:31:19] [I] Teeler: k
+[04-05-2021 13:31:20] [I] SpaceCheddar: WE GOT ISSURES
+[04-05-2021 13:31:27] [I] Teeler: AAAA
+[04-05-2021 13:33:20] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-05-2021 13:38:13] [I] Game over! Reached wave 18 with 1 players online on map Mud Flats.
+[04-05-2021 13:38:13] [I] Selected next map to be Debris Field.
+[04-05-2021 13:38:19] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-05-2021 13:44:30] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-05-2021 13:44:30] [I] Selected next map to be Islands.
+[04-05-2021 13:50:26] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 13:50:26] [I] Selected next map to be Mud Flats.
+[04-05-2021 13:57:00] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-05-2021 13:57:00] [I] Selected next map to be Wasteland.
+[04-05-2021 14:03:31] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 14:03:31] [I] Selected next map to be Triad.
+[04-05-2021 14:10:54] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 14:10:54] [I] Selected next map to be Tendrils.
+[04-05-2021 14:16:42] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 14:16:42] [I] Selected next map to be Debris Field.
+[04-05-2021 14:23:01] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-05-2021 14:23:01] [I] Selected next map to be Tendrils.
+[04-05-2021 14:28:50] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 14:28:50] [I] Selected next map to be Ancient Caldera.
+[04-05-2021 14:34:23] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-05-2021 14:34:23] [I] Selected next map to be Triad.
+[04-05-2021 14:41:46] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 14:41:46] [I] Selected next map to be Labyrinth.
+[04-05-2021 14:48:12] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-05-2021 14:48:12] [I] Selected next map to be Triad.
+[04-05-2021 14:55:34] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 14:55:34] [I] Selected next map to be Maze.
+[04-05-2021 15:02:16] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-05-2021 15:02:16] [I] Selected next map to be Shattered.
+[04-05-2021 15:03:15] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-05-2021 15:06:11] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (timeout)
+[04-05-2021 15:06:32] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-05-2021 15:53:03] [I] Game over! Reached wave 25 with 1 players online on map Shattered.
+[04-05-2021 15:53:03] [I] Selected next map to be Maze.
+[04-05-2021 15:53:20] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (timeout)
+[04-05-2021 15:59:45] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-05-2021 15:59:45] [I] Selected next map to be Fortress.
+[04-05-2021 16:05:14] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 16:05:14] [I] Selected next map to be Molten Lake.
+[04-05-2021 16:10:34] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-05-2021 16:11:12] [I] Game over! Reached wave 2 with 1 players online on map Molten Lake.
+[04-05-2021 16:11:12] [I] Selected next map to be Ancient Caldera.
+[04-05-2021 16:13:15] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-05-2021 16:13:25] [I] Niffles: Hewwo
+[04-05-2021 16:13:30] [I] Niffles: lol
+[04-05-2021 16:13:34] [I] Niffles: Hi
+[04-05-2021 16:13:54] [I] Teeler: Sry
+[04-05-2021 16:13:59] [I] Teeler: I had to go for a moment
+[04-05-2021 16:14:02] [I] Niffles: Voiceeee
+[04-05-2021 16:14:06] [I] Teeler: Oh
+[04-05-2021 16:14:12] [I] Teeler: I saw your electronic mail
+[04-05-2021 16:14:19] [I] Niffles: Eeeemail
+[04-05-2021 16:14:25] [I] Teeler: Ooh
+[04-05-2021 16:14:26] [I] Niffles: VOICE
+[04-05-2021 16:14:28] [I] Teeler: Lots of water
+[04-05-2021 16:14:29] [I] Teeler: Can
+[04-05-2021 16:14:34] [I] Teeler: not find mic
+[04-05-2021 16:14:41] [I] Niffles: EEEEEEEEEEEE
+[04-05-2021 16:14:43] [I] Niffles: E
+[04-05-2021 16:14:45] [I] Niffles: e
+[04-05-2021 16:16:04] [I] Teeler: Um
+[04-05-2021 16:16:08] [I] Teeler: where's the enemy?
+[04-05-2021 16:17:01] [I] Game over! Reached wave 2 with 2 players online on map Ancient Caldera.
+[04-05-2021 16:17:01] [I] Selected next map to be Archipelago.
+[04-05-2021 16:17:08] [I] Teeler: AAAAAAAAAAA
+[04-05-2021 16:17:22] [I] Teeler: wwwwwwwwwwwww
+[04-05-2021 16:17:24] [I] Teeler: oop
+[04-05-2021 16:17:38] [I] Niffles: oop
+[04-05-2021 16:18:09] [I] Niffles: Gun go *pop* *pop*
+[04-05-2021 16:19:10] [I] Teeler: brb
+[04-05-2021 16:19:14] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-05-2021 16:19:29] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (closed)
+[04-05-2021 16:26:01] [I] Game over! Reached wave 3 with 0 players online on map Archipelago.
+[04-05-2021 16:26:01] [I] Selected next map to be Molten Lake.
+[04-05-2021 16:31:58] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 16:31:58] [I] Selected next map to be Fortress.
+[04-05-2021 16:37:28] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 16:37:28] [I] Selected next map to be Tendrils.
+[04-05-2021 16:43:15] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 16:43:15] [I] Selected next map to be Islands.
+[04-05-2021 16:49:10] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 16:49:10] [I] Selected next map to be Archipelago.
+[04-05-2021 16:57:47] [I] Game over! Reached wave 3 with 0 players online on map Archipelago.
+[04-05-2021 16:57:47] [I] Selected next map to be Fortress.
+[04-05-2021 16:58:15] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-05-2021 17:02:06] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-05-2021 17:03:33] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 17:03:33] [I] Selected next map to be Debris Field.
+[04-05-2021 17:09:41] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-05-2021 17:09:41] [I] Selected next map to be Islands.
+[04-05-2021 17:15:38] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 17:15:38] [I] Selected next map to be Molten Lake.
+[04-05-2021 17:21:36] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 17:21:36] [I] Selected next map to be Archipelago.
+[04-05-2021 17:28:22] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-05-2021 17:28:22] [I] Selected next map to be Mud Flats.
+[04-05-2021 17:34:56] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-05-2021 17:34:56] [I] Selected next map to be Islands.
+[04-05-2021 17:40:53] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 17:40:53] [I] Selected next map to be Triad.
+[04-05-2021 17:48:15] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 17:48:15] [I] Selected next map to be Mud Flats.
+[04-05-2021 17:54:48] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-05-2021 17:54:48] [I] Selected next map to be Molten Lake.
+[04-05-2021 18:00:46] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 18:00:46] [I] Selected next map to be Archipelago.
+[04-05-2021 18:07:29] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-05-2021 18:07:29] [I] Selected next map to be Wasteland.
+[04-05-2021 18:14:00] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 18:14:00] [I] Selected next map to be Tendrils.
+[04-05-2021 18:14:06] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-05-2021 18:14:32] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-05-2021 18:19:46] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 18:19:46] [I] Selected next map to be Fork.
+[04-05-2021 18:25:47] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-05-2021 18:25:47] [I] Selected next map to be Islands.
+[04-05-2021 18:31:43] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 18:31:43] [I] Selected next map to be Wasteland.
+[04-05-2021 18:38:13] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 18:38:13] [I] Selected next map to be Triad.
+[04-05-2021 18:45:35] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 18:45:35] [I] Selected next map to be Molten Lake.
+[04-05-2021 18:51:33] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 18:51:33] [I] Selected next map to be Fork.
+[04-05-2021 18:57:34] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-05-2021 18:57:34] [I] Selected next map to be Debris Field.
+[04-05-2021 19:03:53] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-05-2021 19:03:53] [I] Selected next map to be Fork.
+[04-05-2021 19:09:55] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-05-2021 19:09:55] [I] Selected next map to be Tendrils.
+[04-05-2021 19:15:42] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 19:15:42] [I] Selected next map to be Fortress.
+[04-05-2021 19:21:11] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 19:21:11] [I] Selected next map to be Archipelago.
+[04-05-2021 19:28:01] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-05-2021 19:28:01] [I] Selected next map to be Fortress.
+[04-05-2021 19:33:31] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 19:33:31] [I] Selected next map to be Ancient Caldera.
+[04-05-2021 19:39:04] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-05-2021 19:39:04] [I] Selected next map to be Triad.
+[04-05-2021 19:46:26] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 19:46:26] [I] Selected next map to be Ancient Caldera.
+[04-05-2021 19:51:59] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-05-2021 19:51:59] [I] Selected next map to be Tendrils.
+[04-05-2021 19:57:47] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 19:57:47] [I] Selected next map to be Islands.
+[04-05-2021 20:03:44] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 20:03:44] [I] Selected next map to be Ancient Caldera.
+[04-05-2021 20:09:17] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-05-2021 20:09:17] [I] Selected next map to be Triad.
+[04-05-2021 20:16:40] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-05-2021 20:16:40] [I] Selected next map to be Wasteland.
+[04-05-2021 20:23:10] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 20:23:10] [I] Selected next map to be Molten Lake.
+[04-05-2021 20:29:08] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 20:29:08] [I] Selected next map to be Debris Field.
+[04-05-2021 20:35:25] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-05-2021 20:35:25] [I] Selected next map to be Wasteland.
+[04-05-2021 20:41:56] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-05-2021 20:41:56] [I] Selected next map to be Islands.
+[04-05-2021 20:47:53] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 20:47:53] [I] Selected next map to be Tendrils.
+[04-05-2021 20:53:40] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-05-2021 20:53:40] [I] Selected next map to be Debris Field.
+[04-05-2021 20:59:56] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-05-2021 20:59:56] [I] Selected next map to be Molten Lake.
+[04-05-2021 21:05:54] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-05-2021 21:05:54] [I] Selected next map to be Islands.
+[04-05-2021 21:11:50] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-05-2021 21:11:50] [I] Selected next map to be Fork.
+[04-05-2021 21:17:51] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-05-2021 21:17:51] [I] Selected next map to be Fortress.
+[04-05-2021 21:23:20] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-05-2021 21:23:20] [I] Selected next map to be Labyrinth.
+[04-05-2021 21:29:46] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-05-2021 21:29:46] [I] Selected next map to be Shattered.
+[04-05-2021 21:36:17] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-05-2021 21:36:17] [I] Selected next map to be Mud Flats.
+[04-05-2021 21:42:51] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-05-2021 21:42:51] [I] Selected next map to be Shattered.
+[04-05-2021 21:49:21] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-05-2021 21:49:21] [I] Selected next map to be Labyrinth.
+[04-06-2021 07:33:50] [I] Server loaded. Type 'help' for help.
+[04-06-2021 07:34:22] [I] Maps:
+[04-06-2021 07:34:22] [I]   Ancient_Caldera: Default / 256x256
+[04-06-2021 07:34:22] [I]   Archipelago: Default / 500x500
+[04-06-2021 07:34:22] [I]   Debris_Field: Default / 400x400
+[04-06-2021 07:34:22] [I]   Fork: Default / 250x300
+[04-06-2021 07:34:22] [I]   Fortress: Default / 256x256
+[04-06-2021 07:34:22] [I]   Glacier: Default / 150x250
+[04-06-2021 07:34:22] [I]   Islands: Default / 256x256
+[04-06-2021 07:34:22] [I]   Labyrinth: Default / 200x200
+[04-06-2021 07:34:22] [I]   Maze: Default / 256x256
+[04-06-2021 07:34:22] [I]   Molten_Lake: Default / 400x400
+[04-06-2021 07:34:22] [I]   Mud_Flats: Default / 400x400
+[04-06-2021 07:34:22] [I]   Shattered: Default / 350x350
+[04-06-2021 07:34:22] [I]   Tendrils: Default / 300x300
+[04-06-2021 07:34:22] [I]   Triad: Default / 200x200
+[04-06-2021 07:34:22] [I]   Veins: Default / 350x200
+[04-06-2021 07:34:22] [I]   Wasteland: Default / 300x300
+[04-06-2021 07:34:22] [I] Map directory: D:\Mindustry-Server\config\maps
+[04-06-2021 07:34:25] [I] Loading map...
+[04-06-2021 07:34:26] [I] Map loaded.
+[04-06-2021 07:34:26] [I] Opened a server on port 6567.
+[04-06-2021 07:34:33] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-06-2021 07:34:42] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-06-2021 07:35:32] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-06-2021 07:37:35] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-06-2021 07:40:43] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 07:40:43] [I] Selected next map to be Mud Flats.
+[04-06-2021 07:47:18] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 07:47:18] [I] Selected next map to be Archipelago.
+[04-06-2021 07:53:59] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-06-2021 07:53:59] [I] Selected next map to be Molten Lake.
+[04-06-2021 07:55:29] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-06-2021 08:05:11] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-06-2021 08:11:41] [I] Game over! Reached wave 8 with 0 players online on map Molten Lake.
+[04-06-2021 08:11:41] [I] Selected next map to be Debris Field.
+[04-06-2021 08:17:55] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-06-2021 08:17:55] [I] Selected next map to be Maze.
+[04-06-2021 08:24:36] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-06-2021 08:24:36] [I] Selected next map to be Triad.
+[04-06-2021 08:31:58] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 08:31:58] [I] Selected next map to be Molten Lake.
+[04-06-2021 08:37:56] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 08:37:56] [I] Selected next map to be Maze.
+[04-06-2021 08:44:37] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-06-2021 08:44:37] [I] Selected next map to be Mud Flats.
+[04-06-2021 08:51:11] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 08:51:11] [I] Selected next map to be Fortress.
+[04-06-2021 08:56:40] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 08:56:40] [I] Selected next map to be Wasteland.
+[04-06-2021 09:03:11] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 09:03:11] [I] Selected next map to be Triad.
+[04-06-2021 09:10:34] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 09:10:34] [I] Selected next map to be Wasteland.
+[04-06-2021 09:17:04] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 09:17:04] [I] Selected next map to be Fortress.
+[04-06-2021 09:22:34] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 09:22:34] [I] Selected next map to be Tendrils.
+[04-06-2021 09:28:21] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 09:28:21] [I] Selected next map to be Mud Flats.
+[04-06-2021 09:34:55] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 09:34:55] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 09:40:27] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 09:40:27] [I] Selected next map to be Debris Field.
+[04-06-2021 09:46:35] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-06-2021 09:46:35] [I] Selected next map to be Fork.
+[04-06-2021 09:52:35] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 09:52:35] [I] Selected next map to be Wasteland.
+[04-06-2021 09:59:06] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 09:59:06] [I] Selected next map to be Islands.
+[04-06-2021 10:05:02] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 10:05:02] [I] Selected next map to be Debris Field.
+[04-06-2021 10:11:13] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-06-2021 10:11:13] [I] Selected next map to be Fork.
+[04-06-2021 10:17:14] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 10:17:14] [I] Selected next map to be Archipelago.
+[04-06-2021 10:25:52] [I] Game over! Reached wave 3 with 0 players online on map Archipelago.
+[04-06-2021 10:25:52] [I] Selected next map to be Islands.
+[04-06-2021 10:31:48] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 10:31:48] [I] Selected next map to be Debris Field.
+[04-06-2021 10:37:53] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-06-2021 10:37:53] [I] Selected next map to be Shattered.
+[04-06-2021 10:44:24] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 10:44:24] [I] Selected next map to be Wasteland.
+[04-06-2021 10:50:55] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 10:50:55] [I] Selected next map to be Mud Flats.
+[04-06-2021 10:57:29] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 10:57:29] [I] Selected next map to be Maze.
+[04-06-2021 11:04:11] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-06-2021 11:04:11] [I] Selected next map to be Wasteland.
+[04-06-2021 11:10:42] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 11:10:42] [I] Selected next map to be Tendrils.
+[04-06-2021 11:16:29] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 11:16:29] [I] Selected next map to be Molten Lake.
+[04-06-2021 11:22:27] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 11:22:27] [I] Selected next map to be Tendrils.
+[04-06-2021 11:28:14] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 11:28:14] [I] Selected next map to be Shattered.
+[04-06-2021 11:34:45] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 11:34:45] [I] Selected next map to be Debris Field.
+[04-06-2021 11:41:14] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-06-2021 11:41:14] [I] Selected next map to be Mud Flats.
+[04-06-2021 11:47:47] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 11:47:47] [I] Selected next map to be Triad.
+[04-06-2021 11:55:10] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 11:55:10] [I] Selected next map to be Shattered.
+[04-06-2021 12:01:41] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 12:01:41] [I] Selected next map to be Wasteland.
+[04-06-2021 12:08:12] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 12:08:12] [I] Selected next map to be Molten Lake.
+[04-06-2021 12:14:09] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 12:14:09] [I] Selected next map to be Debris Field.
+[04-06-2021 12:20:36] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-06-2021 12:20:36] [I] Selected next map to be Wasteland.
+[04-06-2021 12:27:08] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 12:27:08] [I] Selected next map to be Fork.
+[04-06-2021 12:33:09] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 12:33:09] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 12:38:42] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 12:38:42] [I] Selected next map to be Labyrinth.
+[04-06-2021 12:45:09] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 12:45:09] [I] Selected next map to be Archipelago.
+[04-06-2021 12:51:53] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-06-2021 12:51:53] [I] Selected next map to be Labyrinth.
+[04-06-2021 12:58:18] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 12:58:18] [I] Selected next map to be Archipelago.
+[04-06-2021 13:05:06] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-06-2021 13:05:06] [I] Selected next map to be Labyrinth.
+[04-06-2021 13:11:32] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 13:11:32] [I] Selected next map to be Archipelago.
+[04-06-2021 13:18:19] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-06-2021 13:18:19] [I] Selected next map to be Labyrinth.
+[04-06-2021 13:24:44] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 13:24:44] [I] Selected next map to be Tendrils.
+[04-06-2021 13:30:32] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 13:30:32] [I] Selected next map to be Labyrinth.
+[04-06-2021 13:36:59] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 13:36:59] [I] Selected next map to be Fork.
+[04-06-2021 13:42:59] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 13:42:59] [I] Selected next map to be Labyrinth.
+[04-06-2021 13:49:25] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 13:49:25] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 13:54:59] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 13:54:59] [I] Selected next map to be Shattered.
+[04-06-2021 14:01:30] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 14:01:30] [I] Selected next map to be Molten Lake.
+[04-06-2021 14:07:27] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 14:07:27] [I] Selected next map to be Wasteland.
+[04-06-2021 14:13:58] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 14:13:58] [I] Selected next map to be Islands.
+[04-06-2021 14:19:54] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 14:19:54] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 14:25:27] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 14:25:27] [I] Selected next map to be Fortress.
+[04-06-2021 14:30:56] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 14:30:56] [I] Selected next map to be Molten Lake.
+[04-06-2021 14:36:54] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 14:36:54] [I] Selected next map to be Shattered.
+[04-06-2021 14:43:25] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 14:43:25] [I] Selected next map to be Triad.
+[04-06-2021 14:50:48] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 14:50:48] [I] Selected next map to be Fortress.
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "host"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "host"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:53] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:53] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "mod"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "mod"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "mod"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "mod"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "host"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "ban"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:51:54] [E] Command not found. Did you mean "js"?
+[04-06-2021 14:51:54] [E] Invalid command. Type 'help' for help.
+[04-06-2021 14:52:54] [I] Server loaded. Type 'help' for help.
+[04-06-2021 14:53:08] [E] No map with name 'map' found.
+[04-06-2021 14:53:09] [I] Randomized next map to be Tendrils.
+[04-06-2021 14:53:09] [I] Loading map...
+[04-06-2021 14:53:10] [I] Map loaded.
+[04-06-2021 14:53:10] [I] Opened a server on port 6567.
+[04-06-2021 14:53:46] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-06-2021 14:54:16] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-06-2021 14:54:24] [I] SpaceCheddar: hi
+[04-06-2021 14:54:32] [I] Teeler: Afternoon!
+[04-06-2021 14:54:55] [I] SpaceCheddar: defend
+[04-06-2021 14:54:59] [I] Teeler: Yep
+[04-06-2021 14:55:02] [I] Teeler: I know
+[04-06-2021 14:55:08] [I] Teeler: Just trying to get some basic resources first
+[04-06-2021 14:56:05] [I] SpaceCheddar: I have to press like 4 buttons to chat so you will get 3 words max
+[04-06-2021 14:57:21] [I] SpaceCheddar: dous take graphite
+[04-06-2021 14:59:34] [I] Teeler: Hmm
+[04-06-2021 14:59:37] [I] Teeler: Where is it?
+[04-06-2021 14:59:38] [I] SpaceCheddar: BUILD TURRETS
+[04-06-2021 14:59:50] [I] Teeler: Oh yay
+[04-06-2021 14:59:58] [I] Teeler: I can make better turrets now
+[04-06-2021 15:01:20] [I] Teeler: How do you get metaglass again?
+[04-06-2021 15:01:21] [I] SpaceCheddar: Tyler go fi d your mic
+[04-06-2021 15:01:35] [I] SpaceCheddar: I will get glass
+[04-06-2021 15:02:01] [I] Teeler: Well, I can take from the main coal line
+[04-06-2021 15:03:23] [I] SpaceCheddar: THLER
+[04-06-2021 15:03:38] [I] SpaceCheddar: you can't give them whatever
+[04-06-2021 15:03:42] [I] Teeler: I MISREAD
+[04-06-2021 15:03:48] [I] SpaceCheddar: eeee
+[04-06-2021 15:04:04] [I] SpaceCheddar: scorxhes will not hit ghem
+[04-06-2021 15:04:29] [I] Teeler: Yeah, they come straight to the core
+[04-06-2021 15:04:32] [I] Teeler: Well, okay then
+[04-06-2021 15:06:51] [I] Teeler: Major silicon congestion
+[04-06-2021 15:08:22] [I] Teeler: How much silicon can we make?
+[04-06-2021 15:08:28] [I] Teeler: I would like to put in some Hail turrets
+[04-06-2021 15:08:44] [I] SpaceCheddar: hails take graphite
+[04-06-2021 15:08:55] [I] Teeler: They take silicon too
+[04-06-2021 15:09:02] [I] Teeler: I can use graphite
+[04-06-2021 15:12:06] [I] Teeler: We have a lot more titanium than copper
+[04-06-2021 15:12:14] [I] Teeler: Maybe we should use that
+[04-06-2021 15:12:16] [I] SpaceCheddar: good
+[04-06-2021 15:12:19] [I] Teeler: For conveyors
+[04-06-2021 15:13:25] [I] SpaceCheddar: need graphite
+[04-06-2021 15:13:39] [I] Teeler: Moar graphite, definitely
+[04-06-2021 15:16:41] [I] Teeler: Yeah, too much coal?
+[04-06-2021 15:17:45] [I] SpaceCheddar: crap
+[04-06-2021 15:24:40] [I] SpaceCheddar: WHERE ARE YOU
+[04-06-2021 15:25:31] [I] Teeler: More air defenses
+[04-06-2021 15:26:32] [I] SpaceCheddar: keep up the defenses, I'm getting plastic
+[04-06-2021 15:26:51] [I] Teeler: Silicon too?
+[04-06-2021 15:27:14] [I] SpaceCheddar: wth is this
+[04-06-2021 15:27:34] [I] SpaceCheddar: noooo
+[04-06-2021 15:27:37] [I] Teeler: AAAAAAAAA
+[04-06-2021 15:27:43] [I] Teeler: It's full
+[04-06-2021 15:27:52] [I] SpaceCheddar: we have to burn the. opper
+[04-06-2021 15:28:20] [I] Teeler: We need silicon
+[04-06-2021 15:29:26] [I] SpaceCheddar: I'll be gone soon, I'll be back. though
+[04-06-2021 15:29:38] [I] Teeler: See you when you get home
+[04-06-2021 15:29:57] [I] SpaceCheddar: voice ghen
+[04-06-2021 15:33:29] [I] SpaceCheddar: gtg, find that mic
+[04-06-2021 15:33:35] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (closed)
+[04-06-2021 15:42:32] [I] Commands:
+[04-06-2021 15:42:32] [I]    help - Displays this command list.
+[04-06-2021 15:42:32] [I]    version - Displays server version info.
+[04-06-2021 15:42:32] [I]    exit - Exit the server application.
+[04-06-2021 15:42:32] [I]    stop - Stop hosting the server.
+[04-06-2021 15:42:32] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-06-2021 15:42:32] [I]    maps - Display all available maps.
+[04-06-2021 15:42:32] [I]    reloadmaps - Reload all maps from disk.
+[04-06-2021 15:42:32] [I]    status - Display server status.
+[04-06-2021 15:42:32] [I]    mods - Display all loaded mods.
+[04-06-2021 15:42:32] [I]    mod <name...> - Display information about a loaded plugin.
+[04-06-2021 15:42:32] [I]    js <script...> - Run arbitrary Javascript.
+[04-06-2021 15:42:32] [I]    say <message...> - Send a message to all players.
+[04-06-2021 15:42:32] [I]    pause <on/off> - Pause or unpause the game.
+[04-06-2021 15:42:32] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-06-2021 15:42:32] [I]    fillitems [team] - Fill the core with items.
+[04-06-2021 15:42:32] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-06-2021 15:42:32] [I]    config [name] [value...] - Configure server settings.
+[04-06-2021 15:42:32] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-06-2021 15:42:32] [I]    whitelisted - List the entire whitelist.
+[04-06-2021 15:42:32] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-06-2021 15:42:32] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-06-2021 15:42:32] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-06-2021 15:42:32] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-06-2021 15:42:32] [I]    kick <username...> - Kick a person by name.
+[04-06-2021 15:42:32] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-06-2021 15:42:32] [I]    bans - List all banned IPs and IDs.
+[04-06-2021 15:42:32] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-06-2021 15:42:32] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-06-2021 15:42:32] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-06-2021 15:42:32] [I]    admins - List all admins.
+[04-06-2021 15:42:32] [I]    players - List all players currently in game.
+[04-06-2021 15:42:32] [I]    runwave - Trigger the next wave.
+[04-06-2021 15:42:32] [I]    load <slot> - Load a save from a slot.
+[04-06-2021 15:42:32] [I]    save <slot> - Save game state to a slot.
+[04-06-2021 15:42:32] [I]    saves - List all saves in the save directory.
+[04-06-2021 15:42:32] [I]    gameover - Force a game over.
+[04-06-2021 15:42:32] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-06-2021 15:42:32] [I]    search <name...> - Search players who have used part of a name.
+[04-06-2021 15:42:32] [I]    gc - Trigger a garbage collection. Testing only.
+[04-06-2021 15:42:32] [I]    yes - Run the last suggested incorrect command.
+[04-06-2021 15:42:39] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-06-2021 15:42:48] [I] SpaceCheddar: ooh sporestorm
+[04-06-2021 15:42:52] [I] Teeler: Ooh
+[04-06-2021 15:43:09] [I] SpaceCheddar: Voice?
+[04-06-2021 15:45:10] [I] SpaceCheddar: Ok imma make plastanium
+[04-06-2021 15:45:13] [I] Teeler: YAY!
+[04-06-2021 15:49:17] [I] Teeler: We need thorium
+[04-06-2021 15:49:33] [I] Teeler: *but* more air defenses now
+[04-06-2021 15:51:42] [I] Teeler: AGH
+[04-06-2021 15:51:51] [I] Teeler: Nearest deposit of thoriumm is super far away
+[04-06-2021 15:53:55] [I] SpaceCheddar: Tyler, the  beams suck
+[04-06-2021 15:54:05] [I] SpaceCheddar: The um anti air beams
+[04-06-2021 15:54:08] [I] Teeler: Oh
+[04-06-2021 15:54:12] [I] Teeler: the tractor ones?
+[04-06-2021 15:56:01] [I] SpaceCheddar: *now* I can make plastainium hopefully
+[04-06-2021 15:56:06] [I] SpaceCheddar: Oh wait i am already
+[04-06-2021 15:56:29] [I] SpaceCheddar: BAD
+[04-06-2021 15:56:32] [I] SpaceCheddar: HELP
+[04-06-2021 15:56:43] [I] SpaceCheddar: THEY INVEADE
+[04-06-2021 15:56:51] [I] Teeler: FROM THERE?
+[04-06-2021 15:56:54] [I] SpaceCheddar: FIX IT
+[04-06-2021 15:56:59] [I] SpaceCheddar: I block it off
+[04-06-2021 15:57:20] [I] SpaceCheddar: The copper overflow is taken care of
+[04-06-2021 15:58:08] [I] SpaceCheddar: HELP ME
+[04-06-2021 15:58:21] [I] SpaceCheddar: NO
+[04-06-2021 15:58:23] [I] SpaceCheddar: HERE
+[04-06-2021 15:58:43] [I] Teeler: DARN IT
+[04-06-2021 15:58:46] [I] SpaceCheddar: stop
+[04-06-2021 15:58:56] [I] SpaceCheddar: Lets die
+[04-06-2021 15:59:03] [I] SpaceCheddar: GET YOUR FREAKING MIC
+[04-06-2021 16:00:56] [I] SpaceCheddar: HELLO????!?!?!?!??!?!?!
+[04-06-2021 16:01:11] [I] Teeler: I don't know where the mic *is*
+[04-06-2021 16:01:24] [I] SpaceCheddar: Well then use your phone idc
+[04-06-2021 16:01:49] [I] SpaceCheddar: Although we survived well
+[04-06-2021 16:02:03] [I] SpaceCheddar: BUT YOU CANT SORt lol
+[04-06-2021 16:08:11] [I] Teeler: Need thorium
+[04-06-2021 16:08:17] [I] Teeler: Sorry, silicon
+[04-06-2021 16:08:38] [I] Teeler: Better make some
+[04-06-2021 16:09:09] [I] SpaceCheddar: Look at us, wave 37
+[04-06-2021 16:09:13] [I] Teeler: 38
+[04-06-2021 16:09:19] [I] Teeler: Aircraft
+[04-06-2021 16:10:03] [I] Teeler: We should make units
+[04-06-2021 16:10:07] [I] SpaceCheddar: Yes
+[04-06-2021 16:10:13] [I] SpaceCheddar: Hard to control though
+[04-06-2021 16:10:27] [I] Teeler: Gonna set up more silicon capacity
+[04-06-2021 16:10:41] [I] Teeler: THAT'S WHY
+[04-06-2021 16:10:45] [I] Teeler: One of them was clogged
+[04-06-2021 16:10:49] [I] Teeler: Better now
+[04-06-2021 16:11:18] [I] SpaceCheddar: I have copper clog under very much control
+[04-06-2021 16:12:57] [I] SpaceCheddar: HEY LETS MAKE ALLOY
+[04-06-2021 16:13:05] [I] Teeler: I NEED SILICON FOR REACTOR
+[04-06-2021 16:13:09] [I] SpaceCheddar: Then we can have a big boi forshadow
+[04-06-2021 16:13:13] [I] SpaceCheddar: Which reactor?
+[04-06-2021 16:13:43] [I] SpaceCheddar: Thorium, RTG or impact?
+[04-06-2021 16:13:47] [I] Teeler: Thor
+[04-06-2021 16:13:53] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-06-2021 16:15:58] [I] SpaceCheddar: ah
+[04-06-2021 16:16:17] [I] SpaceCheddar: Tricky to get cryofluid
+[04-06-2021 16:18:09] [I] SpaceCheddar: WE HAVE WALL CLIMBERS
+[04-06-2021 16:20:56] [I] Game over! Reached wave 43 with 1 players online on map Tendrils.
+[04-06-2021 16:20:56] [I] Selected next map to be Fortress.
+[04-06-2021 16:58:21] [I] Game over! Reached wave 18 with 1 players online on map Fortress.
+[04-06-2021 16:58:21] [I] Selected next map to be Shattered.
+[04-06-2021 16:58:25] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-06-2021 17:04:52] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 17:04:52] [I] Selected next map to be Wasteland.
+[04-06-2021 17:11:22] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 17:11:22] [I] Selected next map to be Maze.
+[04-06-2021 17:18:04] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-06-2021 17:18:04] [I] Selected next map to be Mud Flats.
+[04-06-2021 17:24:38] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 17:24:38] [I] Selected next map to be Triad.
+[04-06-2021 17:32:01] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 17:32:01] [I] Selected next map to be Islands.
+[04-06-2021 17:37:57] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 17:37:57] [I] Selected next map to be Labyrinth.
+[04-06-2021 17:44:24] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 17:44:24] [I] Selected next map to be Triad.
+[04-06-2021 17:51:46] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 17:51:46] [I] Selected next map to be Molten Lake.
+[04-06-2021 17:57:44] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 17:57:44] [I] Selected next map to be Labyrinth.
+[04-06-2021 18:04:10] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 18:04:10] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 18:09:44] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 18:09:44] [I] Selected next map to be Triad.
+[04-06-2021 18:17:06] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 18:17:06] [I] Selected next map to be Mud Flats.
+[04-06-2021 18:23:40] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 18:23:40] [I] Selected next map to be Labyrinth.
+[04-06-2021 18:30:05] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 18:30:05] [I] Selected next map to be Archipelago.
+[04-06-2021 18:38:58] [I] Game over! Reached wave 3 with 0 players online on map Archipelago.
+[04-06-2021 18:38:58] [I] Selected next map to be Fortress.
+[04-06-2021 18:44:28] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 18:44:28] [I] Selected next map to be Mud Flats.
+[04-06-2021 18:51:02] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-06-2021 18:51:02] [I] Selected next map to be Debris Field.
+[04-06-2021 18:57:08] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-06-2021 18:57:08] [I] Selected next map to be Shattered.
+[04-06-2021 19:03:39] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 19:03:39] [I] Selected next map to be Archipelago.
+[04-06-2021 19:10:26] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-06-2021 19:10:26] [I] Selected next map to be Ancient Caldera.
+[04-06-2021 19:16:00] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-06-2021 19:16:00] [I] Selected next map to be Molten Lake.
+[04-06-2021 19:21:58] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 19:21:58] [I] Selected next map to be Islands.
+[04-06-2021 19:27:54] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 19:27:54] [I] Selected next map to be Shattered.
+[04-06-2021 19:34:24] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-06-2021 19:34:24] [I] Selected next map to be Fork.
+[04-06-2021 19:40:25] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 19:40:25] [I] Selected next map to be Wasteland.
+[04-06-2021 19:46:55] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 19:46:55] [I] Selected next map to be Fortress.
+[04-06-2021 19:52:24] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 19:52:24] [I] Selected next map to be Fork.
+[04-06-2021 19:58:26] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-06-2021 19:58:26] [I] Selected next map to be Molten Lake.
+[04-06-2021 20:04:23] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-06-2021 20:04:23] [I] Selected next map to be Labyrinth.
+[04-06-2021 20:10:50] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 20:10:50] [I] Selected next map to be Tendrils.
+[04-06-2021 20:16:37] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 20:16:37] [I] Selected next map to be Labyrinth.
+[04-06-2021 20:23:04] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-06-2021 20:23:04] [I] Selected next map to be Fortress.
+[04-06-2021 20:28:33] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-06-2021 20:28:33] [I] Selected next map to be Triad.
+[04-06-2021 20:35:55] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-06-2021 20:35:55] [I] Selected next map to be Debris Field.
+[04-06-2021 20:42:07] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-06-2021 20:42:07] [I] Selected next map to be Islands.
+[04-06-2021 20:48:04] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-06-2021 20:48:04] [I] Selected next map to be Wasteland.
+[04-06-2021 20:54:34] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-06-2021 20:54:34] [I] Selected next map to be Tendrils.
+[04-06-2021 21:00:22] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-06-2021 21:00:22] [I] Selected next map to be Maze.
+[04-06-2021 21:07:04] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-06-2021 21:07:04] [I] Selected next map to be Mud Flats.
+[04-07-2021 14:49:02] [I] Server loaded. Type 'help' for help.
+[04-07-2021 14:49:08] [E] No map with name 'map' found.
+[04-07-2021 14:49:10] [I] Randomized next map to be Fortress.
+[04-07-2021 14:49:10] [I] Loading map...
+[04-07-2021 14:49:10] [I] Map loaded.
+[04-07-2021 14:49:10] [I] Opened a server on port 6567.
+[04-07-2021 14:49:26] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-07-2021 14:49:49] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 14:49:53] [I] Teeler: Hi
+[04-07-2021 14:50:06] [I] SpaceCheddar: lead and graphite
+[04-07-2021 14:51:15] [I] SpaceCheddar: Tyler too much
+[04-07-2021 14:52:43] [I] SpaceCheddar: turrets help me
+[04-07-2021 14:56:12] [I] SpaceCheddar: @tyler get lots of scTterz
+[04-07-2021 14:57:26] [I] SpaceCheddar: Tyler get lots of scatters
+[04-07-2021 14:58:03] [I] SpaceCheddar: TYLER
+[04-07-2021 14:58:07] [I] Teeler: Hey, these graphite presses aren't making coal
+[04-07-2021 14:58:09] [I] Teeler: Ook
+[04-07-2021 14:58:41] [I] SpaceCheddar: no presses don't. are coal. they are outputting v iyy into the routers
+[04-07-2021 14:59:23] [I] SpaceCheddar: HELOO?
+[04-07-2021 14:59:33] [I] SpaceCheddar: get scatters
+[04-07-2021 14:59:49] [I] SpaceCheddar: heavy air attacks later
+[04-07-2021 15:00:04] [I] SpaceCheddar: put them all over
+[04-07-2021 15:03:23] [I] Teeler: Kay, enough lead now for scatter
+[04-07-2021 15:04:17] [I] SpaceCheddar: air targets shoot buildings of intrest
+[04-07-2021 15:04:33] [I] SpaceCheddar: ei production
+[04-07-2021 15:08:11] [I] Teeler: Attacks from up top
+[04-07-2021 15:08:49] [I] Teeler: Defenses here
+[04-07-2021 15:13:26] [I] SpaceCheddar: plastic production. and glass
+[04-07-2021 15:16:05] [I] SpaceCheddar: need power
+[04-07-2021 15:16:13] [I] Teeler: K
+[04-07-2021 15:16:40] [I] SpaceCheddar: help too much lead
+[04-07-2021 15:16:52] [I] Teeler: EEEEe
+[04-07-2021 15:17:28] [I] Teeler: Air attack preparedness time
+[04-07-2021 15:18:16] [I] SpaceCheddar: I am literally burning the lead
+[04-07-2021 15:18:21] [I] Teeler: HEY
+[04-07-2021 15:18:24] [I] Teeler: I'm making overflow
+[04-07-2021 15:19:17] [I] SpaceCheddar: making thor reactor
+[04-07-2021 15:19:22] [I] Teeler: AAAAAAAAA
+[04-07-2021 15:21:55] [I] SpaceCheddar: why did you even think we needed all this lead
+[04-07-2021 15:22:00] [I] Teeler: I dunno
+[04-07-2021 15:22:03] [I] Teeler: Scatters?
+[04-07-2021 15:22:47] [I] SpaceCheddar: go find hour mic
+[04-07-2021 15:27:03] [I] Teeler: We're full again
+[04-07-2021 15:27:08] [I] Teeler: lead needs to be diverted to scatters
+[04-07-2021 15:27:12] [I] SpaceCheddar: opper
+[04-07-2021 15:28:18] [I] SpaceCheddar: BAD TY
+[04-07-2021 15:28:33] [I] SpaceCheddar: dumdum
+[04-07-2021 15:28:50] [I] SpaceCheddar: get out of the way of the reactor
+[04-07-2021 15:28:57] [I] Teeler: Oh
+[04-07-2021 15:29:00] [I] Teeler: I designed a reactor layout
+[04-07-2021 15:30:43] [I] SpaceCheddar: go check defenses
+[04-07-2021 15:34:51] [I] SpaceCheddar: buh bye
+[04-07-2021 15:35:04] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (timeout)
+[04-07-2021 15:35:08] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-07-2021 15:36:48] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-07-2021 15:36:51] [I] Stopped server.
+[04-07-2021 15:36:53] [I] Randomized next map to be Debris Field.
+[04-07-2021 15:36:53] [I] Loading map...
+[04-07-2021 15:36:54] [I] Map loaded.
+[04-07-2021 15:36:54] [I] Opened a server on port 6567.
+[04-07-2021 15:37:24] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 15:37:44] [I] Stopped server.
+[04-07-2021 15:37:46] [I] Randomized next map to be Archipelago.
+[04-07-2021 15:37:46] [I] Loading map...
+[04-07-2021 15:37:47] [I] Map loaded.
+[04-07-2021 15:37:47] [I] Opened a server on port 6567.
+[04-07-2021 15:37:49] [I] Stopped server.
+[04-07-2021 15:37:51] [I] Randomized next map to be Tendrils.
+[04-07-2021 15:37:51] [I] Loading map...
+[04-07-2021 15:37:51] [I] Map loaded.
+[04-07-2021 15:37:51] [I] Opened a server on port 6567.
+[04-07-2021 15:37:58] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 15:47:15] [I] Game over! Reached wave 4 with 1 players online on map Tendrils.
+[04-07-2021 15:47:15] [I] Selected next map to be Molten Lake.
+[04-07-2021 15:47:20] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-07-2021 15:47:59] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-07-2021 15:48:12] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-07-2021 15:53:12] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-07-2021 15:53:12] [I] Selected next map to be Fortress.
+[04-07-2021 15:58:41] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-07-2021 15:58:41] [I] Selected next map to be Mud Flats.
+[04-07-2021 16:05:15] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-07-2021 16:05:15] [I] Selected next map to be Fork.
+[04-07-2021 16:11:16] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-07-2021 16:11:16] [I] Selected next map to be Molten Lake.
+[04-07-2021 16:15:13] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-07-2021 16:17:16] [I] Game over! Reached wave 2 with 1 players online on map Molten Lake.
+[04-07-2021 16:17:16] [I] Selected next map to be Labyrinth.
+[04-07-2021 16:21:52] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-07-2021 16:27:49] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-07-2021 16:33:21] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-07-2021 16:33:25] [I] Niffles: Heeee
+[04-07-2021 16:33:28] [I] SpaceCheddar: HEYYA NIFFLES
+[04-07-2021 16:33:32] [I] SpaceCheddar: Ok lets die
+[04-07-2021 16:33:37] [I] SpaceCheddar: I hate this map
+[04-07-2021 16:33:42] [I] Niffles: WHEEEE
+[04-07-2021 16:33:48] [I] SpaceCheddar: No kill core
+[04-07-2021 16:34:07] [I] SpaceCheddar: Walls to prolong it till you came'
+[04-07-2021 16:34:15] [I] Game over! Reached wave 8 with 2 players online on map Labyrinth.
+[04-07-2021 16:34:15] [I] Selected next map to be Archipelago.
+[04-07-2021 16:34:23] [I] SpaceCheddar: OOH island map
+[04-07-2021 16:34:49] [I] Niffles: Ok whatddu I do
+[04-07-2021 16:35:11] [I] Server: hi
+[04-07-2021 16:35:15] [I] SpaceCheddar: Something
+[04-07-2021 16:35:32] [E] Command not found. Did you mean "js"?
+[04-07-2021 16:35:32] [I] Server: Fu is watching
+[04-07-2021 16:35:37] [I] SpaceCheddar: Lol
+[04-07-2021 16:35:38] [I] Commands:
+[04-07-2021 16:35:38] [I]    help - Displays this command list.
+[04-07-2021 16:35:38] [I]    version - Displays server version info.
+[04-07-2021 16:35:38] [I]    exit - Exit the server application.
+[04-07-2021 16:35:38] [I]    stop - Stop hosting the server.
+[04-07-2021 16:35:38] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-07-2021 16:35:38] [I]    maps - Display all available maps.
+[04-07-2021 16:35:38] [I]    reloadmaps - Reload all maps from disk.
+[04-07-2021 16:35:38] [I]    status - Display server status.
+[04-07-2021 16:35:38] [I]    mods - Display all loaded mods.
+[04-07-2021 16:35:38] [I]    mod <name...> - Display information about a loaded plugin.
+[04-07-2021 16:35:38] [I]    js <script...> - Run arbitrary Javascript.
+[04-07-2021 16:35:38] [I]    say <message...> - Send a message to all players.
+[04-07-2021 16:35:38] [I]    pause <on/off> - Pause or unpause the game.
+[04-07-2021 16:35:38] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-07-2021 16:35:38] [I]    fillitems [team] - Fill the core with items.
+[04-07-2021 16:35:38] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-07-2021 16:35:38] [I]    config [name] [value...] - Configure server settings.
+[04-07-2021 16:35:38] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-07-2021 16:35:38] [I]    whitelisted - List the entire whitelist.
+[04-07-2021 16:35:38] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-07-2021 16:35:38] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-07-2021 16:35:38] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-07-2021 16:35:38] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-07-2021 16:35:38] [I]    kick <username...> - Kick a person by name.
+[04-07-2021 16:35:38] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-07-2021 16:35:38] [I]    bans - List all banned IPs and IDs.
+[04-07-2021 16:35:38] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-07-2021 16:35:38] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-07-2021 16:35:38] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-07-2021 16:35:38] [I]    admins - List all admins.
+[04-07-2021 16:35:38] [I]    players - List all players currently in game.
+[04-07-2021 16:35:38] [I]    runwave - Trigger the next wave.
+[04-07-2021 16:35:38] [I]    load <slot> - Load a save from a slot.
+[04-07-2021 16:35:38] [I]    save <slot> - Save game state to a slot.
+[04-07-2021 16:35:38] [I]    saves - List all saves in the save directory.
+[04-07-2021 16:35:38] [I]    gameover - Force a game over.
+[04-07-2021 16:35:38] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-07-2021 16:35:38] [I]    search <name...> - Search players who have used part of a name.
+[04-07-2021 16:35:38] [I]    gc - Trigger a garbage collection. Testing only.
+[04-07-2021 16:35:38] [I]    yes - Run the last suggested incorrect command.
+[04-07-2021 16:35:39] [I] Niffles: OOOOO
+[04-07-2021 16:35:48] [I] SpaceCheddar: Make silicon and send it to the boat factory
+[04-07-2021 16:35:54] [I] Niffles: *OK*
+[04-07-2021 16:35:59] [I] Niffles: Markdown go brrrrt
+[04-07-2021 16:36:03] [E] Invalid command. Type 'help' for help.
+[04-07-2021 16:36:05] [I] All config values:
+[04-07-2021 16:36:05] [I] | name: Server
+[04-07-2021 16:36:05] [I] | | The server name as displayed on clients.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | desc: off
+[04-07-2021 16:36:05] [I] | | The server description, displayed under the name. Max 100 characters.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | port: 6567
+[04-07-2021 16:36:05] [I] | | The port to host on.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | autoUpdate: false
+[04-07-2021 16:36:05] [I] | | Whether to auto-update and exit when a new bleeding-edge update arrives.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | showConnectMessages: true
+[04-07-2021 16:36:05] [I] | | Whether to display connect/disconnect messages.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | enableVotekick: true
+[04-07-2021 16:36:05] [I] | | Whether votekick is enabled.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | startCommands: 
+[04-07-2021 16:36:05] [I] | | Commands run at startup. This should be a comma-separated list.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | crashReport: false
+[04-07-2021 16:36:05] [I] | | Whether to send crash reports.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | logging: true
+[04-07-2021 16:36:05] [I] | | Whether to log everything to files.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | strict: true
+[04-07-2021 16:36:05] [I] | | Whether strict mode is on - corrects positions and prevents duplicate UUIDs.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | antiSpam: true
+[04-07-2021 16:36:05] [I] | | Whether spammers are automatically kicked and rate-limited.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | interactRateWindow: 6
+[04-07-2021 16:36:05] [I] | | Block interaction rate limit window, in seconds.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | interactRateLimit: 25
+[04-07-2021 16:36:05] [I] | | Block interaction rate limit.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | interactRateKick: 60
+[04-07-2021 16:36:05] [I] | | How many times a player must interact inside the window to get kicked.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | messageRateLimit: 0
+[04-07-2021 16:36:05] [I] | | Message rate limit in seconds. 0 to disable.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | messageSpamKick: 3
+[04-07-2021 16:36:05] [I] | | How many times a player must send a message before the cooldown to get kicked. 0 to disable.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | socketInput: false
+[04-07-2021 16:36:05] [I] | | Allows a local application to control this server through a local TCP socket.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | socketInputPort: 6859
+[04-07-2021 16:36:05] [I] | | The port for socket input.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | socketInputAddress: localhost
+[04-07-2021 16:36:05] [I] | | The bind address for socket input.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | allowCustomClients: false
+[04-07-2021 16:36:05] [I] | | Whether custom clients are allowed to connect.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | whitelist: false
+[04-07-2021 16:36:05] [I] | | Whether the whitelist is used.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | motd: off
+[04-07-2021 16:36:05] [I] | | The message displayed to people on connection.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | autosave: false
+[04-07-2021 16:36:05] [I] | | Whether the periodically save the map when playing.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | autosaveAmount: 10
+[04-07-2021 16:36:05] [I] | | The maximum amount of autosaves. Older ones get replaced.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | autosaveSpacing: 300
+[04-07-2021 16:36:05] [I] | | Spacing between autosaves in seconds.
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:05] [I] | debug: false
+[04-07-2021 16:36:05] [I] | | Enable debug logging
+[04-07-2021 16:36:05] [I] |
+[04-07-2021 16:36:25] [I] SpaceCheddar: Over there
+[04-07-2021 16:36:37] [I] SpaceCheddar: Sand, coal, pwoer
+[04-07-2021 16:36:40] [I] 'name' is currently Server.
+[04-07-2021 16:36:41] [I] Niffles: COLE
+[04-07-2021 16:36:52] [I] SpaceCheddar: Not quite like that
+[04-07-2021 16:36:57] [E] Invalid command. Type 'help' for help.
+[04-07-2021 16:37:06] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 16:37:10] [I] Teeler: Yello
+[04-07-2021 16:37:13] [I] Niffles: Blue
+[04-07-2021 16:37:16] [I] SpaceCheddar: Niffles dum dum
+[04-07-2021 16:37:22] [I] Niffles: Yello is good band tho
+[04-07-2021 16:37:32] [I] Teeler: Mello yello!
+[04-07-2021 16:37:56] [I] Niffles: Why is nothing i build built
+[04-07-2021 16:38:04] [I] Teeler: Press E?
+[04-07-2021 16:38:08] [I] Niffles: OHHH
+[04-07-2021 16:38:14] [I] Niffles: PAWG
+[04-07-2021 16:38:18] [I] SpaceCheddar: NO
+[04-07-2021 16:38:19] [I] Teeler: *huh* I can't drop my cargo
+[04-07-2021 16:38:19] [I] Niffles: I build
+[04-07-2021 16:38:26] [I] Niffles: EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+[04-07-2021 16:38:39] [I] Niffles: I hear a song and it goes EEEEEEEEEEEEEEE
+[04-07-2021 16:38:43] [I] SpaceCheddar: Niffles dumb
+[04-07-2021 16:38:53] [I] Niffles: YES
+[04-07-2021 16:39:30] [I] SpaceCheddar: Tyler dumb too
+[04-07-2021 16:39:36] [I] Teeler: Faster metaglass is prob. needed
+[04-07-2021 16:39:55] [I] Niffles: I WILLEAT YOU
+[04-07-2021 16:40:04] [I] Niffles: HAHAHA
+[04-07-2021 16:40:14] [I] Teeler: I'm sorry to hear that
+[04-07-2021 16:40:19] [I] SpaceCheddar: ???
+[04-07-2021 16:40:37] [I] Niffles: I am capable of placing drills
+[04-07-2021 16:40:44] [I] Niffles: And thats pretty muchn it
+[04-07-2021 16:41:22] [I] Niffles: What resources we need'
+[04-07-2021 16:41:43] [I] SpaceCheddar: Gqaphite incoming
+[04-07-2021 16:41:54] [I] SpaceCheddar: NO FINN
+[04-07-2021 16:42:01] [I] SpaceCheddar: WE DONT BUILD WITH COAL
+[04-07-2021 16:42:06] [I] Niffles: OK
+[04-07-2021 16:42:19] [I] Niffles: STAP
+[04-07-2021 16:42:23] [I] SpaceCheddar: That is going to the core
+[04-07-2021 16:42:27] [I] Niffles: OHH
+[04-07-2021 16:42:31] [I] Niffles: STORAGE
+[04-07-2021 16:42:34] [I] SpaceCheddar: Core stuff is for building
+[04-07-2021 16:42:46] [I] Teeler: We don't have those materials yet
+[04-07-2021 16:42:49] [I] Teeler: For storage
+[04-07-2021 16:42:54] [I] Niffles: Ah ok
+[04-07-2021 16:43:42] [I] Niffles: EWAN CAN I BUILD
+[04-07-2021 16:43:44] [I] Niffles: Please
+[04-07-2021 16:43:49] [I] Niffles: I wanna do something'
+[04-07-2021 16:44:30] [I] Niffles: HELLO?
+[04-07-2021 16:44:33] [I] SpaceCheddar: Ok
+[04-07-2021 16:44:47] [I] SpaceCheddar: Get titainium then
+[04-07-2021 16:44:59] [I] SpaceCheddar: Tyler do better
+[04-07-2021 16:45:02] [I] SpaceCheddar: lol
+[04-07-2021 16:45:41] [I] Teeler: Wait
+[04-07-2021 16:45:41] [I] SpaceCheddar: How do I become boat
+[04-07-2021 16:45:46] [I] Teeler: Do we need more graphite or more silicon
+[04-07-2021 16:45:50] [I] Teeler: Probably silicion, rihgt?
+[04-07-2021 16:45:52] [I] SpaceCheddar: No
+[04-07-2021 16:45:56] [I] SpaceCheddar: Defenses
+[04-07-2021 16:46:15] [I] Teeler: We need both more defenses anyways
+[04-07-2021 16:46:15] [I] Niffles: I got some graphiiiite
+[04-07-2021 16:46:19] [I] Teeler: for more
+[04-07-2021 16:46:21] [I] Teeler: Oh
+[04-07-2021 16:46:24] [I] Teeler: Okay, silicon it is
+[04-07-2021 16:47:36] [I] Niffles: What else do we need to produce
+[04-07-2021 16:48:03] [I] SpaceCheddar: Plastainium, thorium, metaglass, surge alloy
+[04-07-2021 16:48:51] [I] SpaceCheddar: And someone to freecking clean up this area
+[04-07-2021 16:48:52] [I] Niffles: Why mass driver no work
+[04-07-2021 16:48:58] [I] SpaceCheddar: Its unloading
+[04-07-2021 16:49:07] [I] Niffles: POHHH
+[04-07-2021 16:49:31] [I] Teeler: OKAY OKAY
+[04-07-2021 16:49:32] [I] SpaceCheddar: Tyler why are there no defenses
+[04-07-2021 16:49:40] [I] Niffles: IDEK
+[04-07-2021 16:49:45] [I] Niffles: Im not tyler
+[04-07-2021 16:50:06] [I] Niffles: Yaaay titanium go brrrrt
+[04-07-2021 16:50:23] [I] SpaceCheddar: OMG theres 150 items in that driver
+[04-07-2021 16:50:30] [I] Niffles: Yeeeed
+[04-07-2021 16:50:35] [I] SpaceCheddar: Now theres 200
+[04-07-2021 16:50:43] [I] Niffles: Graphite and silicon production, plus titanium mine
+[04-07-2021 16:51:04] [I] SpaceCheddar: boats are "ground targets"
+[04-07-2021 16:51:20] [I] Niffles: How do you extract sand?
+[04-07-2021 16:51:44] [I] SpaceCheddar: TYLER YOU BUILD WALLS
+[04-07-2021 16:51:47] [I] SpaceCheddar: Drill
+[04-07-2021 16:52:11] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-07-2021 16:52:58] [I] Niffles: metaglass COMIN UP
+[04-07-2021 16:53:04] [I] SpaceCheddar: goof
+[04-07-2021 16:53:07] [I] SpaceCheddar: good
+[04-07-2021 16:53:31] [I] SpaceCheddar: Tyler is that setting on to incinerate overflow?
+[04-07-2021 16:53:36] [I] Niffles: Shoot boat
+[04-07-2021 16:53:39] [I] Niffles: tyler gone'
+[04-07-2021 16:53:47] [I] SpaceCheddar: Stupid teeler
+[04-07-2021 16:55:18] [I] SpaceCheddar: Finn get thorium
+[04-07-2021 16:55:28] [I] Niffles: No Im getting metaglsass
+[04-07-2021 16:55:32] [I] SpaceCheddar: ok
+[04-07-2021 16:56:28] [I] Niffles: Need another mass driver
+[04-07-2021 16:56:33] [I] Niffles: Too much production
+[04-07-2021 16:56:57] [I] Niffles: Hence thorium yea
+[04-07-2021 16:58:05] [I] SpaceCheddar: Tyler has gaps in conveyor knowlegde
+[04-07-2021 16:59:22] [I] Niffles: Pog titanium converytr
+[04-07-2021 16:59:28] [I] SpaceCheddar: need 60 more thorium and I can get a biggo gun that shoots firs
+[04-07-2021 16:59:32] [I] SpaceCheddar: LAVA
+[04-07-2021 17:00:14] [I] SpaceCheddar: Phase fabric
+[04-07-2021 17:00:18] [I] SpaceCheddar: we need some
+[04-07-2021 17:00:18] [I] Niffles: Got it
+[04-07-2021 17:00:44] [I] Niffles: Justy a bit more thorium
+[04-07-2021 17:00:54] [I] SpaceCheddar: no, more power
+[04-07-2021 17:01:05] [I] SpaceCheddar: Trust me, just give that island more power
+[04-07-2021 17:01:18] [I] SpaceCheddar: We'll get so much more thorium
+[04-07-2021 17:02:58] [I] SpaceCheddar: POOP FASTER YOU MASS DRIVER
+[04-07-2021 17:03:47] [I] SpaceCheddar: Poopin nice and fast now
+[04-07-2021 17:03:50] [I] Niffles: Lol
+[04-07-2021 17:03:59] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 17:04:38] [I] Teeler: *noice*
+[04-07-2021 17:04:40] [I] Niffles: Thoooooorrrrriiiummmm
+[04-07-2021 17:04:42] [I] Niffles: Hewwo
+[04-07-2021 17:04:42] [I] Teeler: Mass driver set up
+[04-07-2021 17:04:47] [I] Teeler: Hmm
+[04-07-2021 17:04:56] [I] Teeler: wI designed a reactor schematic
+[04-07-2021 17:05:02] [I] Niffles: Hm?
+[04-07-2021 17:05:25] [I] Teeler: In Discord
+[04-07-2021 17:05:47] [I] Teeler: Only requires
+[04-07-2021 17:05:54] [I] Teeler: a little bit more thorium
+[04-07-2021 17:06:11] [I] Niffles: We have like... none tho
+[04-07-2021 17:06:24] [I] Teeler: Found a bit more
+[04-07-2021 17:06:52] [I] Niffles: Need more powa too
+[04-07-2021 17:07:20] [I] Teeler: enemies
+[04-07-2021 17:07:28] [I] SpaceCheddar: TSUNAMI
+[04-07-2021 17:07:32] [I] Niffles: Wth
+[04-07-2021 17:07:38] [I] SpaceCheddar: its a turret
+[04-07-2021 17:07:43] [I] Niffles: Oh lol
+[04-07-2021 17:08:08] [I] SpaceCheddar: ooh phase fabric
+[04-07-2021 17:08:17] [I] Niffles: mAss driver
+[04-07-2021 17:08:21] [I] Niffles: oopslol
+[04-07-2021 17:08:22] [I] Teeler: Yes
+[04-07-2021 17:08:25] [I] Niffles: mass driver
+[04-07-2021 17:08:29] [I] Niffles: not m ass driver
+[04-07-2021 17:09:32] [I] Niffles: We need massd river eh>
+[04-07-2021 17:09:36] [I] Niffles: For the thorium?
+[04-07-2021 17:09:41] [I] Teeler: bye
+[04-07-2021 17:09:41] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-07-2021 17:10:05] [I] Niffles: Scetter
+[04-07-2021 17:10:15] [I] Niffles: Can i use some thorium for mass driver/
+[04-07-2021 17:10:19] [I] SpaceCheddar: Ok
+[04-07-2021 17:10:21] [I] Niffles: Oh nvm,
+[04-07-2021 17:10:28] [I] SpaceCheddar: I want to amke a reactor soon
+[04-07-2021 17:10:44] [I] SpaceCheddar: also can you make some surge?
+[04-07-2021 17:10:47] [I] Niffles: Yes
+[04-07-2021 17:10:48] [I] Niffles: I will
+[04-07-2021 17:10:51] [I] SpaceCheddar: Thanks
+[04-07-2021 17:11:21] [I] Niffles: I am production boi
+[04-07-2021 17:11:25] [I] Niffles: Yopu are defence boi
+[04-07-2021 17:11:32] [I] Niffles: tyler is supreme leader
+[04-07-2021 17:11:39] [I] SpaceCheddar: Ok
+[04-07-2021 17:12:02] [I] SpaceCheddar: Need 100 silicon 100 thor
+[04-07-2021 17:12:30] [I] SpaceCheddar: Hey finn they blew up thor island
+[04-07-2021 17:17:04] [I] Niffles: ?
+[04-07-2021 17:17:09] [I] Niffles: Ohh
+[04-07-2021 17:17:24] [I] SpaceCheddar: Reactor
+[04-07-2021 17:17:27] [I] Niffles: Yes
+[04-07-2021 17:17:29] [I] Niffles: Sorry
+[04-07-2021 17:18:05] [I] SpaceCheddar: No power downtime now
+[04-07-2021 17:18:09] [I] Niffles: Hmm ok
+[04-07-2021 17:19:50] [I] SpaceCheddar: This island will be great for turrets
+[04-07-2021 17:20:10] [I] SpaceCheddar: Except we need plastainium and surge
+[04-07-2021 17:20:47] [I] SpaceCheddar: uh alloy needs copper
+[04-07-2021 17:20:52] [I] SpaceCheddar: OH
+[04-07-2021 17:20:52] [I] Niffles: Yes
+[04-07-2021 17:20:56] [I] Niffles: Im doing it
+[04-07-2021 17:20:56] [I] SpaceCheddar: I see
+[04-07-2021 17:21:04] [I] SpaceCheddar: Ill make plastic
+[04-07-2021 17:23:44] [I] Niffles: How doies sorter eork
+[04-07-2021 17:24:17] [I] Niffles: Ohh nvm
+[04-07-2021 17:25:17] [I] Niffles: Woah pog
+[04-07-2021 17:25:41] [I] SpaceCheddar: Yeet everything comes from that island
+[04-07-2021 17:25:46] [I] Niffles: This is epic
+[04-07-2021 17:25:52] [I] SpaceCheddar: This is a nice map
+[04-07-2021 17:26:08] [I] SpaceCheddar: I need to see how close boats come to this island
+[04-07-2021 17:26:21] [I] SpaceCheddar: Very
+[04-07-2021 17:26:57] [I] Niffles: 2x phase now
+[04-07-2021 17:27:14] [I] SpaceCheddar: I need 175 plastic and 250 surge
+[04-07-2021 17:27:31] [I] SpaceCheddar: yeah, a lot
+[04-07-2021 17:27:50] [I] Niffles: Sand drill pog
+[04-07-2021 17:27:54] [I] Niffles: lmao
+[04-07-2021 17:28:14] [I] SpaceCheddar: LOL
+[04-07-2021 17:28:19] [I] SpaceCheddar: OMG
+[04-07-2021 17:28:27] [I] SpaceCheddar: WE HAVE NEGATIVE POWER
+[04-07-2021 17:28:32] [I] SpaceCheddar: HOW
+[04-07-2021 17:28:51] [I] Niffles: Imma quick make more plastanium
+[04-07-2021 17:29:02] [I] SpaceCheddar: Surge is what we need but ok
+[04-07-2021 17:29:08] [I] Niffles: Ok ill make more that too
+[04-07-2021 17:29:47] [I] SpaceCheddar: Oh a *surge* of surge is coming
+[04-07-2021 17:29:54] [I] Niffles: Lol
+[04-07-2021 17:30:04] [I] SpaceCheddar: A plane took out a conveyor
+[04-07-2021 17:30:12] [I] SpaceCheddar: Now it has lead again
+[04-07-2021 17:30:13] [I] Niffles: Ohh
+[04-07-2021 17:30:16] [I] Niffles: Yea
+[04-07-2021 17:32:08] [I] Server: I can save this map too if you want to later - Fu
+[04-07-2021 17:32:15] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 17:32:18] [I] Teeler: Or I can save now
+[04-07-2021 17:32:21] [I] Niffles: HEY
+[04-07-2021 17:32:22] [I] Commands:
+[04-07-2021 17:32:22] [I]    help - Displays this command list.
+[04-07-2021 17:32:22] [I]    version - Displays server version info.
+[04-07-2021 17:32:22] [I]    exit - Exit the server application.
+[04-07-2021 17:32:22] [I]    stop - Stop hosting the server.
+[04-07-2021 17:32:22] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-07-2021 17:32:22] [I]    maps - Display all available maps.
+[04-07-2021 17:32:22] [I]    reloadmaps - Reload all maps from disk.
+[04-07-2021 17:32:22] [I]    status - Display server status.
+[04-07-2021 17:32:22] [I]    mods - Display all loaded mods.
+[04-07-2021 17:32:22] [I]    mod <name...> - Display information about a loaded plugin.
+[04-07-2021 17:32:22] [I]    js <script...> - Run arbitrary Javascript.
+[04-07-2021 17:32:22] [I]    say <message...> - Send a message to all players.
+[04-07-2021 17:32:22] [I]    pause <on/off> - Pause or unpause the game.
+[04-07-2021 17:32:22] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-07-2021 17:32:22] [I]    fillitems [team] - Fill the core with items.
+[04-07-2021 17:32:22] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-07-2021 17:32:22] [I]    config [name] [value...] - Configure server settings.
+[04-07-2021 17:32:22] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-07-2021 17:32:22] [I]    whitelisted - List the entire whitelist.
+[04-07-2021 17:32:22] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-07-2021 17:32:22] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-07-2021 17:32:22] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-07-2021 17:32:22] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-07-2021 17:32:22] [I]    kick <username...> - Kick a person by name.
+[04-07-2021 17:32:22] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-07-2021 17:32:22] [I]    bans - List all banned IPs and IDs.
+[04-07-2021 17:32:22] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-07-2021 17:32:22] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-07-2021 17:32:22] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-07-2021 17:32:22] [I]    admins - List all admins.
+[04-07-2021 17:32:22] [I]    players - List all players currently in game.
+[04-07-2021 17:32:22] [I]    runwave - Trigger the next wave.
+[04-07-2021 17:32:22] [I]    load <slot> - Load a save from a slot.
+[04-07-2021 17:32:22] [I]    save <slot> - Save game state to a slot.
+[04-07-2021 17:32:22] [I]    saves - List all saves in the save directory.
+[04-07-2021 17:32:22] [I]    gameover - Force a game over.
+[04-07-2021 17:32:22] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-07-2021 17:32:22] [I]    search <name...> - Search players who have used part of a name.
+[04-07-2021 17:32:22] [I]    gc - Trigger a garbage collection. Testing only.
+[04-07-2021 17:32:22] [I]    yes - Run the last suggested incorrect command.
+[04-07-2021 17:32:23] [I] Niffles: Same
+[04-07-2021 17:32:24] [I] Niffles: Save
+[04-07-2021 17:32:26] [I] Niffles: Oops
+[04-07-2021 17:32:28] [I] Niffles: lol
+[04-07-2021 17:32:32] [E] Too few command arguments. Usage: save <slot>
+[04-07-2021 17:32:34] [I] Save files: 
+[04-07-2021 17:32:37] [I] Saved to config/saves/0.msav.
+[04-07-2021 17:32:55] [I] Saved to config/saves/05.32-4.7.21.msav.
+[04-07-2021 17:33:02] [I] Teeler: Saved
+[04-07-2021 17:33:42] [I] Niffles: Plastanium go brrr
+[04-07-2021 17:34:27] [I] SpaceCheddar: We need titainuim
+[04-07-2021 17:34:33] [I] Teeler: Is there any way to put in land?
+[04-07-2021 17:34:41] [I] SpaceCheddar: Put what
+[04-07-2021 17:34:48] [I] Teeler: mass driver can't go far enough
+[04-07-2021 17:34:52] [I] Teeler: I need land to put it on
+[04-07-2021 17:35:31] [I] Teeler: We should make some unit factories
+[04-07-2021 17:35:41] [I] SpaceCheddar: You do that somewhere
+[04-07-2021 17:35:44] [I] Niffles: Ewan islabnd needs more Anti aircraft
+[04-07-2021 17:36:05] [I] Teeler: My god
+[04-07-2021 17:36:15] [I] SpaceCheddar: OH CRAP
+[04-07-2021 17:36:42] [I] Teeler: Out of titanium
+[04-07-2021 17:36:42] [I] SpaceCheddar: HELP ME EVERYONE
+[04-07-2021 17:37:32] [I] Teeler: I dunno what was there before, Ewan
+[04-07-2021 17:37:33] [I] SpaceCheddar: Oh tyler
+[04-07-2021 17:37:40] [I] Niffles: What do ya need
+[04-07-2021 17:37:45] [I] SpaceCheddar: They must have come from a different way
+[04-07-2021 17:37:47] [I] SpaceCheddar: SURGE
+[04-07-2021 17:37:53] [I] Teeler: AAAAAA!
+[04-07-2021 17:38:30] [I] SpaceCheddar: Wellp I need to leave
+[04-07-2021 17:38:34] [I] SpaceCheddar: Soory
+[04-07-2021 17:38:56] [I] SpaceCheddar: Put a spectre on the thorium island if possible
+[04-07-2021 17:38:58] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-07-2021 17:40:44] [I] Game over! Reached wave 28 with 2 players online on map Archipelago.
+[04-07-2021 17:40:44] [I] Selected next map to be Ancient Caldera.
+[04-07-2021 17:40:52] [I] Teeler: well
+[04-07-2021 17:41:01] [I] Niffles: what
+[04-07-2021 17:41:07] [I] Niffles: WHAT
+[04-07-2021 17:41:15] [I] Niffles: Excuzes moi
+[04-07-2021 17:41:27] [I] Niffles: What the happened
+[04-07-2021 17:41:29] [I] Teeler: If you wanna play archipelago again I can load it
+[04-07-2021 17:41:34] [I] Niffles: No its fine
+[04-07-2021 17:42:29] [I] Niffles: I can do res collection and product
+[04-07-2021 17:42:53] [I] Niffles: Good place obver here for production
+[04-07-2021 17:43:32] [I] Niffles: Why drill no buuild
+[04-07-2021 17:43:38] [I] Teeler: need more copper
+[04-07-2021 17:43:49] [I] Niffles: Well im drilling it
+[04-07-2021 17:44:16] [I] Niffles: AAAAAAAA
+[04-07-2021 17:44:18] [I] Niffles: FRICK
+[04-07-2021 17:44:21] [I] Niffles: WHAT THE HECL
+[04-07-2021 17:44:22] [I] Teeler: HEY!
+[04-07-2021 17:44:28] [I] Niffles: Omg so sorry
+[04-07-2021 17:44:32] [I] Teeler: Oh
+[04-07-2021 17:44:35] [I] Niffles: Idk what thye heck happened
+[04-07-2021 17:44:37] [I] Teeler: Itsfine
+[04-07-2021 17:45:02] [I] Niffles: THERE
+[04-07-2021 17:45:05] [I] Niffles: Copper a TON
+[04-07-2021 17:45:16] [I] Niffles: Whoa
+[04-07-2021 17:45:23] [I] Niffles: Jeebus thats a lot of copper
+[04-07-2021 17:45:33] [I] Teeler: There's a lot of congestion on the line
+[04-07-2021 17:45:42] [I] Niffles: Copper!
+[04-07-2021 17:46:06] [I] Niffles: DIE BOT
+[04-07-2021 17:46:17] [I] Niffles: :(
+[04-07-2021 17:48:10] [I] Teeler: Silicon thyme
+[04-07-2021 17:48:20] [I] Teeler: Meant graphite
+[04-07-2021 17:48:44] [I] Game over! Reached wave 3 with 2 players online on map Ancient Caldera.
+[04-07-2021 17:48:44] [I] Selected next map to be Islands.
+[04-07-2021 17:48:49] [I] Teeler: How
+[04-07-2021 17:48:59] [I] Niffles: Go back
+[04-07-2021 17:49:07] [I] Teeler: Why?
+[04-07-2021 17:49:12] [I] Niffles: We had a good save
+[04-07-2021 17:49:15] [I] Niffles: Pleeees
+[04-07-2021 17:49:20] [I] Teeler: OOK
+[04-07-2021 17:49:26] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-07-2021 17:49:31] [I] Commands:
+[04-07-2021 17:49:31] [I]    help - Displays this command list.
+[04-07-2021 17:49:31] [I]    version - Displays server version info.
+[04-07-2021 17:49:31] [I]    exit - Exit the server application.
+[04-07-2021 17:49:31] [I]    stop - Stop hosting the server.
+[04-07-2021 17:49:31] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-07-2021 17:49:31] [I]    maps - Display all available maps.
+[04-07-2021 17:49:31] [I]    reloadmaps - Reload all maps from disk.
+[04-07-2021 17:49:31] [I]    status - Display server status.
+[04-07-2021 17:49:31] [I]    mods - Display all loaded mods.
+[04-07-2021 17:49:31] [I]    mod <name...> - Display information about a loaded plugin.
+[04-07-2021 17:49:31] [I]    js <script...> - Run arbitrary Javascript.
+[04-07-2021 17:49:31] [I]    say <message...> - Send a message to all players.
+[04-07-2021 17:49:31] [I]    pause <on/off> - Pause or unpause the game.
+[04-07-2021 17:49:31] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-07-2021 17:49:31] [I]    fillitems [team] - Fill the core with items.
+[04-07-2021 17:49:31] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-07-2021 17:49:31] [I]    config [name] [value...] - Configure server settings.
+[04-07-2021 17:49:31] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-07-2021 17:49:31] [I]    whitelisted - List the entire whitelist.
+[04-07-2021 17:49:31] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-07-2021 17:49:31] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-07-2021 17:49:31] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-07-2021 17:49:31] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-07-2021 17:49:31] [I]    kick <username...> - Kick a person by name.
+[04-07-2021 17:49:31] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-07-2021 17:49:31] [I]    bans - List all banned IPs and IDs.
+[04-07-2021 17:49:31] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-07-2021 17:49:31] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-07-2021 17:49:31] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-07-2021 17:49:31] [I]    admins - List all admins.
+[04-07-2021 17:49:31] [I]    players - List all players currently in game.
+[04-07-2021 17:49:31] [I]    runwave - Trigger the next wave.
+[04-07-2021 17:49:31] [I]    load <slot> - Load a save from a slot.
+[04-07-2021 17:49:31] [I]    save <slot> - Save game state to a slot.
+[04-07-2021 17:49:31] [I]    saves - List all saves in the save directory.
+[04-07-2021 17:49:31] [I]    gameover - Force a game over.
+[04-07-2021 17:49:31] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-07-2021 17:49:31] [I]    search <name...> - Search players who have used part of a name.
+[04-07-2021 17:49:31] [I]    gc - Trigger a garbage collection. Testing only.
+[04-07-2021 17:49:31] [I]    yes - Run the last suggested incorrect command.
+[04-07-2021 17:49:40] [I] Stopped server.
+[04-07-2021 17:49:47] [I] Maps:
+[04-07-2021 17:49:47] [I]   Ancient_Caldera: Default / 256x256
+[04-07-2021 17:49:47] [I]   Archipelago: Default / 500x500
+[04-07-2021 17:49:47] [I]   Debris_Field: Default / 400x400
+[04-07-2021 17:49:47] [I]   Fork: Default / 250x300
+[04-07-2021 17:49:47] [I]   Fortress: Default / 256x256
+[04-07-2021 17:49:47] [I]   Glacier: Default / 150x250
+[04-07-2021 17:49:47] [I]   Islands: Default / 256x256
+[04-07-2021 17:49:47] [I]   Labyrinth: Default / 200x200
+[04-07-2021 17:49:47] [I]   Maze: Default / 256x256
+[04-07-2021 17:49:47] [I]   Molten_Lake: Default / 400x400
+[04-07-2021 17:49:47] [I]   Mud_Flats: Default / 400x400
+[04-07-2021 17:49:47] [I]   Shattered: Default / 350x350
+[04-07-2021 17:49:47] [I]   Tendrils: Default / 300x300
+[04-07-2021 17:49:47] [I]   Triad: Default / 200x200
+[04-07-2021 17:49:47] [I]   Veins: Default / 350x200
+[04-07-2021 17:49:47] [I]   Wasteland: Default / 300x300
+[04-07-2021 17:49:47] [I] Map directory: D:\Mindustry-Server\config\maps
+[04-07-2021 17:49:53] [I] Save files: 
+[04-07-2021 17:49:53] [I] | 0
+[04-07-2021 17:49:53] [I] | 05.32-4.7.21
+[04-07-2021 17:49:59] [E] No map with name '05.32-4.7.21' found.
+[04-07-2021 17:50:06] [I] Randomized next map to be Triad.
+[04-07-2021 17:50:06] [I] Loading map...
+[04-07-2021 17:50:06] [I] Map loaded.
+[04-07-2021 17:50:06] [I] Opened a server on port 6567.
+[04-07-2021 17:50:12] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-07-2021 17:50:15] [I] Stopped server.
+[04-07-2021 17:50:21] [I] Save loaded.
+[04-07-2021 17:50:21] [I] Opened a server on port 6567.
+[04-07-2021 17:50:30] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-07-2021 17:50:40] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-07-2021 17:51:06] [I] Niffles: Teeler the other one
+[04-07-2021 17:51:31] [I] Niffles: TEEEEE
+[04-07-2021 17:52:12] [I] Niffles: eeeeeeeeeeeeeeeeeee
+[04-07-2021 17:57:04] [I] Teeler: Naval factories need silicon & metaglass?
+[04-07-2021 17:57:08] [I] Niffles: Teeler
+[04-07-2021 17:57:12] [I] Niffles: Go to the other save
+[04-07-2021 17:57:28] [I] Niffles: That we had just started
+[04-07-2021 17:58:27] [I] Niffles: Teee?
+[04-07-2021 17:58:34] [I] Teeler: gimme a moment
+[04-07-2021 17:58:38] [I] Teeler: want to finish naval factory
+[04-07-2021 17:58:44] [I] Niffles: Ok thannns
+[04-07-2021 18:01:35] [I] Saved to config/saves/6.01-4.7.21.msav.
+[04-07-2021 18:02:27] [I] Teeler: They seem to love attacking here
+[04-07-2021 18:06:39] [I] Niffles: Ready for other save?
+[04-07-2021 18:07:22] [I] Teeler: Um
+[04-07-2021 18:13:23] [I] Teeler: bye
+[04-07-2021 18:13:24] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-07-2021 18:26:12] [I] Game over! Reached wave 40 with 1 players online on map Archipelago.
+[04-07-2021 18:26:12] [I] Selected next map to be Ancient Caldera.
+[04-07-2021 18:30:05] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (closed)
+[04-07-2021 18:31:46] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-07-2021 18:31:46] [I] Selected next map to be Tendrils.
+[04-07-2021 18:37:33] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-07-2021 18:37:33] [I] Selected next map to be Triad.
+[04-07-2021 18:44:56] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-07-2021 18:44:56] [I] Selected next map to be Tendrils.
+[04-07-2021 18:50:43] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-07-2021 18:50:43] [I] Selected next map to be Triad.
+[04-07-2021 18:58:06] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-07-2021 18:58:06] [I] Selected next map to be Tendrils.
+[04-07-2021 19:03:53] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-07-2021 19:03:53] [I] Selected next map to be Labyrinth.
+[04-07-2021 19:10:19] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-07-2021 19:10:19] [I] Selected next map to be Ancient Caldera.
+[04-07-2021 19:15:52] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-07-2021 19:15:52] [I] Selected next map to be Wasteland.
+[04-07-2021 19:22:23] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-07-2021 19:22:23] [I] Selected next map to be Debris Field.
+[04-07-2021 19:28:25] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-07-2021 19:28:25] [I] Selected next map to be Ancient Caldera.
+[04-07-2021 19:33:58] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-07-2021 19:33:58] [I] Selected next map to be Maze.
+[04-07-2021 19:40:40] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-07-2021 19:40:40] [I] Selected next map to be Debris Field.
+[04-07-2021 19:46:50] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-07-2021 19:46:50] [I] Selected next map to be Archipelago.
+[04-07-2021 19:53:41] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-07-2021 19:53:41] [I] Selected next map to be Islands.
+[04-07-2021 19:59:37] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-07-2021 19:59:37] [I] Selected next map to be Shattered.
+[04-07-2021 20:04:57] [E] Command not found. Did you mean "js"?
+[04-07-2021 20:04:59] [I] Commands:
+[04-07-2021 20:04:59] [I]    help - Displays this command list.
+[04-07-2021 20:04:59] [I]    version - Displays server version info.
+[04-07-2021 20:04:59] [I]    exit - Exit the server application.
+[04-07-2021 20:04:59] [I]    stop - Stop hosting the server.
+[04-07-2021 20:04:59] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-07-2021 20:04:59] [I]    maps - Display all available maps.
+[04-07-2021 20:04:59] [I]    reloadmaps - Reload all maps from disk.
+[04-07-2021 20:04:59] [I]    status - Display server status.
+[04-07-2021 20:04:59] [I]    mods - Display all loaded mods.
+[04-07-2021 20:04:59] [I]    mod <name...> - Display information about a loaded plugin.
+[04-07-2021 20:04:59] [I]    js <script...> - Run arbitrary Javascript.
+[04-07-2021 20:04:59] [I]    say <message...> - Send a message to all players.
+[04-07-2021 20:04:59] [I]    pause <on/off> - Pause or unpause the game.
+[04-07-2021 20:04:59] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-07-2021 20:04:59] [I]    fillitems [team] - Fill the core with items.
+[04-07-2021 20:04:59] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-07-2021 20:04:59] [I]    config [name] [value...] - Configure server settings.
+[04-07-2021 20:04:59] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-07-2021 20:04:59] [I]    whitelisted - List the entire whitelist.
+[04-07-2021 20:04:59] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-07-2021 20:04:59] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-07-2021 20:04:59] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-07-2021 20:04:59] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-07-2021 20:04:59] [I]    kick <username...> - Kick a person by name.
+[04-07-2021 20:04:59] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-07-2021 20:04:59] [I]    bans - List all banned IPs and IDs.
+[04-07-2021 20:04:59] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-07-2021 20:04:59] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-07-2021 20:04:59] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-07-2021 20:04:59] [I]    admins - List all admins.
+[04-07-2021 20:04:59] [I]    players - List all players currently in game.
+[04-07-2021 20:04:59] [I]    runwave - Trigger the next wave.
+[04-07-2021 20:04:59] [I]    load <slot> - Load a save from a slot.
+[04-07-2021 20:04:59] [I]    save <slot> - Save game state to a slot.
+[04-07-2021 20:04:59] [I]    saves - List all saves in the save directory.
+[04-07-2021 20:04:59] [I]    gameover - Force a game over.
+[04-07-2021 20:04:59] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-07-2021 20:04:59] [I]    search <name...> - Search players who have used part of a name.
+[04-07-2021 20:04:59] [I]    gc - Trigger a garbage collection. Testing only.
+[04-07-2021 20:04:59] [I]    yes - Run the last suggested incorrect command.
+[04-07-2021 20:05:32] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-07-2021 21:13:58] [I] Server loaded. Type 'help' for help.
+[04-07-2021 21:14:03] [I] Randomized next map to be Mud Flats.
+[04-07-2021 21:14:03] [I] Loading map...
+[04-07-2021 21:14:04] [I] Map loaded.
+[04-07-2021 21:14:04] [I] Opened a server on port 6567.
+[04-07-2021 21:20:25] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-07-2021 21:20:25] [I] Selected next map to be Debris Field.
+[04-07-2021 21:26:48] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-07-2021 21:26:48] [I] Selected next map to be Labyrinth.
+[04-07-2021 21:33:15] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-07-2021 21:33:15] [I] Selected next map to be Shattered.
+[04-07-2021 21:39:45] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-07-2021 21:39:45] [I] Selected next map to be Debris Field.
+[04-07-2021 21:45:58] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-07-2021 21:45:58] [I] Selected next map to be Islands.
+[04-07-2021 21:51:54] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-07-2021 21:51:54] [I] Selected next map to be Tendrils.
+[04-07-2021 21:57:40] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-07-2021 21:57:40] [I] Selected next map to be Fortress.
+[04-07-2021 22:03:09] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-07-2021 22:03:09] [I] Selected next map to be Labyrinth.
+[04-07-2021 22:09:35] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-07-2021 22:09:35] [I] Selected next map to be Maze.
+[04-07-2021 22:16:16] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-07-2021 22:16:16] [I] Selected next map to be Islands.
+[04-07-2021 22:22:12] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-07-2021 22:22:12] [I] Selected next map to be Archipelago.
+[04-07-2021 22:29:02] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-07-2021 22:29:02] [I] Selected next map to be Fork.
+[04-07-2021 22:35:03] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-07-2021 22:35:03] [I] Selected next map to be Tendrils.
+[04-07-2021 22:40:50] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-07-2021 22:40:50] [I] Selected next map to be Islands.
+[04-07-2021 22:46:47] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-07-2021 22:46:47] [I] Selected next map to be Fortress.
+[04-07-2021 22:52:16] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-07-2021 22:52:16] [I] Selected next map to be Triad.
+[04-07-2021 22:59:39] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-07-2021 22:59:39] [I] Selected next map to be Fortress.
+[04-07-2021 23:05:08] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-07-2021 23:05:08] [I] Selected next map to be Maze.
+[04-07-2021 23:11:49] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-07-2021 23:11:49] [I] Selected next map to be Fortress.
+[04-07-2021 23:17:18] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-07-2021 23:17:18] [I] Selected next map to be Islands.
+[04-07-2021 23:23:15] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-07-2021 23:23:15] [I] Selected next map to be Molten Lake.
+[04-07-2021 23:29:13] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-07-2021 23:29:13] [I] Selected next map to be Triad.
+[04-08-2021 14:48:16] [I] Server loaded. Type 'help' for help.
+[04-08-2021 14:48:21] [I] Randomized next map to be Archipelago.
+[04-08-2021 14:48:21] [I] Loading map...
+[04-08-2021 14:48:23] [I] Map loaded.
+[04-08-2021 14:48:23] [I] Opened a server on port 6567.
+[04-08-2021 14:48:32] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 14:49:00] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-08-2021 14:49:06] [I] Teeler: It chose Archipleago
+[04-08-2021 14:49:17] [I] SpaceCheddar: what will the bot do
+[04-08-2021 14:49:27] [I] Teeler: Allow you to control the server a little bit
+[04-08-2021 14:49:32] [I] Teeler: Choose maps, etc
+[04-08-2021 14:49:39] [I] Teeler: Pause the game
+[04-08-2021 14:50:25] [I] SpaceCheddar: settings control?
+[04-08-2021 14:50:32] [I] Teeler: Correct
+[04-08-2021 14:50:48] [I] SpaceCheddar: core destroy overflow on?
+[04-08-2021 14:51:08] [I] Teeler: I forgot
+[04-08-2021 14:51:19] [I] Teeler: I can do that, though
+[04-08-2021 14:51:19] [I] SpaceCheddar: eee
+[04-08-2021 14:51:23] [I] Teeler: Once I find the setting
+[04-08-2021 14:53:06] [I] SpaceCheddar: what the heck thler
+[04-08-2021 14:53:16] [I] Teeler: what?
+[04-08-2021 14:53:25] [I] SpaceCheddar: junctions are not routers
+[04-08-2021 14:53:40] [I] Teeler: No, it's to prevent belt contamination
+[04-08-2021 14:53:41] [I] SpaceCheddar: do you know how to conveyor?
+[04-08-2021 14:53:59] [I] SpaceCheddar: COAL DOES NOT VO IN THE CORE
+[04-08-2021 14:54:59] [I] SpaceCheddar: ooooh
+[04-08-2021 14:55:11] [I] SpaceCheddar: thats smart teeler
+[04-08-2021 14:55:20] [I] SpaceCheddar: the junctions
+[04-08-2021 14:55:31] [I] SpaceCheddar: crap enemyz
+[04-08-2021 14:57:18] [I] SpaceCheddar: lol Tyler there's 5 yod on bus saying that he cares about his girlfriend
+[04-08-2021 14:57:35] [I] Teeler: Never know, maybe he does care?
+[04-08-2021 14:57:44] [I] SpaceCheddar: HES 5
+[04-08-2021 14:58:00] [I] Teeler: You  never know
+[04-08-2021 14:58:03] [I] Teeler: Kids these days ...
+[04-08-2021 14:58:11] [I] SpaceCheddar: lol yes
+[04-08-2021 15:02:47] [I] SpaceCheddar: Tyler scatters don't shoot boats
+[04-08-2021 15:02:55] [I] Teeler: OH
+[04-08-2021 15:02:57] [I] Teeler: right
+[04-08-2021 15:02:59] [I] Teeler: I forgot
+[04-08-2021 15:03:03] [I] Teeler: Scatters only do air units
+[04-08-2021 15:06:36] [I] SpaceCheddar: surge coming up
+[04-08-2021 15:08:06] [I] SpaceCheddar: what did I say about walls
+[04-08-2021 15:08:20] [I] SpaceCheddar: very good
+[04-08-2021 15:10:29] [I] SpaceCheddar: freeck
+[04-08-2021 15:10:46] [I] SpaceCheddar: I will manually ship items over
+[04-08-2021 15:10:55] [I] SpaceCheddar: FIX THSI
+[04-08-2021 15:11:30] [I] SpaceCheddar: bad tyler
+[04-08-2021 15:14:07] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 15:17:40] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 15:17:51] [I] SpaceCheddar: whered you go
+[04-08-2021 15:18:05] [I] Teeler: I hav eto go do some chores
+[04-08-2021 15:18:13] [I] SpaceCheddar: ok
+[04-08-2021 15:18:33] [I] Teeler: "whered you go" : I had to lookup some the specs of the Naval Factory
+[04-08-2021 15:18:39] [I] Teeler: I was considering making one
+[04-08-2021 15:18:46] [I] Teeler: Bye now
+[04-08-2021 15:18:47] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 15:18:56] [I] SpaceCheddar: you didn't have to disconnect
+[04-08-2021 15:33:08] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (closed)
+[04-08-2021 15:37:27] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 15:44:50] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-08-2021 15:44:53] [I] Niffles: Eyo
+[04-08-2021 15:44:55] [I] Niffles: Who dis
+[04-08-2021 15:44:57] [I] Teeler: We did another island one
+[04-08-2021 15:45:05] [I] Niffles: OOH
+[04-08-2021 15:45:07] [I] Niffles: Lemme heelp
+[04-08-2021 15:45:11] [I] Niffles: I can produce stuff
+[04-08-2021 15:46:22] [I] Niffles: Imma  ake more silicon
+[04-08-2021 15:46:28] [I] Teeler: Good idea
+[04-08-2021 15:46:57] [I] Niffles: Uhhh
+[04-08-2021 15:47:09] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-08-2021 15:47:17] [I] SpaceCheddar: Itsa meea mario
+[04-08-2021 15:47:30] [I] Niffles: Its yousa ewaan
+[04-08-2021 15:47:33] [I] Niffles: meesa
+[04-08-2021 15:47:35] [I] Niffles: jarjar
+[04-08-2021 15:48:07] [I] Teeler: There we go
+[04-08-2021 15:48:16] [I] Niffles: Need titanium
+[04-08-2021 15:48:18] [I] Teeler: 3600 of generation capacity on the production island
+[04-08-2021 15:48:21] [I] Niffles: The mass driver is jammed
+[04-08-2021 15:48:41] [I] Niffles: THERE
+[04-08-2021 15:48:46] [I] Niffles: Thanks ewan
+[04-08-2021 15:48:55] [I] SpaceCheddar: yeo
+[04-08-2021 15:49:20] [I] SpaceCheddar: stop using the titatum
+[04-08-2021 15:49:24] [I] Niffles: I NEED IT
+[04-08-2021 15:49:28] [I] SpaceCheddar: I do too
+[04-08-2021 15:49:31] [I] Niffles: For what
+[04-08-2021 15:49:34] [I] SpaceCheddar: I need *1*
+[04-08-2021 15:49:34] [I] Niffles: just wondering
+[04-08-2021 15:49:38] [I] Niffles: oh lol
+[04-08-2021 15:49:45] [I] Niffles: Im done now
+[04-08-2021 15:49:47] [I] SpaceCheddar: boom done
+[04-08-2021 15:49:56] [I] Game over! Reached wave 26 with 3 players online on map Archipelago.
+[04-08-2021 15:49:56] [I] Selected next map to be Fortress.
+[04-08-2021 15:50:10] [I] Teeler: Darn?
+[04-08-2021 15:50:13] [I] Niffles: TEELER
+[04-08-2021 15:50:14] [I] Niffles: HOW
+[04-08-2021 15:50:21] [I] Teeler: I was setting up reactors, Finn
+[04-08-2021 15:50:33] [I] Niffles: Ok lez go
+[04-08-2021 15:50:37] [I] Niffles: Ill get some resources'
+[04-08-2021 15:50:54] [I] SpaceCheddar: FRICK
+[04-08-2021 15:51:05] [I] Niffles: Thanks tyler!
+[04-08-2021 15:51:07] [I] SpaceCheddar: We all used it up lol
+[04-08-2021 15:51:31] [I] SpaceCheddar: Ok thats good tyler
+[04-08-2021 15:51:45] [I] Niffles: Ewan
+[04-08-2021 15:51:58] [I] Niffles: my littke area
+[04-08-2021 15:52:06] [I] SpaceCheddar: reet
+[04-08-2021 15:52:12] [I] Teeler: Graphite, please
+[04-08-2021 15:52:15] [I] SpaceCheddar: Fine, I'll build walls
+[04-08-2021 15:52:50] [I] SpaceCheddar: Ooh look, an oil lake
+[04-08-2021 15:52:53] [I] Niffles: OOOO
+[04-08-2021 15:52:57] [I] Niffles: This is good map
+[04-08-2021 15:52:58] [I] Teeler: OOOOO!
+[04-08-2021 15:53:02] [I] Teeler: We played this once
+[04-08-2021 15:53:05] [I] SpaceCheddar: Plastainium
+[04-08-2021 15:53:05] [I] Niffles: And we can block off this section with smol wall
+[04-08-2021 15:53:27] [I] SpaceCheddar: I'd love to use spectres eventually
+[04-08-2021 15:54:00] [I] SpaceCheddar: Go kill em
+[04-08-2021 15:54:07] [I] SpaceCheddar: No walls or defenses yet
+[04-08-2021 15:54:17] [I] Niffles: There graophute
+[04-08-2021 15:54:26] [I] Niffles: Mas noise
+[04-08-2021 15:55:01] [I] Teeler: Bye
+[04-08-2021 15:55:04] [I] SpaceCheddar: no
+[04-08-2021 15:55:12] [I] SpaceCheddar: Illeagl
+[04-08-2021 15:55:15] [I] SpaceCheddar: Stay
+[04-08-2021 15:55:16] [I] Teeler: Fine
+[04-08-2021 15:55:19] [I] Teeler: 10 mins
+[04-08-2021 15:55:19] [I] SpaceCheddar: lol
+[04-08-2021 15:55:21] [I] Teeler: Then I leave
+[04-08-2021 15:55:39] [I] SpaceCheddar: surely you dont *want* to leave
+[04-08-2021 15:55:56] [I] Teeler: Well, I do want to finish those shelves today
+[04-08-2021 15:56:21] [I] Teeler: Hello Mister Finley
+[04-08-2021 15:56:31] [I] Niffles: Hewwo
+[04-08-2021 15:56:50] [I] Teeler: Whew
+[04-08-2021 15:56:56] [I] Niffles: weew
+[04-08-2021 15:56:57] [I] Teeler: Those scorches are *lifesavers*
+[04-08-2021 15:57:05] [I] Teeler: Don't hook these graphite ones up
+[04-08-2021 15:57:11] [I] Teeler: They're for ammo
+[04-08-2021 15:57:15] [I] SpaceCheddar: EEEEEE gtg for like 15 mins
+[04-08-2021 15:57:19] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-08-2021 15:59:07] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-08-2021 15:59:23] [I] SpaceCheddar: nvmd i forgot about the phone
+[04-08-2021 16:00:04] [I] Teeler: bye *now*
+[04-08-2021 16:00:05] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 16:01:22] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (closed)
+[04-08-2021 16:02:23] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-08-2021 16:02:28] [I] SpaceCheddar: voice>
+[04-08-2021 16:02:59] [I] SpaceCheddar: voice????
+[04-08-2021 16:03:05] [I] Niffles: mom sl;eeping'
+[04-08-2021 16:03:09] [I] SpaceCheddar: OOf ok
+[04-08-2021 16:03:10] [I] Niffles: REEE
+[04-08-2021 16:04:43] [I] SpaceCheddar: Tyler can be stupid sometimes
+[04-08-2021 16:04:56] [I] Niffles: Uhhhh
+[04-08-2021 16:05:00] [I] Niffles: Ewam
+[04-08-2021 16:05:07] [I] SpaceCheddar: WTH
+[04-08-2021 16:05:14] [I] Niffles: They are suicide bomb things
+[04-08-2021 16:05:19] [I] SpaceCheddar: Not good
+[04-08-2021 16:05:26] [I] SpaceCheddar: Coal stuff must burn
+[04-08-2021 16:05:47] [I] SpaceCheddar: You fix I defend
+[04-08-2021 16:05:52] [I] Niffles: WHEEEZE
+[04-08-2021 16:06:02] [I] SpaceCheddar: Wheeze?
+[04-08-2021 16:06:05] [I] Niffles: Lol
+[04-08-2021 16:06:06] [I] Niffles: idk
+[04-08-2021 16:06:25] [I] SpaceCheddar: Maybe the wall will presuade them
+[04-08-2021 16:06:30] [I] SpaceCheddar: Yep good
+[04-08-2021 16:08:43] [I] Niffles: Ewan put tyurrets near here
+[04-08-2021 16:08:45] [I] Niffles: the core
+[04-08-2021 16:08:49] [I] SpaceCheddar: Ah yes
+[04-08-2021 16:08:55] [I] SpaceCheddar: Big air strikes later too
+[04-08-2021 16:11:04] [I] Niffles: You forgot thre lance power
+[04-08-2021 16:12:23] [I] SpaceCheddar: Need glass
+[04-08-2021 16:14:17] [I] SpaceCheddar: GRAPHIT
+[04-08-2021 16:14:22] [I] SpaceCheddar: hehe
+[04-08-2021 16:15:15] [I] SpaceCheddar: Halp
+[04-08-2021 16:15:23] [I] Niffles: What
+[04-08-2021 16:15:27] [I] SpaceCheddar: HALP
+[04-08-2021 16:15:56] [I] Niffles: Put more laser turrets
+[04-08-2021 16:16:00] [I] Niffles: jeebus
+[04-08-2021 16:16:19] [I] SpaceCheddar: We should put a wave and a water extractor there
+[04-08-2021 16:16:28] [I] Niffles: Yes
+[04-08-2021 16:16:32] [I] Niffles: I will
+[04-08-2021 16:17:24] [I] SpaceCheddar: AGH I NEED ScATTERS
+[04-08-2021 16:17:28] [I] SpaceCheddar: I just know it
+[04-08-2021 16:18:31] [I] Niffles: need core defenmce
+[04-08-2021 16:18:36] [I] Niffles: O we got some
+[04-08-2021 16:18:52] [I] Niffles: Salvo is doin good
+[04-08-2021 16:19:08] [I] SpaceCheddar: Get some surge going.
+[04-08-2021 16:19:14] [I] Niffles: I will
+[04-08-2021 16:19:22] [I] SpaceCheddar: The plastainium from the oil lake will be harder
+[04-08-2021 16:19:55] [I] SpaceCheddar: Erm, cryofluid is a fliud
+[04-08-2021 16:20:32] [I] SpaceCheddar: Plus I think drills only take water
+[04-08-2021 16:20:48] [I] SpaceCheddar: RRRRRRRRRRRRRRRRRRRRRRRRREEEEEEEEEEEEEEe
+[04-08-2021 16:22:46] [I] SpaceCheddar: what are you making
+[04-08-2021 16:22:53] [I] Niffles: Thorium reactor
+[04-08-2021 16:23:40] [I] SpaceCheddar: Finn drills only take water'
+[04-08-2021 16:23:55] [I] SpaceCheddar: Need lead
+[04-08-2021 16:24:00] [I] Niffles: Okay'
+[04-08-2021 16:25:19] [I] Niffles: Uhh
+[04-08-2021 16:25:24] [I] Niffles: Need to dispose
+[04-08-2021 16:25:32] [I] SpaceCheddar: TYLER!!!
+[04-08-2021 16:25:40] [I] SpaceCheddar: He said he had that setting on
+[04-08-2021 16:25:47] [I] Niffles: TELL HIM THEN
+[04-08-2021 16:26:33] [I] SpaceCheddar: Fixed it though
+[04-08-2021 16:26:37] [I] Niffles: How?
+[04-08-2021 16:26:50] [I] SpaceCheddar: Incineraator
+[04-08-2021 16:29:13] [I] Niffles: Power go brr!
+[04-08-2021 16:29:18] [I] SpaceCheddar: Whee
+[04-08-2021 16:29:21] [I] Niffles: Reactor
+[04-08-2021 16:29:24] [I] Niffles: Heehee
+[04-08-2021 16:29:33] [I] SpaceCheddar: Go get surge now
+[04-08-2021 16:29:35] [I] Niffles: Okay!
+[04-08-2021 16:29:40] [I] Niffles: Imma get a snacc brb
+[04-08-2021 16:29:48] [I] SpaceCheddar: K
+[04-08-2021 16:29:50] [I] Niffles: afk
+[04-08-2021 16:32:33] [I] Niffles: Back
+[04-08-2021 16:32:37] [I] Niffles: What did I mi8ss
+[04-08-2021 16:32:57] [I] Niffles: Ok surge
+[04-08-2021 16:33:04] [I] SpaceCheddar: Well I want to install some Fuses
+[04-08-2021 16:33:09] [I] Niffles: Ok
+[04-08-2021 16:34:09] [I] SpaceCheddar: I'll probably replace the walls soon with thorium or something
+[04-08-2021 16:34:39] [I] Niffles: Imma gety some Lead soon
+[04-08-2021 16:34:51] [I] SpaceCheddar: Good idea
+[04-08-2021 16:36:57] [I] Niffles: brb quic need wasser
+[04-08-2021 16:37:02] [I] SpaceCheddar: Wasser
+[04-08-2021 16:37:23] [I] SpaceCheddar: German water?
+[04-08-2021 16:37:40] [I] Niffles: Back
+[04-08-2021 16:40:09] [I] SpaceCheddar: why not lead eeee
+[04-08-2021 16:40:12] [I] SpaceCheddar: *no
+[04-08-2021 16:40:21] [I] Niffles: Look Im trying
+[04-08-2021 16:40:37] [I] Niffles: I need it tooooo
+[04-08-2021 16:40:38] [I] Niffles: lol
+[04-08-2021 16:41:01] [I] SpaceCheddar: Well im getting oil
+[04-08-2021 16:41:04] [I] Niffles: Okay
+[04-08-2021 16:42:15] [I] SpaceCheddar: SO MUCH OIL!
+[04-08-2021 16:42:38] [I] Niffles: Need air defense too
+[04-08-2021 16:43:05] [I] Niffles: what for
+[04-08-2021 16:43:07] [I] Niffles: oil
+[04-08-2021 16:43:17] [I] SpaceCheddar: Should we bring the oil down to the manufacturing section?
+[04-08-2021 16:43:20] [I] SpaceCheddar: Plastic
+[04-08-2021 16:43:22] [I] Niffles: Uh suuure
+[04-08-2021 16:43:25] [I] Niffles: Do it
+[04-08-2021 16:43:29] [I] SpaceCheddar: K
+[04-08-2021 16:43:34] [I] SpaceCheddar: You get anti air
+[04-08-2021 16:43:42] [I] Niffles: Um
+[04-08-2021 16:43:44] [I] Niffles: Im getting led
+[04-08-2021 16:44:16] [I] Niffles: Can you pop over here and get this defended?
+[04-08-2021 16:44:18] [I] Niffles: important
+[04-08-2021 16:49:07] [I] Niffles: RICK
+[04-08-2021 16:49:10] [I] Niffles: HOW
+[04-08-2021 16:49:17] [I] Niffles: EWAN
+[04-08-2021 16:49:21] [I] Niffles: EEEEEEEEEEEEEEEEEWAAAAAAAAAAAAAAN
+[04-08-2021 16:49:25] [I] SpaceCheddar: WHAT
+[04-08-2021 16:49:36] [I] SpaceCheddar: What hwere an aliean
+[04-08-2021 16:49:37] [I] Niffles: YOu put phase alloy into the feed fir the cryofluid
+[04-08-2021 16:49:42] [I] Niffles: therefore it stopped working
+[04-08-2021 16:49:47] [I] Niffles: and the reactores blew
+[04-08-2021 16:49:54] [I] SpaceCheddar: oopse
+[04-08-2021 16:50:15] [I] Niffles: Everything isnt working
+[04-08-2021 16:51:22] [I] SpaceCheddar: They gettin strong
+[04-08-2021 16:52:10] [I] SpaceCheddar: Meesa sorry
+[04-08-2021 16:54:46] [I] Niffles: Uhh
+[04-08-2021 16:54:53] [I] SpaceCheddar: e gototooa oao ofooad
+[04-08-2021 16:54:54] [I] Niffles: Its destoyinh everything
+[04-08-2021 16:54:58] [I] Niffles: you need to defend more
+[04-08-2021 16:55:13] [I] SpaceCheddar: GTG
+[04-08-2021 16:55:18] [I] SpaceCheddar: ME????
+[04-08-2021 16:55:21] [I] SpaceCheddar: ef;'sa;f]alfskmiegrwfnjfikewjkmfewkmfowmogfwnfinfe
+[04-08-2021 16:55:26] [I] SpaceCheddar: WE BOTH EXIST
+[04-08-2021 16:55:29] [I] Niffles: REACTOR BLEW AGAI
+[04-08-2021 16:55:31] [I] Niffles: as
+[04-08-2021 16:55:34] [I] Niffles: s
+[04-08-2021 16:55:35] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-08-2021 16:57:26] [I] Game over! Reached wave 33 with 1 players online on map Fortress.
+[04-08-2021 16:57:26] [I] Selected next map to be Fork.
+[04-08-2021 17:02:03] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-08-2021 17:02:06] [I] SpaceCheddar: Hi
+[04-08-2021 17:02:13] [I] Niffles: HI
+[04-08-2021 17:02:15] [I] Niffles: We died
+[04-08-2021 17:02:16] [I] SpaceCheddar: We ded. And here's why:
+[04-08-2021 17:02:27] [I] Niffles: Bc yeetus the sorter
+[04-08-2021 17:02:36] [I] SpaceCheddar: One person has a limit to how much they can manage.
+[04-08-2021 17:02:40] [I] Niffles: Yep
+[04-08-2021 17:02:44] [I] SpaceCheddar: Two people the limit is better
+[04-08-2021 17:03:00] [I] Niffles: Tis why we each do diff jobs
+[04-08-2021 17:03:02] [I] SpaceCheddar: ( imean like manage the whole game)
+[04-08-2021 17:03:10] [I] SpaceCheddar: Now hear me out
+[04-08-2021 17:03:37] [I] SpaceCheddar: The jobs might be a bad idea *because* sometimes help is needed in a different area
+[04-08-2021 17:03:51] [I] Niffles: yea
+[04-08-2021 17:04:25] [I] SpaceCheddar: Thus two people working like *one*, not in synch but the same semi random oh look I need this i'll do it
+[04-08-2021 17:04:35] [I] SpaceCheddar: Is better, so no jobs
+[04-08-2021 17:04:47] [I] SpaceCheddar: and the managing limit is higher
+[04-08-2021 17:04:56] [I] SpaceCheddar: Ok done speaking
+[04-08-2021 17:04:59] [I] Niffles: yep
+[04-08-2021 17:05:21] [I] Niffles: But we can generally stick toa  few things
+[04-08-2021 17:06:20] [I] Niffles: Imma make graphite
+[04-08-2021 17:07:30] [I] SpaceCheddar: I dont know the waves of this map
+[04-08-2021 17:08:49] [I] SpaceCheddar: I need 22 graphite
+[04-08-2021 17:10:08] [I] SpaceCheddar: eee laggy'
+[04-08-2021 17:11:51] [I] Niffles: We need coal
+[04-08-2021 17:13:58] [I] SpaceCheddar: Scorch go brr
+[04-08-2021 17:14:43] [I] Niffles: Oo tutan wall
+[04-08-2021 17:14:55] [I] SpaceCheddar: needed
+[04-08-2021 17:14:58] [I] Niffles: tx for led
+[04-08-2021 17:16:04] [I] SpaceCheddar: Need graphite
+[04-08-2021 17:17:08] [I] SpaceCheddar: Good scorches
+[04-08-2021 17:20:04] [I] Niffles: How do yoyu extract coal from oil
+[04-08-2021 17:20:07] [I] Niffles: or is that only classic
+[04-08-2021 17:20:08] [I] SpaceCheddar: uh
+[04-08-2021 17:20:29] [I] SpaceCheddar: Coal centrifuge
+[04-08-2021 17:20:41] [I] SpaceCheddar: You can get oil from sand and water too
+[04-08-2021 17:21:34] [I] Niffles: Where is it locayrd
+[04-08-2021 17:21:44] [I] SpaceCheddar: ?
+[04-08-2021 17:21:48] [I] SpaceCheddar: Oh
+[04-08-2021 17:21:51] [I] Niffles: the coal things
+[04-08-2021 17:21:52] [I] SpaceCheddar: Factry
+[04-08-2021 17:28:14] [I] Niffles: We doing good
+[04-08-2021 17:28:24] [I] SpaceCheddar: Agreed
+[04-08-2021 17:28:32] [I] SpaceCheddar: Probably could do better though
+[04-08-2021 17:29:04] [I] SpaceCheddar: esp on power
+[04-08-2021 17:30:12] [I] SpaceCheddar: Boom, just needed underated steam power
+[04-08-2021 17:31:33] [I] Niffles: How to gewt more sand?
+[04-08-2021 17:31:42] [I] SpaceCheddar: You dont
+[04-08-2021 17:31:48] [I] Niffles: F
+[04-08-2021 17:31:52] [I] SpaceCheddar: Theres no scrap to get more
+[04-08-2021 17:38:56] [I] SpaceCheddar: If we get surge we can get a meltdown
+[04-08-2021 17:40:51] [I] SpaceCheddar: Agh but we need thor
+[04-08-2021 17:41:26] [I] SpaceCheddar: THOR THOR THOR
+[04-08-2021 17:41:31] [I] Niffles: YEEE
+[04-08-2021 17:41:40] [I] SpaceCheddar: hurumph
+[04-08-2021 17:42:07] [I] Niffles: OH
+[04-08-2021 17:42:14] [I] Niffles: CORE LIMIT
+[04-08-2021 17:42:32] [I] SpaceCheddar: Well come read the message over here
+[04-08-2021 17:43:23] [I] Niffles: tz
+[04-08-2021 17:43:25] [I] SpaceCheddar: Ok lets get this thor
+[04-08-2021 17:43:26] [I] Niffles: Oh ok
+[04-08-2021 17:43:31] [I] SpaceCheddar: After this wave
+[04-08-2021 17:43:36] [I] Niffles: Lol
+[04-08-2021 17:44:02] [I] Niffles: Well need to move the turrets
+[04-08-2021 17:44:07] [I] SpaceCheddar: nah
+[04-08-2021 17:44:12] [I] SpaceCheddar: Just make more
+[04-08-2021 17:45:25] [I] Niffles: Thor!
+[04-08-2021 17:47:02] [I] SpaceCheddar: Make a reactor
+[04-08-2021 17:47:05] [I] Niffles: I will
+[04-08-2021 17:47:15] [I] Niffles: Need water tho
+[04-08-2021 17:47:21] [I] SpaceCheddar: Our defenses are suffering from it
+[04-08-2021 17:47:29] [I] SpaceCheddar: Water extractor
+[04-08-2021 17:47:31] [I] Niffles: OKAY
+[04-08-2021 17:50:50] [I] Niffles: Ewan
+[04-08-2021 17:50:52] [I] Niffles: WWWWW
+[04-08-2021 17:50:53] [I] Niffles: oop
+[04-08-2021 17:50:55] [I] Niffles: EEEEEEEE
+[04-08-2021 17:51:08] [I] SpaceCheddar: well crap
+[04-08-2021 17:53:21] [I] SpaceCheddar: ahh the reactor needs thor to be build
+[04-08-2021 17:55:32] [I] SpaceCheddar: yay
+[04-08-2021 17:55:33] [I] Niffles: POG
+[04-08-2021 17:55:39] [I] Niffles: WE GOIN NOW
+[04-08-2021 17:55:41] [I] SpaceCheddar: Time for sruge
+[04-08-2021 17:55:47] [I] Niffles: Wlright'
+[04-08-2021 17:55:53] [I] Niffles: And better air defence
+[04-08-2021 17:56:01] [I] SpaceCheddar: Can you do that>
+[04-08-2021 17:56:11] [I] Niffles: Uh
+[04-08-2021 17:56:14] [I] SpaceCheddar: REEEEEEEE
+[04-08-2021 17:56:16] [I] Niffles: IUDK what im dfoing with wepons
+[04-08-2021 17:56:24] [I] SpaceCheddar: Then learn
+[04-08-2021 17:56:29] [I] SpaceCheddar: but ok
+[04-08-2021 17:57:36] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (disappeared)
+[04-08-2021 17:57:36] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-08-2021 17:59:33] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-08-2021 18:03:29] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-08-2021 18:03:38] [I] Niffles: Hewwo
+[04-08-2021 18:03:43] [I] Niffles: We got them alloys
+[04-08-2021 18:04:11] [I] SpaceCheddar: Looks like there are holes
+[04-08-2021 18:04:38] [I] Niffles: EWAN
+[04-08-2021 18:04:39] [I] SpaceCheddar: Ah we goona dir
+[04-08-2021 18:05:03] [I] SpaceCheddar: Those climb walls
+[04-08-2021 18:05:19] [I] Game over! Reached wave 33 with 2 players online on map Fork.
+[04-08-2021 18:05:19] [I] Selected next map to be Archipelago.
+[04-08-2021 18:05:28] [I] Niffles: OO arckipeeelagoo
+[04-08-2021 18:05:37] [I] SpaceCheddar: yeet
+[04-08-2021 18:06:53] [I] Niffles: Hewwo?
+[04-08-2021 18:06:58] [I] SpaceCheddar: Hi
+[04-08-2021 18:07:55] [I] SpaceCheddar: what dont import that
+[04-08-2021 18:08:02] [I] Niffles: Why not>
+[04-08-2021 18:08:03] [I] Niffles: Oh ok
+[04-08-2021 18:08:04] [I] SpaceCheddar: Import graphite silicon and others
+[04-08-2021 18:08:09] [I] Niffles: Yes I was gonna
+[04-08-2021 18:08:10] [I] Niffles: OK
+[04-08-2021 18:08:11] [I] SpaceCheddar: We have that at base
+[04-08-2021 18:08:16] [I] Niffles: But we need copper rn so i just was
+[04-08-2021 18:08:19] [I] SpaceCheddar: lead and copper
+[04-08-2021 18:08:24] [I] Niffles: Soon I wont
+[04-08-2021 18:10:11] [I] SpaceCheddar: help me shoot boat until I can get um
+[04-08-2021 18:10:18] [I] SpaceCheddar: slavos
+[04-08-2021 18:17:41] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 18:17:44] [I] Teeler: Good afternoon!
+[04-08-2021 18:17:48] [I] SpaceCheddar: TEERLER
+[04-08-2021 18:17:48] [I] Teeler: We played a bit of tennis
+[04-08-2021 18:17:53] [I] Niffles: Buenos Tardes
+[04-08-2021 18:18:00] [I] SpaceCheddar: Good toliets
+[04-08-2021 18:18:04] [I] Teeler: Well, probably ... good evening
+[04-08-2021 18:18:04] [I] Niffles: YES
+[04-08-2021 18:18:37] [I] SpaceCheddar: I need slick cone
+[04-08-2021 18:19:04] [I] SpaceCheddar: Yum slick cone
+[04-08-2021 18:19:50] [I] Niffles: Oop
+[04-08-2021 18:19:52] [I] Niffles: EE
+[04-08-2021 18:19:54] [I] SpaceCheddar: hey
+[04-08-2021 18:19:59] [I] Niffles: Sorryu
+[04-08-2021 18:20:37] [I] SpaceCheddar: this place needs power
+[04-08-2021 18:20:41] [I] Niffles: Yes
+[04-08-2021 18:22:19] [I] Teeler: Little bit more graphite now, at least
+[04-08-2021 18:22:23] [I] SpaceCheddar: Teeler is a pickel
+[04-08-2021 18:22:34] [I] Teeler: ohok
+[04-08-2021 18:22:56] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 18:23:04] [I] SpaceCheddar: teeler oof
+[04-08-2021 18:24:07] [I] Niffles: POWA
+[04-08-2021 18:24:24] [I] SpaceCheddar: BURN THE COAL
+[04-08-2021 18:26:51] [I] Niffles: REEEEActor
+[04-08-2021 18:26:58] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 18:27:07] [I] SpaceCheddar: Tykler is inconsistent
+[04-08-2021 18:28:00] [I] SpaceCheddar: UHOH
+[04-08-2021 18:28:04] [I] SpaceCheddar: IT BOOMED
+[04-08-2021 18:28:11] [I] Niffles: I GTG
+[04-08-2021 18:28:13] [I] Niffles: HOW
+[04-08-2021 18:28:16] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (closed)
+[04-08-2021 18:28:20] [I] Teeler: Thorium?
+[04-08-2021 18:28:20] [I] SpaceCheddar: Not enough cyro
+[04-08-2021 18:28:52] [I] SpaceCheddar: TYLER MAKE AIR DEFENSES and FIND THAT FFFING MIC
+[04-08-2021 18:28:54] [I] SpaceCheddar: eeee
+[04-08-2021 18:29:55] [I] SpaceCheddar: HELLO>?
+[04-08-2021 18:29:59] [I] Teeler: Scatters, we ned
+[04-08-2021 18:30:11] [I] SpaceCheddar: On ilsand
+[04-08-2021 18:30:20] [I] SpaceCheddar: NOT HERE
+[04-08-2021 18:30:22] [I] SpaceCheddar: doof
+[04-08-2021 18:31:41] [I] SpaceCheddar: Go away and doo your job
+[04-08-2021 18:36:20] [I] SpaceCheddar: Tyler they dont shoot thata
+[04-08-2021 18:36:27] [I] Teeler: I know, but later they could
+[04-08-2021 18:37:38] [I] Teeler: Add water
+[04-08-2021 18:37:40] [I] Teeler: Oh
+[04-08-2021 18:37:41] [I] Teeler: yes
+[04-08-2021 18:37:49] [I] SpaceCheddar: Yeet
+[04-08-2021 18:37:54] [I] Teeler: that drill
+[04-08-2021 18:37:55] [I] Teeler: wow
+[04-08-2021 18:37:59] [I] SpaceCheddar: I needed silicon
+[04-08-2021 18:38:07] [I] SpaceCheddar: I CANNOT AT ALL WAIT FOR BPM
+[04-08-2021 18:38:59] [I] SpaceCheddar: Also we needed more lead over here *airblast drill go brr*
+[04-08-2021 18:39:32] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 18:41:04] [I] SpaceCheddar: dw\
+[04-08-2021 18:41:41] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 18:41:50] [I] SpaceCheddar: tell me what is this?
+[04-08-2021 18:41:54] [I] Teeler: Slag
+[04-08-2021 18:41:59] [I] SpaceCheddar: why
+[04-08-2021 18:43:44] [I] SpaceCheddar: Power is an issue
+[04-08-2021 18:44:04] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 18:55:59] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-08-2021 19:25:49] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-08-2021 19:36:59] [I] Saved to config/saves/7364821.msav.
+[04-08-2021 20:05:10] [I] Saved to config/saves/8054821.msav.
+[04-08-2021 20:15:28] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-08-2021 20:15:33] [I] Teeler: 55 wave
+[04-08-2021 20:15:34] [I] Niffles: eyo
+[04-08-2021 20:15:37] [I] Teeler: Not much to do but wait
+[04-08-2021 20:15:59] [I] Teeler: YAY
+[04-08-2021 20:16:02] [I] Teeler: Lead back online
+[04-08-2021 20:17:11] [I] Niffles: holy frick
+[04-08-2021 20:17:33] [I] Teeler: Believe in the LANCER
+[04-08-2021 20:17:44] [I] Teeler: That thing is *amazing*
+[04-08-2021 20:17:52] [I] Niffles: Yes!!
+[04-08-2021 20:17:58] [I] Teeler: Darn it
+[04-08-2021 20:18:00] [I] Teeler: No silicon
+[04-08-2021 20:18:11] [I] Niffles: Production island down?
+[04-08-2021 20:18:15] [I] Niffles: Oh boi its GONE
+[04-08-2021 20:18:16] [I] Teeler: Gone
+[04-08-2021 20:18:20] [I] Teeler: Literally wiped off the earth
+[04-08-2021 20:18:21] [I] Niffles: BRUH
+[04-08-2021 20:18:23] [I] Niffles: WOW
+[04-08-2021 20:18:36] [I] Teeler: Here we go
+[04-08-2021 20:18:39] [I] Teeler: I just like watching
+[04-08-2021 20:19:20] [I] Niffles: What else can you do
+[04-08-2021 20:19:26] [I] Teeler: Not much
+[04-08-2021 20:19:30] [I] Teeler: Build more walls
+[04-08-2021 20:19:33] [I] Teeler: Periodic repair
+[04-08-2021 20:19:49] [I] Niffles: plastanioum coinveyors are interesting
+[04-08-2021 20:19:50] [I] Teeler: Plenty of thorium, and lots of titanium & copper
+[04-08-2021 20:20:09] [I] Teeler: once the enemy rolls out T5s, we're dead tho
+[04-08-2021 20:20:39] [I] Niffles: Bruh fuse go BRRRT
+[04-08-2021 20:21:03] [I] Teeler: Power supply safely behind front lines
+[04-08-2021 20:21:11] [I] Niffles: WERTE ALL GONNA DIEEEEE
+[04-08-2021 20:22:01] [I] Teeler: My god
+[04-08-2021 20:22:06] [I] Teeler: oh, and also
+[04-08-2021 20:22:10] [I] Teeler: We're all going to, someday
+[04-08-2021 20:22:32] [I] Niffles: hold the heck up
+[04-08-2021 20:22:36] [I] Niffles: we got silicon!!
+[04-08-2021 20:22:39] [I] Teeler: There, ripple turrets
+[04-08-2021 20:22:44] [I] Teeler: We *do*?
+[04-08-2021 20:22:46] [I] Niffles: we need phase tho
+[04-08-2021 20:22:50] [I] Teeler: Wave 60!
+[04-08-2021 20:22:55] [I] Teeler: Never gotten this far before!
+[04-08-2021 20:23:29] [I] Niffles: no kidding
+[04-08-2021 20:25:05] [I] Teeler: The energy weapons are good
+[04-08-2021 20:25:05] [I] Niffles: YEs we have silicopn
+[04-08-2021 20:25:22] [I] Teeler: Because we have tons of energy storage
+[04-08-2021 20:25:26] [I] Teeler: And lots of solar
+[04-08-2021 20:25:37] [I] Niffles: woa
+[04-08-2021 20:25:53] [I] Teeler: yeah, 350K+
+[04-08-2021 20:26:13] [I] Teeler: Here we go!
+[04-08-2021 20:26:15] [I] Niffles: Conveyors need repair
+[04-08-2021 20:27:51] [I] Teeler: We don't even have in house titanium, I just realized
+[04-08-2021 20:28:12] [I] Teeler: Do you have the status symbols on?
+[04-08-2021 20:28:18] [I] Teeler: F6, shows you if things are working
+[04-08-2021 20:28:47] [I] Niffles: OH BOI
+[04-08-2021 20:28:50] [I] Teeler: AAAAAA
+[04-08-2021 20:28:52] [I] Teeler: T5
+[04-08-2021 20:28:55] [I] Niffles: What on earth is that
+[04-08-2021 20:28:59] [I] Teeler: The T5 units
+[04-08-2021 20:29:08] [I] Teeler: *um*
+[04-08-2021 20:29:13] [I] Teeler: that oone has no supply?
+[04-08-2021 20:29:17] [I] Niffles: uhh
+[04-08-2021 20:29:20] [I] Niffles: Wer al gon a die
+[04-08-2021 20:29:23] [I] Niffles: Mark my words
+[04-08-2021 20:29:49] [I] Teeler: Stayin' Alive!
+[04-08-2021 20:31:00] [I] Teeler: AAAAAAAAAAAA
+[04-08-2021 20:31:31] [I] Teeler: We're DEAD
+[04-08-2021 20:32:00] [I] Niffles: A R M O R
+[04-08-2021 20:36:06] [I] Niffles: We need to keep power and menders to core
+[04-08-2021 20:36:10] [I] Niffles: we wont recover tho
+[04-08-2021 20:38:22] [I] Teeler: yee
+[04-08-2021 20:38:45] [I] Niffles: Im going to fill all empty space with armor and see how long we last
+[04-08-2021 20:39:08] [I] Teeler: Got it
+[04-08-2021 20:42:07] [I] Teeler: 67!!!
+[04-08-2021 20:42:13] [I] Niffles: HOldup can we make aitr units
+[04-08-2021 20:42:14] [I] Teeler: My god
+[04-08-2021 20:42:19] [I] Teeler: WALLS
+[04-08-2021 20:42:21] [I] Teeler: Can we?
+[04-08-2021 20:42:42] [I] Niffles: darnit needs silicon
+[04-08-2021 20:43:02] [I] Niffles: Lost the tsunami
+[04-08-2021 20:43:07] [I] Teeler: OH
+[04-08-2021 20:43:12] [I] Teeler: whew
+[04-08-2021 20:43:17] [I] Teeler: that's one we can reconstruct
+[04-08-2021 20:43:35] [I] Niffles: Yep
+[04-08-2021 20:44:04] [I] Niffles: Ammunition supply conveyors are like 50% not working
+[04-08-2021 20:46:06] [I] Niffles: Almost all fuse working
+[04-08-2021 20:46:12] [I] Niffles: Losing the lancers
+[04-08-2021 20:46:41] [I] Teeler: DARN IT!
+[04-08-2021 20:47:15] [I] Teeler: They disappear ... it's over
+[04-08-2021 20:47:20] [I] Niffles: Hmm?
+[04-08-2021 20:47:25] [I] Teeler: Ii think 75, what do you think?
+[04-08-2021 20:47:30] [I] Niffles: Ye
+[04-08-2021 20:47:36] [I] Niffles: Im getting the fuses online
+[04-08-2021 20:49:10] [I] Niffles: Running out of thorium
+[04-08-2021 20:49:16] [I] Teeler: AA
+[04-08-2021 20:49:18] [I] Teeler: wave 70!
+[04-08-2021 20:49:19] [I] Niffles: Once we run out we die
+[04-08-2021 20:49:22] [I] Teeler: Yes
+[04-08-2021 20:50:31] [I] Saved to config/saves/8504821.msav.
+[04-08-2021 20:50:46] [I] Niffles: all fuse online
+[04-08-2021 20:50:49] [I] Teeler: The vast majority of defenses are still online
+[04-08-2021 20:50:52] [I] Niffles: most of the scatter
+[04-08-2021 20:50:54] [I] Teeler: Doing pretyt good, tbh
+[04-08-2021 20:50:59] [I] Niffles: Edit: all the scatter
+[04-08-2021 20:51:30] [I] Niffles: I gtg soon, record this
+[04-08-2021 20:52:22] [I] Teeler: INSANE, I tell you
+[04-08-2021 20:52:30] [I] Niffles: YEs
+[04-08-2021 20:52:31] [I] Teeler: Doing really well
+[04-08-2021 20:53:05] [I] Teeler: Out of thorium
+[04-08-2021 20:53:11] [I] Teeler: COPPER!
+[04-08-2021 20:53:24] [I] Niffles: lmao
+[04-08-2021 20:53:47] [I] Teeler: Air units comin' in
+[04-08-2021 20:55:00] [I] Niffles: Running out of titanium
+[04-08-2021 20:55:11] [I] Niffles: LEAD WALLS
+[04-08-2021 20:55:12] [I] Teeler: Graphite, got plenty of that?
+[04-08-2021 20:55:13] [I] Niffles: LKol
+[04-08-2021 20:55:20] [I] Niffles: Yeah graphite
+[04-08-2021 20:55:26] [I] Niffles: We have led walls tho
+[04-08-2021 20:55:40] [I] Niffles: In this version can you swap your player to another mech somehow?
+[04-08-2021 20:55:45] [I] Teeler: IDK how
+[04-08-2021 20:55:48] [I] Teeler: I think you *can*
+[04-08-2021 20:56:35] [I] Teeler: This is a smaller one
+[04-08-2021 20:56:39] [I] Teeler: Unless they're T5
+[04-08-2021 20:56:43] [I] Teeler: which hopefully they're not?
+[04-08-2021 20:56:44] [I] Niffles: Nexty save we need to get units vs turrets
+[04-08-2021 20:57:00] [I] Niffles: T5S?
+[04-08-2021 20:57:03] [I] Niffles: Are those these>
+[04-08-2021 20:57:17] [I] Teeler: No, the really big ones we saaw once
+[04-08-2021 20:57:20] [I] Niffles: Ok
+[04-08-2021 20:57:37] [I] Niffles: IF only we could get materials for another core
+[04-08-2021 20:57:49] [I] Niffles: Next save also massive turret and organization
+[04-08-2021 20:59:12] [I] Niffles: WE HAVE 1 air unit!
+[04-08-2021 20:59:26] [I] Niffles: 2
+[04-08-2021 20:59:38] [I] Niffles: 3
+[04-08-2021 21:01:38] [I] Teeler: 75!
+[04-08-2021 21:01:48] [I] Teeler: Now we have 1
+[04-08-2021 21:02:59] [I] Teeler: 44 enemies
+[04-08-2021 21:06:05] [I] Teeler: Damnit
+[04-08-2021 21:06:12] [I] Teeler: The fuse ones require titaniuim
+[04-08-2021 21:06:16] [I] Niffles: Frick
+[04-08-2021 21:06:18] [I] Teeler: We don't have much of that
+[04-08-2021 21:06:20] [I] Niffles: Were losing it
+[04-08-2021 21:06:39] [I] Niffles: big hole
+[04-08-2021 21:07:13] [I] Niffles: Copper will have to do
+[04-08-2021 21:08:00] [I] Teeler: Done
+[04-08-2021 21:08:03] [I] Teeler: 78 is it, I think
+[04-08-2021 21:09:24] [I] Niffles: And we can't make an unloader so the fuses are down
+[04-08-2021 21:09:34] [I] Teeler: OH NO!
+[04-08-2021 21:10:44] [I] Niffles: But do not fret! for I have brought titanium
+[04-08-2021 21:10:56] [I] Niffles: damit silicon
+[04-08-2021 21:11:08] [I] Teeler: I just want 80!
+[04-08-2021 21:11:41] [I] Teeler: Oh, it's a ground unit!
+[04-08-2021 21:12:17] [I] Niffles: Mindustry: Core is under attack
+[04-08-2021 21:12:24] [I] Niffles: Me;: no crap, when isnt it
+[04-08-2021 21:12:38] [I] Teeler: We need more titanium
+[04-08-2021 21:12:50] [I] Niffles: FUSE ONLINE!@
+[04-08-2021 21:12:54] [I] Teeler: YES
+[04-08-2021 21:15:53] [I] Teeler: Bring *all* the lancers online you can
+[04-08-2021 21:15:57] [I] Niffles: Ince we run out of copper unlikely we die
+[04-08-2021 21:16:07] [I] Teeler: All the energy units
+[04-08-2021 21:16:20] [I] Teeler: We can continue to make arcs
+[04-08-2021 21:16:58] [I] Teeler: Thank goodness for those batteries
+[04-08-2021 21:17:11] [I] Teeler: Otherwise supporting all of these energy weapons would be impossible
+[04-08-2021 21:17:26] [I] Niffles: Making some silicon
+[04-08-2021 21:17:34] [I] Niffles: Or not
+[04-08-2021 21:17:38] [I] Niffles: Just got bombed
+[04-08-2021 21:17:57] [I] Niffles: Wave 100 we can do it
+[04-08-2021 21:18:04] [I] Niffles: Batrely limping
+[04-08-2021 21:18:09] [I] Niffles: NOO
+[04-08-2021 21:18:12] [I] Teeler: If we keep the menders online, maybe?
+[04-08-2021 21:18:17] [I] Teeler: NOOOO!
+[04-08-2021 21:18:59] [I] Teeler: AAAAAA
+[04-08-2021 21:19:03] [I] Game over! Reached wave 82 with 2 players online on map Archipelago.
+[04-08-2021 21:19:03] [I] Selected next map to be Triad.
+[04-08-2021 21:19:10] [I] Niffles: Frick
+[04-08-2021 21:19:21] [I] Niffles: I had almost got titanium for unloader :(
+[04-08-2021 21:19:33] [I] Teeler: Well, good night
+[04-08-2021 21:19:37] [I] Teeler: I need to take a shower
+[04-08-2021 21:19:40] [I] Teeler: Bye!
+[04-08-2021 21:19:43] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-08-2021 21:46:34] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (closed)
+[04-08-2021 21:47:20] [I] Game over! Reached wave 9 with 0 players online on map Triad.
+[04-08-2021 21:47:20] [I] Selected next map to be Islands.
+[04-08-2021 21:53:16] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-08-2021 21:53:16] [I] Selected next map to be Fork.
+[04-08-2021 21:59:17] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-08-2021 21:59:17] [I] Selected next map to be Debris Field.
+[04-08-2021 22:05:32] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-08-2021 22:05:32] [I] Selected next map to be Archipelago.
+[04-08-2021 22:12:18] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-08-2021 22:12:18] [I] Selected next map to be Molten Lake.
+[04-08-2021 22:18:17] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-08-2021 22:18:17] [I] Selected next map to be Triad.
+[04-08-2021 22:25:39] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-08-2021 22:25:39] [I] Selected next map to be Debris Field.
+[04-08-2021 22:31:49] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-08-2021 22:31:49] [I] Selected next map to be Islands.
+[04-08-2021 22:37:46] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-08-2021 22:37:46] [I] Selected next map to be Molten Lake.
+[04-08-2021 22:43:43] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-08-2021 22:43:43] [I] Selected next map to be Shattered.
+[04-08-2021 22:50:13] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-08-2021 22:50:13] [I] Selected next map to be Wasteland.
+[04-08-2021 22:56:44] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-08-2021 22:56:44] [I] Selected next map to be Triad.
+[04-08-2021 23:04:07] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-08-2021 23:04:07] [I] Selected next map to be Debris Field.
+[04-08-2021 23:10:25] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-08-2021 23:10:25] [I] Selected next map to be Molten Lake.
+[04-08-2021 23:16:23] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-08-2021 23:16:23] [I] Selected next map to be Shattered.
+[04-08-2021 23:22:53] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-08-2021 23:22:53] [I] Selected next map to be Fork.
+[04-08-2021 23:28:54] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-08-2021 23:28:54] [I] Selected next map to be Wasteland.
+[04-09-2021 07:53:25] [I] Server loaded. Type 'help' for help.
+[04-09-2021 07:53:41] [I] Randomized next map to be Tendrils.
+[04-09-2021 07:53:41] [I] Loading map...
+[04-09-2021 07:53:42] [I] Map loaded.
+[04-09-2021 07:53:42] [I] Opened a server on port 6567.
+[04-09-2021 07:54:01] [I] Stopped server.
+[04-09-2021 07:54:07] [I] All config values:
+[04-09-2021 07:54:07] [I] | name: Server
+[04-09-2021 07:54:07] [I] | | The server name as displayed on clients.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | desc: off
+[04-09-2021 07:54:07] [I] | | The server description, displayed under the name. Max 100 characters.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | port: 6567
+[04-09-2021 07:54:07] [I] | | The port to host on.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | autoUpdate: false
+[04-09-2021 07:54:07] [I] | | Whether to auto-update and exit when a new bleeding-edge update arrives.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | showConnectMessages: true
+[04-09-2021 07:54:07] [I] | | Whether to display connect/disconnect messages.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | enableVotekick: true
+[04-09-2021 07:54:07] [I] | | Whether votekick is enabled.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | startCommands: 
+[04-09-2021 07:54:07] [I] | | Commands run at startup. This should be a comma-separated list.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | crashReport: false
+[04-09-2021 07:54:07] [I] | | Whether to send crash reports.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | logging: true
+[04-09-2021 07:54:07] [I] | | Whether to log everything to files.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | strict: true
+[04-09-2021 07:54:07] [I] | | Whether strict mode is on - corrects positions and prevents duplicate UUIDs.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | antiSpam: true
+[04-09-2021 07:54:07] [I] | | Whether spammers are automatically kicked and rate-limited.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | interactRateWindow: 6
+[04-09-2021 07:54:07] [I] | | Block interaction rate limit window, in seconds.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | interactRateLimit: 25
+[04-09-2021 07:54:07] [I] | | Block interaction rate limit.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | interactRateKick: 60
+[04-09-2021 07:54:07] [I] | | How many times a player must interact inside the window to get kicked.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | messageRateLimit: 0
+[04-09-2021 07:54:07] [I] | | Message rate limit in seconds. 0 to disable.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | messageSpamKick: 3
+[04-09-2021 07:54:07] [I] | | How many times a player must send a message before the cooldown to get kicked. 0 to disable.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | socketInput: false
+[04-09-2021 07:54:07] [I] | | Allows a local application to control this server through a local TCP socket.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | socketInputPort: 6859
+[04-09-2021 07:54:07] [I] | | The port for socket input.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | socketInputAddress: localhost
+[04-09-2021 07:54:07] [I] | | The bind address for socket input.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | allowCustomClients: false
+[04-09-2021 07:54:07] [I] | | Whether custom clients are allowed to connect.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | whitelist: false
+[04-09-2021 07:54:07] [I] | | Whether the whitelist is used.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | motd: off
+[04-09-2021 07:54:07] [I] | | The message displayed to people on connection.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | autosave: false
+[04-09-2021 07:54:07] [I] | | Whether the periodically save the map when playing.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | autosaveAmount: 10
+[04-09-2021 07:54:07] [I] | | The maximum amount of autosaves. Older ones get replaced.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | autosaveSpacing: 300
+[04-09-2021 07:54:07] [I] | | Spacing between autosaves in seconds.
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:54:07] [I] | debug: false
+[04-09-2021 07:54:07] [I] | | Enable debug logging
+[04-09-2021 07:54:07] [I] |
+[04-09-2021 07:55:24] [I] Save files: 
+[04-09-2021 07:55:24] [I] | 0
+[04-09-2021 07:55:24] [I] | 05.32-4.7.21
+[04-09-2021 07:55:24] [I] | 6.01-4.7.21
+[04-09-2021 07:55:24] [I] | 7364821
+[04-09-2021 07:55:24] [I] | 8054821
+[04-09-2021 07:55:24] [I] | 8504821
+[04-09-2021 07:55:32] [I] Save loaded.
+[04-09-2021 07:55:32] [I] Opened a server on port 6567.
+[04-09-2021 07:55:38] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 08:01:04] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 13:06:48] [I] Server loaded. Type 'help' for help.
+[04-09-2021 13:06:51] [E] Command not found. Did you mean "help"?
+[04-09-2021 13:06:53] [I] Commands:
+[04-09-2021 13:06:53] [I]    help - Displays this command list.
+[04-09-2021 13:06:53] [I]    version - Displays server version info.
+[04-09-2021 13:06:53] [I]    exit - Exit the server application.
+[04-09-2021 13:06:53] [I]    stop - Stop hosting the server.
+[04-09-2021 13:06:53] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-09-2021 13:06:53] [I]    maps - Display all available maps.
+[04-09-2021 13:06:53] [I]    reloadmaps - Reload all maps from disk.
+[04-09-2021 13:06:53] [I]    status - Display server status.
+[04-09-2021 13:06:53] [I]    mods - Display all loaded mods.
+[04-09-2021 13:06:53] [I]    mod <name...> - Display information about a loaded plugin.
+[04-09-2021 13:06:53] [I]    js <script...> - Run arbitrary Javascript.
+[04-09-2021 13:06:53] [I]    say <message...> - Send a message to all players.
+[04-09-2021 13:06:53] [I]    pause <on/off> - Pause or unpause the game.
+[04-09-2021 13:06:53] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-09-2021 13:06:53] [I]    fillitems [team] - Fill the core with items.
+[04-09-2021 13:06:53] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-09-2021 13:06:53] [I]    config [name] [value...] - Configure server settings.
+[04-09-2021 13:06:53] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-09-2021 13:06:53] [I]    whitelisted - List the entire whitelist.
+[04-09-2021 13:06:53] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-09-2021 13:06:53] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-09-2021 13:06:53] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-09-2021 13:06:53] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-09-2021 13:06:53] [I]    kick <username...> - Kick a person by name.
+[04-09-2021 13:06:53] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-09-2021 13:06:53] [I]    bans - List all banned IPs and IDs.
+[04-09-2021 13:06:53] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-09-2021 13:06:53] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-09-2021 13:06:53] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-09-2021 13:06:53] [I]    admins - List all admins.
+[04-09-2021 13:06:53] [I]    players - List all players currently in game.
+[04-09-2021 13:06:53] [I]    runwave - Trigger the next wave.
+[04-09-2021 13:06:53] [I]    load <slot> - Load a save from a slot.
+[04-09-2021 13:06:53] [I]    save <slot> - Save game state to a slot.
+[04-09-2021 13:06:53] [I]    saves - List all saves in the save directory.
+[04-09-2021 13:06:53] [I]    gameover - Force a game over.
+[04-09-2021 13:06:53] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-09-2021 13:06:53] [I]    search <name...> - Search players who have used part of a name.
+[04-09-2021 13:06:53] [I]    gc - Trigger a garbage collection. Testing only.
+[04-09-2021 13:06:53] [I]    yes - Run the last suggested incorrect command.
+[04-09-2021 14:49:50] [I] Loading map...
+[04-09-2021 14:50:00] [I] Map loaded.
+[04-09-2021 14:50:00] [I] Opened a server on port 6567.
+[04-09-2021 14:50:17] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 14:50:21] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-09-2021 14:51:07] [I] Teeler: A mass driver, yay
+[04-09-2021 14:51:15] [I] Teeler: let's get some graphite!
+[04-09-2021 14:51:29] [I] Teeler: It doesn't make that much graphite
+[04-09-2021 14:56:06] [I] Teeler: Moving' over to production island
+[04-09-2021 14:56:13] [I] Teeler: Gonna set some stuff up
+[04-09-2021 15:00:13] [I] SpaceCheddar: TYLER
+[04-09-2021 15:01:48] [I] SpaceCheddar: use steam power
+[04-09-2021 15:01:54] [I] Teeler: I know
+[04-09-2021 15:02:01] [I] Teeler: I just needed to get those silicon ones up and running
+[04-09-2021 15:02:22] [I] SpaceCheddar: Tyler don't know how to conveyro
+[04-09-2021 15:08:15] [I] SpaceCheddar: teellee dum
+[04-09-2021 15:09:26] [I] SpaceCheddar: TULER
+[04-09-2021 15:10:00] [I] SpaceCheddar: Tyler dum
+[04-09-2021 15:10:35] [I] SpaceCheddar: we have no glass
+[04-09-2021 15:10:39] [I] Teeler: I know
+[04-09-2021 15:10:41] [I] Teeler: Making glass
+[04-09-2021 15:13:01] [I] Teeler: No glass
+[04-09-2021 15:13:59] [I] SpaceCheddar: Tyler don't know how to converyor
+[04-09-2021 15:20:13] [I] SpaceCheddar: stupid tyler
+[04-09-2021 15:20:22] [I] Teeler: What now
+[04-09-2021 15:20:37] [I] SpaceCheddar: fix hour stupid silicon conveyor
+[04-09-2021 15:20:54] [I] Teeler: Oh
+[04-09-2021 15:23:15] [I] SpaceCheddar: tyler...
+[04-09-2021 15:23:26] [I] SpaceCheddar: you didn't connect the steam
+[04-09-2021 15:23:31] [I] Teeler: We didn't have glass
+[04-09-2021 15:23:41] [I] SpaceCheddar: idiot to the power
+[04-09-2021 15:24:35] [I] SpaceCheddar: those batts take up a lot of space
+[04-09-2021 15:25:21] [I] Teeler: Be right back
+[04-09-2021 15:25:23] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 15:26:18] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 15:26:28] [I] Teeler: Slag for those ones is really good
+[04-09-2021 15:27:44] [I] Teeler: Give me a moment again
+[04-09-2021 15:27:45] [I] Teeler: brb
+[04-09-2021 15:27:48] [I] Teeler: making a silicon design
+[04-09-2021 15:27:51] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 15:32:47] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (closed)
+[04-09-2021 15:33:59] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 15:35:58] [I] Core destroyed.
+[04-09-2021 15:35:58] [I] Game over! Reached wave 19 with 1 players online on map Archipelago.
+[04-09-2021 15:35:58] [I] Selected next map to be Debris Field.
+[04-09-2021 15:36:05] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 15:36:14] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 15:36:21] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-09-2021 15:36:23] [I] Stopped server.
+[04-09-2021 15:36:24] [I] Randomized next map to be Triad.
+[04-09-2021 15:36:24] [I] Loading map...
+[04-09-2021 15:36:24] [I] Map loaded.
+[04-09-2021 15:36:24] [I] Opened a server on port 6567.
+[04-09-2021 15:36:30] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 15:36:59] [I] Stopped server.
+[04-09-2021 15:37:02] [I] Save files: 
+[04-09-2021 15:37:02] [I] | 0
+[04-09-2021 15:37:02] [I] | 05.32-4.7.21
+[04-09-2021 15:37:02] [I] | 6.01-4.7.21
+[04-09-2021 15:37:02] [I] | 7364821
+[04-09-2021 15:37:02] [I] | 8054821
+[04-09-2021 15:37:02] [I] | 8504821
+[04-09-2021 15:37:08] [E] No map with name '8504821' found.
+[04-09-2021 15:37:14] [E] Invalid command. Type 'help' for help.
+[04-09-2021 15:37:16] [I] Commands:
+[04-09-2021 15:37:16] [I]    help - Displays this command list.
+[04-09-2021 15:37:16] [I]    version - Displays server version info.
+[04-09-2021 15:37:16] [I]    exit - Exit the server application.
+[04-09-2021 15:37:16] [I]    stop - Stop hosting the server.
+[04-09-2021 15:37:16] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-09-2021 15:37:16] [I]    maps - Display all available maps.
+[04-09-2021 15:37:16] [I]    reloadmaps - Reload all maps from disk.
+[04-09-2021 15:37:16] [I]    status - Display server status.
+[04-09-2021 15:37:16] [I]    mods - Display all loaded mods.
+[04-09-2021 15:37:16] [I]    mod <name...> - Display information about a loaded plugin.
+[04-09-2021 15:37:16] [I]    js <script...> - Run arbitrary Javascript.
+[04-09-2021 15:37:16] [I]    say <message...> - Send a message to all players.
+[04-09-2021 15:37:16] [I]    pause <on/off> - Pause or unpause the game.
+[04-09-2021 15:37:16] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-09-2021 15:37:16] [I]    fillitems [team] - Fill the core with items.
+[04-09-2021 15:37:16] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-09-2021 15:37:16] [I]    config [name] [value...] - Configure server settings.
+[04-09-2021 15:37:16] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-09-2021 15:37:16] [I]    whitelisted - List the entire whitelist.
+[04-09-2021 15:37:16] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-09-2021 15:37:16] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-09-2021 15:37:16] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-09-2021 15:37:16] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-09-2021 15:37:16] [I]    kick <username...> - Kick a person by name.
+[04-09-2021 15:37:16] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-09-2021 15:37:16] [I]    bans - List all banned IPs and IDs.
+[04-09-2021 15:37:16] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-09-2021 15:37:16] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-09-2021 15:37:16] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-09-2021 15:37:16] [I]    admins - List all admins.
+[04-09-2021 15:37:16] [I]    players - List all players currently in game.
+[04-09-2021 15:37:16] [I]    runwave - Trigger the next wave.
+[04-09-2021 15:37:16] [I]    load <slot> - Load a save from a slot.
+[04-09-2021 15:37:16] [I]    save <slot> - Save game state to a slot.
+[04-09-2021 15:37:16] [I]    saves - List all saves in the save directory.
+[04-09-2021 15:37:16] [I]    gameover - Force a game over.
+[04-09-2021 15:37:16] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-09-2021 15:37:16] [I]    search <name...> - Search players who have used part of a name.
+[04-09-2021 15:37:16] [I]    gc - Trigger a garbage collection. Testing only.
+[04-09-2021 15:37:16] [I]    yes - Run the last suggested incorrect command.
+[04-09-2021 15:37:27] [I] Save loaded.
+[04-09-2021 15:37:27] [I] Opened a server on port 6567.
+[04-09-2021 15:37:33] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 15:40:05] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 15:53:37] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-09-2021 16:05:47] [I] SpaceCheddar has connected. [EixL23HMmGIAAAAAmQmmiw==]
+[04-09-2021 16:05:52] [I] Niffles: Hewwo
+[04-09-2021 16:06:00] [I] SpaceCheddar: Tyler here?
+[04-09-2021 16:06:04] [I] Niffles: Focus on antiaircraft defence when we need to repairt
+[04-09-2021 16:06:06] [I] Niffles: no
+[04-09-2021 16:06:11] [I] Niffles: Were going to make it to wave 100
+[04-09-2021 16:06:14] [I] Niffles: I swear
+[04-09-2021 16:06:17] [I] SpaceCheddar: Tyler inconsistent
+[04-09-2021 16:06:27] [I] Niffles: Do you want to try to get some resources? and reestablish the other island maybe?
+[04-09-2021 16:06:29] [I] SpaceCheddar: I on phone
+[04-09-2021 16:06:35] [I] Niffles: Or at least a little mass driver
+[04-09-2021 16:06:52] [I] Niffles: We neeed titanium and thorium BAD
+[04-09-2021 16:07:47] [I] Game over! Reached wave 83 with 2 players online on map Archipelago.
+[04-09-2021 16:07:47] [I] Selected next map to be Wasteland.
+[04-09-2021 16:07:52] [I] Niffles: Frick
+[04-09-2021 16:07:56] [I] Niffles: Same wekness as last time
+[04-09-2021 16:08:01] [I] Niffles: t12
+[04-09-2021 16:08:06] [I] Niffles: to the right flank
+[04-09-2021 16:08:23] [I] Niffles: I like this map
+[04-09-2021 16:08:32] [I] Niffles: Thorium tho
+[04-09-2021 16:08:34] [I] Niffles: Poggers
+[04-09-2021 16:08:38] [I] Niffles: And easy to defend ish?
+[04-09-2021 16:10:44] [I] Niffles: This is pog
+[04-09-2021 16:10:47] [I] Niffles: Tons of res close
+[04-09-2021 16:13:33] [I] Niffles: We need massive silicon very important
+[04-09-2021 16:14:18] [I] SpaceCheddar: sory
+[04-09-2021 16:14:24] [I] Niffles: No wirries
+[04-09-2021 16:15:27] [I] Niffles: We will need to expand up
+[04-09-2021 16:15:37] [I] Niffles: Bc titanium
+[04-09-2021 16:16:16] [I] Niffles: We also need to organizze powert
+[04-09-2021 16:19:30] [I] SpaceCheddar: getting plastic for some big silicon
+[04-09-2021 16:19:33] [I] Niffles: OK
+[04-09-2021 16:19:37] [I] Niffles: We need that
+[04-09-2021 16:19:44] [I] Niffles: And metaglas
+[04-09-2021 16:19:51] [I] Niffles: Yeeheehee
+[04-09-2021 16:19:59] [I] Niffles: O thats a convenient spot for glass lel
+[04-09-2021 16:20:44] [I] SpaceCheddar: Finn down here would be good for 1 multi press 2 steam power
+[04-09-2021 16:20:48] [I] Niffles: OK
+[04-09-2021 16:21:04] [I] Niffles: OK Got bit titanium now
+[04-09-2021 16:21:07] [I] Niffles: *big
+[04-09-2021 16:21:37] [I] SpaceCheddar: here
+[04-09-2021 16:22:05] [I] Niffles: need more glass
+[04-09-2021 16:22:10] [I] SpaceCheddar: ee3 defenses
+[04-09-2021 16:22:16] [I] Niffles: Ya
+[04-09-2021 16:26:35] [I] SpaceCheddar: need 25 silicon
+[04-09-2021 16:26:43] [I] Niffles: For wha
+[04-09-2021 16:27:00] [I] SpaceCheddar: *60. for big silicon
+[04-09-2021 16:27:15] [I] Niffles: I need 200 :P
+[04-09-2021 16:27:18] [I] Niffles: AH
+[04-09-2021 16:27:19] [I] Niffles: Lol
+[04-09-2021 16:27:27] [I] Niffles: We will need better silicon production
+[04-09-2021 16:27:39] [I] Niffles: Ill redo this
+[04-09-2021 16:32:15] [I] SpaceCheddar: just need plastic
+[04-09-2021 16:34:50] [I] Niffles: We need graphiiiitee
+[04-09-2021 16:34:53] [I] Niffles: Salvoo'
+[04-09-2021 16:35:02] [I] SpaceCheddar: need 50 graphite for some big graphite
+[04-09-2021 16:35:06] [I] Niffles: OK
+[04-09-2021 16:38:34] [I] Niffles: Ill need ur help with air defence
+[04-09-2021 16:39:45] [I] Niffles: Make ur thing
+[04-09-2021 16:39:51] [I] Niffles: We have 50 graph
+[04-09-2021 16:39:55] [I] SpaceCheddar: ok
+[04-09-2021 16:41:06] [I] Niffles: Can i use some now?
+[04-09-2021 16:41:30] [I] SpaceCheddar: some what
+[04-09-2021 16:41:38] [I] Niffles: Graoph
+[04-09-2021 16:43:49] [I] SpaceCheddar: I'll make a reCyor
+[04-09-2021 16:43:56] [I] SpaceCheddar: reactor
+[04-09-2021 16:44:00] [I] Niffles: I was gonna
+[04-09-2021 16:44:03] [I] Niffles: EEEEE
+[04-09-2021 16:44:13] [I] SpaceCheddar: ok you do it ghen
+[04-09-2021 16:44:16] [I] Niffles: OOKM
+[04-09-2021 16:44:26] [E] Command not found. Did you mean "js"?
+[04-09-2021 16:44:30] [I] Commands:
+[04-09-2021 16:44:30] [I]    help - Displays this command list.
+[04-09-2021 16:44:30] [I]    version - Displays server version info.
+[04-09-2021 16:44:30] [I]    exit - Exit the server application.
+[04-09-2021 16:44:30] [I]    stop - Stop hosting the server.
+[04-09-2021 16:44:30] [I]    host [mapname] [mode] - Open the server. Will default to survival and a random map if not specified.
+[04-09-2021 16:44:30] [I]    maps - Display all available maps.
+[04-09-2021 16:44:30] [I]    reloadmaps - Reload all maps from disk.
+[04-09-2021 16:44:30] [I]    status - Display server status.
+[04-09-2021 16:44:30] [I]    mods - Display all loaded mods.
+[04-09-2021 16:44:30] [I]    mod <name...> - Display information about a loaded plugin.
+[04-09-2021 16:44:30] [I]    js <script...> - Run arbitrary Javascript.
+[04-09-2021 16:44:30] [I]    say <message...> - Send a message to all players.
+[04-09-2021 16:44:30] [I]    pause <on/off> - Pause or unpause the game.
+[04-09-2021 16:44:30] [I]    rules [remove/add] [name] [value...] - List, remove or add global rules. These will apply regardless of map.
+[04-09-2021 16:44:30] [I]    fillitems [team] - Fill the core with items.
+[04-09-2021 16:44:30] [I]    playerlimit [off/somenumber] - Set the server player limit.
+[04-09-2021 16:44:30] [I]    config [name] [value...] - Configure server settings.
+[04-09-2021 16:44:30] [I]    subnet-ban [add/remove] [address] - Ban a subnet. This simply rejects all connections with IPs starting with some string.
+[04-09-2021 16:44:30] [I]    whitelisted - List the entire whitelist.
+[04-09-2021 16:44:30] [I]    whitelist-add <ID> - Add a player to the whitelist by ID.
+[04-09-2021 16:44:30] [I]    whitelist-remove <ID> - Remove a player to the whitelist by ID.
+[04-09-2021 16:44:30] [I]    shuffle [none/all/custom/builtin] - Set map shuffling mode.
+[04-09-2021 16:44:30] [I]    nextmap <mapname...> - Set the next map to be played after a game-over. Overrides shuffling.
+[04-09-2021 16:44:30] [I]    kick <username...> - Kick a person by name.
+[04-09-2021 16:44:30] [I]    ban <type-id/name/ip> <username/IP/ID...> - Ban a person.
+[04-09-2021 16:44:30] [I]    bans - List all banned IPs and IDs.
+[04-09-2021 16:44:30] [I]    unban <ip/ID> - Completely unban a person by IP or ID.
+[04-09-2021 16:44:30] [I]    pardon <ID> - Pardons a votekicked player by ID and allows them to join again.
+[04-09-2021 16:44:30] [I]    admin <add/remove> <username/ID...> - Make an online user admin
+[04-09-2021 16:44:30] [I]    admins - List all admins.
+[04-09-2021 16:44:30] [I]    players - List all players currently in game.
+[04-09-2021 16:44:30] [I]    runwave - Trigger the next wave.
+[04-09-2021 16:44:30] [I]    load <slot> - Load a save from a slot.
+[04-09-2021 16:44:30] [I]    save <slot> - Save game state to a slot.
+[04-09-2021 16:44:30] [I]    saves - List all saves in the save directory.
+[04-09-2021 16:44:30] [I]    gameover - Force a game over.
+[04-09-2021 16:44:30] [I]    info <IP/UUID/name...> - Find player info(s). Can optionally check for all names or IPs a player has had.
+[04-09-2021 16:44:30] [I]    search <name...> - Search players who have used part of a name.
+[04-09-2021 16:44:30] [I]    gc - Trigger a garbage collection. Testing only.
+[04-09-2021 16:44:30] [I]    yes - Run the last suggested incorrect command.
+[04-09-2021 16:44:44] [I] Server: test test boing
+[04-09-2021 16:44:50] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 16:45:54] [I] Niffles: WELKL
+[04-09-2021 16:47:23] [I] Teeler: Thorium coming online
+[04-09-2021 16:47:30] [I] Teeler: slowly
+[04-09-2021 16:47:38] [I] SpaceCheddar: um
+[04-09-2021 16:47:47] [I] SpaceCheddar: Finn is doing ghat
+[04-09-2021 16:47:58] [I] Teeler: oh
+[04-09-2021 16:48:02] [I] Teeler: well, additional power?
+[04-09-2021 16:48:09] [I] SpaceCheddar: no
+[04-09-2021 16:48:47] [I] Teeler: I don't *see* any reactor
+[04-09-2021 16:48:55] [I] Niffles: IM MAKING IT
+[04-09-2021 16:49:00] [I] Teeler: o
+[04-09-2021 16:49:06] [I] Niffles: Need coolant fisrt tho
+[04-09-2021 16:49:11] [I] Teeler: You want schematic though?
+[04-09-2021 16:49:13] [I] Teeler: bXNjaAF4nEVNS26DMBQczMcQkrLoBbgAh6iqLCpVrVRVlbok4DaWAFNjkrDs/Sr1QlHoMxBVlj1vxjPzECBm8Jq8FkjvX7Z3rw9v2/T56fE9NXulZV+notnnTSHK9IC4FF2hZWukaoA1ksWTaZEXRm
+[04-09-2021 16:49:21] [I] Teeler: Titanium & water extractors
+[04-09-2021 16:49:34] [I] Teeler: Maybe right next to the thorium laserdrill
+[04-09-2021 16:49:36] [I] Niffles: No I dont want scnematic
+[04-09-2021 16:49:39] [I] Niffles: Bruh
+[04-09-2021 16:49:42] [I] Teeler: darnit
+[04-09-2021 16:49:48] [I] Niffles: move I cant see
+[04-09-2021 16:49:49] [I] Teeler: Space efficient?
+[04-09-2021 16:52:06] [I] Niffles: Bruh lancers are pog
+[04-09-2021 16:53:13] [I] Niffles: Tyler can you redo the titanium supply for the cryo, its too big and you like space efficient
+[04-09-2021 16:53:43] [I] Niffles: Ello?
+[04-09-2021 16:53:47] [I] Teeler: Oh
+[04-09-2021 16:53:49] [I] Teeler: full of copper
+[04-09-2021 16:54:10] [I] Niffles: Oh oop
+[04-09-2021 16:54:15] [I] SpaceCheddar: stupid tyler
+[04-09-2021 16:54:16] [I] Niffles: EEE
+[04-09-2021 16:54:23] [I] Teeler: That was Finn
+[04-09-2021 16:54:28] [I] Niffles: Yes that wwas me\
+[04-09-2021 16:54:31] [I] Teeler: Why do *i* get blamed for everything?
+[04-09-2021 16:54:32] [I] Niffles: Sowwy
+[04-09-2021 16:54:41] [I] Niffles: teeler can you help with titanium quick
+[04-09-2021 16:54:47] [I] Teeler: Oh sure
+[04-09-2021 16:54:48] [I] Niffles: I need to get the reactor back up
+[04-09-2021 16:55:04] [I] Niffles: this loop here
+[04-09-2021 16:56:17] [I] Teeler: *huh*
+[04-09-2021 16:56:23] [I] Teeler: why don't my bridge conveyors work?
+[04-09-2021 16:56:25] [I] Niffles: Nooooo thats not goos
+[04-09-2021 16:56:40] [I] Niffles: Its becausde you made the loop[ smaller
+[04-09-2021 16:56:45] [I] Niffles: Just lemme fixc it them
+[04-09-2021 16:56:51] [I] SpaceCheddar: Tyler ghags why you need a lesson on how to conveyor
+[04-09-2021 16:57:53] [I] Niffles: Does it work tee?
+[04-09-2021 16:58:17] [I] Niffles: Sigh ill do it
+[04-09-2021 16:58:58] [I] Niffles: uhh
+[04-09-2021 16:59:01] [I] Niffles: wat
+[04-09-2021 17:00:38] [I] Niffles: OOOH
+[04-09-2021 17:00:42] [I] Niffles: Ohg I need the reactor
+[04-09-2021 17:00:47] [I] Niffles: One sec
+[04-09-2021 17:01:10] [I] Niffles: need a power boost
+[04-09-2021 17:01:13] [I] Niffles: Boost
+[04-09-2021 17:01:18] [I] Niffles: OK good now
+[04-09-2021 17:01:23] [I] Niffles: Ish
+[04-09-2021 17:01:29] [I] SpaceCheddar: crap
+[04-09-2021 17:01:34] [I] Teeler: Ooh
+[04-09-2021 17:01:38] [I] Teeler: This segment could be useful
+[04-09-2021 17:01:39] [I] Niffles: One second
+[04-09-2021 17:01:50] [I] SpaceCheddar: they coming a different way
+[04-09-2021 17:02:01] [I] Niffles: WHAT IS USING THE POWER
+[04-09-2021 17:02:14] [I] Teeler: Everything?
+[04-09-2021 17:02:21] [I] Niffles: Ok fixed
+[04-09-2021 17:02:22] [I] Teeler: We just need thorium into the rreactor
+[04-09-2021 17:02:27] [I] Teeler: whew
+[04-09-2021 17:02:38] [I] Niffles: force ooh
+[04-09-2021 17:02:54] [I] Teeler: though if we had use *my* 4 reactor design we would A.) use 4 times more materials and B.) have more power
+[04-09-2021 17:03:04] [I] Teeler: shameless self promotion
+[04-09-2021 17:03:35] [I] Game over! Reached wave 27 with 3 players online on map Wasteland.
+[04-09-2021 17:03:35] [I] Selected next map to be Ancient Caldera.
+[04-09-2021 17:03:41] [I] Niffles: EEEEEEEEEEEEEEEEEEE
+[04-09-2021 17:03:46] [I] Niffles: Can you revert teler
+[04-09-2021 17:03:54] [I] Teeler: No, the server doesn't save
+[04-09-2021 17:03:57] [I] Niffles: Ok
+[04-09-2021 17:04:00] [I] Niffles: We start over
+[04-09-2021 17:04:01] [I] Teeler: And I haven't implemented that yet into boing
+[04-09-2021 17:04:22] [I] Niffles: How is the bot going?
+[04-09-2021 17:04:36] [I] Niffles: Ook we need grtapite silicon
+[04-09-2021 17:04:40] [I] Niffles: Ewan you wanna do dat?
+[04-09-2021 17:06:09] [I] Niffles: SOPPER
+[04-09-2021 17:06:12] [I] Niffles: COPPER
+[04-09-2021 17:06:27] [I] Teeler: Bye now
+[04-09-2021 17:06:33] [I] Niffles: bainow
+[04-09-2021 17:06:35] [I] SpaceCheddar: phone dead
+[04-09-2021 17:06:35] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (disappeared)
+[04-09-2021 17:06:49] [I] SpaceCheddar has disconnected. [EixL23HMmGIAAAAAmQmmiw==] (timeout)
+[04-09-2021 17:51:18] [I] Game over! Reached wave 23 with 1 players online on map Ancient Caldera.
+[04-09-2021 17:51:18] [I] Selected next map to be Debris Field.
+[04-09-2021 17:57:36] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (closed)
+[04-09-2021 17:59:04] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-09-2021 17:59:04] [I] Selected next map to be Mud Flats.
+[04-09-2021 18:02:14] [I] Niffles has connected. [7pbgsyTHpyEAAAAAKNxApg==]
+[04-09-2021 18:15:01] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 18:15:10] [I] Teeler: ... Mud flats!
+[04-09-2021 18:15:14] [I] Niffles: UEs
+[04-09-2021 18:15:24] [I] Niffles: Get graphite and sili
+[04-09-2021 18:16:12] [I] Teeler: Oh, no, I'm here to test out server commands
+[04-09-2021 18:16:16] [I] Teeler: But you're playing, so
+[04-09-2021 18:16:20] [I] Teeler: That's a bad idea
+[04-09-2021 18:16:37] [I] Teeler: I *do* like how neat and orderly everything is!
+[04-09-2021 18:16:47] [I] Niffles has disconnected. [7pbgsyTHpyEAAAAAKNxApg==] (disappeared)
+[04-09-2021 18:16:51] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-10-2021 10:26:01] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:26:06] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 10:26:06] [I] Loading map...
+[04-10-2021 10:26:06] [I] Map loaded.
+[04-10-2021 10:26:06] [I] Opened a server on port 6567.
+[04-10-2021 10:31:27] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 10:31:27] [I] Selected next map to be Shattered.
+[04-10-2021 10:37:58] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 10:37:58] [I] Selected next map to be Fortress.
+[04-10-2021 10:43:26] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 10:43:27] [I] Selected next map to be Debris Field.

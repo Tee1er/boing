@@ -1,0 +1,884 @@
+[04-09-2021 21:08:57] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:09:19] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:12:24] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:13:18] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:22:15] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:32:31] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:33:27] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:36:13] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:36:17] [I] Randomized next map to be Maze.
+[04-09-2021 21:36:17] [I] Loading map...
+[04-09-2021 21:36:18] [I] Map loaded.
+[04-09-2021 21:36:18] [I] Opened a server on port 6567.
+[04-09-2021 21:36:31] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 21:37:07] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-09-2021 21:39:05] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:39:15] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:39:45] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:39:48] [I] Randomized next map to be Maze.
+[04-09-2021 21:39:48] [I] Loading map...
+[04-09-2021 21:39:48] [I] Map loaded.
+[04-09-2021 21:39:48] [I] Opened a server on port 6567.
+[04-09-2021 21:39:51] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-09-2021 21:39:53] [I] Stopped server.
+[04-09-2021 21:39:54] [I] Randomized next map to be Islands.
+[04-09-2021 21:39:54] [I] Loading map...
+[04-09-2021 21:39:54] [I] Map loaded.
+[04-09-2021 21:39:54] [I] Opened a server on port 6567.
+[04-09-2021 21:41:35] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:50:57] [I] Server loaded. Type 'help' for help.
+[04-09-2021 21:50:59] [E] Invalid command. Type 'help' for help.
+[04-09-2021 21:51:02] [I] Randomized next map to be Fortress.
+[04-09-2021 21:51:02] [I] Loading map...
+[04-09-2021 21:51:03] [I] Map loaded.
+[04-09-2021 21:51:03] [I] Opened a server on port 6567.
+[04-09-2021 21:56:20] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-09-2021 21:56:20] [I] Selected next map to be Debris Field.
+[04-09-2021 22:01:09] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:02:06] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:03:01] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:03:52] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:04:29] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:08:31] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:08:45] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:08:58] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:10:57] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:12:02] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:12:22] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:13:40] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:14:05] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:16:35] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:17:06] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:18:35] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:20:29] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:22:59] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:23:14] [E] Invalid command. Type 'help' for help.
+[04-09-2021 22:26:22] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:26:22] [I] Randomized next map to be Fork.
+[04-09-2021 22:26:22] [I] Loading map...
+[04-09-2021 22:26:23] [I] Map loaded.
+[04-09-2021 22:26:23] [I] Opened a server on port 6567.
+[04-09-2021 22:27:30] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:27:30] [I] Randomized next map to be Shattered.
+[04-09-2021 22:27:30] [I] Loading map...
+[04-09-2021 22:27:30] [I] Map loaded.
+[04-09-2021 22:27:30] [I] Opened a server on port 6567.
+[04-09-2021 22:27:44] [I] Server loaded. Type 'help' for help.
+[04-09-2021 22:27:44] [I] Randomized next map to be Molten Lake.
+[04-09-2021 22:27:44] [I] Loading map...
+[04-09-2021 22:27:45] [I] Map loaded.
+[04-09-2021 22:27:45] [I] Opened a server on port 6567.
+[04-09-2021 22:28:15] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-09-2021 22:28:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:40:49] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:42:16] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:42:49] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:43:47] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:43:47] [I] Randomized next map to be Labyrinth.
+[04-10-2021 10:43:47] [I] Loading map...
+[04-10-2021 10:43:47] [I] Map loaded.
+[04-10-2021 10:43:47] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 10:44:08] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:44:11] [E] Invalid command. Type 'help' for help.
+[04-10-2021 10:44:14] [I] Randomized next map to be Triad.
+[04-10-2021 10:44:14] [I] Loading map...
+[04-10-2021 10:44:14] [I] Map loaded.
+[04-10-2021 10:44:14] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 10:44:22] [I] Randomized next map to be Shattered.
+[04-10-2021 10:44:22] [I] Loading map...
+[04-10-2021 10:44:22] [I] Map loaded.
+[04-10-2021 10:44:22] [I] Opened a server on port 6567.
+[04-10-2021 10:49:02] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:50:01] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:50:01] [I] Randomized next map to be Labyrinth.
+[04-10-2021 10:50:01] [I] Loading map...
+[04-10-2021 10:50:02] [I] Map loaded.
+[04-10-2021 10:50:02] [I] Opened a server on port 6567.
+[04-10-2021 10:50:13] [I] Server loaded. Type 'help' for help.
+[04-10-2021 10:50:13] [I] Randomized next map to be Triad.
+[04-10-2021 10:50:13] [I] Loading map...
+[04-10-2021 10:50:13] [I] Map loaded.
+[04-10-2021 10:50:13] [I] Opened a server on port 6567.
+[04-10-2021 10:57:22] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-10-2021 10:57:22] [I] Selected next map to be Wasteland.
+[04-10-2021 11:03:53] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 11:03:53] [I] Selected next map to be Islands.
+[04-10-2021 11:09:49] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 11:09:49] [I] Selected next map to be Shattered.
+[04-10-2021 11:16:20] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 11:16:20] [I] Selected next map to be Fork.
+[04-10-2021 11:22:21] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 11:22:21] [I] Selected next map to be Archipelago.
+[04-10-2021 11:29:06] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-10-2021 11:29:06] [I] Selected next map to be Fortress.
+[04-10-2021 11:34:35] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 11:34:35] [I] Selected next map to be Debris Field.
+[04-10-2021 11:40:53] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-10-2021 11:40:53] [I] Selected next map to be Shattered.
+[04-10-2021 11:47:24] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 11:47:24] [I] Selected next map to be Fortress.
+[04-10-2021 11:52:53] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 11:52:53] [I] Selected next map to be Debris Field.
+[04-10-2021 11:59:01] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-10-2021 11:59:01] [I] Selected next map to be Tendrils.
+[04-10-2021 12:04:49] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 12:04:49] [I] Selected next map to be Labyrinth.
+[04-10-2021 12:11:15] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-10-2021 12:11:15] [I] Selected next map to be Fork.
+[04-10-2021 12:17:16] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 12:17:16] [I] Selected next map to be Wasteland.
+[04-10-2021 12:23:47] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 12:23:47] [I] Selected next map to be Fortress.
+[04-10-2021 12:29:16] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 12:29:16] [I] Selected next map to be Archipelago.
+[04-10-2021 12:36:00] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-10-2021 12:36:00] [I] Selected next map to be Fortress.
+[04-10-2021 12:41:30] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 12:41:30] [I] Selected next map to be Archipelago.
+[04-10-2021 12:48:18] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-10-2021 12:48:18] [I] Selected next map to be Labyrinth.
+[04-10-2021 12:54:45] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-10-2021 12:54:45] [I] Selected next map to be Fork.
+[04-10-2021 13:00:45] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 13:00:45] [I] Selected next map to be Debris Field.
+[04-10-2021 13:06:52] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-10-2021 13:06:52] [I] Selected next map to be Maze.
+[04-10-2021 13:13:34] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 13:13:34] [I] Selected next map to be Triad.
+[04-10-2021 13:20:57] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-10-2021 13:20:57] [I] Selected next map to be Molten Lake.
+[04-10-2021 13:26:54] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-10-2021 13:26:54] [I] Selected next map to be Ancient Caldera.
+[04-10-2021 13:32:28] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 13:32:28] [I] Selected next map to be Labyrinth.
+[04-10-2021 13:38:55] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-10-2021 13:38:55] [I] Selected next map to be Molten Lake.
+[04-10-2021 13:45:11] [I] Server loaded. Type 'help' for help.
+[04-10-2021 13:45:11] [I] Randomized next map to be Labyrinth.
+[04-10-2021 13:45:11] [I] Loading map...
+[04-10-2021 13:45:12] [I] Map loaded.
+[04-10-2021 13:45:12] [I] Opened a server on port 6567.
+[04-10-2021 13:45:53] [I] Server loaded. Type 'help' for help.
+[04-10-2021 13:45:53] [I] Randomized next map to be Molten Lake.
+[04-10-2021 13:45:53] [I] Loading map...
+[04-10-2021 13:45:54] [I] Map loaded.
+[04-10-2021 13:45:55] [I] Opened a server on port 6567.
+[04-10-2021 13:46:35] [E] Invalid command. Type 'help' for help.
+[04-10-2021 13:46:37] [E] Too few command arguments. Usage: pause <on/off>
+[04-10-2021 13:46:42] [I] Game paused.
+[04-10-2021 13:46:44] [I] Game unpaused.
+[04-10-2021 13:48:51] [I] Server loaded. Type 'help' for help.
+[04-10-2021 13:48:51] [I] Randomized next map to be Islands.
+[04-10-2021 13:48:51] [I] Loading map...
+[04-10-2021 13:48:51] [I] Map loaded.
+[04-10-2021 13:48:51] [I] Opened a server on port 6567.
+[04-10-2021 13:48:58] [E] Too few command arguments. Usage: pause <on/off>
+[04-10-2021 13:54:34] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 13:54:34] [I] Selected next map to be Tendrils.
+[04-10-2021 14:00:20] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 14:00:20] [I] Selected next map to be Maze.
+[04-10-2021 14:07:01] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 14:07:01] [I] Selected next map to be Fortress.
+[04-10-2021 14:12:31] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 14:12:31] [I] Selected next map to be Wasteland.
+[04-10-2021 14:19:02] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 14:19:02] [I] Selected next map to be Fork.
+[04-10-2021 14:25:02] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 14:25:02] [I] Selected next map to be Molten Lake.
+[04-10-2021 14:31:00] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-10-2021 14:31:00] [I] Selected next map to be Wasteland.
+[04-10-2021 14:37:31] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 14:37:31] [I] Selected next map to be Maze.
+[04-10-2021 14:44:13] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 14:44:13] [I] Selected next map to be Ancient Caldera.
+[04-10-2021 14:49:46] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 14:49:46] [I] Selected next map to be Triad.
+[04-10-2021 14:57:08] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-10-2021 14:57:08] [I] Selected next map to be Shattered.
+[04-10-2021 15:03:39] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 15:03:39] [I] Selected next map to be Tendrils.
+[04-10-2021 15:09:28] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 15:09:28] [I] Selected next map to be Wasteland.
+[04-10-2021 15:15:58] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 15:15:58] [I] Selected next map to be Islands.
+[04-10-2021 15:21:55] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 15:21:55] [I] Selected next map to be Mud Flats.
+[04-10-2021 15:28:28] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-10-2021 15:28:28] [I] Selected next map to be Maze.
+[04-10-2021 15:35:10] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 15:35:10] [I] Selected next map to be Wasteland.
+[04-10-2021 15:41:41] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 15:41:41] [I] Selected next map to be Fortress.
+[04-10-2021 15:47:10] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 15:47:10] [I] Selected next map to be Labyrinth.
+[04-10-2021 15:53:36] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-10-2021 15:53:36] [I] Selected next map to be Debris Field.
+[04-10-2021 15:59:55] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-10-2021 15:59:55] [I] Selected next map to be Shattered.
+[04-10-2021 16:06:25] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 16:06:25] [I] Selected next map to be Mud Flats.
+[04-10-2021 16:13:00] [I] Game over! Reached wave 3 with 0 players online on map Mud Flats.
+[04-10-2021 16:13:00] [I] Selected next map to be Fortress.
+[04-10-2021 16:16:08] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:16:08] [I] Randomized next map to be Debris Field.
+[04-10-2021 16:16:08] [I] Loading map...
+[04-10-2021 16:16:09] [I] Map loaded.
+[04-10-2021 16:16:09] [I] Opened a server on port 6567.
+[04-10-2021 16:16:15] [I] Game paused.
+[04-10-2021 16:19:53] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:19:53] [I] Randomized next map to be Archipelago.
+[04-10-2021 16:19:53] [I] Loading map...
+[04-10-2021 16:19:56] [I] Map loaded.
+[04-10-2021 16:19:56] [I] Opened a server on port 6567.
+[04-10-2021 16:20:01] [I] Game paused.
+[04-10-2021 16:20:29] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:20:29] [I] Randomized next map to be Labyrinth.
+[04-10-2021 16:20:29] [I] Loading map...
+[04-10-2021 16:20:30] [I] Map loaded.
+[04-10-2021 16:20:30] [I] Opened a server on port 6567.
+[04-10-2021 16:20:35] [I] Game paused.
+[04-10-2021 16:21:18] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:21:18] [I] Randomized next map to be Debris Field.
+[04-10-2021 16:21:18] [I] Loading map...
+[04-10-2021 16:21:19] [I] Map loaded.
+[04-10-2021 16:21:19] [I] Opened a server on port 6567.
+[04-10-2021 16:21:22] [I] Game paused.
+[04-10-2021 16:21:58] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:21:58] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 16:21:58] [I] Loading map...
+[04-10-2021 16:21:58] [I] Map loaded.
+[04-10-2021 16:21:58] [I] Opened a server on port 6567.
+[04-10-2021 16:22:03] [I] Game paused.
+[04-10-2021 16:24:56] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:24:56] [I] Randomized next map to be Archipelago.
+[04-10-2021 16:24:56] [I] Loading map...
+[04-10-2021 16:24:59] [I] Map loaded.
+[04-10-2021 16:24:59] [I] Opened a server on port 6567.
+[04-10-2021 16:25:03] [I] Game paused.
+[04-10-2021 16:25:20] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:25:20] [I] Randomized next map to be Molten Lake.
+[04-10-2021 16:25:20] [I] Loading map...
+[04-10-2021 16:25:21] [I] Map loaded.
+[04-10-2021 16:25:21] [I] Opened a server on port 6567.
+[04-10-2021 16:25:25] [I] Game paused.
+[04-10-2021 16:25:33] [I] Game unpaused.
+[04-10-2021 16:25:58] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:25:58] [I] Randomized next map to be Triad.
+[04-10-2021 16:25:58] [I] Loading map...
+[04-10-2021 16:25:59] [I] Map loaded.
+[04-10-2021 16:25:59] [I] Opened a server on port 6567.
+[04-10-2021 16:25:59] [I] Game paused.
+[04-10-2021 16:26:33] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:26:33] [I] Randomized next map to be Mud Flats.
+[04-10-2021 16:26:33] [I] Loading map...
+[04-10-2021 16:26:34] [I] Map loaded.
+[04-10-2021 16:26:34] [I] Opened a server on port 6567.
+[04-10-2021 16:26:39] [I] Game paused.
+[04-10-2021 16:29:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:29:45] [I] Randomized next map to be Labyrinth.
+[04-10-2021 16:29:45] [I] Loading map...
+[04-10-2021 16:29:46] [I] Map loaded.
+[04-10-2021 16:29:46] [I] Opened a server on port 6567.
+[04-10-2021 16:30:21] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:30:21] [I] Randomized next map to be Labyrinth.
+[04-10-2021 16:30:21] [I] Loading map...
+[04-10-2021 16:30:21] [I] Map loaded.
+[04-10-2021 16:30:21] [I] Opened a server on port 6567.
+[04-10-2021 16:30:42] [I] Game paused.
+[04-10-2021 16:31:01] [I] Game paused.
+[04-10-2021 16:31:05] [I] Game unpaused.
+[04-10-2021 16:31:09] [I] Game unpaused.
+[04-10-2021 16:31:13] [I] Game paused.
+[04-10-2021 16:32:07] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:32:07] [I] Randomized next map to be Wasteland.
+[04-10-2021 16:32:07] [I] Loading map...
+[04-10-2021 16:32:08] [I] Map loaded.
+[04-10-2021 16:32:08] [I] Opened a server on port 6567.
+[04-10-2021 16:32:10] [I] Game paused.
+[04-10-2021 16:32:36] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:32:36] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 16:32:36] [I] Loading map...
+[04-10-2021 16:32:36] [I] Map loaded.
+[04-10-2021 16:32:36] [I] Opened a server on port 6567.
+[04-10-2021 16:32:39] [I] Game paused.
+[04-10-2021 16:33:16] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:33:16] [I] Randomized next map to be Islands.
+[04-10-2021 16:33:16] [I] Loading map...
+[04-10-2021 16:33:16] [I] Map loaded.
+[04-10-2021 16:33:16] [I] Opened a server on port 6567.
+[04-10-2021 16:33:18] [I] Game paused.
+[04-10-2021 16:33:40] [I] Game paused.
+[04-10-2021 16:35:43] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:35:43] [I] Randomized next map to be Shattered.
+[04-10-2021 16:35:43] [I] Loading map...
+[04-10-2021 16:35:44] [I] Map loaded.
+[04-10-2021 16:35:44] [I] Opened a server on port 6567.
+[04-10-2021 16:35:47] [I] Game paused.
+[04-10-2021 16:36:09] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:36:09] [I] Randomized next map to be Fortress.
+[04-10-2021 16:36:09] [I] Loading map...
+[04-10-2021 16:36:10] [I] Map loaded.
+[04-10-2021 16:36:10] [I] Opened a server on port 6567.
+[04-10-2021 16:36:16] [I] Game paused.
+[04-10-2021 16:37:55] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:37:55] [I] Randomized next map to be Triad.
+[04-10-2021 16:37:55] [I] Loading map...
+[04-10-2021 16:37:56] [I] Map loaded.
+[04-10-2021 16:37:56] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 16:38:15] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:38:15] [I] Randomized next map to be Fork.
+[04-10-2021 16:38:15] [I] Loading map...
+[04-10-2021 16:38:16] [I] Map loaded.
+[04-10-2021 16:38:16] [I] Opened a server on port 6567.
+[04-10-2021 16:38:19] [I] Game paused.
+[04-10-2021 16:38:44] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:38:44] [I] Randomized next map to be Archipelago.
+[04-10-2021 16:38:44] [I] Loading map...
+[04-10-2021 16:38:47] [I] Map loaded.
+[04-10-2021 16:38:47] [I] Opened a server on port 6567.
+[04-10-2021 16:38:48] [I] Game paused.
+[04-10-2021 16:39:08] [I] Game unpaused.
+[04-10-2021 16:40:57] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:40:57] [I] Randomized next map to be Fork.
+[04-10-2021 16:40:57] [I] Loading map...
+[04-10-2021 16:40:58] [I] Map loaded.
+[04-10-2021 16:40:58] [I] Opened a server on port 6567.
+[04-10-2021 16:40:59] [I] Game paused.
+[04-10-2021 16:41:01] [I] Game unpaused.
+[04-10-2021 16:42:10] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:42:10] [I] Randomized next map to be Maze.
+[04-10-2021 16:42:10] [I] Loading map...
+[04-10-2021 16:42:11] [I] Map loaded.
+[04-10-2021 16:42:11] [I] Opened a server on port 6567.
+[04-10-2021 16:42:13] [I] Game paused.
+[04-10-2021 16:42:26] [I] Server loaded. Type 'help' for help.
+[04-10-2021 16:42:26] [I] Randomized next map to be Maze.
+[04-10-2021 16:42:26] [I] Loading map...
+[04-10-2021 16:42:27] [I] Map loaded.
+[04-10-2021 16:42:27] [I] Opened a server on port 6567.
+[04-10-2021 16:42:28] [I] Game paused.
+[04-10-2021 17:01:38] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:01:38] [I] Randomized next map to be Fork.
+[04-10-2021 17:01:38] [I] Loading map...
+[04-10-2021 17:01:39] [I] Map loaded.
+[04-10-2021 17:01:39] [I] Opened a server on port 6567.
+[04-10-2021 17:02:28] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:02:28] [I] Randomized next map to be Triad.
+[04-10-2021 17:02:28] [I] Loading map...
+[04-10-2021 17:02:29] [I] Map loaded.
+[04-10-2021 17:02:29] [I] Opened a server on port 6567.
+[04-10-2021 17:03:05] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:03:05] [I] Randomized next map to be Shattered.
+[04-10-2021 17:03:05] [I] Loading map...
+[04-10-2021 17:03:06] [I] Map loaded.
+[04-10-2021 17:03:06] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:03:27] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:03:27] [I] Randomized next map to be Triad.
+[04-10-2021 17:03:27] [I] Loading map...
+[04-10-2021 17:03:27] [I] Map loaded.
+[04-10-2021 17:03:27] [I] Opened a server on port 6567.
+[04-10-2021 17:04:23] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:04:23] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 17:04:23] [I] Loading map...
+[04-10-2021 17:04:24] [I] Map loaded.
+[04-10-2021 17:04:24] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:07:46] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:07:46] [I] Randomized next map to be Tendrils.
+[04-10-2021 17:07:46] [I] Loading map...
+[04-10-2021 17:07:47] [I] Map loaded.
+[04-10-2021 17:07:47] [I] Opened a server on port 6567.
+[04-10-2021 17:08:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:08:45] [I] Randomized next map to be Archipelago.
+[04-10-2021 17:08:45] [I] Loading map...
+[04-10-2021 17:08:48] [I] Map loaded.
+[04-10-2021 17:08:48] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:09:21] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:09:21] [I] Randomized next map to be Mud Flats.
+[04-10-2021 17:09:21] [I] Loading map...
+[04-10-2021 17:09:22] [I] Map loaded.
+[04-10-2021 17:09:22] [I] Opened a server on port 6567.
+[04-10-2021 17:10:00] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:10:00] [I] Randomized next map to be Tendrils.
+[04-10-2021 17:10:00] [I] Loading map...
+[04-10-2021 17:10:00] [I] Map loaded.
+[04-10-2021 17:10:00] [I] Opened a server on port 6567.
+[04-10-2021 17:10:05] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 17:13:57] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:13:58] [I] Randomized next map to be Wasteland.
+[04-10-2021 17:13:58] [I] Loading map...
+[04-10-2021 17:13:58] [I] Map loaded.
+[04-10-2021 17:13:58] [I] Opened a server on port 6567.
+[04-10-2021 17:14:10] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 17:14:23] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:14:23] [I] Randomized next map to be Debris Field.
+[04-10-2021 17:14:23] [I] Loading map...
+[04-10-2021 17:14:24] [I] Map loaded.
+[04-10-2021 17:14:24] [I] Opened a server on port 6567.
+[04-10-2021 17:14:28] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 17:16:41] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:16:41] [I] Randomized next map to be Debris Field.
+[04-10-2021 17:16:41] [I] Loading map...
+[04-10-2021 17:16:42] [I] Map loaded.
+[04-10-2021 17:16:42] [I] Opened a server on port 6567.
+[04-10-2021 17:16:53] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 17:17:09] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:17:09] [I] Randomized next map to be Maze.
+[04-10-2021 17:17:09] [I] Loading map...
+[04-10-2021 17:17:10] [I] Map loaded.
+[04-10-2021 17:17:10] [I] Opened a server on port 6567.
+[04-10-2021 17:17:14] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 17:17:16] [I] Stopped server.
+[04-10-2021 17:18:08] [I] No players are currently in the server.
+[04-10-2021 17:18:20] [I] Status: server closed
+[04-10-2021 17:20:36] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:20:36] [I] Randomized next map to be Mud Flats.
+[04-10-2021 17:20:36] [I] Loading map...
+[04-10-2021 17:20:37] [I] Map loaded.
+[04-10-2021 17:20:37] [I] Opened a server on port 6567.
+[04-10-2021 17:20:44] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:20:44] [I] Randomized next map to be Mud Flats.
+[04-10-2021 17:20:44] [I] Loading map...
+[04-10-2021 17:20:45] [I] Map loaded.
+[04-10-2021 17:20:45] [I] Opened a server on port 6567.
+[04-10-2021 17:20:48] [I] Status:
+[04-10-2021 17:20:48] [I]   Playing on map Mud Flats / Wave 1
+[04-10-2021 17:20:48] [I]   0 enemies.
+[04-10-2021 17:20:48] [I]   61 FPS, 50 MB used.
+[04-10-2021 17:20:48] [I]   No players connected.
+[04-10-2021 17:25:03] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:25:03] [I] Randomized next map to be Fork.
+[04-10-2021 17:25:03] [I] Loading map...
+[04-10-2021 17:25:03] [I] Map loaded.
+[04-10-2021 17:25:03] [I] Opened a server on port 6567.
+[04-10-2021 17:25:20] [I] Status:
+[04-10-2021 17:25:20] [I]   Playing on map Fork / Wave 1
+[04-10-2021 17:25:20] [I]   0 enemies.
+[04-10-2021 17:25:20] [I]   61 FPS, 24 MB used.
+[04-10-2021 17:25:20] [I]   No players connected.
+[04-10-2021 17:28:56] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:28:56] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 17:28:56] [I] Loading map...
+[04-10-2021 17:28:57] [I] Map loaded.
+[04-10-2021 17:28:57] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:29:07] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:29:07] [I] Randomized next map to be Tendrils.
+[04-10-2021 17:29:07] [I] Loading map...
+[04-10-2021 17:29:08] [I] Map loaded.
+[04-10-2021 17:29:08] [I] Opened a server on port 6567.
+[04-10-2021 17:29:11] [I] Status:
+[04-10-2021 17:29:11] [I]   Playing on map Tendrils / Wave 1
+[04-10-2021 17:29:11] [I]   0 enemies.
+[04-10-2021 17:29:11] [I]   61 FPS, 19 MB used.
+[04-10-2021 17:29:11] [I]   No players connected.
+[04-10-2021 17:29:32] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:29:32] [I] Randomized next map to be Archipelago.
+[04-10-2021 17:29:32] [I] Loading map...
+[04-10-2021 17:29:35] [I] Map loaded.
+[04-10-2021 17:29:35] [I] Opened a server on port 6567.
+[04-10-2021 17:29:44] [I] Status:
+[04-10-2021 17:29:44] [I]   Playing on map Archipelago / Wave 1
+[04-10-2021 17:29:44] [I]   0 enemies.
+[04-10-2021 17:29:44] [I]   61 FPS, 38 MB used.
+[04-10-2021 17:29:44] [I]   No players connected.
+[04-10-2021 17:30:24] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:30:24] [I] Randomized next map to be Mud Flats.
+[04-10-2021 17:30:24] [I] Loading map...
+[04-10-2021 17:30:25] [I] Map loaded.
+[04-10-2021 17:30:25] [I] Opened a server on port 6567.
+[04-10-2021 17:30:26] [I] Status:
+[04-10-2021 17:30:26] [I]   Playing on map Mud Flats / Wave 1
+[04-10-2021 17:30:26] [I]   0 enemies.
+[04-10-2021 17:30:26] [I]   0 FPS, 19 MB used.
+[04-10-2021 17:30:26] [I]   No players connected.
+[04-10-2021 17:31:35] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:31:35] [I] Randomized next map to be Archipelago.
+[04-10-2021 17:31:35] [I] Loading map...
+[04-10-2021 17:31:37] [I] Map loaded.
+[04-10-2021 17:31:37] [I] Opened a server on port 6567.
+[04-10-2021 17:31:37] [I] Status:
+[04-10-2021 17:31:37] [I]   Playing on map Archipelago / Wave 1
+[04-10-2021 17:31:37] [I]   0 enemies.
+[04-10-2021 17:31:37] [I]   0 FPS, 42 MB used.
+[04-10-2021 17:31:37] [I]   No players connected.
+[04-10-2021 17:34:14] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:34:14] [I] Randomized next map to be Maze.
+[04-10-2021 17:34:14] [I] Loading map...
+[04-10-2021 17:34:15] [I] Map loaded.
+[04-10-2021 17:34:15] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:34:25] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:34:25] [I] Randomized next map to be Shattered.
+[04-10-2021 17:34:25] [I] Loading map...
+[04-10-2021 17:34:25] [I] Map loaded.
+[04-10-2021 17:34:25] [I] Opened a server on port 6567.
+[04-10-2021 17:34:26] [I] Status:
+[04-10-2021 17:34:26] [I]   Playing on map Shattered / Wave 1
+[04-10-2021 17:34:26] [I]   0 enemies.
+[04-10-2021 17:34:26] [I]   0 FPS, 30 MB used.
+[04-10-2021 17:34:26] [I]   No players connected.
+[04-10-2021 17:35:13] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:35:13] [I] Randomized next map to be Debris Field.
+[04-10-2021 17:35:13] [I] Loading map...
+[04-10-2021 17:35:13] [I] Map loaded.
+[04-10-2021 17:35:13] [I] Opened a server on port 6567.
+[04-10-2021 17:35:15] [I] Status:
+[04-10-2021 17:35:15] [I]   Playing on map Debris Field / Wave 1
+[04-10-2021 17:35:15] [I]   0 enemies.
+[04-10-2021 17:35:15] [I]   61 FPS, 30 MB used.
+[04-10-2021 17:35:15] [I]   No players connected.
+[04-10-2021 17:35:51] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:35:51] [I] Randomized next map to be Wasteland.
+[04-10-2021 17:35:51] [I] Loading map...
+[04-10-2021 17:35:52] [I] Map loaded.
+[04-10-2021 17:35:52] [I] Opened a server on port 6567.
+[04-10-2021 17:35:55] [I] Status:
+[04-10-2021 17:35:55] [I]   Playing on map Wasteland / Wave 1
+[04-10-2021 17:35:55] [I]   0 enemies.
+[04-10-2021 17:35:55] [I]   60 FPS, 33 MB used.
+[04-10-2021 17:35:55] [I]   No players connected.
+[04-10-2021 17:36:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:36:45] [I] Randomized next map to be Fork.
+[04-10-2021 17:36:45] [I] Loading map...
+[04-10-2021 17:36:46] [I] Map loaded.
+[04-10-2021 17:36:46] [I] Opened a server on port 6567.
+[04-10-2021 17:36:48] [I] Status:
+[04-10-2021 17:36:48] [I]   Playing on map Fork / Wave 1
+[04-10-2021 17:36:48] [I]   0 enemies.
+[04-10-2021 17:36:48] [I]   61 FPS, 25 MB used.
+[04-10-2021 17:36:48] [I]   No players connected.
+[04-10-2021 17:40:44] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:40:44] [I] Randomized next map to be Molten Lake.
+[04-10-2021 17:40:44] [I] Loading map...
+[04-10-2021 17:40:45] [I] Map loaded.
+[04-10-2021 17:40:45] [E] Unable to host: Port already in use! Make sure no other servers are running on the same port in your network.
+[04-10-2021 17:40:52] [I] Status: server closed
+[04-10-2021 17:41:07] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:41:07] [I] Randomized next map to be Islands.
+[04-10-2021 17:41:07] [I] Loading map...
+[04-10-2021 17:41:07] [I] Map loaded.
+[04-10-2021 17:41:07] [I] Opened a server on port 6567.
+[04-10-2021 17:41:12] [I] Status:
+[04-10-2021 17:41:12] [I]   Playing on map Islands / Wave 1
+[04-10-2021 17:41:12] [I]   0 enemies.
+[04-10-2021 17:41:12] [I]   60 FPS, 14 MB used.
+[04-10-2021 17:41:12] [I]   No players connected.
+[04-10-2021 17:43:19] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:43:19] [I] Randomized next map to be Islands.
+[04-10-2021 17:43:19] [I] Loading map...
+[04-10-2021 17:43:20] [I] Map loaded.
+[04-10-2021 17:43:20] [I] Opened a server on port 6567.
+[04-10-2021 17:43:23] [I] Status:
+[04-10-2021 17:43:23] [I]   Playing on map Islands / Wave 1
+[04-10-2021 17:43:23] [I]   0 enemies.
+[04-10-2021 17:43:23] [I]   61 FPS, 23 MB used.
+[04-10-2021 17:43:23] [I]   No players connected.
+[04-10-2021 17:43:52] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:43:52] [I] Randomized next map to be Islands.
+[04-10-2021 17:43:52] [I] Loading map...
+[04-10-2021 17:43:53] [I] Map loaded.
+[04-10-2021 17:43:53] [I] Opened a server on port 6567.
+[04-10-2021 17:43:54] [I] Status:
+[04-10-2021 17:43:54] [I]   Playing on map Islands / Wave 1
+[04-10-2021 17:43:54] [I]   0 enemies.
+[04-10-2021 17:43:54] [I]   61 FPS, 14 MB used.
+[04-10-2021 17:43:54] [I]   No players connected.
+[04-10-2021 17:44:39] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:44:39] [I] Randomized next map to be Triad.
+[04-10-2021 17:44:39] [I] Loading map...
+[04-10-2021 17:44:39] [I] Map loaded.
+[04-10-2021 17:44:39] [I] Opened a server on port 6567.
+[04-10-2021 17:47:19] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:47:19] [I] Randomized next map to be Molten Lake.
+[04-10-2021 17:47:19] [I] Loading map...
+[04-10-2021 17:47:20] [I] Map loaded.
+[04-10-2021 17:47:20] [I] Opened a server on port 6567.
+[04-10-2021 17:48:45] [I] Status:
+[04-10-2021 17:48:45] [I]   Playing on map Molten Lake / Wave 1
+[04-10-2021 17:48:45] [I]   0 enemies.
+[04-10-2021 17:48:45] [I]   60 FPS, 28 MB used.
+[04-10-2021 17:48:45] [I]   No players connected.
+[04-10-2021 17:49:21] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:49:21] [I] Randomized next map to be Maze.
+[04-10-2021 17:49:21] [I] Loading map...
+[04-10-2021 17:49:22] [I] Map loaded.
+[04-10-2021 17:49:22] [I] Opened a server on port 6567.
+[04-10-2021 17:49:26] [I] Status:
+[04-10-2021 17:49:26] [I]   Playing on map Maze / Wave 1
+[04-10-2021 17:49:26] [I]   0 enemies.
+[04-10-2021 17:49:26] [I]   61 FPS, 23 MB used.
+[04-10-2021 17:49:26] [I]   No players connected.
+[04-10-2021 17:49:57] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:49:57] [I] Randomized next map to be Maze.
+[04-10-2021 17:49:57] [I] Loading map...
+[04-10-2021 17:49:57] [I] Map loaded.
+[04-10-2021 17:49:57] [I] Opened a server on port 6567.
+[04-10-2021 17:50:02] [I] Status:
+[04-10-2021 17:50:02] [I]   Playing on map Maze / Wave 1
+[04-10-2021 17:50:02] [I]   0 enemies.
+[04-10-2021 17:50:02] [I]   61 FPS, 24 MB used.
+[04-10-2021 17:50:02] [I]   No players connected.
+[04-10-2021 17:50:33] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:50:33] [I] Randomized next map to be Debris Field.
+[04-10-2021 17:50:33] [I] Loading map...
+[04-10-2021 17:50:34] [I] Map loaded.
+[04-10-2021 17:50:34] [I] Opened a server on port 6567.
+[04-10-2021 17:50:37] [I] Status:
+[04-10-2021 17:50:37] [I]   Playing on map Debris Field / Wave 1
+[04-10-2021 17:50:37] [I]   0 enemies.
+[04-10-2021 17:50:37] [I]   61 FPS, 50 MB used.
+[04-10-2021 17:50:37] [I]   No players connected.
+[04-10-2021 17:51:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:51:45] [I] Randomized next map to be Wasteland.
+[04-10-2021 17:51:45] [I] Loading map...
+[04-10-2021 17:51:46] [I] Map loaded.
+[04-10-2021 17:51:46] [I] Opened a server on port 6567.
+[04-10-2021 17:52:45] [I] Status:
+[04-10-2021 17:52:45] [I]   Playing on map Wasteland / Wave 1
+[04-10-2021 17:52:45] [I]   0 enemies.
+[04-10-2021 17:52:45] [I]   60 FPS, 32 MB used.
+[04-10-2021 17:52:45] [I]   No players connected.
+[04-10-2021 17:53:35] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:53:35] [I] Randomized next map to be Debris Field.
+[04-10-2021 17:53:35] [I] Loading map...
+[04-10-2021 17:53:36] [I] Map loaded.
+[04-10-2021 17:53:36] [I] Opened a server on port 6567.
+[04-10-2021 17:53:38] [I] Status:
+[04-10-2021 17:53:38] [I]   Playing on map Debris Field / Wave 1
+[04-10-2021 17:53:38] [I]   0 enemies.
+[04-10-2021 17:53:38] [I]   61 FPS, 27 MB used.
+[04-10-2021 17:53:38] [I]   No players connected.
+[04-10-2021 17:56:20] [I] Status:
+[04-10-2021 17:56:20] [I]   Playing on map Debris Field / Wave 1
+[04-10-2021 17:56:20] [I]   0 enemies.
+[04-10-2021 17:56:20] [I]   60 FPS, 30 MB used.
+[04-10-2021 17:56:21] [I]   No players connected.
+[04-10-2021 17:56:45] [I] Server loaded. Type 'help' for help.
+[04-10-2021 17:56:45] [I] Randomized next map to be Wasteland.
+[04-10-2021 17:56:45] [I] Loading map...
+[04-10-2021 17:56:46] [I] Map loaded.
+[04-10-2021 17:56:46] [I] Opened a server on port 6567.
+[04-10-2021 17:56:49] [I] Status:
+[04-10-2021 17:56:49] [I]   Playing on map Wasteland / Wave 1
+[04-10-2021 17:56:49] [I]   0 enemies.
+[04-10-2021 17:56:49] [I]   60 FPS, 30 MB used.
+[04-10-2021 17:56:49] [I]   No players connected.
+[04-10-2021 18:03:03] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 18:03:03] [I] Selected next map to be Fork.
+[04-10-2021 18:09:04] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 18:09:04] [I] Selected next map to be Archipelago.
+[04-10-2021 18:18:00] [I] Game over! Reached wave 3 with 0 players online on map Archipelago.
+[04-10-2021 18:18:00] [I] Selected next map to be Ancient Caldera.
+[04-10-2021 18:23:33] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 18:23:33] [I] Selected next map to be Debris Field.
+[04-10-2021 18:29:51] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-10-2021 18:29:51] [I] Selected next map to be Molten Lake.
+[04-10-2021 18:35:48] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-10-2021 18:35:48] [I] Selected next map to be Islands.
+[04-10-2021 18:41:45] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 18:41:45] [I] Selected next map to be Fork.
+[04-10-2021 18:47:46] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 18:47:46] [I] Selected next map to be Wasteland.
+[04-10-2021 18:54:16] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 18:54:16] [I] Selected next map to be Islands.
+[04-10-2021 19:00:12] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 19:00:12] [I] Selected next map to be Maze.
+[04-10-2021 19:01:38] [I] Server loaded. Type 'help' for help.
+[04-10-2021 19:01:38] [I] Randomized next map to be Wasteland.
+[04-10-2021 19:01:38] [I] Loading map...
+[04-10-2021 19:01:39] [I] Map loaded.
+[04-10-2021 19:01:39] [I] Opened a server on port 6567.
+[04-10-2021 19:01:45] [I] Status:
+[04-10-2021 19:01:45] [I]   Playing on map Wasteland / Wave 1
+[04-10-2021 19:01:45] [I]   0 enemies.
+[04-10-2021 19:01:45] [I]   61 FPS, 32 MB used.
+[04-10-2021 19:01:45] [I]   No players connected.
+[04-10-2021 19:02:40] [I] Server loaded. Type 'help' for help.
+[04-10-2021 19:02:40] [I] Randomized next map to be Fork.
+[04-10-2021 19:02:40] [I] Loading map...
+[04-10-2021 19:02:40] [I] Map loaded.
+[04-10-2021 19:02:40] [I] Opened a server on port 6567.
+[04-10-2021 19:02:41] [I] Status:
+[04-10-2021 19:02:41] [I]   Playing on map Fork / Wave 1
+[04-10-2021 19:02:41] [I]   0 enemies.
+[04-10-2021 19:02:41] [I]   0 FPS, 25 MB used.
+[04-10-2021 19:02:41] [I]   No players connected.
+[04-10-2021 19:04:31] [I] Server loaded. Type 'help' for help.
+[04-10-2021 19:04:31] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 19:04:31] [I] Loading map...
+[04-10-2021 19:04:31] [I] Map loaded.
+[04-10-2021 19:04:31] [I] Opened a server on port 6567.
+[04-10-2021 19:04:39] [I] Status:
+[04-10-2021 19:04:39] [I]   Playing on map Ancient Caldera / Wave 1
+[04-10-2021 19:04:39] [I]   0 enemies.
+[04-10-2021 19:04:39] [I]   60 FPS, 24 MB used.
+[04-10-2021 19:04:39] [I]   No players connected.
+[04-10-2021 19:09:51] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 19:09:51] [I] Selected next map to be Triad.
+[04-10-2021 19:17:13] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-10-2021 19:17:13] [I] Selected next map to be Debris Field.
+[04-10-2021 19:23:21] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-10-2021 19:23:21] [I] Selected next map to be Maze.
+[04-10-2021 19:30:02] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 19:30:02] [I] Selected next map to be Debris Field.
+[04-10-2021 19:36:12] [I] Game over! Reached wave 2 with 0 players online on map Debris Field.
+[04-10-2021 19:36:12] [I] Selected next map to be Maze.
+[04-10-2021 19:42:53] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 19:42:53] [I] Selected next map to be Shattered.
+[04-10-2021 19:49:24] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 19:49:24] [I] Selected next map to be Islands.
+[04-10-2021 19:55:20] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 19:55:20] [I] Selected next map to be Tendrils.
+[04-10-2021 20:01:06] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 20:01:06] [I] Selected next map to be Molten Lake.
+[04-10-2021 20:07:05] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-10-2021 20:07:05] [I] Selected next map to be Tendrils.
+[04-10-2021 20:12:52] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 20:12:52] [I] Selected next map to be Wasteland.
+[04-10-2021 20:19:23] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 20:19:23] [I] Selected next map to be Shattered.
+[04-10-2021 20:25:53] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 20:25:53] [I] Selected next map to be Tendrils.
+[04-10-2021 20:31:42] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 20:31:42] [I] Selected next map to be Fork.
+[04-10-2021 20:33:49] [I] SpaceCheddar has connected. [2UFOCp9a2foAAAAAaHSA7g==]
+[04-10-2021 20:33:58] [I] Game paused.
+[04-10-2021 20:35:15] [I] Game unpaused.
+[04-10-2021 20:35:41] [I] SpaceCheddar has disconnected. [2UFOCp9a2foAAAAAaHSA7g==] (closed)
+[04-10-2021 20:39:00] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 20:39:00] [I] Selected next map to be Shattered.
+[04-10-2021 20:45:30] [I] Game over! Reached wave 3 with 0 players online on map Shattered.
+[04-10-2021 20:45:30] [I] Selected next map to be Molten Lake.
+[04-10-2021 20:51:27] [I] Game over! Reached wave 2 with 0 players online on map Molten Lake.
+[04-10-2021 20:51:27] [I] Selected next map to be Maze.
+[04-10-2021 20:58:08] [I] Game over! Reached wave 3 with 0 players online on map Maze.
+[04-10-2021 20:58:08] [I] Selected next map to be Ancient Caldera.
+[04-10-2021 21:03:42] [I] Game over! Reached wave 2 with 0 players online on map Ancient Caldera.
+[04-10-2021 21:03:42] [I] Selected next map to be Fork.
+[04-10-2021 21:08:53] [I] No players are currently in the server.
+[04-10-2021 21:09:13] [I] Teeler has connected. [AVDY/FaBkCsAAAAAKphHzQ==]
+[04-10-2021 21:09:22] [I] Players: 1
+[04-10-2021 21:09:22] [I]   Teeler /  ID: AVDY/FaBkCsAAAAAKphHzQ== / IP: 192.168.86.1 / Admin: false
+[04-10-2021 21:09:31] [I] Teeler has disconnected. [AVDY/FaBkCsAAAAAKphHzQ==] (closed)
+[04-10-2021 21:09:34] [I] Status:
+[04-10-2021 21:09:34] [I]   Playing on map Fork / Wave 2
+[04-10-2021 21:09:34] [I]   2 enemies.
+[04-10-2021 21:09:34] [I]   60 FPS, 56 MB used.
+[04-10-2021 21:09:34] [I]   No players connected.
+[04-10-2021 21:09:36] [I] Status:
+[04-10-2021 21:09:36] [I]   Playing on map Fork / Wave 2
+[04-10-2021 21:09:36] [I]   2 enemies.
+[04-10-2021 21:09:36] [I]   60 FPS, 56 MB used.
+[04-10-2021 21:09:36] [I]   No players connected.
+[04-10-2021 21:09:43] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 21:09:43] [I] Selected next map to be Debris Field.
+[04-10-2021 21:14:06] [I] Maps:
+[04-10-2021 21:14:06] [I]   Ancient_Caldera: Default / 256x256
+[04-10-2021 21:14:06] [I]   Archipelago: Default / 500x500
+[04-10-2021 21:14:06] [I]   Debris_Field: Default / 400x400
+[04-10-2021 21:14:06] [I]   Fork: Default / 250x300
+[04-10-2021 21:14:06] [I]   Fortress: Default / 256x256
+[04-10-2021 21:14:06] [I]   Glacier: Default / 150x250
+[04-10-2021 21:14:06] [I]   Islands: Default / 256x256
+[04-10-2021 21:14:06] [I]   Labyrinth: Default / 200x200
+[04-10-2021 21:14:06] [I]   Maze: Default / 256x256
+[04-10-2021 21:14:06] [I]   Molten_Lake: Default / 400x400
+[04-10-2021 21:14:06] [I]   Mud_Flats: Default / 400x400
+[04-10-2021 21:14:06] [I]   Shattered: Default / 350x350
+[04-10-2021 21:14:06] [I]   Tendrils: Default / 300x300
+[04-10-2021 21:14:06] [I]   Triad: Default / 200x200
+[04-10-2021 21:14:06] [I]   Veins: Default / 350x200
+[04-10-2021 21:14:06] [I]   Wasteland: Default / 300x300
+[04-10-2021 21:14:06] [I] Map directory: D:\Mindustry-Server\boing\src\config\maps
+[04-10-2021 21:16:03] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-10-2021 21:16:03] [I] Selected next map to be Tendrils.
+[04-10-2021 21:21:49] [I] Game over! Reached wave 2 with 0 players online on map Tendrils.
+[04-10-2021 21:21:49] [I] Selected next map to be Molten Lake.
+[04-10-2021 21:24:31] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:24:31] [I] Randomized next map to be Triad.
+[04-10-2021 21:24:31] [I] Loading map...
+[04-10-2021 21:24:31] [I] Map loaded.
+[04-10-2021 21:24:31] [I] Opened a server on port 6567.
+[04-10-2021 21:24:46] [I] Game paused.
+[04-10-2021 21:24:48] [I] Game unpaused.
+[04-10-2021 21:24:51] [E] Already hosting. Type 'stop' to stop hosting first.
+[04-10-2021 21:24:59] [I] Stopped server.
+[04-10-2021 21:25:16] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:25:16] [I] Randomized next map to be Debris Field.
+[04-10-2021 21:25:16] [I] Loading map...
+[04-10-2021 21:25:17] [I] Map loaded.
+[04-10-2021 21:25:17] [I] Opened a server on port 6567.
+[04-10-2021 21:25:22] [I] Stopped server.
+[04-10-2021 21:26:01] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:26:01] [I] Randomized next map to be Mud Flats.
+[04-10-2021 21:26:01] [I] Loading map...
+[04-10-2021 21:26:02] [I] Map loaded.
+[04-10-2021 21:26:02] [I] Opened a server on port 6567.
+[04-10-2021 21:26:51] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:26:51] [I] Randomized next map to be Ancient Caldera.
+[04-10-2021 21:26:51] [I] Loading map...
+[04-10-2021 21:26:52] [I] Map loaded.
+[04-10-2021 21:26:52] [I] Opened a server on port 6567.
+[04-10-2021 21:28:43] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:28:43] [I] Randomized next map to be Triad.
+[04-10-2021 21:28:43] [I] Loading map...
+[04-10-2021 21:28:44] [I] Map loaded.
+[04-10-2021 21:28:44] [I] Opened a server on port 6567.
+[04-10-2021 21:28:55] [I] Game paused.
+[04-10-2021 21:30:03] [I] Stopped server.
+[04-10-2021 21:36:35] [I] Server loaded. Type 'help' for help.
+[04-10-2021 21:36:35] [I] Randomized next map to be Wasteland.
+[04-10-2021 21:36:35] [I] Loading map...
+[04-10-2021 21:36:36] [I] Map loaded.
+[04-10-2021 21:36:36] [I] Opened a server on port 6567.
+[04-10-2021 21:42:53] [I] Game over! Reached wave 3 with 0 players online on map Wasteland.
+[04-10-2021 21:42:53] [I] Selected next map to be Fork.
+[04-10-2021 21:48:54] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 21:48:54] [I] Selected next map to be Islands.
+[04-10-2021 21:54:50] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 21:54:50] [I] Selected next map to be Fork.
+[04-10-2021 22:00:51] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 22:00:51] [I] Selected next map to be Islands.
+[04-10-2021 22:06:48] [I] Game over! Reached wave 2 with 0 players online on map Islands.
+[04-10-2021 22:06:48] [I] Selected next map to be Debris Field.
+[04-10-2021 22:13:01] [I] Game over! Reached wave 3 with 0 players online on map Debris Field.
+[04-10-2021 22:13:01] [I] Selected next map to be Fork.
+[04-10-2021 22:19:02] [I] Game over! Reached wave 2 with 0 players online on map Fork.
+[04-10-2021 22:19:02] [I] Selected next map to be Archipelago.
+[04-10-2021 22:25:50] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-10-2021 22:25:50] [I] Selected next map to be Fortress.
+[04-10-2021 22:31:20] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 22:31:20] [I] Selected next map to be Triad.
+[04-10-2021 22:38:44] [I] Game over! Reached wave 2 with 0 players online on map Triad.
+[04-10-2021 22:38:44] [I] Selected next map to be Fortress.
+[04-10-2021 22:44:13] [I] Game over! Reached wave 2 with 0 players online on map Fortress.
+[04-10-2021 22:44:13] [I] Selected next map to be Archipelago.
+[04-10-2021 22:50:59] [I] Game over! Reached wave 2 with 0 players online on map Archipelago.
+[04-10-2021 22:50:59] [I] Selected next map to be Labyrinth.
+[04-10-2021 22:57:25] [I] Game over! Reached wave 3 with 0 players online on map Labyrinth.
+[04-10-2021 22:57:25] [I] Selected next map to be Shattered.
+[04-11-2021 10:24:08] [I] Server loaded. Type 'help' for help.
+[04-11-2021 10:24:08] [I] Randomized next map to be Mud Flats.
+[04-11-2021 10:24:08] [I] Loading map...
+[04-11-2021 10:24:09] [I] Map loaded.
+[04-11-2021 10:24:09] [I] Opened a server on port 6567.
+[04-11-2021 10:24:18] [E] Too many command arguments. Usage: host [mapname] [mode]
+[04-11-2021 10:24:25] [I] Stopped server.
+[04-11-2021 10:24:33] [E] Too many command arguments. Usage: host [mapname] [mode]
+[04-11-2021 10:24:41] [E] No gamemode 'host' found.
+[04-11-2021 10:24:45] [I] Stopped server.
+[04-11-2021 10:24:48] [E] No gamemode 'host' found.
+[04-11-2021 10:25:00] [E] Too many command arguments. Usage: host [mapname] [mode]
+[04-11-2021 10:25:01] [E] Command not found. Did you mean "js"?
+[04-11-2021 10:25:03] [I] Randomized next map to be Islands.
+[04-11-2021 10:25:03] [I] Loading map...
+[04-11-2021 10:25:03] [I] Map loaded.
+[04-11-2021 10:25:03] [I] Opened a server on port 6567.
+[04-11-2021 10:25:14] [I] Stopped server.
+[04-11-2021 10:25:21] [E] Too many command arguments. Usage: host [mapname] [mode]
+[04-11-2021 10:25:21] [E] Too many command arguments. Usage: host [mapname] [mode]
+[04-11-2021 10:26:00] [I] Server loaded. Type 'help' for help.
+[04-11-2021 10:26:00] [I] Randomized next map to be Debris Field.
+[04-11-2021 10:26:00] [I] Loading map...
+[04-11-2021 10:26:01] [I] Map loaded.
+[04-11-2021 10:26:01] [I] Opened a server on port 6567.
+[04-11-2021 10:26:06] [I] Stopped server.
+[04-11-2021 10:26:10] [E] Too many command arguments. Usage: host [mapname] [mode]
