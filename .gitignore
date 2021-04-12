@@ -1,3 +1,4 @@
 src/config.json
 config/
 src/config/
+**/config
