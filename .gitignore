@@ -1,1 +1,6 @@
+# Discord bot config JSON
 src/config.json
+
+# Mindustry server config/data folders
+**/config
+**/logs
