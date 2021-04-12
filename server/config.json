@@ -1,0 +1,4 @@
+{
+  "classPath": ["jre/desktop.jar"],
+  "mainClass": "mindustry.desktop.DesktopLauncher"
+}
