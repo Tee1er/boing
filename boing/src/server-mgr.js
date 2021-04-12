@@ -3,6 +3,10 @@ const stream = require("stream");
 const fs = require("fs");
 const bot = require("./bot");
 const util = require("util");
+// for generating file names
+const crypto = require("crypto");
+const Discord = require("discord.js");
+const path = require("path");
 
 let server;
 
@@ -56,6 +60,19 @@ stopServer = function() {
     })
 }
 
+exportGame = function() {
+    return new Promise(resolve => {
+        console.log("A")
+        let fileName = crypto.randomBytes(8).toString("hex");
+        if (server.stdin.write(`save ${fileName}\n`)) {
+            console.log("A1")
+            resolve(`config/saves/${fileName}.msav`);
+        }
+        
+    })
+
+}
+
 
 module.exports = { 
     startServer,
@@ -63,4 +80,5 @@ module.exports = {
     unpauseServer,
     hostServer,
     stopServer,
+    exportGame
 }; 

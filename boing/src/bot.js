@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 // User config file
 const userSettings = JSON.parse(
-    fs.readFileSync('config.json', 'utf8')
+    fs.readFileSync('settings.json', 'utf8')
 );
     
 
@@ -25,7 +25,7 @@ client.on("message", message => {
     // Didn't want to make cmd handler
     if (cmdPrefix === userSettings.required.prefix) {
         try {
-            commands[arguments[0]](message);
+            commands[arguments[0]](message, arguments);
         }
         catch (error) {
             message.channel.send(`❌ **Oops, either that command doesn't exist or an error occured.  ${error}**`)
@@ -53,7 +53,7 @@ let commands = {
             .addFields(
                 { name: "`pause / unpause`", value: "Pause & unpause the game.", inline: true},
                 { name: "`host`", value: "Host the game. A random map is chosen if not specified.", inline:true},
-                { name: "`export`", value: "Exports the map as an .msav file with your name of choice.", inline: true},
+                { name: "`export`", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
                 { name: "`import`", value: "Imports a map from a .msav file.", inline: true},
                 { name: "`maps`", value: "Lists maps available.", inline: true},
                 { name : "`stop`", value: "Stops the server. Please use caution w/ this command.", inline: true},
@@ -122,6 +122,21 @@ let commands = {
                 {name: "Wasteland", value: "300x300", inline:true}
             )
         message.channel.send(mapsEmbed);
+    },
+    "export" : function(message, arguments) {
+            servermgr.exportGame().then(res => {
+                let attachment;
+                console.log(fs.readFileSync(res)+"b");
+                if (arguments[1]) {
+                    console.log("B")
+                    attachment = new Discord.MessageAttachment(res, `${arguments[1]}.msav`);
+                } else {
+                    attachment = new Discord.MessageAttachment(res);
+                }
+                console.log("C")
+                message.channel.send("Here's your save file: ", attachment);
+            })
+
     }
 }
 
