@@ -15,7 +15,7 @@ client.once("Ready", () => {
 })
 
 client.on("message", message => {
-    if (!message.content.startsWith(userSettings.optional.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(userSettings.required.prefix) || message.author.bot) return;
 
     let arguments = message.content
         .trim()
@@ -23,7 +23,7 @@ client.on("message", message => {
     const cmdPrefix = arguments.shift().toLowerCase();
 
     // Didn't want to make cmd handler
-    if (cmdPrefix === userSettings.optional.prefix) {
+    if (cmdPrefix === userSettings.required.prefix) {
         try {
             commands[arguments[0]](message);
         }
