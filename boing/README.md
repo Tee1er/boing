@@ -1,3 +1,3 @@
 # boing
 
-A Mindustry server wrapper w/ a Discord bot interface.
+Discord bot wrapper for the Mindustry server, using Discord.js
