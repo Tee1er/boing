@@ -4,3 +4,4 @@ boing/src/settings.json
 # Mindustry server config/data folders
 **/config
 **/logs
+**/settings.json

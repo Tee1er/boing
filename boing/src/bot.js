@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 // User config file
 const userSettings = JSON.parse(
-    fs.readFileSync('settings.json', 'utf8')
+    fs.readFileSync('../settings.json', 'utf8')
 );
     
 
