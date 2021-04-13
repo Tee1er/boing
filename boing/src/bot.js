@@ -80,13 +80,13 @@ let commands = {
             .setTitle("Help - Boing")
             .setDescription("Boing has the following commands, listed below.")
             .addFields(
-                { name: "`pause / unpause`", value: "Pause & unpause the game.", inline: true},
-                { name: "`host`", value: "Host the game. A random map is chosen if not specified.", inline:true},
-                { name: "`export`", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
+                { name: "*`pause / unpause`*", value: "Pause & unpause the game.", inline: true},
+                { name: "*`host`*", value: "Host the game. A random map is chosen if not specified.", inline:true},
+                { name: "*`export`*", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
                 { name: "`import`", value: "Imports a map from a .msav file.", inline: true},
-                { name: "`maps`", value: "Lists maps available.", inline: true},
-                { name : "`stop`", value: "Stops the server. Please use caution w/ this command.", inline: true},
-                { name : "`help`", value: "This embed!", inline: true}
+                { name: "*`maps`*", value: "Lists maps available.", inline: true},
+                { name : "*`stop`*", value: "Stops the server. Please use caution w/ this command.", inline: true},
+                { name : "*`help`*", value: "This embed!", inline: true},
             )
             .setFooter('Boing boing boing boing boing ...');
         message.channel.send(helpEmbed);
