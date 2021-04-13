@@ -12,7 +12,8 @@ let server;
 
 startServer = function(path) {
     console.log("Starting ...");
-    server = spawn("java", ["-jar", path], {
+    console.log(path);
+    server = spawn("java", ["-jar", `"${path}"`], {
         shell: true,
     });
     server.stdout.pipe(process.stdout);
@@ -67,15 +68,15 @@ stopServer = function() {
 
 exportGame = function() {
     return new Promise(resolve => {
-        console.log("A")
         let fileName = crypto.randomBytes(8).toString("hex");
         if (server.stdin.write(`save ${fileName}\n`)) {
-            console.log("A1")
-            resolve(`src/config/saves/${fileName}.msav`);
+            getSoonestOutput().then(out => {
+                if (out.indexOf("Saved to") !== -1) {
+                    resolve(path.resolve(`config/saves/${fileName}.msav`));
+                }
+            }) 
         }
-        
     })
-
 }
 
 // Write to the server's STDIN

@@ -10,6 +10,8 @@ const userSettings = JSON.parse(
     fs.readFileSync(path.resolve('settings.json'), 'utf8')
 );
 
+console.log(userSettings);
+
 // Regexes for filtering server output
 const extractTimestamp = /[0-9\s\:\-]{19}/g;
 const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g; 
@@ -20,7 +22,7 @@ let chatRelay = true;
     
 client.once("ready", () => {
     console.log("Ready! ");
-    if (userSettings.optional.chatChannel != null) {
+    if (typeof userSettings.optional.chatChannel != undefined) {
         servermgr.setOutputCallback(handleStdout);
     }
 })
@@ -41,9 +43,9 @@ client.on("message", message => {
     const cmdPrefix = arguments.shift().toLowerCase();
 
     // Didn't want to make cmd handler
-    if (cmdPrefix === userSettings.optional.prefix) {
+    if (cmdPrefix === userSettings.required.prefix) {
         try {
-            commands[arguments[0]](message);
+            commands[arguments[0]](message, arguments);
         }
         catch (error) {
             message.channel.send(`❌ ***Oops*, either that command doesn't exist or an error occured.  ${error}**`)
@@ -68,9 +70,8 @@ client.login(userSettings.required.token) // add token here
 
 //namespacing
 
-if (servermgr.startServer(userSettings.required.serverPath)) {
-    console.log("Started.");
-};
+servermgr.startServer(userSettings.required.serverPath)
+console.log("Started.");
 
 let commands = {
     "help" : function(message) {
@@ -151,17 +152,14 @@ let commands = {
             )
         message.channel.send(mapsEmbed);
     },
-    "export" : function(message, arguments) {
+    "export" : function(message) {
             servermgr.exportGame().then(res => {
                 let attachment;
-                console.log(fs.readFileSync(res)+"b");
-                if (arguments[1]) {
-                    console.log("B")
-                    attachment = new Discord.MessageAttachment(res, `${arguments[1]}.msav`);
+                if (arguments[1][1]) {
+                    attachment = new Discord.MessageAttachment(res, `${arguments[1][1]}.msav`);
                 } else {
                     attachment = new Discord.MessageAttachment(res);
                 }
-                console.log("C")
                 message.channel.send("Here's your save file: ", attachment);
             })
 
