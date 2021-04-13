@@ -3,18 +3,36 @@ const fs = require("fs");
 const Discord = require('discord.js');
 const servermgr = require("./server-mgr");
 const client = new Discord.Client();
+const path = require("path");
 
 // User config file
 const userSettings = JSON.parse(
-    fs.readFileSync('../settings.json', 'utf8')
+    fs.readFileSync(path.resolve('settings.json'), 'utf8')
 );
-    
 
-client.once("Ready", () => {
+// Regexes for filtering server output
+const extractTimestamp = /[0-9\s\:\-]{19}/g;
+const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g; 
+const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
+const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
+const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
+let chatRelay = true;
+    
+client.once("ready", () => {
     console.log("Ready! ");
+    if (userSettings.optional.chatChannel != null) {
+        servermgr.setOutputCallback(handleStdout);
+    }
 })
 
+// On discord message callback
 client.on("message", message => {
+    // Relay message to the server chat if its in the "chat" channel (set by config)
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
+        sendChatMessage(`[${message.author.username}]: ${message.content}`);
+    }
+    
+    // Cancel command if the message was not sent with the prefix, or was sent by a bot
     if (!message.content.startsWith(userSettings.required.prefix) || message.author.bot) return;
 
     let arguments = message.content
@@ -23,17 +41,28 @@ client.on("message", message => {
     const cmdPrefix = arguments.shift().toLowerCase();
 
     // Didn't want to make cmd handler
-    if (cmdPrefix === userSettings.required.prefix) {
+    if (cmdPrefix === userSettings.optional.prefix) {
         try {
-            commands[arguments[0]](message, arguments);
+            commands[arguments[0]](message);
         }
         catch (error) {
-            message.channel.send(`❌ **Oops, either that command doesn't exist or an error occured.  ${error}**`)
+            message.channel.send(`❌ ***Oops*, either that command doesn't exist or an error occured.  ${error}**`)
         }
     }
 })
 
-
+// Server output callback
+function handleStdout(dat) {
+    var message = dat.toString();
+    // Handle player message
+    if (chatRelay && message.match(checkPlayerMessage) != null) {
+        var sender = message.match(extractSender)[0];
+        var content = message.match(extractChatMessage)[0];
+        if (!message.match(checkIsDiscordMessage)) {
+            sendMessage(userSettings.optional.chatChannel, `**[${sender}]:** ${content}`);
+        }
+    }
+}
 
 client.login(userSettings.required.token) // add token here
 
@@ -41,7 +70,6 @@ client.login(userSettings.required.token) // add token here
 
 if (servermgr.startServer(userSettings.required.serverPath)) {
     console.log("Started.");
-
 };
 
 let commands = {
@@ -140,9 +168,16 @@ let commands = {
     }
 }
 
-function sendMessage (msg) {
-    let channel = Discord.Channel(userSettings.required.defaultChannel);
+// Send discord message
+function sendMessage(channelname, msg) {
+    const channel = client.channels.cache.find(ch => ch.name == channelname);
     channel.send(msg);
+}
+
+// Send mindustry server chat message
+function sendChatMessage(strmsg) {
+    servermgr.stdinWrite("say " + strmsg + "\n");
+    console.log(strmsg);
 }
 
 module.exports = {

@@ -20,6 +20,11 @@ startServer = function(path) {
     server.stdin.write("host \n"); 
 }
 
+// Register callback function for server stdout data reception
+setOutputCallback = function(fn) {
+    server.stdout.on("data", (dat) => { fn(dat); console.log(dat.toString()); });
+}
+
 getSoonestOutput = function() {
     return new Promise (resolve => {
         server.stdout.on("data", (data) => {
@@ -73,6 +78,10 @@ exportGame = function() {
 
 }
 
+// Write to the server's STDIN
+stdinWrite = function(str) {
+    server.stdin.write(str);
+}
 
 module.exports = { 
     startServer,
@@ -80,5 +89,7 @@ module.exports = {
     unpauseServer,
     hostServer,
     stopServer,
-    exportGame
+    exportGame,
+    stdinWrite,
+    setOutputCallback
 }; 
