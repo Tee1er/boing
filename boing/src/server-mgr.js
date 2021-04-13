@@ -66,7 +66,7 @@ exportGame = function() {
         let fileName = crypto.randomBytes(8).toString("hex");
         if (server.stdin.write(`save ${fileName}\n`)) {
             console.log("A1")
-            resolve(`config/saves/${fileName}.msav`);
+            resolve(`src/config/saves/${fileName}.msav`);
         }
         
     })
