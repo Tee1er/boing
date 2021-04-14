@@ -4,11 +4,19 @@ const Discord = require('discord.js');
 const servermgr = require("./server-mgr");
 const client = new Discord.Client();
 const path = require("path");
+const axios = require("axios");
+const chalk = require("chalk");
 
 // User config file
 const userSettings = JSON.parse(
     fs.readFileSync(path.resolve('settings.json'), 'utf8')
 );
+
+let styles = {
+    error: chalk.bold.red,
+    command: chalk.bold.blue,
+    success: chalk.bold.green
+}
 
 console.log(userSettings);
 
@@ -75,6 +83,7 @@ console.log("Started.");
 
 let commands = {
     "help" : function(message) {
+        console.log(styles.command("Help command."))
         const helpEmbed = new Discord.MessageEmbed()
             .setColor("#E67B29")
             .setTitle("Help - Boing")
@@ -85,49 +94,60 @@ let commands = {
                 { name: "*`export`*", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
                 { name: "`import`", value: "Imports a map from a .msav file.", inline: true},
                 { name: "*`maps`*", value: "Lists maps available.", inline: true},
-                { name : "*`stop`*", value: "Stops the server. Please use caution w/ this command.", inline: true},
-                { name : "*`help`*", value: "This embed!", inline: true},
+                { name: "*`stop`*", value: "Stops the server. Please use caution w/ this command.", inline: true},
+                { name: "*`ip`*", value: "Returns the IP address of the server. This does *not* guarantee the server is functional.", inline: true},
+                { name: "*`help`*", value: "This embed!", inline: true},
             )
             .setFooter('Boing boing boing boing boing ...');
         message.channel.send(helpEmbed);
     },
     "pause" : function(message) {
+        console.log(styles.command("Pause command."))
         servermgr.pauseServer().then( (out) => {
             if (out.indexOf("Game paused.") !== -1 ) {
                 message.channel.send(`Game paused.\`\`\`js\n${out}\`\`\``)
             } else {
-                message.channel.send("Error. Contact Tyler for help, or reevaluate your life choices.")
+                message.channel.send("Error. Contact admin for help, or reevaluate your life choices.")
+                console.log(styles.error("An error occured while trying to pause the game."))
             }
         });
     },
     "unpause" : function(message) {
+        console.log(styles.command("Unpause command."))
         servermgr.unpauseServer().then( (out) => {
             if (out.indexOf("Game unpaused.") !== -1) {
                 message.channel.send(`Game unpaused.\`\`\`js\n${out}\`\`\``)
             } else {
-                message.channel.send("Error. Well, slice me bapples - Contact Tyler for help.")
+                message.channel.send("Error. Contact admin for help.")
+                console.log(styles.error("An error occured while trying to unpause the game."))
             }
         });
     },
     "host" : function (message) {
+        console.log(styles.command("Host command."))
         servermgr.hostServer(message).then( (out) => {
             if (out.indexOf("Loading map...") !== -1) {
                 message.channel.send(`Hosting map. \`\`\`js\n${out}\`\`\``)
+                console.log(styles.command("Help command."))
             } else {
                 message.channel.send(`Error. You might want to send 'stop' first. \`\`\`js\n${out}\`\`\``)
+                console.log(styles.error("An error occurred while trying to host."))
             }
         })
     },
     "stop" : function (message) {
+        console.log(styles.command("Stop command."))
         servermgr.stopServer().then( (out) => {
             if (out.indexOf("Stopped server.") !== -1 ) {
                 message.channel.send(`Stopped hosting.\`\`\`js\n${out}\`\`\``)
             } else {
                 message.channel.send("Error.")
+                console.log(styles.error("An error occured while trying to pause the game."))
             }
         });
     },
     "maps" : function (message) {
+        console.log(styles.command("Maps command."))
         let mapsEmbed = new Discord.MessageEmbed()
             .setColor("#E67B29")
             .setTitle("Maps - Boing")
@@ -153,6 +173,7 @@ let commands = {
         message.channel.send(mapsEmbed);
     },
     "export" : function(message) {
+            console.log(styles.command("Export command."))
             servermgr.exportGame().then(res => {
                 let attachment;
                 if (arguments[1][1]) {
@@ -162,7 +183,12 @@ let commands = {
                 }
                 message.channel.send("Here's your save file: ", attachment);
             })
-
+    },
+    "ip": function(message) {
+        console.log(styles.command("IP command."))
+        axios.get("https://api.ipify.org", {params: {format:"json"}}).then((response) => {
+            message.channel.send(`The server's IP is **${response.data.ip}**.`);
+        })
     }
 }
 

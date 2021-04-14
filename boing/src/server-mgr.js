@@ -16,7 +16,6 @@ startServer = function(path) {
     server = spawn("java", ["-jar", `"${path}"`], {
         shell: true,
     });
-    server.stdout.pipe(process.stdout);
     process.stdin.pipe(server.stdin);
     server.stdin.write("host \n"); 
 }
