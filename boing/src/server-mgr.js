@@ -49,9 +49,9 @@ unpauseServer = function() {
     })
 }
 
-hostServer = function(map) {
+hostServer = function(map, arguments) {
     return new Promise(resolve => {
-        if (server.stdin.write(`host ${map.content.replace("boing ", "")}\n`)) {
+        if (server.stdin.write(`host ${arguments[1]}\n`)) {
             resolve(getSoonestOutput());
         }
     })
@@ -67,13 +67,23 @@ stopServer = function() {
 
 exportGame = function() {
     return new Promise(resolve => {
-        let fileName = crypto.randomBytes(8).toString("hex");
+        let fileName = "E-" + crypto.randomBytes(8).toString("hex");
         if (server.stdin.write(`save ${fileName}\n`)) {
             getSoonestOutput().then(out => {
                 if (out.indexOf("Saved to") !== -1) {
                     resolve(path.resolve(`config/saves/${fileName}.msav`));
                 }
             }) 
+        }
+    })
+}
+
+importGame = function(fileName) {
+    return new Promise(resolve => {
+        if (server.stdin.write(`load ${fileName}\n`)) {
+            getSoonestOutput().then(out => {
+                resolve(out);
+            })
         }
     })
 }
@@ -91,5 +101,6 @@ module.exports = {
     stopServer,
     exportGame,
     stdinWrite,
+    importGame,
     setOutputCallback
 }; 
