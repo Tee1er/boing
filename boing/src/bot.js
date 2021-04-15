@@ -191,9 +191,11 @@ let commands = {
         console.log(styles.command(`Import save command.`));
         let attachment = message.attachments.array()[0];
         let fileName = "I-" + crypto.randomBytes(8).toString("hex");
-        let file = axios.get(attachment.url).then(output => {
-            let binData = iconv.encode(output.data, "ascii");
-            fs.writeFileSync(`config/saves/${fileName}.msav`, binData);
+        let file = axios.get(attachment.url, {responseType: "buffer"}).then(output => {
+            let data = Buffer.from(output.data);
+            console.log(output);
+            console.log(typeof output.data);
+            fs.writeFileSync(`config/saves/${fileName}.msav`, data, {encoding: null});
             servermgr.importGame(fileName).then (res => {
                 message.channel.send(`Map import attempted. \`\`\`js\n${res}\`\`\``)
             })
