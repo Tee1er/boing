@@ -1,4 +1,5 @@
 // TODO: Commands refactor
+
 const fs = require("fs");
 const Discord = require('discord.js');
 const servermgr = require("./server-mgr");
