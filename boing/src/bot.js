@@ -6,6 +6,9 @@ const client = new Discord.Client();
 const path = require("path");
 const axios = require("axios");
 const chalk = require("chalk");
+const crypto = require("crypto");
+const { stringify } = require("querystring");
+var iconv = require("iconv-lite");
 
 // User config file
 const userSettings = JSON.parse(
@@ -123,9 +126,9 @@ let commands = {
             }
         });
     },
-    "host" : function (message) {
+    "host" : function (message, arguments) {
         console.log(styles.command("Host command."))
-        servermgr.hostServer(message).then( (out) => {
+        servermgr.hostServer(message, arguments).then( (out) => {
             if (out.indexOf("Loading map...") !== -1) {
                 message.channel.send(`Hosting map. \`\`\`js\n${out}\`\`\``)
                 console.log(styles.command("Help command."))
@@ -183,6 +186,18 @@ let commands = {
                 }
                 message.channel.send("Here's your save file: ", attachment);
             })
+    },
+    "import" : function(message) {
+        console.log(styles.command(`Import save command.`));
+        let attachment = message.attachments.array()[0];
+        let fileName = "I-" + crypto.randomBytes(8).toString("hex");
+        let file = axios.get(attachment.url).then(output => {
+            let binData = iconv.encode(output.data, "ascii");
+            fs.writeFileSync(`config/saves/${fileName}.msav`, binData);
+            servermgr.importGame(fileName).then (res => {
+                message.channel.send(`Map import attempted. \`\`\`js\n${res}\`\`\``)
+            })
+        })
     },
     "ip": function(message) {
         console.log(styles.command("IP command."))
