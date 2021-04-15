@@ -218,7 +218,6 @@ function sendMessage(channelname, msg) {
 // Send mindustry server chat message
 function sendChatMessage(strmsg) {
     servermgr.stdinWrite("say " + strmsg + "\n");
-    console.log(strmsg);
 }
 
 module.exports = {
