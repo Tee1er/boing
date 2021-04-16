@@ -8,7 +8,6 @@ const axios = require("axios");
 const chalk = require("chalk");
 const crypto = require("crypto");
 const { stringify } = require("querystring");
-var iconv = require("iconv-lite");
 
 // User config file
 const userSettings = JSON.parse(
@@ -187,12 +186,16 @@ let commands = {
                 message.channel.send("Here's your save file: ", attachment);
             })
     },
+    // Import a .msav file from Discord message attachment.
     "import" : function(message) {
         console.log(styles.command(`Import save command.`));
+        // Get first attachment from message, and generate random hex filename
         let attachment = message.attachments.array()[0];
         let fileName = "I-" + crypto.randomBytes(8).toString("hex");
+        // make GET request to Discord servers to download file w/ axios
         let file = axios.get(attachment.url, {responseType: "arraybuffer"}).then(output => {
             let data = Buffer.from(output.data);
+            // open & write to file.
             fs.writeFileSync(`config/saves/${fileName}.msav`, data, {encoding: null});
             servermgr.importGame(fileName).then (res => {
                 message.channel.send(`Map import attempted. \`\`\`js\n${res}\`\`\``)
