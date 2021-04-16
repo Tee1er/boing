@@ -2,7 +2,11 @@
 
 A Node.js wrapper for the *Mindustry* server, with a self-hosted Discord bot interface.
 
-The bot is *almost* ready for use, but not quite. 
+The bot is somewhat stable for daily use, but still contains multiple issues - however, it's OK if you would like to start your own instance of Boing; just remember to keep on top of updates. 
+
+This bot is *self-hosted*, which means you are in charge of keeping your bot online - whenever the computer you run Boing on goes offline, Boing does too. 
+
+The cloud is just someone else's computer.
 
 ## Installation Instructions
 
@@ -43,6 +47,26 @@ As for chatChannel - Boing comes with a chat relay feature that takes chat in a 
 You can put the name of the channel you'd like to use for that in there at this point in setup.
 
 Now, all you need to do is save the file, and double-click `run.bat`.
+
+## Commands
+
+### **pause / unpause**
+Pause & unpause the game.
+### **host**
+Host the game. A random map is chosen if not specified.
+### **export**
+Exports the map as an .msav file w/ your name of choice.
+### **import**
+Imports a map from a .msav file.
+### **maps**
+Lists maps available.
+### **stop**
+Stops the server. Please use caution w/ this command.
+### **ip**
+Returns the IP address of the server. This does not guarantee the server is functional.
+### **help**
+This embed!
+Boing boing boing boing boi
 
 
 

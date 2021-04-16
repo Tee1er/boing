@@ -81,7 +81,6 @@ client.login(userSettings.required.token) // add token here
 //namespacing
 servermgr.startServer(userSettings.required.serverPath)
 console.log("Started.");
-console.log(err);
 
 let commands = {
     "help" : function(message) {
