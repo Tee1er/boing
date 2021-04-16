@@ -174,6 +174,7 @@ let commands = {
             )
         message.channel.send(mapsEmbed);
     },
+    // save and send a .msav file.
     "export" : function(message) {
             console.log(styles.command("Export command."))
             servermgr.exportGame().then(res => {
