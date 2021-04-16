@@ -92,14 +92,14 @@ let commands = {
             .setTitle("Help - Boing")
             .setDescription("Boing has the following commands, listed below.")
             .addFields(
-                { name: "*`pause / unpause`*", value: "Pause & unpause the game.", inline: true},
-                { name: "*`host`*", value: "Host the game. A random map is chosen if not specified.", inline:true},
-                { name: "*`export`*", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
+                { name: "`pause / unpause`", value: "Pause & unpause the game.", inline: true},
+                { name: "`host`", value: "Host the game. A random map is chosen if not specified.", inline:true},
+                { name: "`export`", value: "Exports the map as an .msav file w/ your name of choice.", inline: true},
                 { name: "`import`", value: "Imports a map from a .msav file.", inline: true},
-                { name: "*`maps`*", value: "Lists maps available.", inline: true},
-                { name: "*`stop`*", value: "Stops the server. Please use caution w/ this command.", inline: true},
-                { name: "*`ip`*", value: "Returns the IP address of the server. This does *not* guarantee the server is functional.", inline: true},
-                { name: "*`help`*", value: "This embed!", inline: true},
+                { name: "`maps`", value: "Lists maps available.", inline: true},
+                { name: "`stop`", value: "Stops the server. Please use caution w/ this command.", inline: true},
+                { name: "`ip`", value: "Returns the IP address of the server. This does *not* guarantee the server is functional.", inline: true},
+                { name: "`help`", value: "This embed!", inline: true},
             )
             .setFooter('Boing boing boing boing boing ...');
         message.channel.send(helpEmbed);
@@ -191,10 +191,8 @@ let commands = {
         console.log(styles.command(`Import save command.`));
         let attachment = message.attachments.array()[0];
         let fileName = "I-" + crypto.randomBytes(8).toString("hex");
-        let file = axios.get(attachment.url, {responseType: "buffer"}).then(output => {
+        let file = axios.get(attachment.url, {responseType: "arraybuffer"}).then(output => {
             let data = Buffer.from(output.data);
-            console.log(output);
-            console.log(typeof output.data);
             fs.writeFileSync(`config/saves/${fileName}.msav`, data, {encoding: null});
             servermgr.importGame(fileName).then (res => {
                 message.channel.send(`Map import attempted. \`\`\`js\n${res}\`\`\``)
