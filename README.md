@@ -6,8 +6,6 @@ The bot is somewhat stable for daily use, but still contains multiple issues - h
 
 This bot is *self-hosted*, which means you are in charge of keeping your bot online - whenever the computer you run Boing on goes offline, Boing does too. 
 
-The cloud is just someone else's computer.
-
 ## Installation Instructions
 
 Installation is a relatively simple process - you could finish it in about 10-15 minutes. Some technical knowledge is required, but no programming experience is necessary.
@@ -40,13 +38,13 @@ Now, let's set up Boing's settings.
 }
 ```
 For `serverPath`, paste in the path to your jarfile. Remember that in JSON, you'll want to use double backslashes.
-Replace the token with the token you copied earlier - and remember, don't share it with others.
+Replace `YOUR-TOKEN` with the token you copied earlier - and remember, don't share it with others.
 
 As for chatChannel - Boing comes with a chat relay feature that takes chat in a specific channel and relays it to the in-game Mindustry chat.
 
 You can put the name of the channel you'd like to use for that in there at this point in setup.
 
-Now, all you need to do is save the file, and double-click `run.bat`.
+Now, all you need to do is save the file, and double-click `run.bat`. You might want to automate it as a service using something like https://nssm.cc/. This has two main benefits: A.) you won't need to remember to start the server, and B.) it'll be out of sight, hidden away. 
 
 ## Commands
 
@@ -54,6 +52,12 @@ Now, all you need to do is save the file, and double-click `run.bat`.
 Pause & unpause the game.
 ### **host**
 Host the game. A random map is chosen if not specified.
+
+Please note that PvP maps (Glaicer & Veins) won't assign players to teams automatically. There is a workaround for this: 
+
+First, start a new Custom Game with that map. Set it to PvP mode, then export it.
+
+Import that save file with `b import`, and the server should now automatically assign players to different teams.
 ### **export**
 Exports the map as an .msav file w/ your name of choice.
 ### **import**
@@ -61,9 +65,9 @@ Imports a map from a .msav file.
 ### **maps**
 Lists maps available.
 ### **stop**
-Stops the server. Please use caution w/ this command.
+Stops the server. Please use caution w/ this command, as any changes you've made to the world will be deleted, and a new world will be randomly selected for you by the Mindustry server.
 ### **ip**
-Returns the IP address of the server. This does not guarantee the server is functional.
+Returns the IP address of the server. This does not guarantee the server is functional, *but* if Boing is up, and the server hasn't crashed or been stopped deliberately, it's a good sign! The **ip** command uses https://www.ipify.org/.
 ### **help**
 This embed!
 Boing boing boing boing boi
