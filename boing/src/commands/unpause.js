@@ -10,6 +10,7 @@ module.exports = {
     execute,
     info: {
         name: "unpause",
-        descrip: "Unpauses the game."
+        descrip: "Unpauses the game.",
+        longDescrip: "Unpauses the game. To pause it, use `b pause`."
     }
 }

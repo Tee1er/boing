@@ -9,6 +9,7 @@ const chalk = require("chalk");
 const crypto = require("crypto");
 const { stringify } = require("querystring");
 const mserver = require("./mserver.js");
+const { Console } = require("console");
 
 // User config file
 const userSettings = JSON.parse(
@@ -58,11 +59,31 @@ client.on("message", message => {
         .trim()
         .split(" ")
         .slice(1);
-    
-    if (commandsInfo.find(command => {if (command.name == ARGUMENTS[0]) { return true; }})) {
-        require(`./commands/${ARGUMENTS[0]}`).execute(arguments).then(result => message.channel.send(result));
-    }
 
+    //Display more detailed help information IF the last argument is "help" & if the cmd requested is not the 'help' command.
+    if (ARGUMENTS[ARGUMENTS.length - 1] == "help" && ARGUMENTS[0] !== "help") {
+        let command = commandsInfo.find(element => {
+            if (element.name == ARGUMENTS[0].toLowerCase()) return true;
+        })
+
+        let helpEmbed = new Discord.MessageEmbed()
+            .setColor("#E67B29")
+            .setTitle(`Help - "${command.name}"`)
+            .setFooter("Boing - github.com/Tee1er/boing");
+
+        if ("longDescrip" in command) {
+            helpEmbed.setDescription(command.longDescrip);
+        } else {
+            helpEmbed.setDescription(command.descrip);
+        }
+
+        message.channel.send(helpEmbed);
+        
+    }
+    
+    else if (commandsInfo.find(command => {if (command.name == ARGUMENTS[0]) { return true; }})) {
+        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS).then(result => message.channel.send(result));
+    }
 
 })
 
@@ -78,6 +99,10 @@ client.on("message", message => {
 //         }
 //     }
 // }
+
+module.exports = {
+    commandsInfo: commandsInfo
+}
 
 client.login(userSettings.required.token) // add token here
 
@@ -222,9 +247,4 @@ client.login(userSettings.required.token) // add token here
 // // Send mindustry server chat message
 // function sendChatMessage(strmsg) {
 //     servermgr.stdinWrite("say " + strmsg + "\n");
-// }
-
-// module.exports = {
-//     userSettings,
-//     commands
 // }
