@@ -80,7 +80,13 @@ client.on("message", message => {
     }
     
     else if (commandsInfo.find(command => {if (command.name == ARGUMENTS[0]) { return true; }})) {
-        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS, message).then(result => message.channel.send(result));
+        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS, message).then(result => {
+            if (Array.isArray(result)) {
+                message.channel.send(...result)
+            } else {
+                message.channel.send(result);
+            }
+        });
     }
 
 })
