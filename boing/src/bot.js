@@ -4,9 +4,7 @@ const Discord = require('discord.js');
 // const servermgr = require("./server-mgr");
 const client = new Discord.Client();
 const path = require("path");
-const axios = require("axios");
 const chalk = require("chalk");
-const crypto = require("crypto");
 const { stringify } = require("querystring");
 const mserver = require("./mserver.js");
 const { Console } = require("console");
@@ -82,7 +80,7 @@ client.on("message", message => {
     }
     
     else if (commandsInfo.find(command => {if (command.name == ARGUMENTS[0]) { return true; }})) {
-        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS).then(result => message.channel.send(result));
+        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS, message).then(result => message.channel.send(result));
     }
 
 })
