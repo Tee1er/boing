@@ -15,9 +15,9 @@ let execute = async function(ARGUMENTS, message) {
     let attachment;
     let filePath = resolve(`../../server/config/saves/${fileName}.msav`);
     if (ARGUMENTS[1]) {
-        attachment = new MessageAttachment(filePath, ARGUMENTS[1]);
+        attachment = new MessageAttachment(filePath, ARGUMENTS[1] + ".msav");
     } else {
-        attachment = new MessageAttachment(filePath, fileName);
+        attachment = new MessageAttachment(filePath, fileName + ".msav");
     }
     return ["Here's your save file:" , attachment];
 }
