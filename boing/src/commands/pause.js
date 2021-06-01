@@ -11,6 +11,6 @@ module.exports = {
     info: {
         name: "pause",
         descrip: "Pauses the game.",
-        longDescrip: "Pauses the game. To unpause it, use `b unpause`."
+        longDescrip: "Pauses the game. To unpause it, use `<prefix> unpause`."
     }
 }

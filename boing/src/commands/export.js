@@ -20,7 +20,7 @@ let execute = async function(ARGUMENTS, message) {
     } else {
         attachment = new MessageAttachment(filePath, fileName + ".msav");
     }
-    rm(`../../server/config/saves/${fileName}.msav`)
+    rm(filePath)
     return ["Here's your save file:" , attachment];
 }
 
@@ -29,6 +29,6 @@ module.exports = {
     info: {
         name: "export",
         descrip: "Exports the game.",
-        longDescrip: "Saves the currently running game & posts it. A name can be specified; if not, Boing will automatically generate one."
+        longDescrip: "Saves the currently running game & posts it. A name can be specified; if not, Boing will automatically generate one. `export` automatically deletes the file after it has been exported."
     }
 }
