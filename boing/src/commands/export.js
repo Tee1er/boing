@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const { server } = require("../mserver.js");
 const { MessageAttachment } = require("discord.js");
 const { resolve } = require("path");
+const { rm } = require("fs/promises");
 
 let execute = async function(ARGUMENTS, message) {
     let fileName = `E-${crypto.randomBytes(4).toString("hex")}`;
@@ -19,6 +20,7 @@ let execute = async function(ARGUMENTS, message) {
     } else {
         attachment = new MessageAttachment(filePath, fileName + ".msav");
     }
+    rm(`../../server/config/saves/${fileName}.msav`)
     return ["Here's your save file:" , attachment];
 }
 
