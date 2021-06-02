@@ -32,5 +32,5 @@ module.exports = {
         name: "library",
         descrip: "Lists all the maps in the Map Library.",
         longDescrip: "Lists maps in the Map Library, in alphabetical order. Play one of them with `<prefix> load`."
-    }
+    } 
 }

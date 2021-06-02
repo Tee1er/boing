@@ -4,12 +4,12 @@ const { writeFileSync, existsSync } = require("fs");
 const { resolve } = require("path");
 const { get } = require("axios");
 
-let execute = async function(arguments, message) {
-    if (!arguments[1]) {
+let execute = async function(ARGUMENTS, message) {
+    if (!ARGUMENTS[1]) {
         return "An error occured. A map name must be provided."
     } 
     let attachment = message.attachments.array()[0];
-    let fileName = arguments[1];
+    let fileName = ARGUMENTS[1];
     let filePath = resolve(`../../server/config/saves/boing-library/${fileName}.msav`);
     let file = await get(attachment.url, {responseType: "arraybuffer"}).then(result => {
         let data = Buffer.from(result.data);
