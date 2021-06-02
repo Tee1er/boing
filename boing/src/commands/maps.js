@@ -5,9 +5,9 @@ let execute = function() {
 
     let mapEmbed = new MessageEmbed()
         .setColor("#E67B29")
-        .setTitle("Maps")
+        .setTitle("Default Maps")
         .setFooter("Boing - github.com/Tee1er/boing")
-        .setDescription("In addition, you should know that PvP maps will not assign players to teams in this version of Boing. See the README at github.com/Tee1er/boing for more information.")
+        .setDescription("Default maps included with the server. Host using `<prefix> host`. For user-imported maps, try `<prefix> library`")
         .addFields(
             {name: "Ancient_Caldera", value: "256x256", inline: true},
             {name: "Archipelago", value: "500x500", inline:true},
