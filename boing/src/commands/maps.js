@@ -35,7 +35,7 @@ module.exports = {
     execute,
     info: {
         name: "maps",
-        descrip: "Lists available maps.",
-        longDescrip: "Lists available maps. Includes both user-uploaded maps, and built-in ones. Map names are case-sensitive."
+        descrip: "Lists available (default) maps.",
+        longDescrip: "Lists available maps. Includes only built-in ones. Map names are case-sensitive."
     }
 }
