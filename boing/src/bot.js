@@ -10,22 +10,22 @@ const userSettings = JSON.parse(
     fs.readFileSync(path.resolve('settings.json'), 'utf8')
 );
 
-// Regexes for filtering server output
+// Regexes for filtering server output, ignore
 const extractTimestamp = /[0-9\s\:\-]{19}/g;
-const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g; 
+const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
 const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
 const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
 const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
 let chatRelay = true;
-    
+
 client.once("ready", () => {
     console.log("Connected to Discord ... Ready! ");
 })
 
 const CMDPATHS = fs.readdirSync("commands")
-.filter(element => {
-    return element.endsWith(".js")
-})
+    .filter(element => {
+        return element.endsWith(".js")
+    })
 
 let commandsInfo = CMDPATHS.map(
     element => {
@@ -39,7 +39,7 @@ client.on("message", message => {
     if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
         sendChatMessage(`[${message.author.username}]: ${message.content}`);
     }
-    
+
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
     if (!message.content.startsWith(userSettings.required.prefix) || message.author.bot) return;
 
@@ -66,10 +66,8 @@ client.on("message", message => {
         }
 
         message.channel.send(helpEmbed);
-        
-    }
-    
-    else if (commandsInfo.find(command => {if (command.name == ARGUMENTS[0]) { return true; }})) {
+
+    } else if (commandsInfo.find(command => { if (command.name == ARGUMENTS[0]) { return true; } })) {
         require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS, message).then(result => {
             // Allows for passing of either an array of arguments, or simply a regular string.
             if (Array.isArray(result)) {

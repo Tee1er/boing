@@ -37,14 +37,14 @@ Now, let's set up Boing's settings.
     }
 }
 ```
-For `serverPath`, paste in the path to your jarfile. Remember that in JSON, you'll want to use double backslashes.
+For `serverPath`, paste in the path to your jarfile, or the one included in this repository. Remember that in JSON, you'll want to use double backslashes.
 Replace `YOUR-TOKEN` with the token you copied earlier - and remember, don't share it with others.
 
 As for chatChannel - Boing comes with a chat relay feature that takes chat in a specific channel and relays it to the in-game Mindustry chat.
 
 You can put the name of the channel you'd like to use for that in there at this point in setup.
 
-Now, all you need to do is save the file, and double-click `run.bat`. You might want to automate it as a service using something like https://nssm.cc/. This has two main benefits: A.) you won't need to remember to start the server, and B.) it'll be out of sight, hidden away. 
+Now, all you need to do is save the file, and execute `run.bat` (also works as a bash script). You might want to automate it as a service using something like https://nssm.cc/. This has two main benefits: A.) you won't need to remember to start the server, and B.) it'll be out of sight, hidden away. 
 
 ## Commands
 

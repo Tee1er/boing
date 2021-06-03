@@ -2,10 +2,11 @@ const stream = require("stream");
 const child_process = require("child_process");
 
 //Use "mserver" to avoid confusion with Discord servers.
-let mserver = child_process.spawn("run.bat", [], {
+let mserver = child_process.spawn("cd ../../ && java -jar server/server.jar", [], {
     shell: true
 })
 
+child_process.exec("cd boing/src"); // Go back to normal working directory so relative paths don't get messed up
 process.stdin.pipe(mserver.stdin);
 mserver.stdout.pipe(process.stdout);
 
