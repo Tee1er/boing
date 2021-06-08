@@ -1,6 +1,6 @@
 const mserver = require("../mserver.js");
 const crypto = require("crypto");
-const { writeFileSync, existsSync } = require("fs");
+const { writeFileSync} = require("fs");
 const { resolve } = require("path");
 const { get } = require("axios");
 

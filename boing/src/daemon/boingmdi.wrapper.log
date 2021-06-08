@@ -1,0 +1,128 @@
+2021-06-04 16:06:08 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-04 16:06:08 - Started 11848
+2021-06-04 16:07:01 - Stopping boingmdi.exe
+2021-06-04 16:07:01 - ProcessKill 11848
+2021-06-04 16:07:01 - Found child process: 5784 Name: conhost.exe
+2021-06-04 16:07:01 - Found child process: 17700 Name: node.exe
+2021-06-04 16:07:01 - Stopping process 5784
+2021-06-04 16:07:01 - Send SIGINT 5784
+2021-06-04 16:07:01 - SIGINT to 5784 failed - Killing as fallback
+2021-06-04 16:07:01 - Found child process: 12180 Name: cmd.exe
+2021-06-04 16:07:01 - Found child process: 13008 Name: conhost.exe
+2021-06-04 16:07:01 - Found child process: 12148 Name: java.exe
+2021-06-04 16:07:01 - Stopping process 13008
+2021-06-04 16:07:01 - Send SIGINT 13008
+2021-06-04 16:07:01 - SIGINT to 13008 failed - Killing as fallback
+2021-06-04 16:07:01 - Found child process: 14224 Name: java.exe
+2021-06-04 16:07:01 - Stopping process 14224
+2021-06-04 16:07:01 - Send SIGINT 14224
+2021-06-04 16:07:01 - SIGINT to 14224 failed - Killing as fallback
+2021-06-04 16:07:01 - Stopping process 12148
+2021-06-04 16:07:01 - Send SIGINT 12148
+2021-06-04 16:07:01 - SIGINT to 12148 failed - Killing as fallback
+2021-06-04 16:07:01 - Stopping process 12180
+2021-06-04 16:07:01 - Process 12180 is already stopped
+2021-06-04 16:07:01 - Stopping process 17700
+2021-06-04 16:07:01 - Send SIGINT 17700
+2021-06-04 16:07:01 - SIGINT to 17700 failed - Killing as fallback
+2021-06-04 16:07:01 - Stopping process 11848
+2021-06-04 16:07:01 - Send SIGINT 11848
+2021-06-04 16:07:01 - SIGINT to 11848 failed - Killing as fallback
+2021-06-04 16:07:01 - Finished boingmdi.exe
+2021-06-04 16:07:04 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-04 16:07:04 - Started 2924
+2021-06-04 23:30:56 - Stopping boingmdi.exe
+2021-06-04 23:30:57 - ProcessKill 2924
+2021-06-04 23:30:58 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-05 15:09:15 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-05 15:09:16 - Started 6420
+2021-06-05 16:38:06 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-05 16:38:06 - Started 6128
+2021-06-05 23:30:49 - Stopping boingmdi.exe
+2021-06-05 23:30:49 - ProcessKill 6128
+2021-06-05 23:30:50 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-06 17:50:50 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-06 17:50:50 - Started 5492
+2021-06-06 23:30:43 - Stopping boingmdi.exe
+2021-06-06 23:30:43 - ProcessKill 5492
+2021-06-06 23:30:43 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-07 08:09:01 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-07 08:09:01 - Started 5392
+2021-06-07 23:31:00 - Stopping boingmdi.exe
+2021-06-07 23:31:00 - ProcessKill 5392
+2021-06-07 23:31:01 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-08 07:17:33 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-08 07:17:33 - Started 5536
+2021-06-08 15:13:24 - Stopping boingmdi.exe
+2021-06-08 15:13:24 - ProcessKill 5536
+2021-06-08 15:13:24 - Found child process: 5552 Name: conhost.exe
+2021-06-08 15:13:24 - Found child process: 20764 Name: node.exe
+2021-06-08 15:13:24 - Stopping process 5552
+2021-06-08 15:13:24 - Send SIGINT 5552
+2021-06-08 15:13:24 - SIGINT to 5552 failed - Killing as fallback
+2021-06-08 15:13:24 - Found child process: 20832 Name: cmd.exe
+2021-06-08 15:13:24 - Found child process: 19736 Name: conhost.exe
+2021-06-08 15:13:24 - Found child process: 15284 Name: java.exe
+2021-06-08 15:13:25 - Stopping process 19736
+2021-06-08 15:13:25 - Send SIGINT 19736
+2021-06-08 15:13:25 - SIGINT to 19736 failed - Killing as fallback
+2021-06-08 15:13:25 - Found child process: 21476 Name: java.exe
+2021-06-08 15:13:25 - Stopping process 21476
+2021-06-08 15:13:25 - Send SIGINT 21476
+2021-06-08 15:13:25 - SIGINT to 21476 failed - Killing as fallback
+2021-06-08 15:13:25 - Stopping process 15284
+2021-06-08 15:13:25 - Send SIGINT 15284
+2021-06-08 15:13:25 - SIGINT to 15284 failed - Killing as fallback
+2021-06-08 15:13:25 - Stopping process 20832
+2021-06-08 15:13:25 - Process 20832 is already stopped
+2021-06-08 15:13:25 - Stopping process 20764
+2021-06-08 15:13:25 - Send SIGINT 20764
+2021-06-08 15:13:25 - SIGINT to 20764 failed - Killing as fallback
+2021-06-08 15:13:25 - Stopping process 5536
+2021-06-08 15:13:25 - Send SIGINT 5536
+2021-06-08 15:13:25 - SIGINT to 5536 failed - Killing as fallback
+2021-06-08 15:13:25 - Finished boingmdi.exe
