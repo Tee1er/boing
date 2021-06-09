@@ -28,9 +28,9 @@ if (!setupOccurred) {
 } 
 
 if (!settings.serviceMode && setupOccurred) {
-    let boing = child_process.spawn("bot.js", [], {shell: true});
-    console.log(colors.bold("Attempting to start Boing ..."))
-    process.stdout.pipe(boing.stdout);
+    console.log(colors.bold("Attempting to start Boing ... \n"))
+    let boing = child_process.spawn("node bot.js", [], {shell: true});
+    boing.stdout.pipe(process.stdout);
 }
 
 async function setup() {
