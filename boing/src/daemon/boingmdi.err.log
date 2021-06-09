@@ -1,9 +1,9 @@
 D:\Mindustry-Server\boing\src\bot.js:38
-    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
-                                                                                                                            ^
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                   ^
 
 TypeError: Cannot read property 'name' of undefined
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:116)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
@@ -14,11 +14,11 @@ TypeError: Cannot read property 'name' of undefined
     at WebSocket.emit (events.js:315:20)
     at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)
 D:\Mindustry-Server\boing\src\bot.js:38
-    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
-                                                                                                                            ^
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                   ^
 
 TypeError: Cannot read property 'name' of undefined
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:116)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
@@ -29,11 +29,11 @@ TypeError: Cannot read property 'name' of undefined
     at WebSocket.emit (events.js:315:20)
     at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)
 D:\Mindustry-Server\boing\src\bot.js:38
-    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
-                                                                                                                            ^
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                   ^
 
 TypeError: Cannot read property 'name' of undefined
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:116)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)

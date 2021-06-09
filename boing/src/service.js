@@ -14,16 +14,17 @@ let win = {
             description: "A Discord interface for the Mindustry game server.",
             script: "bot.js"
         })
-        svc.on("install", () => {
-            console.log(colors.green("Service installed successfully."))
+
+        svc.on("install", async () => {
+            console.log(colors.green("Now installing service ..."))
             svc.start();
+            console.log(colors.bold.green("Service installed!"))
             return true;
         })
 
         svc.on("alreadyinstalled", async () => {
-            console.log(colors.red("Service already installed. Uninstalling existing service ..."));
+            console.log("Service already installed. Uninstalling existing service ...");
             let uninstalled = await this.uninstall(svc);
-            console.log(uninstalled);
             console.log(uninstalled ? "Service uninstalled." : colors.bold.red("An error occured. The service was not uninstalled."))
             this.install();
         })
@@ -35,13 +36,14 @@ let win = {
             svc.on("uninstall", () => {
                 resolve(true);
             })
+            svc.on("alreadyuninstalled", () => {
+                resolve(true);
+            })
             svc.uninstall();
         })
     }
 
 }
-
-win.install();
 
     module.exports = {
         win

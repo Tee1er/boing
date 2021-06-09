@@ -7,4 +7,4 @@ boing/src/settings.json
 **/settings.json
 
 #node-windows data folders:
-boing/src/daemon
+**/daemon

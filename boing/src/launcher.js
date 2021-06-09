@@ -17,7 +17,6 @@ if (existsSync("settings.json")) {
 } 
 if (!setupOccurred) {
     setup();
-
 } else { 
     //Can someone clean up this terrible ternary operator thingy and make it easier to read? TODO
     console.log(`Setup has already occured. Service Mode is ${colors.bold(settings.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
@@ -59,14 +58,6 @@ async function setup() {
 
     ]
 
-    // if (Service) { prompts.push( {
-    //         type: "toggle",
-    //         name: "serviceMode",
-    //         message: "Enable Service Mode?",
-    //         initial: false
-    //     })
-    // }
-
     const response = await enquirer.prompt(prompts);
     console.log(colors.bold.green(`\nSetup is now complete. `) + `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
@@ -78,7 +69,11 @@ automatically the next time you restart your computer. \n`)
     writeFileSync("settings.json", settings)
 
     if (response.serviceMode === true) {
+        console.log(colors.bold("Beginning the service installation process now. You may have to accept multiple prompts from your operating system in order to install correctly. \n"))
+        await new Promise(resolve => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
         serviceUtil.win.install();
+    } else if (response.serviceMode !== true) {
+        serviceUtil.win.uninstall();
     }
 }
 

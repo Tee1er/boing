@@ -35,7 +35,7 @@ let chatRelay = userSettings.chatChannel != "";
 // On discord message callback
 client.on("message", message => {
     // Relay message to the server chat if its in the "chat" channel (set by config)
-    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
         sendChatMessage(`[${message.author.username}]: ${message.content}`);
     }
 
