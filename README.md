@@ -1,4 +1,7 @@
-# boing
+<h2 align="center">Boing</h2>
+<p align="center">
+    <img src="media/boing-logo.png" style="width: 40%; height: auto">
+</p>
 
 A Node.js wrapper for the *Mindustry* server, with a self-hosted Discord bot interface.
 
