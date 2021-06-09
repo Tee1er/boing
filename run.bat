@@ -1,1 +1,1 @@
-cd ./boing/src && node bot.js
+cd ./boing/src && node launcher.js

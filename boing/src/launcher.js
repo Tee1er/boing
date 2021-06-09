@@ -1,15 +1,23 @@
 const { resolve } = require("path");
 const colors = require("ansi-colors");
 const enquirer = require("enquirer");
-const Service = require("node-windows").Service; //Destructing operator doesn't work here?
-const { writeFileSync, readFileSync } = require("fs");
+var Service = false
+if (process.platform == "win32") {
+    Service = require("node-windows").Service; //Destructing operator doesn't work here?
+}
+
+const { writeFileSync, readFileSync, existsSync } = require("fs");
 const child_process = require("child_process")
 
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.0 --"));
 console.log("Please see github.com/Tee1er/boing for more information if you get stuck during setup.\n");
 
-const settings = JSON.parse(readFileSync("settings.json"));
-const setupOccurred = Object.keys(settings).length !== 0;
+var settings = {};
+var setupOccurred = false;
+if (existsSync("settings.json")) {
+    const settings = JSON.parse(readFileSync("settings.json"));
+    setupOccurred = Object.keys(settings).length !== 0;
+} 
 
 if (!setupOccurred) {
     setup();
@@ -41,19 +49,28 @@ async function setup() {
             initial: "b"
         },
         {
+            type: "input",
+            name: "optional.chatChannel"
+            message: "Enter the channel name that you would like the server's chat to relay through, leave blank for none",
+            initial: ""
+        }
+
+    ]
+
+    if (Service) { prompts.push( {
             type: "toggle",
             name: "serviceMode",
             message: "Enable service mode?",
             initial: false
-        }
-    ]
+        })
+    }
 
     const response = await enquirer.prompt(prompts);
     console.log(colors.bold.green(`\nSetup is now complete. `) + `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer.`)
 
-    const settings = JSON.stringify(response);
+    const settings = JSON.stringify(response, null, 4);
 
     //is using the file handle method faster?
     writeFileSync("settings.json", settings)

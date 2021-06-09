@@ -16,7 +16,6 @@ const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
 const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
 const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
 const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
-let chatRelay = true;
 
 client.once("ready", () => {
     console.log("Connected to Discord ... Ready! ");
@@ -32,6 +31,8 @@ let commandsInfo = CMDPATHS.map(
         return require(`./commands/${element}`).info
     }
 )
+
+let chatRelay = userSetting.optional.chatChannel != "";
 
 // On discord message callback
 client.on("message", message => {
