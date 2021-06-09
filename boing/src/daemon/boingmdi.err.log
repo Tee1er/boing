@@ -1,114 +1,9 @@
-(node:7272) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:7272) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:7272) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:6188) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:6188) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:6188) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:7072) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:7072) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:7072) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:12856) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:12856) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:12856) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-(node:9320) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:9320) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:9320) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
-internal/child_process.js:403
-    throw errnoException(err, 'spawn');
-    ^
+D:\Mindustry-Server\boing\src\bot.js:38
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                            ^
 
-Error: spawn EROFS
-    at ChildProcess.spawn (internal/child_process.js:403:11)
-    at spawn (child_process.js:553:9)
-    at Object.execFile (child_process.js:237:17)
-    at exec (child_process.js:158:25)
-    at write (C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\eventlog.js:67:3)
-    at logger.value [as warn] (C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\eventlog.js:185:9)
-    at launch (C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:143:18)
-    at process.<anonymous> (C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js:201:5)
-    at process.emit (events.js:315:20)
-    at process._fatalException (internal/process/execution.js:163:25) {
-  errno: -4043,
-  code: 'EROFS',
-  syscall: 'spawn'
-}
-internal/fs/utils.js:718
-      throw err;
-      ^
-
-Error: ENOENT: no such file or directory, stat 'D:\Mindustry-Server\server\config\saves\boing-library\randomtest.msav'
-    at Object.statSync (fs.js:1086:3)
-    at internal/fs/utils.js:703:32
-    at hidden (internal/errors.js:294:14)
-    at rmSync (fs.js:909:13)
-    at Object.execute (D:\Mindustry-Server\boing\src\commands\delete.js:8:5)
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:71:47)
-    at Client.emit (events.js:315:20)
-    at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
-    at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
-    at WebSocketManager.handlePacket (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:384:31) {
-  errno: -4058,
-  syscall: 'stat',
-  code: 'ENOENT',
-  path: 'D:\\Mindustry-Server\\server\\config\\saves\\boing-library\\randomtest.msav'
-}
-internal/fs/utils.js:718
-      throw err;
-      ^
-
-Error: ENOENT: no such file or directory, stat 'D:\Mindustry-Server\server\config\saves\boing-library\randomtest.msav'
-    at Object.statSync (fs.js:1086:3)
-    at internal/fs/utils.js:703:32
-    at hidden (internal/errors.js:294:14)
-    at rmSync (fs.js:909:13)
-    at Object.execute (D:\Mindustry-Server\boing\src\commands\delete.js:8:5)
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:71:47)
-    at Client.emit (events.js:315:20)
-    at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
-    at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
-    at WebSocketManager.handlePacket (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:384:31) {
-  errno: -4058,
-  syscall: 'stat',
-  code: 'ENOENT',
-  path: 'D:\\Mindustry-Server\\server\\config\\saves\\boing-library\\randomtest.msav'
-}
-D:\Mindustry-Server\boing\src\commands\delete.js:9
-    return Promise.resolve(`Deleted file **${filename}** from the Map Library.`)
-                                             ^
-
-ReferenceError: filename is not defined
-    at Object.execute (D:\Mindustry-Server\boing\src\commands\delete.js:9:46)
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:71:47)
+TypeError: Cannot read property 'name' of undefined
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
@@ -117,13 +12,13 @@ ReferenceError: filename is not defined
     at WebSocketShard.onMessage (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketShard.js:301:10)
     at WebSocket.onMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\event-target.js:132:16)
     at WebSocket.emit (events.js:315:20)
-D:\Mindustry-Server\boing\src\commands\delete.js:9
-    return Promise.resolve(`Deleted file **${filename}** from the Map Library.`)
-                                             ^
+    at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)
+D:\Mindustry-Server\boing\src\bot.js:38
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                            ^
 
-ReferenceError: filename is not defined
-    at Object.execute (D:\Mindustry-Server\boing\src\commands\delete.js:9:46)
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:71:47)
+TypeError: Cannot read property 'name' of undefined
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
@@ -132,13 +27,13 @@ ReferenceError: filename is not defined
     at WebSocketShard.onMessage (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketShard.js:301:10)
     at WebSocket.onMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\event-target.js:132:16)
     at WebSocket.emit (events.js:315:20)
-D:\Mindustry-Server\boing\src\commands\delete.js:9
-    return Promise.resolve(`Deleted file **${filename}** from the Map Library.`)
-                                             ^
+    at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)
+D:\Mindustry-Server\boing\src\bot.js:38
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.optional.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                            ^
 
-ReferenceError: filename is not defined
-    at Object.execute (D:\Mindustry-Server\boing\src\commands\delete.js:9:46)
-    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:71:47)
+TypeError: Cannot read property 'name' of undefined
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:125)
     at Client.emit (events.js:315:20)
     at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
     at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
@@ -147,12 +42,4 @@ ReferenceError: filename is not defined
     at WebSocketShard.onMessage (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketShard.js:301:10)
     at WebSocket.onMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\event-target.js:132:16)
     at WebSocket.emit (events.js:315:20)
-(node:1136) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
-    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
-    at processTicksAndRejections (internal/process/task_queues.js:93:5)
-    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
-    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
-    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
-(Use `node --trace-warnings ...` to show where the warning was created)
-(node:1136) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
-(node:1136) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+    at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)

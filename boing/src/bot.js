@@ -1,10 +1,8 @@
 // Make sure to set the variables inside config.json
 const fs = require("fs");
 const Discord = require('discord.js');
-// const servermgr = require("./server-mgr");
 const client = new Discord.Client();
 const path = require("path");
-
 // User config file
 const userSettings = JSON.parse(
     fs.readFileSync(path.resolve('settings.json'), 'utf8')
@@ -32,7 +30,7 @@ let commandsInfo = CMDPATHS.map(
     }
 )
 
-let chatRelay = userSetting.optional.chatChannel != "";
+let chatRelay = userSettings.chatChannel != "";
 
 // On discord message callback
 client.on("message", message => {
