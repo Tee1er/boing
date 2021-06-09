@@ -1,8 +1,5 @@
 const stream = require("stream");
 const child_process = require("child_process");
-const { cwd } = require("process");
-
-console.log(cwd());
 
 //Use "mserver" to avoid confusion with Discord servers.
 let mserver = child_process.spawn("cd ../../server && java -jar server.jar", [], {
@@ -10,7 +7,6 @@ let mserver = child_process.spawn("cd ../../server && java -jar server.jar", [],
 })
 
 child_process.exec("cd ../boing/src"); // Go back to normal working directory so relative paths don't get messed up
-console.log(cwd());
 process.stdin.pipe(mserver.stdin);
 mserver.stdout.pipe(process.stdout);
 

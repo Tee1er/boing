@@ -5,3 +5,6 @@ boing/src/settings.json
 **/config
 **/logs
 **/settings.json
+
+#node-windows data folders:
+boing/src/daemon

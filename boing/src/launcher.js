@@ -1,35 +1,103 @@
-// let nw = require("node-windows");
 const { resolve } = require("path");
 const colors = require("ansi-colors");
-let Service = require("node-windows").Service;
+const enquirer = require("enquirer");
+const Service = require("node-windows").Service; //Destructing operator doesn't work here?
+const { writeFileSync, readFileSync } = require("fs");
+const child_process = require("child_process")
 
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.0 --"));
-console.log("Please see github.com/Tee1er/boing for more information if you get stuck during setup.");
+console.log("Please see github.com/Tee1er/boing for more information if you get stuck during setup.\n");
 
-let serviceMode, prefix, token;
+const settings = JSON.parse(readFileSync("settings.json"));
+const setupOccurred = Object.keys(settings).length !== 0;
 
-// (async () => {
-//     const response = await prompts({
-//         type: "confirm",
-//         name: "serviceMode",
-//         message: "Turn on Service Mode: (yes/no)",
-//         // validate: value => value == "yes" || value == "no" ? "Please enter either 'yes' or 'no'." : true
-//     })
-// })
+if (!setupOccurred) {
+    setup();
 
-var svc = new Service({
-    name: "Boing MDI",
-    description: "A Discord interface for the Mindustry server. Please see github.com/Tee1er/boing for more information.",
+} else { 
+    //Can someone clean up this terrible ternary operator thingy and make it easier to read? TODO
+    console.log(`Setup has already occured. Service Mode is ${colors.bold(settings.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
+} 
+
+if (!settings.serviceMode && setupOccurred) {
+    let boing = child_process.spawn("bot.js", [], {shell: true});
+    console.log(colors.bold("Attempting to start Boing ..."))
+    process.stdout.pipe(boing.stdout);
+}
+
+async function setup() {
+    //todo, replace w/ template string
+    console.log(`${colors.bold.blue("Welcome to setup. ")} For setup instructions, please visit ${colors.blue("https://github.com/Tee1er/boing/blob/main/README.md")} \n`);
+    const prompts = [
+        {
+            type: "input",
+            name: "token",
+            message: "Please enter your bot's token."
+        },
+        {
+            type: "input",
+            name: "prefix",
+            message: "Please enter a prefix. (default is 'b')",
+            initial: "b"
+        },
+        {
+            type: "toggle",
+            name: "serviceMode",
+            message: "Enable service mode?",
+            initial: false
+        }
+    ]
+
+    const response = await enquirer.prompt(prompts);
+    console.log(colors.bold.green(`\nSetup is now complete. `) + `In the future, if you do not have Service Mode enabled, the Boing launcher 
+will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
+automatically the next time you restart your computer.`)
+
+    const settings = JSON.stringify(response);
+
+    //is using the file handle method faster?
+    writeFileSync("settings.json", settings)
+
+    if (response.serviceMode === true) {
+        if (installService()) {console.log(colors.bold.green("Service mode enabled."))}
+    }
+}
+
+async function installService () {
+
+    var svc = new Service({
+    name: "BoingMDI",
+    description: "A Discord interface for the Mindustry game server.",
     script: "bot.js"
-})
+    })
 
-svc.on("install", function(){svc.start();})
+    svc.on("install", function(){
+        console.log(colors.green("Service installed successfully."))
+        svc.start();
+        return;
+    })
 
-svc.install();
+    svc.on("invalidinstallation", () => {throw new Error(`${colors.bold.red("An error occured: ")}invalid installation detected.`)})
 
-svc.on("alreadyinstalled", () => {
+    svc.install();
 
-})
+    svc.on("alreadyinstalled", () => {
+        console.log("Boing appears to be already installed. Uninstalling & reinstalling ...")
+        uninstallService(svc);
+        installService();
+    })
+}
+
+async function uninstallService(svc) {
+    svc.on("uninstall", () => {
+        console.log(colors.yellow("Uninstalled existing service(s)."))
+    })
+    svc.uninstall()
+}
+
+
+
+
 
 
 

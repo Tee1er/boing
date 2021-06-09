@@ -41,7 +41,7 @@ client.on("message", message => {
     }
 
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
-    if (!message.content.startsWith(userSettings.required.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(userSettings.prefix) || message.author.bot) return;
 
     const ARGUMENTS = message.content
         .trim()
@@ -84,4 +84,4 @@ module.exports = {
     commandsInfo: commandsInfo
 }
 
-client.login(userSettings.required.token) // add token here
+client.login(userSettings.token) // add token here

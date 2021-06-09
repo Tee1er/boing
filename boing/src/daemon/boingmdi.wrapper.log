@@ -126,3 +126,35 @@ Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInter
 2021-06-08 15:13:25 - Send SIGINT 5536
 2021-06-08 15:13:25 - SIGINT to 5536 failed - Killing as fallback
 2021-06-08 15:13:25 - Finished boingmdi.exe
+2021-06-09 07:37:26 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "Boing MDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-09 07:37:26 - Started 5852
+2021-06-09 10:25:36 - Stopping boingmdi.exe
+2021-06-09 10:25:36 - ProcessKill 5852
+2021-06-09 10:25:36 - Found child process: 5876 Name: conhost.exe
+2021-06-09 10:25:36 - Found child process: 1136 Name: node.exe
+2021-06-09 10:25:36 - Stopping process 5876
+2021-06-09 10:25:36 - Send SIGINT 5876
+2021-06-09 10:25:36 - SIGINT to 5876 failed - Killing as fallback
+2021-06-09 10:25:36 - Found child process: 7524 Name: cmd.exe
+2021-06-09 10:25:36 - Found child process: 7536 Name: conhost.exe
+2021-06-09 10:25:36 - Found child process: 7640 Name: java.exe
+2021-06-09 10:25:36 - Stopping process 7536
+2021-06-09 10:25:36 - Send SIGINT 7536
+2021-06-09 10:25:36 - SIGINT to 7536 failed - Killing as fallback
+2021-06-09 10:25:36 - Found child process: 7668 Name: java.exe
+2021-06-09 10:25:36 - Stopping process 7668
+2021-06-09 10:25:36 - Send SIGINT 7668
+2021-06-09 10:25:36 - SIGINT to 7668 failed - Killing as fallback
+2021-06-09 10:25:36 - Stopping process 7640
+2021-06-09 10:25:36 - Send SIGINT 7640
+2021-06-09 10:25:36 - SIGINT to 7640 failed - Killing as fallback
+2021-06-09 10:25:36 - Stopping process 7524
+2021-06-09 10:25:36 - Send SIGINT 7524
+2021-06-09 10:25:36 - SIGINT to 7524 failed - Killing as fallback
+2021-06-09 10:25:36 - Stopping process 1136
+2021-06-09 10:25:36 - Send SIGINT 1136
+2021-06-09 10:25:36 - SIGINT to 1136 failed - Killing as fallback
+2021-06-09 10:25:36 - Stopping process 5852
+2021-06-09 10:25:36 - Send SIGINT 5852
+2021-06-09 10:25:36 - SIGINT to 5852 failed - Killing as fallback
+2021-06-09 10:25:36 - Finished boingmdi.exe
