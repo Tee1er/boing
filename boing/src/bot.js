@@ -86,5 +86,4 @@ client.login(userSettings.token) // add token here
 
 module.exports = {
     commandsInfo: commandsInfo,
-    discordChat
 }

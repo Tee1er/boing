@@ -7,7 +7,7 @@ const { writeFileSync, readFileSync, existsSync } = require("fs");
 const child_process = require("child_process")
 
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.0 --"));
-console.log("Please see github.com/Tee1er/boing for more information if you get stuck during setup.\n");
+console.log("Please see https://www.github.com/Tee1er/boing for more information.\n");
 
 var settings = {};
 var setupOccurred = false;

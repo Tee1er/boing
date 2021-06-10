@@ -1,83 +1,134 @@
-<h1 align="center">Boing</h1>
+<h1 align="center">boing</h1>
 
-A Node.js wrapper for the *Mindustry* server, with a self-hosted Discord bot interface.
+<h3 align="center">A Discord interface for the Mindustry game server .</h3>
 
-The bot is somewhat stable for daily use, but still contains multiple issues - however, it's OK if you would like to start your own instance of Boing; just remember to keep on top of updates. 
+- **Intuitive:** Boing is simple and easy to use, and you can access it from any machine, not just the one the server is running on.
 
-This bot is *self-hosted*, which means you are in charge of keeping your bot online - whenever the computer you run Boing on goes offline, Boing does too. 
+- **Multiplayer:** Easily play together with friends --  no need to set up your own Dedicated Server.
 
-## Installation Instructions
-
-Installation is a relatively simple process - you could finish it in about 10-15 minutes. Some technical knowledge is required, but no programming experience is necessary.
-
-First, begin by downloading the Mindustry server jar file. The codebase comes bundled with one, but it might not be up to date, etc. After you've downloaded this, you can place it anywhere you'd like, but we reccomend the `server` folder. Just remember the path.
-
-Next, set up your bot.
-
-Go to the Discord Developer Portal, at discord.com/developers/applications. You'll want to click **New Application**, in the upper right. Give it whatever name you'd like. Select **Bot** from the tabs on the left, then click **Add Bot.** You'll want to copy your token by clicking **Copy**. Make sure to keep your token a secret.
-
-Next, invite Boing to your Discord server of choice - you'll need certain permissions to do this, so it's best to either ask a server admin or to create your own.
-
-Begin by selecting the **OAuth2** tab. You'll see a heading labeled **OAuth2 URL Generator.** Select 'bot' from the big list of checkboxes below; it's the 4th down in the second column from left. When it comes to General Permissions, just select "Administrator." (Technically, Boing only needs to be able to send & read messages to function, but this is just easier.) Copy that link and paste it into your web browser of choice; it should work on almost any.
-
-A pretty standard Discord bot page should pop up. Just select your server from the drop-down below, and click **Continue,** then **Authorize.** You might have to do a CAPTCHA before it finally goes through, but otherwise - the Discord portion of setup is basically done!
-
-Now, let's set up Boing's settings.
-
-*settings.json*
-```json
-{
-    "required" : {
-        "serverPath": "C:\\Path\\To\\Server\\File",
-        "prefix": "b",
-        "token": "YOUR-TOKEN"
-    },
-    "optional" : {
-        "chatChannel": "chat"
-    }
-}
-```
-For `serverPath`, paste in the path to your jarfile, or the one included in this repository. Remember that in JSON, you'll want to use double backslashes.
-Replace `YOUR-TOKEN` with the token you copied earlier - and remember, don't share it with others.
-
-As for chatChannel - Boing comes with a chat relay feature that takes chat in a specific channel and relays it to the in-game Mindustry chat.
-
-You can put the name of the channel you'd like to use for that in there at this point in setup.
-
-Now, all you need to do is save the file, and execute `run.bat` (also works as a bash script). You might want to automate it as a service using something like https://nssm.cc/. This has two main benefits: A.) you won't need to remember to start the server, and B.) it'll be out of sight, hidden away. 
-
-## Commands
-
-### **pause / unpause**
-Pause & unpause the game.
-### **host**
-Host the game. A random map is chosen if not specified.
-
-Please note that PvP maps (Glaicer & Veins) won't assign players to teams automatically. There is a workaround for this: 
-
-First, start a new Custom Game with that map. Set it to PvP mode, then export it.
-
-Import that save file with `b import`, and the server should now automatically assign players to different teams.
-### **export**
-Exports the map as an .msav file w/ your name of choice.
-### **import**
-Imports a map from a .msav file.
-### **maps**
-Lists maps available.
-### **stop**
-Stops the server. Please use caution w/ this command, as any changes you've made to the world will be deleted, and a new world will be randomly selected for you by the Mindustry server.
-### **ip**
-Returns the IP address of the server. This does not guarantee the server is functional, *but* if Boing is up, and the server hasn't crashed or been stopped deliberately, it's a good sign! The **ip** command uses https://www.ipify.org/.
-### **help**
-This embed!
-Boing boing boing boing boi
+- **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
+  
+  **What is Boing?**
+  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This lets you and your friends play together much more easily.
 
 
 
+**<u>For Windows only.</u>**
 
 
 
+#### Table of Contents
+
+- [Setup](#-getting-started)
+  - [Bot Setup](#-bot-setup)
+  - [Boing Setup](#-boing-setup)
+- [Features](#-features)
+- [Commands](#-commands)
+- [Help & Troubleshooting](#-help)
+
+# > Getting Started
+
+Installation of Boing should be relatively straightforward - the wrapper takes care of much, if anything technical and leaves you with a nice, pretty, Discord bot at the end. However, if anything goes wrong, please feel free to open a issue with the problem you're encountering.
+
+First, we'll begin by setting up the Discord bot. 
+
+### > Bot Setup
+
+First, we'll begin by going to the Discord Developer Portal, at https://discord.com/developers/applications.
+
+You should see a page that looks something like this:
+
+Create a new project by clicking on the blue button in the top right corner (**New Application**)
+
+That should take you to the control panel for your new application. 
+
+Switch to the **Add Bot** tab - the **General Information** tab is of no interest to us right now.
+
+Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](github.com/Tee1er/boing) if you'd like to use those, but of course, you can always upload your own, or even just leave it as it is right now.
+
+Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the F.A.Q. section for help.)
+
+You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server. 
+
+In the box **Scopes**, check off the permission **Bot**.
+
+Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box, too. You're almost done!
+
+Finally, scroll back up and copy the URL in the **Scopes** box. If you did everything right, it *should* look something like this, with numbers in place of the X's here, obviously.
+
+    https://discord.com/api/oauth2/authorize?client_id=XXXXXXXXXXXXXXXXXX&permissions=2048&scope=bot
+
+Paste that URL into your web browser of choice, and follow the prompts to add Boing to your server. To do this, you need the **Manage Server** permission. 
+
+You are now finished with Part 1 of installation 🎉.
+
+### > Boing Setup
+
+In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life.
+
+Open the folder that Boing is in, and move it somewhere safe.
+
+Double-click `run.bat` , which should start Boing.
+
+When you start Boing for the first time, you will be asked to answer some questions. 
+
+- When you are asked to enter your token, that's the one we copied from Discord earlier, and that I asked you to save. Paste that in now.
+- For more information on Chat Relay & Service Mode, please see the [Features](#-features) section below. I highly encourage you to enable Service Mode - Chat Relay is up to you.
+
+If you enabled Service Mode, you'll need to accept multiple prompts from your operating system in order to complete service installation.  There are a *lot*, but please accept all of them.
+
+If you have **not** enabled Service Mode, start Boing by double-clicking `run.bat` again. This will open the Boing launcher, which should now run Boing. Try it out!
+
+If you **have** enabled Service Mode, Boing should now be running in the background. In the future, then, `run.bat` will exit automatically.
+
+If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
 
+
+> # Features
+> 
+> - **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way.
+> 
+> - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
+> 
+> - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
+> 
+> - **Map Library:** Store user-content server-side, and let users play those maps on-demand. 
+
+> # Commands
+> 
+> A quick note: this README is liable to be outdated. This commands list was last updated on June 10th, 2021, with Boing 2.0. Therefore, the actual `help` command will likely provide for more up-to-date stuff.
+> 
+> 
+> 
+> All of these examples assume you are using 'b' as the prefix. If this is *not* the case, then simply substitute the prefix you *are* using.
+> 
+> 
+
+> - **help:** Provides information on available commands.
+>   
+>   > b help
+>   > 
+>   > → Returns an embed with descriptions of available commands.
+> 
+> - **host:** Hosts a new map. Will select a random map if one is not given. 
+>   
+>   > b host
+>   > 
+>   > → Hosts a new map, randomly selected from the default maps. (see the 'maps' command for a list)
+>   > 
+>   > b host Ancient_Caldera **or** b host ancient_caldera
+>   > 
+>   > → Hosts the map "Ancient_Caldera". Map names are not case-sensitive, both "Ancient_Caldera" and "ancient_caldera" would work.
+> 
+> - **pause/unpause**: Pauses or unpauses the game. This stops all player movement, as well as conveyor belts, production, etc.
+>   
+>   > b pause
+>   > 
+>   > → Pauses the game.
+>   > 
+>   > b unpause
+>   > 
+>   > → Unpauses the game.
 
 

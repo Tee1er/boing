@@ -1,15 +1,6 @@
-let Service;
-const colors = require("ansi-colors");
 
-if (process.platform == "win32") {
-    Service = require("node-windows").Service; //destructing operator doesn't work fsr?
-} else if (process.platform == "darwin") {// macOS, I think?
-    Service = require("node-mac").Service;
-} else if (process.platform == "linux") {
-    Service = require("node-linux").Service;
-} else {
-    throw new Error("Your operating system may not be compatible with Boing. Aborting ...")
-}
+const colors = require("ansi-colors");
+const Service = require("node-windows").Service; //destructing operator doesn't work fsr?
 
 let install = async function() {
     let svc = new Service({
