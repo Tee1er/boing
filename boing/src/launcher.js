@@ -71,9 +71,9 @@ automatically the next time you restart your computer. \n`)
     if (response.serviceMode === true) {
         console.log(colors.bold("Beginning the service installation process now. You may have to accept multiple prompts from your operating system in order to install correctly. \n"))
         await new Promise(resolve => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
-        serviceUtil.win.install();
+        serviceUtil.install();
     } else if (response.serviceMode !== true) {
-        serviceUtil.win.uninstall();
+        serviceUtil.uninstall();
     }
 }
 
