@@ -1,12 +1,16 @@
 // Make sure to set the variables inside config.json
 const fs = require("fs");
 const Discord = require('discord.js');
-const client = new Discord.Client();
 const path = require("path");
+const mserver = require("./mserver");
+
+const client = new Discord.Client();
+
 // User config file
 const userSettings = JSON.parse(
     fs.readFileSync(path.resolve('settings.json'), 'utf8')
 );
+console.log("Configuration file loaded.");
 
 // Regexes for filtering server output, ignore
 const extractTimestamp = /[0-9\s\:\-]{19}/g;
@@ -30,13 +34,12 @@ let commandsInfo = CMDPATHS.map(
     }
 )
 
-let chatRelay = userSettings.chatChannel != "";
-
 // On discord message callback
 client.on("message", message => {
-    // Relay message to the server chat if its in the "chat" channel (set by config)
-    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
-        sendChatMessage(`[${message.author.username}]: ${message.content}`);
+
+    //Relay server chat in the user-specified chat channel to players in-game.
+    if (userSettings.chatChannel && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id !== client.user.id) {
+        mserver.chat(message.author, message.content);
     }
 
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
@@ -79,8 +82,9 @@ client.on("message", message => {
 
 })
 
-module.exports = {
-    commandsInfo: commandsInfo
-}
-
 client.login(userSettings.token) // add token here
+
+module.exports = {
+    commandsInfo: commandsInfo,
+    discordChat
+}

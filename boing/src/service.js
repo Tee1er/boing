@@ -34,16 +34,14 @@ let install = async function() {
 
     svc.install();
 }
-let uninstall =  function(svc) {
-    return new Promise((resolve) => {
-        svc.on("uninstall", () => {
-            resolve(true);
+let uninstall =  async function(svc) {
+        this.svc.on("uninstall", () => {
+            return true;;
         })
-        svc.on("alreadyuninstalled", () => {
-            resolve(true);
+        this.svc.on("alreadyuninstalled", () => {
+            return true;
         })
         svc.uninstall();
-    })
 }
 
 

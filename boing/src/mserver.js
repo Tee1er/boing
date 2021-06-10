@@ -1,5 +1,6 @@
 const stream = require("stream");
 const child_process = require("child_process");
+const bot = require("./bot.js");
 
 //Use "mserver" to avoid confusion with Discord servers.
 let mserver = child_process.spawn("cd ../../server && java -jar server.jar", [], {
@@ -19,8 +20,13 @@ let write = function(text) {
     })
 }
 
+let chat = function(user, message) {
+    let username = `${user.username}#${user.discriminator}`; //Account for multiple users w/ the same username. Unlikely, but just in case.
+    write(`say [${username}] ${message}`)
+}
+
 module.exports = {
     server: mserver,
     write,
-
+    chat
 }

@@ -45,7 +45,7 @@ async function setup() {
         },
         {
             type: "input",
-            name: "optional.chatChannel",
+            name: "chatChannel",
             message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay.",
             initial: ""
         },
