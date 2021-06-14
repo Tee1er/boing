@@ -272,3 +272,19 @@ Maintenance will still go on, at least for now.
 - [x] New command handler.
 - [x] Better README
 - [ ] Chat Relay, w/ streams.
+
+
+
+**Version 2.1** "Bang"
+
+- [ ] Autosaving.
+- [ ] Rich presence statuses to show when Boing is online?
+
+
+
+**Version 2.2** "Bling"
+
+- [ ] Add a web admin dashboard? 
+
+
+
