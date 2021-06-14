@@ -1,2 +1,38 @@
 2021-06-10 09:30:07 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "BoingMDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
 2021-06-10 09:30:07 - Started 4408
+2021-06-10 23:31:01 - Stopping boingmdi.exe
+2021-06-10 23:31:01 - ProcessKill 4408
+2021-06-10 23:31:01 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-11 07:28:50 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "BoingMDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-11 07:28:50 - Started 5688
+2021-06-11 23:30:59 - Stopping boingmdi.exe
+2021-06-11 23:30:59 - ProcessKill 5688
+2021-06-11 23:31:00 - Shutdown exception
+Message:Class not registered
+
+Stacktrace:   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   at System.Management.ManagementScope.InitializeGuts(Object o)
+   at System.Management.ManagementScope.Initialize()
+   at System.Management.ManagementObjectSearcher.Initialize()
+   at System.Management.ManagementObjectSearcher.Get()
+   at winsw.WrapperService.GetChildPids(Int32 pid)
+   at winsw.WrapperService.StopProcessAndChildren(Int32 pid)
+   at winsw.WrapperService.StopIt()
+   at winsw.WrapperService.OnShutdown()
+2021-06-12 12:03:10 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "BoingMDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-12 12:03:10 - Started 6204
+2021-06-13 08:45:06 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "BoingMDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-13 08:45:06 - Started 6528
+2021-06-14 09:04:33 - Starting C:\Program Files\nodejs\node.exe  --harmony C:\Users\tyler\AppData\Roaming\npm\node_modules\node-windows\lib\wrapper.js --file D:\Mindustry-Server\boing\src\bot.js --scriptoptions= --log "BoingMDI wrapper" --grow 0.25 --wait 1 --maxrestarts 3 --abortonerror n --stopparentfirst undefined
+2021-06-14 09:04:33 - Started 6052

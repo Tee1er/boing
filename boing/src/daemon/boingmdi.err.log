@@ -1,0 +1,59 @@
+D:\Mindustry-Server\boing\src\bot.js:38
+    if (chatRelay && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id != client.user.id) {
+                                                                                                                   ^
+
+TypeError: Cannot read property 'name' of undefined
+    at Client.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:38:116)
+    at Client.emit (events.js:315:20)
+    at MessageCreateAction.handle (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\actions\MessageCreate.js:31:14)
+    at Object.module.exports [as MESSAGE_CREATE] (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\handlers\MESSAGE_CREATE.js:4:32)
+    at WebSocketManager.handlePacket (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:384:31)
+    at WebSocketShard.onPacket (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketShard.js:444:22)
+    at WebSocketShard.onMessage (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketShard.js:301:10)
+    at WebSocket.onMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\event-target.js:132:16)
+    at WebSocket.emit (events.js:315:20)
+    at Receiver.receiverOnMessage (D:\Mindustry-Server\boing\node_modules\ws\lib\websocket.js:834:20)
+(node:1168) UnhandledPromiseRejectionWarning: Error [TOKEN_INVALID]: An invalid token was provided.
+    at Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:206:52)
+    at Object.<anonymous> (D:\Mindustry-Server\boing\src\bot.js:86:8)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:1168) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:1168) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:7356) UnhandledPromiseRejectionWarning: Error [TOKEN_INVALID]: An invalid token was provided.
+    at WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:133:26)
+    at Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:21)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7356) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:7356) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6876) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6876) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6876) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:7116) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7116) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:7116) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6468) UnhandledPromiseRejectionWarning: Error [TOKEN_INVALID]: An invalid token was provided.
+    at WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:133:26)
+    at Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:21)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6468) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:6468) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
