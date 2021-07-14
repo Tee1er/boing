@@ -22,6 +22,7 @@
 - [Setup](#getting-started)
   - [Bot Setup](#bot-setup)
   - [Boing Setup](#boing-setup)
+  - [Network Setup](#network-setup)
 - [Features](#features)
 - [Commands](#commands)
 - [Help & Troubleshooting](#help-&-troubleshooting)
@@ -96,7 +97,12 @@ If you **have** enabled Service Mode, Boing should now be running in the backgro
 
 If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
+#### Network Setup
 
+If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you _do_ plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
+
+The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for guides on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
+ 
 
 ## Features
 
