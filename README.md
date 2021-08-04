@@ -285,4 +285,4 @@ Maintenance will still go on, at least for now.
 **Version 2.2** "Bling"
 
 - [ ] Add a web admin dashboard? 
-- [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard.
+- [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard. 

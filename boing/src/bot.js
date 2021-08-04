@@ -1,6 +1,6 @@
 // Make sure to set the variables inside config.json
 const fs = require("fs");
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const path = require("path");
 const mserver = require("./mserver");
 
@@ -8,53 +8,59 @@ const client = new Discord.Client();
 
 // User config file
 const userSettings = JSON.parse(
-    fs.readFileSync(path.resolve('settings.json'), 'utf8')
+    fs.readFileSync(path.resolve("settings.json"), "utf8"),
 );
 console.log("Configuration file loaded.");
 
 // Regexes for filtering server output, ignore
-const extractTimestamp = /[0-9\s\:\-]{19}/g;
-const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
-const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
-const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
-const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
+// const extractTimestamp = /[0-9\s\:\-]{19}/g;
+// const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
+// const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
+// const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
+// const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
 
 client.once("ready", () => {
     console.log("Connected to Discord ... Ready! ");
-})
+});
 
-const CMDPATHS = fs.readdirSync("commands")
-    .filter(element => {
-        return element.endsWith(".js")
-    })
+const CMDPATHS = fs.readdirSync("commands").filter((element) => {
+    return element.endsWith(".js");
+});
 
-let commandsInfo = CMDPATHS.map(
-    element => {
-        return require(`./commands/${element}`).info
-    }
-)
+let commandsInfo = CMDPATHS.map((element) => {
+    return require(`./commands/${element}`).info;
+});
 
 // On discord message callback
-client.on("message", message => {
-
+client.on("message", (message) => {
     //Relay server chat in the user-specified chat channel to players in-game.
-    if (userSettings.chatChannel && message.channel.name == client.channels.cache.find(ch => ch.name === userSettings.chatChannel).name && message.author.id !== client.user.id) {
+    if (
+        userSettings.chatChannel &&
+        message.channel.name ==
+            client.channels.cache.find(
+                (ch) => ch.name === userSettings.chatChannel,
+            ).name &&
+        message.author.id !== client.user.id
+    ) {
         mserver.chat(message.author, message.content);
     }
 
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
-    if (!message.content.startsWith(userSettings.prefix) || message.author.bot) return;
+    if (!message.content.startsWith(userSettings.prefix) || message.author.bot)
+        return;
 
-    const ARGUMENTS = message.content
-        .trim()
-        .split(" ")
-        .slice(1);
+    // Cancel command if the message was sent in a blacklisted channel.
+    if (userSettings.channelBlacklist.includes(message.channel.name)) {
+        return;
+    }
+
+    const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
     //Display more detailed help information IF the last argument is "help" & if the cmd requested is not the 'help' command.
     if (ARGUMENTS[ARGUMENTS.length - 1] == "help" && ARGUMENTS[0] !== "help") {
-        let command = commandsInfo.find(element => {
+        let command = commandsInfo.find((element) => {
             if (element.name == ARGUMENTS[0].toLowerCase()) return true;
-        })
+        });
 
         let helpEmbed = new Discord.MessageEmbed()
             .setColor("#E67B29")
@@ -68,22 +74,28 @@ client.on("message", message => {
         }
 
         message.channel.send(helpEmbed);
-
-    } else if (commandsInfo.find(command => { if (command.name == ARGUMENTS[0]) { return true; } })) {
-        require(`./commands/${ARGUMENTS[0]}`).execute(ARGUMENTS, message).then(result => {
-            // Allows for passing of either an array of arguments, or simply a regular string.
-            if (Array.isArray(result)) {
-                message.channel.send(...result)
-            } else {
-                message.channel.send(result);
+    } else if (
+        commandsInfo.find((command) => {
+            if (command.name == ARGUMENTS[0]) {
+                return true;
             }
-        });
+        })
+    ) {
+        require(`./commands/${ARGUMENTS[0]}`)
+            .execute(ARGUMENTS, message)
+            .then((result) => {
+                // Allows for passing of either an array of arguments, or simply a regular string.
+                if (Array.isArray(result)) {
+                    message.channel.send(...result);
+                } else {
+                    message.channel.send(result);
+                }
+            });
     }
+});
 
-})
-
-client.login(userSettings.token) // add token here
+client.login(userSettings.token); // add token here
 
 module.exports = {
     commandsInfo: commandsInfo,
-}
+};
