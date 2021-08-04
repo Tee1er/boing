@@ -22,9 +22,10 @@
 - [Setup](#getting-started)
   - [Bot Setup](#bot-setup)
   - [Boing Setup](#boing-setup)
+  - [Network Setup](#network-setup)
 - [Features](#features)
 - [Commands](#commands)
-- [Help & Troubleshooting](#help-&-troubleshooting)
+- [Help & Troubleshooting](#troubleshooting-&-additional-information)
 
 ## Getting Started
 
@@ -96,14 +97,19 @@ If you **have** enabled Service Mode, Boing should now be running in the backgro
 
 If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
+#### Network Setup
+
+If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you _do_ plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
+
+The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for guides on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
 
 
 ## Features
 
 - **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way.
-
 - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
+- **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
 - **Map Library:** Store user-content server-side, and let users play those maps on-demand. 
   - The Map Library stores uploaded maps & loads them when desired. These maps can be deleted, renamed, etc. 
   - Maps are stored in `server/config/saves/boing-library`
@@ -206,7 +212,7 @@ If you encounter any problems during this entire process, please consult the [he
   >
   > → Returns the IP address of the server.
 
-## Help & Troubleshooting
+## Troubleshooting & Additional Information
 
 ##### I accidentally entered in wrong information.
 
@@ -251,6 +257,10 @@ Your `settings.json` should look like this:
 
 Now, if you start the launcher again, after being prompted for setup, Service Mode will activate and install the service, hopefully correctly this time.
 
+**How do I setup the channel blacklist feature?**
+
+The channel blacklist is not included in the setup wizard currently - therefore, you'll need to use a text editor to manually add those in. In the `src/settings.json` config file, you should find yourself with a couple key-value pairs. At the end, add the key `channelBlacklist` (with double quotes around it), and then two square brackets. Between these brackets, you should add the channel names you wish to blacklist, again, surrounded w/ double quotes & with commas separating each entry.
+
 ## Roadmap
 
 Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying code. Future updates are unlikely unless major new features are added to the Mindustry server. To submit a feature request, please open a new issue in the **Issues** tab.
@@ -285,4 +295,8 @@ Maintenance will still go on, at least for now.
 **Version 2.2** "Bling"
 
 - [ ] Add a web admin dashboard? 
+<<<<<<< HEAD
 - [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard. 
+=======
+- [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard.
+>>>>>>> ed7418a04fee55cd61ab12991cca2578a5da93d3

@@ -77,7 +77,6 @@ async function setup() {
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
     );
-
     const settings = JSON.stringify(response, null, 4);
 
     //is using the file handle method faster?
