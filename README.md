@@ -59,7 +59,7 @@ In the box **Scopes**, check off the permission **Bot**.
 
 ![](media\discord-dev-permissions.jpg)
 
-Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box, too. You're almost done!
+Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box (**Send Messages**), too. You're almost done!
 
 Finally, scroll back up and copy the URL in the **Scopes** box. If you did everything right, it *should* look something like this, with numbers in place of the X's here, obviously.
 
@@ -290,22 +290,18 @@ Maintenance will still go on, at least for now.
 - [x] Map Library
 - [x] New command handler.
 - [x] Better README
-- [ ] Chat Relay, w/ streams.
+- [ ] ~~Chat Relay, w/ streams.~~
 
 
 
 **Version 2.1** "Bang"
 
-- [ ] Autosaving.
-- [ ] Rich presence statuses to show when Boing is online?
+- [x] Autosaving.
+- [x] Rich presence statuses to show when Boing is online?
 
 
 
 **Version 2.2** "Bling"
 
 - [ ] Add a web admin dashboard? 
-<<<<<<< HEAD
-- [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard. 
-=======
 - [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard.
->>>>>>> ed7418a04fee55cd61ab12991cca2578a5da93d3
