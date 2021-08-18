@@ -39,7 +39,7 @@ First, we'll begin by going to the Discord Developer Portal, at https://discord.
 
 You should see a page that looks something like this:
 
-![](D:\Mindustry-Server\media\discord-dev-applications.jpg)
+![](media\discord-dev-applications.jpg)
 
 Create a new project by clicking on the blue button in the top right corner (**New Application**)
 
@@ -51,13 +51,13 @@ Create for yourself a new bot using the button on the right. (**Add Bot**) Next,
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
-![](D:\Mindustry-Server\media\discord-dev-bot.jpg)
+![](media\discord-dev-bot.jpg)
 
 You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server. 
 
 In the box **Scopes**, check off the permission **Bot**.
 
-![](D:\Mindustry-Server\media\discord-dev-permissions.jpg)
+![](media\discord-dev-permissions.jpg)
 
 Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box, too. You're almost done!
 
@@ -110,6 +110,7 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
 - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
 - **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
+- **Automatic backups:** Boing takes backups automatically every 5 minutes, adding an extra safety net if you mess up. 
 - **Map Library:** Store user-content server-side, and let users play those maps on-demand. 
   - The Map Library stores uploaded maps & loads them when desired. These maps can be deleted, renamed, etc. 
   - Maps are stored in `server/config/saves/boing-library`
@@ -211,6 +212,12 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
   > **b ip**
   >
   > → Returns the IP address of the server.
+  
+- **rollback**: Stops the server and loads the latest backup. Boing only stores a single save at a time and deletes it automatically whenever the server is stopped or all players disconnect. 
+
+  > **b rollback**
+  >
+  > → Stops the server & loads the latest backup.
 
 ## Troubleshooting & Additional Information
 
@@ -260,6 +267,8 @@ Now, if you start the launcher again, after being prompted for setup, Service Mo
 **How do I setup the channel blacklist feature?**
 
 The channel blacklist is not included in the setup wizard currently - therefore, you'll need to use a text editor to manually add those in. In the `src/settings.json` config file, you should find yourself with a couple key-value pairs. At the end, add the key `channelBlacklist` (with double quotes around it), and then two square brackets. Between these brackets, you should add the channel names you wish to blacklist, again, surrounded w/ double quotes & with commas separating each entry.
+
+****
 
 ## Roadmap
 
