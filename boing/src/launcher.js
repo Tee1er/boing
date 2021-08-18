@@ -68,6 +68,12 @@ async function setup() {
             message: "Enable Service Mode?",
             initial: false,
         },
+        {
+            type: "input",
+            name: "notificationChannel",
+            message:
+                "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
+        },
     ];
 
     const response = await enquirer.prompt(prompts);
