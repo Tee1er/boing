@@ -74,6 +74,12 @@ async function setup() {
             message:
                 "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
         },
+        {
+            type: "list",
+            name: "channelBlacklist",
+            message:
+                "Select channels to blacklist - leave blank if you have none.",
+        },
     ];
 
     const response = await enquirer.prompt(prompts);
