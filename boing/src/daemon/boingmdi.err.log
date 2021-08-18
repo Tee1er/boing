@@ -370,3 +370,50 @@ Error: spawn EROFS
 (Use `node --trace-warnings ...` to show where the warning was created)
 (node:6932) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
 (node:6932) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6496) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6496) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6496) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6260) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6260) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6260) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6588) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6588) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6588) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6088) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 data listeners added to [Socket]. Use emitter.setMaxListeners() to increase limit
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6484) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6484) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6484) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:6476) UnhandledPromiseRejectionWarning: FetchError: request to https://discord.com/api/v7/gateway/bot failed, reason: getaddrinfo ENOTFOUND discord.com
+    at RequestHandler.execute (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:93:15)
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async RequestHandler.push (D:\Mindustry-Server\boing\node_modules\discord.js\src\rest\RequestHandler.js:39:14)
+    at async WebSocketManager.connect (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\websocket\WebSocketManager.js:138:9)
+    at async Client.login (D:\Mindustry-Server\boing\node_modules\discord.js\src\client\Client.js:223:7)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6476) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 3)
+(node:6476) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.

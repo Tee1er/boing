@@ -3,6 +3,7 @@ const fs = require("fs");
 const Discord = require("discord.js");
 const path = require("path");
 const mserver = require("./mserver");
+const backups = require("./backups");
 
 const client = new Discord.Client();
 
@@ -20,7 +21,10 @@ console.log("Configuration file loaded.");
 // const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
 
 client.once("ready", () => {
-    console.log("Connected to Discord ... Ready! ");
+    console.log("Connected to Discord. ");
+    client.user.setActivity(`${userSettings.prefix} help`, {
+        type: "LISTENING",
+    });
 });
 
 const CMDPATHS = fs.readdirSync("commands").filter((element) => {
@@ -33,18 +37,6 @@ let commandsInfo = CMDPATHS.map((element) => {
 
 // On discord message callback
 client.on("message", (message) => {
-    //Relay server chat in the user-specified chat channel to players in-game.
-    if (
-        userSettings.chatChannel &&
-        message.channel.name ==
-            client.channels.cache.find(
-                (ch) => ch.name === userSettings.chatChannel,
-            ).name &&
-        message.author.id !== client.user.id
-    ) {
-        mserver.chat(message.author, message.content);
-    }
-
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
     if (!message.content.startsWith(userSettings.prefix) || message.author.bot)
         return;
@@ -92,6 +84,40 @@ client.on("message", (message) => {
                 }
             });
     }
+});
+
+function sendNotification(message) {
+    const channel = client.channels.cache.find(
+        (channel) => channel.name == userSettings.notificationChannel,
+    );
+    if (!channel) {
+        return;
+    }
+    channel.send(message);
+}
+
+let numPlayers = 0;
+
+mserver.events.on("gameOver", (result) => {
+    sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
+});
+mserver.events.on("playerConnected", (result) => {
+    sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
+    numPlayers++;
+    backups.startBackups(mserver);
+});
+mserver.events.on("playerDisconnected", (result) => {
+    sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
+    numPlayers--;
+    if (numPlayers == 0) {
+        // could've used a ternary, but this is more readable
+        backups.stopBackups();
+    }
+});
+
+mserver.events.on("stopped", (result) => {
+    numPlayers = 0;
+    backups.stopBackups();
 });
 
 client.login(userSettings.token); // add token here

@@ -3,7 +3,7 @@ const { get } = require("axios");
 
 let execute = async function() {
     response = await get("https://api.ipify.org", {params: {format:"json"}});
-    return `The server's IP is **${response.data.ip}**.`
+    return `The server's IP is **${response.data.ip}**`
 }
 
 module.exports = {
