@@ -17,8 +17,6 @@ console.log(
     "Please see https://www.github.com/Tee1er/boing for more information.\n",
 );
 
-deps_resolver.get_server();
-
 var settings = {};
 var setupOccurred = false;
 if (existsSync("settings.json")) {
@@ -37,9 +35,11 @@ if (!setupOccurred) {
 }
 
 if (!settings.serviceMode && setupOccurred) {
-    console.log(colors.bold("Attempting to start Boing ... \n"));
-    let boing = child_process.spawn("node bot.js", [], { shell: true });
-    boing.stdout.pipe(process.stdout);
+    deps_resolver.get_server().then(_ => {
+        console.log(colors.bold("Attempting to start Boing ... \n"));
+        let boing = child_process.spawn("node bot.js", [], { shell: true });
+        boing.stdout.pipe(process.stdout);
+    });
 }
 
 async function setup() {
