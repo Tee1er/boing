@@ -8,3 +8,6 @@ boing/src/settings.json
 
 #node-windows data folders:
 **/daemon
+
+# Server files
+*.jar

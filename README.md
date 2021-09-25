@@ -11,21 +11,20 @@
   
   Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily.
   
-  
-
-**<u>For Windows only.</u>**
-
 ****
 
 #### Table of Contents
 
-- [Setup](#getting-started)
-  - [Bot Setup](#bot-setup)
-  - [Boing Setup](#boing-setup)
-  - [Network Setup](#network-setup)
+- [Getting Started](#getting-started)
+    - [Bot Setup](#bot-setup)
+    - [Boing Setup](#boing-setup)
+    - [Network Setup](#network-setup)
 - [Features](#features)
 - [Commands](#commands)
-- [Help & Troubleshooting](#troubleshooting-&-additional-information)
+- [Troubleshooting & Additional Information](#troubleshooting--additional-information)
+      - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
+      - [**The service installation failed for some reason. Now Boing won't work in Service Mode anymore.**](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
+- [Roadmap](#roadmap)
 
 ## Getting Started
 

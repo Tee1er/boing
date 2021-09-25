@@ -1,15 +1,23 @@
+const platform = process.platform;
+
 const { resolve } = require("path");
 const colors = require("ansi-colors");
 const enquirer = require("enquirer");
-const serviceUtil = require("./service.js");
-
+const deps_resolver = require('./get_deps');
 const { writeFileSync, readFileSync, existsSync } = require("fs");
 const child_process = require("child_process");
+
+// Service mode only on windows
+if (platform == 'win32') {
+    const serviceUtil = require("./service.js");
+}
 
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.0 --"));
 console.log(
     "Please see https://www.github.com/Tee1er/boing for more information.\n",
 );
+
+deps_resolver.get_server();
 
 var settings = {};
 var setupOccurred = false;
@@ -43,8 +51,7 @@ async function setup() {
             "https://github.com/Tee1er/boing/blob/main/README.md",
         )} \n`,
     );
-    const prompts = [
-        {
+    const prompts = [{
             type: "input",
             name: "token",
             message: "Please enter your bot's token.",
@@ -58,8 +65,7 @@ async function setup() {
         {
             type: "input",
             name: "chatChannel",
-            message:
-                "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
+            message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
             initial: "",
         },
         {
@@ -71,21 +77,19 @@ async function setup() {
         {
             type: "input",
             name: "notificationChannel",
-            message:
-                "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
+            message: "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
         },
         {
             type: "list",
             name: "channelBlacklist",
-            message:
-                "Select channels to blacklist - leave blank if you have none.",
+            message: "Select channels to blacklist - leave blank if you have none.",
         },
     ];
 
     const response = await enquirer.prompt(prompts);
     console.log(
         colors.bold.green(`\nSetup is now complete. `) +
-            `In the future, if you do not have Service Mode enabled, the Boing launcher 
+        `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
     );
@@ -94,7 +98,7 @@ automatically the next time you restart your computer. \n`,
     //is using the file handle method faster?
     writeFileSync("settings.json", settings);
 
-    if (response.serviceMode === true) {
+    if (response.serviceMode === true && platform == "win32") {
         console.log(
             colors.bold(
                 "Beginning the service installation process now. You may have to accept multiple prompts from your operating system in order to install correctly. \n",
@@ -103,6 +107,7 @@ automatically the next time you restart your computer. \n`,
         await new Promise((resolve) => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
         serviceUtil.install();
     } else if (response.serviceMode !== true) {
-        serviceUtil.uninstall();
+        if (platform == "win32")
+            serviceUtil.uninstall();
     }
 }
