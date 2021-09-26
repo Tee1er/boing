@@ -4,6 +4,7 @@ boing/src/settings.json
 # Mindustry server config/data folders
 **/config
 **/logs
+*.log
 **/settings.json
 
 #node-windows data folders:
