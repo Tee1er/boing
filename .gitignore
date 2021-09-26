@@ -10,4 +10,4 @@ boing/src/settings.json
 **/daemon
 
 # Server files
-*.jar
+server/*
