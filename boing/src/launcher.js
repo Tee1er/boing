@@ -3,12 +3,12 @@ const platform = process.platform;
 const { resolve } = require("path");
 const colors = require("ansi-colors");
 const enquirer = require("enquirer");
-const deps_resolver = require('./get_deps');
+const deps_resolver = require("./get_deps");
 const { writeFileSync, readFileSync, existsSync } = require("fs");
 const child_process = require("child_process");
 
 // Service mode only on windows
-if (platform == 'win32') {
+if (platform == "win32") {
     const serviceUtil = require("./service.js");
 }
 
@@ -35,8 +35,8 @@ if (!setupOccurred) {
 }
 
 if (!settings.serviceMode && setupOccurred) {
-    deps_resolver.get_server(settings.serverResource).then(_ => {
-        console.log(colors.bold("Attempting to start Boing ... \n"));
+    deps_resolver.get_server(settings.serverResource).then((_) => {
+        console.log(colors.bold("Starting Boing ... \n"));
         let boing = child_process.spawn("node bot.js", [], { shell: true });
         boing.stdout.pipe(process.stdout);
     });
@@ -51,7 +51,8 @@ async function setup() {
             "https://github.com/Tee1er/boing/blob/main/README.md",
         )} \n`,
     );
-    const prompts = [{
+    const prompts = [
+        {
             type: "input",
             name: "token",
             message: "Please enter your bot's token.",
@@ -65,7 +66,8 @@ async function setup() {
         {
             type: "input",
             name: "chatChannel",
-            message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
+            message:
+                "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
             initial: "",
         },
         {
@@ -77,25 +79,28 @@ async function setup() {
         {
             type: "input",
             name: "notificationChannel",
-            message: "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
+            message:
+                "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
         },
         {
             type: "list",
             name: "channelBlacklist",
-            message: "Select channels to blacklist - leave blank if you have none.",
+            message:
+                "Select channels to blacklist - leave blank if you have none.",
         },
     ];
 
     const response = await enquirer.prompt(prompts);
     console.log(
         colors.bold.green(`\nSetup is now complete. `) +
-        `In the future, if you do not have Service Mode enabled, the Boing launcher 
+            `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
     );
 
     var user_settings = response;
-    user_settings["serverResource"] = "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
+    user_settings["serverResource"] =
+        "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
     const settings = JSON.stringify(user_settings, null, 4);
 
     //is using the file handle method faster?
@@ -110,7 +115,6 @@ automatically the next time you restart your computer. \n`,
         await new Promise((resolve) => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
         serviceUtil.install();
     } else if (response.serviceMode !== true) {
-        if (platform == "win32")
-            serviceUtil.uninstall();
+        if (platform == "win32") serviceUtil.uninstall();
     }
 }
