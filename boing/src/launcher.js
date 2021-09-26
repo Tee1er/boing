@@ -35,7 +35,7 @@ if (!setupOccurred) {
 }
 
 if (!settings.serviceMode && setupOccurred) {
-    deps_resolver.get_server().then(_ => {
+    deps_resolver.get_server(settings.serverResource).then(_ => {
         console.log(colors.bold("Attempting to start Boing ... \n"));
         let boing = child_process.spawn("node bot.js", [], { shell: true });
         boing.stdout.pipe(process.stdout);
@@ -93,7 +93,10 @@ async function setup() {
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
     );
-    const settings = JSON.stringify(response, null, 4);
+
+    var user_settings = response;
+    user_settings["serverResource"] = "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
+    const settings = JSON.stringify(user_settings, null, 4);
 
     //is using the file handle method faster?
     writeFileSync("settings.json", settings);
