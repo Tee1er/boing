@@ -73,9 +73,30 @@ client.on("message", (message) => {
             }
         })
     ) {
-        require(`./commands/${ARGUMENTS[0]}`)
-            .execute(ARGUMENTS, message)
-            .then((result) => {
+        let c = require(`./commands/${ARGUMENTS[0]}`);
+
+        let isAdmin = message.member.roles.cache.find(
+            (x) => userSettings.adminRoleID === x.id,
+        )
+            ? true
+            : false;
+
+        let allowed = () => {
+            if (c.info.adminOnly === true && isAdmin) {
+                return true;
+            }
+            if (c.info.adminOnly === false) {
+                return true;
+            }
+            if (c.info.adminOnly === undefined) {
+                return true;
+            } else {
+                return false;
+            }
+        };
+
+        if (allowed && isAdmin) {
+            c.execute(ARGUMENTS, message).then((result) => {
                 // Allows for passing of either an array of arguments, or simply a regular string.
                 if (Array.isArray(result)) {
                     message.channel.send(...result);
@@ -83,6 +104,11 @@ client.on("message", (message) => {
                     message.channel.send(result);
                 }
             });
+        } else {
+            message.channel.send(
+                "An error occured. You must be an administrator to use that command.",
+            );
+        }
     }
 });
 
@@ -117,7 +143,7 @@ mserver.events.on("playerDisconnected", (result) => {
 
 mserver.events.on("stopped", (result) => {
     numPlayers = 0;
-    backups.stopBackups();
+    // backups.stopBackups();
 });
 
 client.login(userSettings.token); // add token here

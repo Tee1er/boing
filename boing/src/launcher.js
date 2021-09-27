@@ -78,6 +78,11 @@ async function setup() {
         },
         {
             type: "input",
+            name: "adminRole",
+            message: "ID of administrator role?",
+        },
+        {
+            type: "input",
             name: "notificationChannel",
             message:
                 "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
