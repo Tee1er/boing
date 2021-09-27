@@ -137,7 +137,7 @@ mserver.events.on("playerDisconnected", (result) => {
     numPlayers--;
     if (numPlayers == 0) {
         // could've used a ternary, but this is more readable
-        backups.stopBackups();
+        // backups.stopBackups();
     }
 });
 
