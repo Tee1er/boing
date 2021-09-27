@@ -76,7 +76,7 @@ client.on("message", (message) => {
         let c = require(`./commands/${ARGUMENTS[0]}`);
 
         let isAdmin = message.member.roles.cache.find(
-            (x) => userSettings.adminRoleID === x.id,
+            (x) => userSettings.adminRole === x.name,
         )
             ? true
             : false;

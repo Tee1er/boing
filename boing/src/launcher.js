@@ -79,7 +79,7 @@ async function setup() {
         {
             type: "input",
             name: "adminRole",
-            message: "ID of administrator role?",
+            message: "Administrator role name?",
         },
         {
             type: "input",
