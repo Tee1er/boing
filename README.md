@@ -297,7 +297,15 @@ Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying co
 **Version 2.2** 
 
 - [ ] ~~Add a web admin dashboard?~~ 
-- [ ] Role permissions, so only authorized users can use certain commands. 
+- [x] Role permissions, so only authorized users can use certain commands. 
+- [ ] Ban, pardon, and kick commands, for administrators only.
 - [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
 - [ ] Server auto-updating
 - [ ] Upgraded Chat Relay w/ webhooks. 
+- [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+
+**Version 2.3**
+
+- [ ] Rewrite portions of codebase to allow for hosting of multiple server instances.
+- [ ] Find a better way of making Boing a service / run in background.
+- [ ] A tray utility would be *nice* but isn't really necessary. If we have time.
