@@ -1,7 +1,5 @@
 let execute = function () {
-    return Promise.resolve(
-        `You should need administrator permission for this?`,
-    );
+    return Promise.resolve(`Administrator-only!`);
 };
 
 module.exports = {
