@@ -8,8 +8,8 @@ module.exports = {
     execute,
     info: {
         name: "testadmincommand",
-        descrip: "stuff",
-        longDescrip: "stuff",
+        descrip: "**Admin-only.** stuff",
+        longDescrip: "**Admin-only.** stuff",
         adminOnly: true,
     },
 };
