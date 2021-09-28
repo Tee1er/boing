@@ -95,7 +95,7 @@ client.on("message", (message) => {
             }
         };
 
-        if (allowed && isAdmin) {
+        if (allowed) {
             c.execute(ARGUMENTS, message).then((result) => {
                 // Allows for passing of either an array of arguments, or simply a regular string.
                 if (Array.isArray(result)) {
