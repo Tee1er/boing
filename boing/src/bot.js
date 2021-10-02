@@ -75,7 +75,7 @@ client.on("message", (message) => {
         let c = require(`./commands/${ARGUMENTS[0]}`);
 
         let isAdmin = message.member.roles.cache.find(
-                (x) => userSettings.adminRole === x.name,
+                (x) => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "",
             ) ?
             true :
             false;
@@ -149,5 +149,4 @@ client.login(data.SETTINGS.token); // add token here
 
 module.exports = {
     commandsInfo: commandsInfo,
-    userSettings,
 };

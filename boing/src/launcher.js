@@ -45,6 +45,7 @@ if (!data.SETTINGS.serviceMode && setupOccurred) {
         // FIXME: Make bot into a class to make boing one unified process
         let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true });
         boing.stdout.pipe(process.stdout);
+        boing.stderr.pipe(process.stderr);
     });
 }
 
@@ -83,7 +84,7 @@ async function setup() {
         {
             type: "input",
             name: "adminRole",
-            message: "Administrator role name?",
+            message: "Name of a role to grant administrator permissions (leave blank for none)",
         },
         {
             type: "input",
