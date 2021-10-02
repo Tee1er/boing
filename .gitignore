@@ -12,6 +12,7 @@ boing/src/settings.json
 
 # Npm modules
 **/node_modules
+**/package-lock.json
 
 # Server files
 data/
