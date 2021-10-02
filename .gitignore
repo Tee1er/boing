@@ -7,8 +7,11 @@ boing/src/settings.json
 *.log
 **/settings.json
 
-#node-windows data folders:
+# node-windows data folders:
 **/daemon
 
+# Npm modules
+**/node_modules
+
 # Server files
-server/*
+data/

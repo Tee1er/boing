@@ -2,7 +2,7 @@ const mserver = require("../mserver.js");
 const { rmSync } = require("fs");
 const { resolve } = require("path");
 
-let execute = function(ARGUMENTS) {
+let execute = function (ARGUMENTS) {
     let fileName = ARGUMENTS[1];
     let filePath = resolve(`../../server/config/saves/boing-library/${fileName}.msav`)
     rmSync(filePath);

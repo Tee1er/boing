@@ -2,21 +2,21 @@ const stream = require("stream");
 const child_process = require("child_process");
 const bot = require("./bot.js");
 const EventEmitter = require("events");
+const { SERVER_JAR, SERVER_DIR } = require('./globals');
 
 //Use "mserver" to avoid confusion with Discord servers.
+
 let mserver = child_process.spawn(
-    "cd ../../server && java -jar server.jar",
-    [],
-    {
+    `cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`, [], {
         shell: true,
     },
 );
 
-child_process.exec("cd ../boing/src"); // Go back to normal working directory so relative paths don't get messed up
+// child_process.exec("cd ../boing/src"); // Go back to normal working directory so relative paths don't get messed up
 mserver.stdin.pipe(process.stdin);
 mserver.stdout.pipe(process.stdout);
 
-let write = function (text) {
+let write = function(text) {
     mserver.stdin.write(`${text} \n`);
     return new Promise((resolve) => {
         mserver.stdout.on("data", (data) => {

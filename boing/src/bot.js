@@ -4,14 +4,13 @@ const Discord = require("discord.js");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
+const { data, SRC_DIR, loadSettings, loadSessionData } = require('./globals');
+const { resolve } = require("path");
+
+loadSettings(); // Needs to be loaded here because this is run as a separate process
+loadSessionData();
 
 const client = new Discord.Client();
-
-// User config file
-const userSettings = JSON.parse(
-    fs.readFileSync(path.resolve("settings.json"), "utf8"),
-);
-console.log("Configuration file loaded.");
 
 // Regexes for filtering server output, ignore
 // const extractTimestamp = /[0-9\s\:\-]{19}/g;
@@ -22,12 +21,12 @@ console.log("Configuration file loaded.");
 
 client.once("ready", () => {
     console.log("Connected to Discord. ");
-    client.user.setActivity(`${userSettings.prefix} help`, {
+    client.user.setActivity(`${data.SETTINGS.prefix} help`, {
         type: "LISTENING",
     });
 });
 
-const CMDPATHS = fs.readdirSync("commands").filter((element) => {
+const CMDPATHS = fs.readdirSync(resolve(SRC_DIR, "commands/")).filter((element) => {
     return element.endsWith(".js");
 });
 
@@ -38,11 +37,11 @@ let commandsInfo = CMDPATHS.map((element) => {
 // On discord message callback
 client.on("message", (message) => {
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
-    if (!message.content.startsWith(userSettings.prefix) || message.author.bot)
+    if (!message.content.startsWith(data.SETTINGS.prefix) || message.author.bot)
         return;
 
     // Cancel command if the message was sent in a blacklisted channel.
-    if (userSettings.channelBlacklist.includes(message.channel.name)) {
+    if (data.SETTINGS.channelBlacklist.includes(message.channel.name)) {
         return;
     }
 
@@ -88,7 +87,7 @@ client.on("message", (message) => {
 
 function sendNotification(message) {
     const channel = client.channels.cache.find(
-        (channel) => channel.name == userSettings.notificationChannel,
+        (channel) => channel.name == data.SETTINGS.notificationChannel,
     );
     if (!channel) {
         return;
@@ -120,9 +119,8 @@ mserver.events.on("stopped", (result) => {
     backups.stopBackups();
 });
 
-client.login(userSettings.token); // add token here
+client.login(data.SETTINGS.token); // add token here
 
 module.exports = {
     commandsInfo: commandsInfo,
-    userSettings,
 };
