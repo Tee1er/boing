@@ -24,6 +24,6 @@ let get_server = async function() {
         saveSessionData();
         console.log(`\nSuccessfully downloaded latest release of Mindustry server (${server_release.name}).`);
     }
-}
+};
 
 module.exports = { get_server };

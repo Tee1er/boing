@@ -3,9 +3,10 @@
         "ansi-colors": "^4.1.1",
         "axios": "^0.21.1",
         "discord.js": "^12.5.3",
+        "enquirer": "^2.3.6",
         "forever": "^4.0.0",
         "forever-monitor": "^3.0.3",
-        "prompts": "^2.4.1",
-        "enquirer": "^2.3.6"
+        "node-windows": "^1.0.0-beta.6",
+        "prompts": "^2.4.1"
     }
 }

@@ -212,7 +212,7 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
   >
   > → Returns the IP address of the server.
   
-- **rollback**: Stops the server and loads the latest backup. Boing only stores a single save at a time and deletes it automatically whenever the server is stopped or all players disconnect. 
+- **rollback**: Stops the server and loads the latest backup. Boing only stores a single save at a time, which currently persists until overwritten with a new one.
 
   > **b rollback**
   >
@@ -271,15 +271,9 @@ The channel blacklist is not included in the setup wizard currently - therefore,
 
 ## Roadmap
 
-Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying code. Future updates are unlikely unless major new features are added to the Mindustry server. To submit a feature request, please open a new issue in the **Issues** tab.
+Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying code. 
 
-
-
-Maintenance will still go on, at least for now.
-
-
-
-**Version 2.0** "Bounce"
+**Version 2.0**
 
 - [x] Automatic deletion of imported & exported saves.
 - [x] Boing launcher.
@@ -293,14 +287,25 @@ Maintenance will still go on, at least for now.
 
 
 
-**Version 2.1** "Bang"
+**Version 2.1** 
 
 - [x] Autosaving.
 - [x] Rich presence statuses to show when Boing is online?
 
 
 
-**Version 2.2** "Bling"
+**Version 2.2** 
 
-- [ ] Add a web admin dashboard? 
-- [ ] Role permissions, so only authorized users can use certain commands. Set from dashboard.
+- [ ] ~~Add a web admin dashboard?~~ 
+- [x] Role permissions, so only authorized users can use certain commands. 
+- [ ] Ban, pardon, and kick commands, for administrators only.
+- [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
+- [ ] Server auto-updating
+- [ ] Upgraded Chat Relay w/ webhooks. 
+- [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+
+**Version 2.3**
+
+- [ ] Rewrite portions of codebase to allow for hosting of multiple server instances.
+- [ ] Find a better way of making Boing a service / run in background.
+- [ ] A tray utility would be *nice* but isn't really necessary. If we have time.
