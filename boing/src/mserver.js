@@ -13,7 +13,7 @@ let mserver = child_process.spawn(
 );
 
 // child_process.exec("cd ../boing/src"); // Go back to normal working directory so relative paths don't get messed up
-mserver.stdin.pipe(process.stdin);
+process.stdin.pipe(mserver.stdin); // Fixed this, you have to pipe fro the nodejs process to the child
 mserver.stdout.pipe(process.stdout);
 
 let write = function(text) {

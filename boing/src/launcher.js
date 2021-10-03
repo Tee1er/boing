@@ -1,6 +1,5 @@
 const service_win32 = process.platform === "win32";
 const child_process = require("child_process");
-const { resolve } = require("path");
 const { writeFileSync, readFileSync, existsSync } = require("fs");
 const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR } = require('./globals.js');
 
@@ -14,7 +13,7 @@ loadSessionData();
 //     child_process.execSync(`cd ${BOING_DIR} && npm install --no-bin-links`);
 // }
 
-// NPM modules (loaded after auto-install)
+// NPM modules (loaded after possible auto-install)
 const colors = require("ansi-colors");
 const enquirer = require("enquirer");
 const deps_resolver = require("./get_deps");
@@ -43,9 +42,7 @@ if (!data.SETTINGS.serviceMode && setupOccurred) {
     deps_resolver.get_server().then((_) => {
         console.log(colors.bold("Starting Boing ... \n"));
         // FIXME: Make bot into a class to make boing one unified process
-        let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true });
-        boing.stdout.pipe(process.stdout);
-        boing.stderr.pipe(process.stderr);
+        let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true, stdio: "inherit" });
     });
 }
 
