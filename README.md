@@ -300,9 +300,10 @@ Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying co
 - [x] Role permissions, so only authorized users can use certain commands. 
 - [ ] Ban, pardon, and kick commands, for administrators only.
 - [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
-- [ ] Server auto-updating
+- [x] Server auto-updating
 - [ ] Upgraded Chat Relay w/ webhooks. 
 - [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+
 
 **Version 2.3**
 
