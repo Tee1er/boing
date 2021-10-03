@@ -1,7 +1,7 @@
 const service_win32 = process.platform === "win32";
 const child_process = require("child_process");
-const { writeFileSync, readFileSync, existsSync } = require("fs");
-const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR } = require('./globals.js');
+const { writeFileSync, readFileSync, existsSync, fstat, mkdirSync } = require("fs");
+const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SERVER_DIR } = require('./globals.js');
 
 // Load config files
 loadSettings();
@@ -36,6 +36,7 @@ if (!setupOccurred) {
             data.SETTINGS.serviceMode ? colors.green("on.") : colors.red("off."),
         )} \n`,
     );
+    setupOccurred = true;
 }
 
 if (!data.SETTINGS.serviceMode && setupOccurred) {
@@ -47,6 +48,10 @@ if (!data.SETTINGS.serviceMode && setupOccurred) {
 }
 
 async function setup() {
+    // Create data directory
+    mkdirSync(DATA_DIR, { recursive: true });
+    mkdirSync(SERVER_DIR, { recursive: true });
+
     //todo, replace w/ template string
     console.log(
         `${colors.bold.blue(
@@ -107,10 +112,8 @@ automatically the next time you restart your computer. \n`,
     user_settings["serverResource"] =
         "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
 
-    data.SETTINGS = JSON.stringify(user_settings, null, 4);
+    data.SETTINGS = user_settings;
     saveSettings();
-
-    writeFileSync("settings.json", settings);
 
     if (data.SETTINGS.serviceMode === true && service_win32) {
         console.log(

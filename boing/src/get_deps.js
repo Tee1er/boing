@@ -1,8 +1,10 @@
 const fs = require('fs');
 const axios = require('axios');
-const { data, SERVER_JAR, saveSessionData } = require('./globals');
+const { data, SERVER_JAR, saveSessionData, SERVER_DIR } = require('./globals');
 
 let get_server = async function() {
+    if (!fs.existsSync(SERVER_DIR)) fs.mkdirSync(SERVER_DIR, { recursive: true });
+
     const release_metadata = await axios.get(data.SETTINGS.serverResource, { responseType: "json" })
         .then(res => res.data)
         .catch(err => console.error(err));
