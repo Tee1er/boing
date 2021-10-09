@@ -39,14 +39,20 @@ let execute = async function(ARGUMENTS) {
             return Promise.reject(`Option ${cfg_opt} not found. Use the config command with no arguments to display all configuration options.`);
 
         if (cfg_val) {
-            return mserver.write(`config ${cfg_opt} ${cfg_val}`).then(res => `Server option ${res.match(regexes.message)}`);
+            return mserver.write_recv(`config ${cfg_opt} ${cfg_val}`).then(res => `Server option ${res.match(regexes.message)}`);
         } else {
-            let value = await mserver.write(`config ${cfg_opt}`);
+            let value = await mserver.write_recv(`config ${cfg_opt}`);
             value = value.match(regexes.message);
             return Promise.resolve(`Server option ${value}`);
         }
     } else {
-
+        return await mserver.write_poll(
+            "config",
+            function(line) { return line.includes("| | Enable debug logging") },
+            function(line) {
+                return line.match(regexes.message);
+            }
+        );
     }
 };
 

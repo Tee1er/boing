@@ -13,7 +13,7 @@ let execute = async function(ARGUMENTS, message) {
         //open & write to file
         writeFileSync(filePath, data, { encoding: null });
     })
-    let result = await mserver.write(`load ${fileName}`)
+    let result = await mserver.write_recv(`load ${fileName}`)
 
     //Deletes imported file, now that the server has loaded it.
     rmSync(filePath);

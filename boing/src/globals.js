@@ -15,10 +15,10 @@ const SERVER_JAR = resolve(SERVER_DIR, "server.jar");
 
 // Regexes for filtering server output, ignore
 const regexes = Object.freeze({
-    timestamp_raw: /\[\d+-\d+-\d+ \d+:\d+:\d+\]/,
-    timestamp: /(?<=\[)\d+-\d+-\d+ \d+:\d+:\d+(?=\])/,
-    type: /(?<=\[)\w(?=\])/,
-    message: /(?<=\[\d+-\d+-\d+ \d+:\d+:\d+\] \[\w\] ).+/
+    timestamp_raw: /\[\d+-\d+-\d+ \d+:\d+:\d+\]/g,
+    timestamp: /(?<=\[)\d+-\d+-\d+ \d+:\d+:\d+(?=\])/g,
+    type: /(?<=\[)\w(?=\])/g,
+    message: /(?<=\[\d+-\d+-\d+ \d+:\d+:\d+\] \[\w\] )(.|)*/g
 
     // extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
     // extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;

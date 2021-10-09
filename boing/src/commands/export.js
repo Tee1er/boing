@@ -7,7 +7,7 @@ const { rm } = require("fs/promises");
 
 let execute = async function(ARGUMENTS, message) {
     let fileName = `E-${crypto.randomBytes(4).toString("hex")}`;
-    let result = await mserver.write(`save ${fileName}`);
+    let result = await mserver.write_recv(`save ${fileName}`);
     if (!result.includes("Saved to")) {
         return `An error occured. The save could not be exported. \`\`\`js\n${result} \`\`\``
     } else if (result.includes("Not hosting")) {
@@ -21,7 +21,7 @@ let execute = async function(ARGUMENTS, message) {
         attachment = new MessageAttachment(filePath, fileName + ".msav");
     }
     rm(filePath)
-    return ["Here's your save file:" , attachment];
+    return ["Here's your save file:", attachment];
 }
 
 module.exports = {

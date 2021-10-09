@@ -1,7 +1,7 @@
 const mserver = require("../mserver.js");
 
 let execute = async function(ARGUMENTS) {
-    let result = await mserver.write(`load boing-library/${ARGUMENTS[1]}`);
+    let result = await mserver.write_recv(`load boing-library/${ARGUMENTS[1]}`);
     if (result.includes("Save loaded")) {
         return `Loaded save from the Map Library. \`\`\`js\n${result} \`\`\` `
     } else {
