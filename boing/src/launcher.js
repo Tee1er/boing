@@ -36,7 +36,7 @@ try {
         setupOccurred = true;
     }
 
-    if (data.SETTINGS.serviceMode && setupOccurred) {
+    if (!data.SETTINGS.serviceMode && setupOccurred) {
         deps_resolver.get_server().then(_ => {
             console.log(colors.bold("Starting Boing ... \n"));
             // FIXME: Make bot into a class to make boing one unified process
@@ -51,8 +51,7 @@ try {
 
         //todo, replace w/ template string
         console.log(`${colors.bold.blue("Welcome to setup. ")} For setup instructions, please visit ${colors.blue("https://github.com/Tee1er/boing/blob/main/README.md")} \n`);
-        const prompts = [
-            {
+        const prompts = [{
                 type: "input",
                 name: "token",
                 message: "Please enter your bot's token.",
@@ -95,7 +94,7 @@ try {
         const response = await enquirer.prompt(prompts);
         console.log(
             colors.bold.green(`\nSetup is now complete. `) +
-                `In the future, if you do not have Service Mode enabled, the Boing launcher 
+            `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
         );

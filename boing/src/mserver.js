@@ -16,11 +16,16 @@ let mserver = child_process.spawn(
 process.stdin.pipe(mserver.stdin); // Fixed this, you have to pipe fro the nodejs process to the child
 mserver.stdout.pipe(process.stdout);
 
+/**
+ * 
+ * @param {string} text Text to send to the server's standard input
+ * @returns {Promise<string>} Output of the server immediately after the input was send
+ */
 let write = function(text) {
-    mserver.stdin.write(`${text} \n`);
+    mserver.stdin.write(`${text}\n`);
     return new Promise((resolve) => {
         mserver.stdout.on("data", (data) => {
-            resolve(data.toString().trim());
+            resolve(cleanServerOutput(data.toString().trim()));
         });
     });
 };
@@ -45,8 +50,18 @@ mserver.stdout.on("data", (data) => {
     }
 });
 
+/**
+ * @param {string} output 
+ * @returns {string}
+ */
+function cleanServerOutput(output) {
+    let cleaned = output.replace(/\[\w*m/g, "");
+    return cleaned;
+}
+
 module.exports = {
     server: mserver,
     write,
+    cleanServerOutput,
     events: gameEvents,
 };

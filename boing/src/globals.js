@@ -1,8 +1,9 @@
 const fs = require('fs');
-const { resolve, relative } = require('path');
+const { resolve } = require('path');
 
 const BASE_DIR = "../../";
 const SRC_DIR = resolve(BASE_DIR, "boing/src/");
+const COMMANDS_DIR = resolve(SRC_DIR, "commands/");
 const BOING_DIR = resolve(BASE_DIR, "boing/");
 const DATA_DIR = "../../data/";
 
@@ -11,6 +12,19 @@ const DATA_FILE = resolve(DATA_DIR, "data.json");
 const SERVER_DIR = resolve(DATA_DIR, "server/");
 const SERVER_CONFIG_DIR = resolve(SERVER_DIR, "config/");
 const SERVER_JAR = resolve(SERVER_DIR, "server.jar");
+
+// Regexes for filtering server output, ignore
+const regexes = Object.freeze({
+    timestamp_raw: /\[\d+-\d+-\d+ \d+:\d+:\d+\]/,
+    timestamp: /(?<=\[)\d+-\d+-\d+ \d+:\d+:\d+(?=\])/,
+    type: /(?<=\[)\w(?=\])/,
+    message: /(?<=\[\d+-\d+-\d+ \d+:\d+:\d+\] \[\w\] ).+/
+
+    // extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
+    // extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
+    // checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
+    // checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
+})
 
 function loadSettings() {
     if (fs.existsSync(SETTINGS_FILE)) {
@@ -59,4 +73,7 @@ module.exports = {
     SERVER_DIR,
     SERVER_CONFIG_DIR,
     SERVER_JAR,
+    COMMANDS_DIR,
+
+    regexes,
 };

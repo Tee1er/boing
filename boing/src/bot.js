@@ -4,34 +4,20 @@ const Discord = require("discord.js");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
-const { data, SRC_DIR, loadSettings, loadSessionData } = require('./globals');
+const { data, SRC_DIR, loadSettings, loadSessionData, COMMANDS_DIR } = require('./globals');
 const { resolve } = require("path");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
 
 const client = new Discord.Client();
-
-// Regexes for filtering server output, ignore
-// const extractTimestamp = /[0-9\s\:\-]{19}/g;
-// const extractChatMessage = /(?<=(\[[\d\s\:\-]{19}\])\s\[.\]\s.*:\s)(.*)/g;
-// const extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
-// const checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
-// const checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
+var command_instances = {};
 
 client.once("ready", () => {
     console.log("Connected to Discord. ");
     client.user.setActivity(`${data.SETTINGS.prefix} help`, {
         type: "LISTENING",
     });
-});
-
-const CMDPATHS = fs.readdirSync(resolve(SRC_DIR, "commands/")).filter((element) => {
-    return element.endsWith(".js");
-});
-
-let commandsInfo = CMDPATHS.map((element) => {
-    return require(`./commands/${element}`).info;
 });
 
 // On discord message callback
@@ -41,73 +27,41 @@ client.on("message", (message) => {
         return;
 
     // Cancel command if the message was sent in a blacklisted channel.
-    if (data.SETTINGS.channelBlacklist.includes(message.channel.name)) {
+    if (data.SETTINGS.channelBlacklist.includes(message.channel.name))
         return;
-    }
+
 
     const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
-    //Display more detailed help information IF the last argument is "help" & if the cmd requested is not the 'help' command.
-    if (ARGUMENTS[ARGUMENTS.length - 1] == "help" && ARGUMENTS[0] !== "help") {
-        let command = commandsInfo.find((element) => {
-            if (element.name == ARGUMENTS[0].toLowerCase()) return true;
-        });
+    if (!command_instances[ARGUMENTS[0]]) {
+        command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
+    }
+    let c = command_instances[ARGUMENTS[0]];
 
-        let helpEmbed = new Discord.MessageEmbed()
-            .setColor("#E67B29")
-            .setTitle(`Help - "${command.name}"`)
-            .setFooter("Boing - github.com/Tee1er/boing");
+    let isAdmin = message.member.roles.cache.find(
+        (x) => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "",
+    )
 
-        if ("longDescrip" in command) {
-            helpEmbed.setDescription(command.longDescrip);
-        } else {
-            helpEmbed.setDescription(command.descrip);
-        }
+    let allowed = (c.info.adminOnly === true && isAdmin) || (c.info.adminOnly === false) || (c.info.adminOnly === undefined)
 
-        message.channel.send(helpEmbed);
-    } else if (
-        commandsInfo.find((command) => {
-            if (command.name == ARGUMENTS[0]) {
-                return true;
-            }
-        })
-    ) {
-        let c = require(`./commands/${ARGUMENTS[0]}`);
-
-        let isAdmin = message.member.roles.cache.find(
-                (x) => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "",
-            ) ?
-            true :
-            false;
-
-        let allowed = () => {
-            if (c.info.adminOnly === true && isAdmin) {
-                return true;
-            }
-            if (c.info.adminOnly === false) {
-                return true;
-            }
-            if (c.info.adminOnly === undefined) {
-                return true;
-            } else {
-                return false;
-            }
-        };
-
-        if (allowed) {
-            c.execute(ARGUMENTS, message).then((result) => {
+    if (allowed) {
+        let cmd_execution = c.execute(ARGUMENTS, message);
+        if (cmd_execution) {
+            cmd_execution.then((result) => {
                 // Allows for passing of either an array of arguments, or simply a regular string.
-                if (Array.isArray(result)) {
-                    message.channel.send(...result);
-                } else {
-                    message.channel.send(result);
+                if (result) {
+                    if (Array.isArray(result)) {
+                        message.channel.send(...result);
+                    } else {
+                        message.channel.send(result);
+                    }
                 }
-            });
+            }).catch(err => message.channel.send(err));
         } else {
-            message.channel.send(
-                "An error occured. You must be an administrator to use that command.",
-            );
+            message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
         }
+    } else {
+        message.channel.send("You must be an administrator to use that command.");
     }
 });
 
@@ -146,7 +100,3 @@ mserver.events.on("stopped", (result) => {
 });
 
 client.login(data.SETTINGS.token); // add token here
-
-module.exports = {
-    commandsInfo: commandsInfo,
-};
