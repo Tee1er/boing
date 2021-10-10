@@ -5,8 +5,8 @@ let timer;
 let current;
 
 function startBackups(server) {
-    backups = fs.readdirSync(`../server/config/saves/boing-backups/`);
-    backupNums = backups.map(backup => Number(backup.split(".")[0]).sort((a, b) => a - b));
+    let backups = fs.readdirSync("../server/config/saves/boing-backups/");
+    let backupNums = backups.map(backup => Number(backup.split(".")[0]).sort((a, b) => a - b));
     current = backupNums.length > 0 ? backupNums[backupNums.length - 1] : 0;
     if (current > 12) {
         for (let i = current - 12; i >= 0; i--) {

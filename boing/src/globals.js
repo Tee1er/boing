@@ -1,5 +1,5 @@
-const fs = require('fs');
-const { resolve } = require('path');
+const fs = require("fs");
+const { resolve } = require("path");
 
 const BASE_DIR = "../../";
 const SRC_DIR = resolve(BASE_DIR, "boing/src/");
@@ -24,16 +24,16 @@ const regexes = Object.freeze({
     // extractSender = /(?<=\[[\d\s\:\-]{19}\]\s\[.\]\s)(.*)(?=:)/g;
     // checkPlayerMessage = /(?<=\[I\]\s)(.*)(?=:)/g;
     // checkIsDiscordMessage = /Server: \[[A-z a-z]*\]:/g
-})
+});
 
 function loadSettings() {
     if (fs.existsSync(SETTINGS_FILE)) {
         module.exports.data.SETTINGS = JSON.parse(fs.readFileSync(SETTINGS_FILE));
     }
-    console.log(`Loaded settings.`);
+    console.log("Loaded settings.");
 }
 
-function saveSettings() { fs.writeFileSync(SETTINGS_FILE, JSON.stringify(module.exports.data.SETTINGS, null, 4)); }
+function saveSettings() { fs.writeFileSync(SETTINGS_FILE, JSON.stringify(module.exports.data.SETTINGS, null, 4)) }
 
 function loadSessionData() {
     if (fs.existsSync(DATA_FILE))
@@ -41,7 +41,7 @@ function loadSessionData() {
     console.log("Loaded data.");
 }
 
-function saveSessionData() { fs.writeFileSync(DATA_FILE, JSON.stringify(module.exports.data.SESSION_DATA, null, 4)); }
+function saveSessionData() { fs.writeFileSync(DATA_FILE, JSON.stringify(module.exports.data.SESSION_DATA, null, 4)) }
 
 // Save settings when boing shuts down
 // process.on("beforeExit", () => {

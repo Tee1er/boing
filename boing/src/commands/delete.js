@@ -15,6 +15,7 @@ let execute = function(ARGUMENTS) {
             `An error occured. The map couldn't be deleted. \`\`\`${err}\`\`\``,
         );
     }
+    
     return Promise.resolve(
         `Deleted file \`${fileName}\` from the Map Library.`,
     );

@@ -1,5 +1,5 @@
 let execute = function () {
-    return Promise.resolve(`Administrator-only!`);
+    return Promise.resolve("Administrator-only!");
 };
 
 module.exports = {

@@ -1,8 +1,8 @@
 const mserver = require("../mserver.js");
 
 let execute = async function() {
-    await mserver.write_recv(`stop`);
-    let result = await mserver.write_recv(`load boing-backups/latest`);
+    await mserver.write_recv("stop");
+    let result = await mserver.write_recv("load boing-backups/latest");
     if (result.includes("Save loaded")) {
         return `Loaded backup. \`\`\`js\n${result} \`\`\` `;
     } else {

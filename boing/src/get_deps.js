@@ -1,6 +1,6 @@
-const fs = require('fs');
-const axios = require('axios');
-const { data, SERVER_JAR, saveSessionData, SERVER_DIR } = require('./globals');
+const fs = require("fs");
+const axios = require("axios");
+const { data, SERVER_JAR, saveSessionData, SERVER_DIR } = require("./globals");
 
 let get_server = async function() {
     if (!fs.existsSync(SERVER_DIR)) fs.mkdirSync(SERVER_DIR, { recursive: true });

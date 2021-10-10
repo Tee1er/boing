@@ -3,10 +3,11 @@ const MessageEmbed = require("discord.js").MessageEmbed;
 const fs = require("fs");
 
 var commandsInfo;
+var CMDPATHS
 
 let execute = function(ARGUMENTS) {
     if (!commandsInfo) { //Get paths to all .js files in dir. 'commands'
-        let CMDPATHS = fs.readdirSync("commands").filter((element) => {
+        CMDPATHS = fs.readdirSync("commands").filter((element) => {
             return element.endsWith(".js");
         });
 
@@ -15,14 +16,14 @@ let execute = function(ARGUMENTS) {
         });
     }
 
-    let helpEmbed = new MessageEmbed()
+    var helpEmbed = new MessageEmbed()
         .setColor("#E67B29")
         .setTitle("Help")
         .setFooter("Boing - github.com/Tee1er/boing");
 
     if (ARGUMENTS.length <= 1) {
-
         for (element of commandsInfo) {
+            if (!element) continue;
             helpEmbed.addFields({
                 name: element.name,
                 value: element.descrip,

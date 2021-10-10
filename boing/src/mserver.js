@@ -1,8 +1,8 @@
-const readline = require('readline');
+const readline = require("readline");
 const child_process = require("child_process");
 const bot = require("./bot.js");
 const EventEmitter = require("events");
-const { SERVER_JAR, SERVER_DIR, regexes } = require('./globals');
+const { SERVER_JAR, SERVER_DIR, regexes } = require("./globals");
 
 //Use "mserver" to avoid confusion with Discord servers.
 
@@ -29,20 +29,22 @@ mserver.stdout.pipe(process.stdout);
  * 
  * @returns {string} Output buffer accumulated from the server's output, return triggered by `poll_return`
  */
-let write_poll = function(text, poll_return = function(line, lines, nlines) { return true; }, transform = (line) => line) {
+let write_poll = function(text, poll_return = function(line, lines, nlines) { return true }, transform = (line, line_idx) => line) {
     mserver.stdin.write(`${text} \n`);
 
     let buf = "";
     let nlines = 0;
     let listener_idx = mserver_io.listenerCount();
+    
     return new Promise(resolve => {
-        mserver_io.on('line', (data) => {
+        mserver_io.on("line", (data) => {
             let line = data.toString();
-            buf += transform(cleanServerOutput(line)) + '\n';
+            let transformed_line = transform(cleanServerOutput(line), nlines);
+            if (transformed_line)
+                buf += transformed_line + "\n";
 
-            if (line.trim() != '' && poll_return(buf, nlines)) {
-                console.log("Removing listener");
-                mserver_io.removeListener('line', mserver_io.listeners('line')[listener_idx]);
+            if (line.trim() != "" && poll_return(buf, nlines)) {
+                mserver_io.removeListener("line", mserver_io.listeners("line")[listener_idx]);
                 resolve(buf);
             }
 
@@ -54,17 +56,18 @@ let write_poll = function(text, poll_return = function(line, lines, nlines) { re
 let write_recv = function(text) {
     mserver.stdin.write(`${text} \n`);
     let listener_idx = mserver_io.listenerCount();
+    
     return new Promise(resolve => {
-        mserver_io.on('line', data => {
+        mserver_io.on("line", data => {
             resolve(cleanServerOutput(data.toString().trim()));
-            mserver_io.removeListener('line', mserver_io.listeners('line')[listener_idx]);
-        })
-    })
-}
+            mserver_io.removeListener("line", mserver_io.listeners("line")[listener_idx]);
+        });
+    });
+};
 
 let write = function(text) {
-    mserver.stdin.write(`${text} \n`)
-}
+    mserver.stdin.write(`${text} \n`);
+};
 
 // let chat = function (user, message) {
 //     let username = `${user.username}#${user.discriminator}`; //Account for multiple users w/ the same username. Unlikely, but just in case.
@@ -72,7 +75,7 @@ let write = function(text) {
 // };
 
 let gameEvents = new EventEmitter();
-mserver_io.on('line', (data) => {
+mserver_io.on("line", (data) => {
     let message = data.toString();
     if (message.includes("Game over!") && !message.includes("0 players")) {
         gameEvents.emit("gameOver", message);
@@ -80,8 +83,7 @@ mserver_io.on('line', (data) => {
         gameEvents.emit("playerConnected", message);
     } else if (message.includes("has disconnected")) {
         gameEvents.emit("playerDisconnected", message);
-    }
-    if (message.includes("Stopped server.")) {
+    } else if (message.includes("Stopped server.")) {
         gameEvents.emit("stopped", message);
     }
 });
@@ -93,6 +95,7 @@ mserver_io.on('line', (data) => {
  */
 function cleanServerOutput(output) {
     let cleaned = output.replace(/\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])/g, "");
+    
     return cleaned;
 }
 

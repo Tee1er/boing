@@ -1,11 +1,12 @@
 const { regexes } = require("../globals.js");
 const mserver = require("../mserver.js");
+const Discord = require("discord.js");
 
 const VALID_CONFIGS = [
     "name",
     "desc",
-    "port",
-    "autoUpdate",
+    //    "port",
+    //    "autoUpdate",
     "showConnectMessages",
     "enableVoteKick",
     "startCommands",
@@ -18,17 +19,17 @@ const VALID_CONFIGS = [
     "interactRateKick",
     "messageRateLimit",
     "messageSpamKick",
-    "socketInput",
-    "socketInputPort",
-    "socketInputAddress",
+    //    "socketInput",
+    //    "socketInputPort",
+    //    "socketInputAddress",
     "allowCustomClients",
     "whitelist",
     "motd",
     "autosave",
     "autosaveAmount",
     "autosaveSpacing",
-    "debug"
-]
+    //    "debug"
+];
 
 let execute = async function(ARGUMENTS) {
     const cfg_opt = ARGUMENTS.length >= 1 ? ARGUMENTS[1] : null;
@@ -43,16 +44,46 @@ let execute = async function(ARGUMENTS) {
         } else {
             let value = await mserver.write_recv(`config ${cfg_opt}`);
             value = value.match(regexes.message);
+            
             return Promise.resolve(`Server option ${value}`);
         }
     } else {
-        return await mserver.write_poll(
+        let raw_config = await mserver.write_poll(
             "config",
             function(line) { return line.includes("| | Enable debug logging") },
-            function(line) {
-                return line.match(regexes.message);
+            function(line, line_idx) {
+                if (line_idx != 0)
+                    return line.match(regexes.message);
             }
         );
+
+        let parsed_config = raw_config
+            .split("|\n")                           // Split at double newlines
+            .map(c => c.replace(/\|\s*/g, "")       // Remove bars
+                .split("\n")                        // Split to pairs
+                .filter(l => l != "")               // Remove empty third
+            ).filter(
+                pair => VALID_CONFIGS.includes(     // Only show allowed values
+                    pair[0].split(":")[0]           // Find the key of the pair's value
+                )
+            );
+
+        let embed = new Discord.MessageEmbed()
+            .setColor("#E67B29")
+            .setTitle("Configuration values")
+            .setFooter("Boing - github.com/Tee1er/boing");
+
+        for (let chunk of parsed_config) {
+            embed.addFields({
+                name: chunk[0],
+                value: chunk[1],
+                inline: true
+            });
+        }
+
+        console.log(parsed_config);
+        
+        return embed;
     }
 };
 

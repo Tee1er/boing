@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
-const { data, SRC_DIR, loadSettings, loadSessionData, COMMANDS_DIR } = require('./globals');
+const { data, SRC_DIR, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
 const { resolve } = require("path");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
@@ -33,16 +33,19 @@ client.on("message", (message) => {
 
     const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
-    if (!command_instances[ARGUMENTS[0]]) {
-        command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
-    }
-    let c = command_instances[ARGUMENTS[0]];
+    // Memoized loading of command
+    if (fs.existsSync(`${COMMANDS_DIR}/${ARGUMENTS[0]}.js`)) {
+        if (!command_instances[ARGUMENTS[0]]) {
+            command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
+        }
+        var c = command_instances[ARGUMENTS[0]];
+    } else return; // If the command doesn't exist
 
     let isAdmin = message.member.roles.cache.find(
         (x) => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "",
-    )
+    );
 
-    let allowed = (c.info.adminOnly === true && isAdmin) || (c.info.adminOnly === false) || (c.info.adminOnly === undefined)
+    let allowed = (c.info.adminOnly === true && isAdmin) || (c.info.adminOnly === false) || (c.info.adminOnly === undefined);
 
     if (allowed) {
         let cmd_execution = c.execute(ARGUMENTS, message);
