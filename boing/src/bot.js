@@ -37,7 +37,6 @@ client.on("message", (message) => {
     if (data.SETTINGS.channelBlacklist.includes(message.channel.name))
         return;
 
-
     const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
     // Memoized loading of command
