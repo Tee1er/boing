@@ -101,6 +101,8 @@ automatically the next time you restart your computer. \n`,
 
     var user_settings = response;
     user_settings["serverResource"] = "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
+    // Used by the config command to only expose certain configuration values
+    user_settings["exposedConfigs"] = ["name", "desc", "showConnectMessages", "enableVoteKick", "startCommands", "crashReport", "logging", "strict", "antiSpam", "interactRateWindow", "interactRateLimit", "interactRateKick", "messageRateLimit", "messageSpamKick", "allowCustomClients", "whitelist", "motd", "autosave", "autosaveAmount", "autosaveSpacing"];
 
     data.SETTINGS = user_settings;
     saveSettings();

@@ -1,35 +1,8 @@
-const { regexes } = require("../globals.js");
+const { regexes, data } = require("../globals.js");
 const mserver = require("../mserver.js");
 const Discord = require("discord.js");
 
-const VALID_CONFIGS = [
-    "name",
-    "desc",
-    //    "port",
-    //    "autoUpdate",
-    "showConnectMessages",
-    "enableVoteKick",
-    "startCommands",
-    "crashReport",
-    "logging",
-    "strict",
-    "antiSpam",
-    "interactRateWindow",
-    "interactRateLimit",
-    "interactRateKick",
-    "messageRateLimit",
-    "messageSpamKick",
-    //    "socketInput",
-    //    "socketInputPort",
-    //    "socketInputAddress",
-    "allowCustomClients",
-    "whitelist",
-    "motd",
-    "autosave",
-    "autosaveAmount",
-    "autosaveSpacing",
-    //    "debug"
-];
+const VALID_CONFIGS = data.SETTINGS.exposedConfigs;
 
 let execute = async function(ARGUMENTS) {
     const cfg_opt = ARGUMENTS.length >= 1 ? ARGUMENTS[1] : null;
@@ -80,8 +53,6 @@ let execute = async function(ARGUMENTS) {
                 inline: true
             });
         }
-
-        console.log(parsed_config);
         
         return embed;
     }

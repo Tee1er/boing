@@ -1,16 +1,19 @@
-// Make sure to set the variables inside config.json
 const fs = require("fs");
 const Discord = require("discord.js");
+const { REST } = require("@discordjs/rest");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
-const { data, SRC_DIR, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
-const { resolve } = require("path");
+const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
 
 const client = new Discord.Client();
+const rest = new REST({ version: "9" }).setToken(data.SETTINGS.token);
+client.login(data.SETTINGS.token);
+
+// Command storage
 var command_instances = {};
 
 client.once("ready", () => {
@@ -19,6 +22,10 @@ client.once("ready", () => {
         type: "LISTENING",
     });
 });
+
+for (let guild of client.guilds.cache) {
+    guild[1].slash;
+}
 
 // On discord message callback
 client.on("message", (message) => {
@@ -102,4 +109,7 @@ mserver.events.on("stopped", (result) => {
     // backups.stopBackups();
 });
 
-client.login(data.SETTINGS.token); // add token here
+module.exports = {
+    client,
+    rest
+};

@@ -303,6 +303,7 @@ Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying co
 - [x] Server auto-updating
 - [ ] Upgraded Chat Relay w/ webhooks. 
 - [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+- [ ] Slash commands
 
 
 **Version 2.3**

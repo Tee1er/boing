@@ -1,7 +1,9 @@
 {
     "dependencies": {
+        "@discordjs/rest": "^0.1.0-canary.0",
         "ansi-colors": "^4.1.1",
         "axios": "^0.21.1",
+        "discord-api-types": "^0.23.1",
         "discord.js": "^12.5.3",
         "enquirer": "^2.3.6",
         "eslint": "^8.0.0",
