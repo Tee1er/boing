@@ -23,10 +23,6 @@ client.once("ready", () => {
     });
 });
 
-for (let guild of client.guilds.cache) {
-    guild[1].slash;
-}
-
 // On discord message callback
 client.on("message", (message) => {
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
@@ -81,27 +77,36 @@ function sendNotification(message) {
     if (!channel) {
         return;
     }
+    console.log(`Sending notification ${message}`);
     channel.send(message);
 }
 
 let numPlayers = 0;
-
 mserver.events.on("gameOver", (result) => {
     sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
 });
 mserver.events.on("playerConnected", (result) => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
     numPlayers++;
+    updateStatus();
     backups.startBackups(mserver);
 });
 mserver.events.on("playerDisconnected", (result) => {
     sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
     numPlayers--;
-    if (numPlayers == 0) {
-        // could've used a ternary, but this is more readable
-        // backups.stopBackups();
-    }
+    updateStatus();
 });
+
+function updateStatus() {
+    console.log("Player update");
+    if (numPlayers >= 0) {
+        client.user.setActivity(`a Mindustry game with ${numPlayers} players.`, { type: "WATCHING" });
+    } else {
+        client.user.setActivity(`${data.SETTINGS.prefix} help`, {
+            type: "LISTENING",
+        });
+    }
+}
 
 mserver.events.on("stopped", (result) => {
     numPlayers = 0;
@@ -109,6 +114,6 @@ mserver.events.on("stopped", (result) => {
 });
 
 module.exports = {
-    client,
-    rest
+    botClient: client,
+    restAPI: rest
 };

@@ -3,7 +3,7 @@ const MessageEmbed = require("discord.js").MessageEmbed;
 const fs = require("fs");
 
 var commandsInfo;
-var CMDPATHS
+var CMDPATHS;
 
 let execute = function(ARGUMENTS) {
     if (!commandsInfo) { //Get paths to all .js files in dir. 'commands'
@@ -22,7 +22,7 @@ let execute = function(ARGUMENTS) {
         .setFooter("Boing - github.com/Tee1er/boing");
 
     if (ARGUMENTS.length <= 1) {
-        for (element of commandsInfo) {
+        for (let element of commandsInfo) {
             if (!element) continue;
             helpEmbed.addFields({
                 name: element.name,
@@ -35,7 +35,7 @@ let execute = function(ARGUMENTS) {
             if (element.name == ARGUMENTS[1].toLowerCase()) return true;
         });
 
-        helpEmbed.setTitle(`Help - ${ARGUMENTS[1]}`)
+        helpEmbed.setTitle(`Help - ${ARGUMENTS[1]}`);
 
         if ("longDescrip" in command) {
             helpEmbed.setDescription(command.longDescrip);

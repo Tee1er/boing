@@ -10,7 +10,6 @@
         "ecmaVersion": "latest"
     },
     "rules": {
-        
         "indent": [
             "warn",
             4
@@ -46,7 +45,8 @@
             }
         ],
         "no-unreachable": "warn",
-        "newline-before-return":"warn",
-        "no-control-regex": "off"
+        "newline-before-return": "warn",
+        "no-control-regex": "off",
+        "space-before-blocks": "warn"
     }
 }

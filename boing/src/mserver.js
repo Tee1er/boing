@@ -3,6 +3,7 @@ const child_process = require("child_process");
 const bot = require("./bot.js");
 const EventEmitter = require("events");
 const { SERVER_JAR, SERVER_DIR, regexes } = require("./globals");
+const { appendFileSync, appendFile, existsSync, createWriteStream } = require("fs");
 
 //Use "mserver" to avoid confusion with Discord servers.
 
@@ -75,8 +76,9 @@ let write = function(text) {
 // };
 
 let gameEvents = new EventEmitter();
-mserver_io.on("line", (data) => {
-    let message = data.toString();
+mserver_io.on("line", line => {
+    let message = cleanServerOutput(line.toString());
+
     if (message.includes("Game over!") && !message.includes("0 players")) {
         gameEvents.emit("gameOver", message);
     } else if (message.includes("has connected")) {
