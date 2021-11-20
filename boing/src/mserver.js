@@ -79,7 +79,7 @@ let write = function (text) {
 // };
 
 let gameEvents = new EventEmitter();
-mserver_io.on("line", line => {
+mserver.stdout.on("data", line => {
     let message = cleanServerOutput(line.toString());
 
     if (message.includes("Game over!") && !message.includes("0 players")) {
