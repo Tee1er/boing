@@ -5,25 +5,25 @@ const fs = require("fs");
 var commandsInfo;
 var CMDPATHS;
 
-let execute = function(ARGUMENTS) {
-    if (!commandsInfo) { //Get paths to all .js files in dir. 'commands'
-        CMDPATHS = fs.readdirSync("commands").filter((element) => {
+let execute = function (ARGUMENTS) {
+    if (!commandsInfo) {
+        //Get paths to all .js files in dir. 'commands'
+        CMDPATHS = fs.readdirSync("commands").filter(element => {
             return element.endsWith(".js");
         });
 
-        commandsInfo = CMDPATHS.map((element) => {
+        commandsInfo = CMDPATHS.map(element => {
             return require(`./${element}`).info;
         });
     }
 
-    var helpEmbed = new MessageEmbed()
-        .setColor("#E67B29")
-        .setTitle("Help")
-        .setFooter("Boing - github.com/Tee1er/boing");
+    var helpEmbed = new MessageEmbed().setColor("#E67B29").setTitle("Help").setFooter("Boing - github.com/Tee1er/boing");
 
     if (ARGUMENTS.length <= 1) {
         for (let element of commandsInfo) {
             if (!element) continue;
+
+            if (element.disabled) continue;
             helpEmbed.addFields({
                 name: element.name,
                 value: element.descrip,
@@ -31,7 +31,7 @@ let execute = function(ARGUMENTS) {
             });
         }
     } else {
-        let command = commandsInfo.find((element) => {
+        let command = commandsInfo.find(element => {
             if (element.name == ARGUMENTS[1].toLowerCase()) return true;
         });
 
@@ -45,7 +45,6 @@ let execute = function(ARGUMENTS) {
     }
 
     return Promise.resolve(helpEmbed);
-
 };
 
 module.exports = {
