@@ -46,7 +46,7 @@ client.on("message", message => {
     let allowed = (c.info.adminOnly === true && isAdmin) || c.info.adminOnly === false || c.info.adminOnly === undefined;
 
     if (allowed) {
-        let cmd_execution = c.disabled ? false : c.execute(ARGUMENTS, message);
+        let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
         if (cmd_execution) {
             cmd_execution
                 .then(result => {
