@@ -30,6 +30,7 @@ console.log("Please see https://www.github.com/Tee1er/boing for more information
 let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
 
 if (!setupOccurred) {
+    console.log("Starting setup.");
     setup();
 } else {
     console.log(`Setup has already occured. Service Mode is ${colors.bold(data.SETTINGS.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
@@ -51,44 +52,45 @@ async function setup() {
 
     //todo, replace w/ template string
     console.log(`${colors.bold.blue("Welcome to setup. ")} For setup instructions, please visit ${colors.blue("https://github.com/Tee1er/boing/blob/main/README.md")} \n`);
-    const prompts = [{
-        type: "input",
-        name: "token",
-        message: "Please enter your bot's token.",
-    },
-    {
-        type: "input",
-        name: "prefix",
-        message: "Please enter a prefix. (default is 'b')",
-        initial: "b",
-    },
-    {
-        type: "input",
-        name: "chatChannel",
-        message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
-        initial: "",
-    },
-    {
-        type: "toggle",
-        name: "serviceMode",
-        message: "Enable Service Mode?",
-        initial: false,
-    },
-    {
-        type: "input",
-        name: "adminRole",
-        message: "Name of a role to grant administrator permissions (leave blank for none)",
-    },
-    {
-        type: "input",
-        name: "notificationChannel",
-        message: "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
-    },
-    {
-        type: "list",
-        name: "channelBlacklist",
-        message: "Select channels to blacklist - leave blank if you have none.",
-    },
+    const prompts = [
+        {
+            type: "input",
+            name: "token",
+            message: "Please enter your bot's token.",
+        },
+        {
+            type: "input",
+            name: "prefix",
+            message: "Please enter a prefix. (default is 'b')",
+            initial: "b",
+        },
+        {
+            type: "input",
+            name: "chatChannel",
+            message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
+            initial: "",
+        },
+        {
+            type: "toggle",
+            name: "serviceMode",
+            message: "Enable Service Mode?",
+            initial: false,
+        },
+        {
+            type: "input",
+            name: "adminRole",
+            message: "Name of a role to grant administrator permissions (leave blank for none)",
+        },
+        {
+            type: "input",
+            name: "notificationChannel",
+            message: "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
+        },
+        {
+            type: "list",
+            name: "channelBlacklist",
+            message: "Select channels to blacklist - leave blank if you have none.",
+        },
     ];
 
     const response = await enquirer.prompt(prompts);
@@ -102,7 +104,28 @@ automatically the next time you restart your computer. \n`,
     var user_settings = response;
     user_settings["serverResource"] = "https://api.github.com/repos/Anuken/Mindustry/releases/latest";
     // Used by the config command to only expose certain configuration values
-    user_settings["exposedConfigs"] = ["name", "desc", "showConnectMessages", "enableVoteKick", "startCommands", "crashReport", "logging", "strict", "antiSpam", "interactRateWindow", "interactRateLimit", "interactRateKick", "messageRateLimit", "messageSpamKick", "allowCustomClients", "whitelist", "motd", "autosave", "autosaveAmount", "autosaveSpacing"];
+    user_settings["exposedConfigs"] = [
+        "name",
+        "desc",
+        "showConnectMessages",
+        "enableVoteKick",
+        "startCommands",
+        "crashReport",
+        "logging",
+        "strict",
+        "antiSpam",
+        "interactRateWindow",
+        "interactRateLimit",
+        "interactRateKick",
+        "messageRateLimit",
+        "messageSpamKick",
+        "allowCustomClients",
+        "whitelist",
+        "motd",
+        "autosave",
+        "autosaveAmount",
+        "autosaveSpacing",
+    ];
 
     data.SETTINGS = user_settings;
     saveSettings();
