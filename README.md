@@ -8,9 +8,9 @@
 
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
   
+  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily. 
   
-  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily.
-  
+  >  ***Note: Boing works best on Windows; on Linux there may be some bugs. We're working on better Linux support, to come in the v2.2 release***
 ****
 
 #### Table of Contents
@@ -22,8 +22,8 @@
 - [Features](#features)
 - [Commands](#commands)
 - [Troubleshooting & Additional Information](#troubleshooting--additional-information)
-      - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
-      - [**The service installation failed for some reason. Now Boing won't work in Service Mode anymore.**](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
+     - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
+     - [The service installation failed for some reason. Now Boing won't work in Service Mode anymore.](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
 - [Roadmap](#roadmap)
 
 ## Getting Started
@@ -36,10 +36,6 @@ First, we'll begin by setting up the Discord bot.
 
 First, we'll begin by going to the Discord Developer Portal, at https://discord.com/developers/applications.
 
-You should see a page that looks something like this:
-
-![](media\discord-dev-applications.jpg)
-
 Create a new project by clicking on the blue button in the top right corner (**New Application**)
 
 That should take you to the control panel for your new application. 
@@ -50,13 +46,9 @@ Create for yourself a new bot using the button on the right. (**Add Bot**) Next,
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
-![](media\discord-dev-bot.jpg)
-
 You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server. 
 
 In the box **Scopes**, check off the permission **Bot**.
-
-![](media\discord-dev-permissions.jpg)
 
 Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box (**Send Messages**), too. You're almost done!
 
@@ -87,6 +79,10 @@ When you start Boing for the first time, you will be asked to answer some questi
   ```
 
 - For more information on Chat Relay & Service Mode, please see the [Features](#-features) section below. I highly encourage you to enable Service Mode - Chat Relay is up to you.
+
+- The notifications channel is where Boing will send messages when users join, leave, and when a game ends. 
+
+- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. 
 
 If you enabled Service Mode, you'll need to accept multiple prompts from your operating system in order to complete service installation.  There are a *lot*, but please accept all of them.
 
@@ -271,7 +267,7 @@ The channel blacklist is not included in the setup wizard currently - therefore,
 
 ## Roadmap
 
-Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying code. 
+Currently, Boing is on **Version 2.1**, which rewrote a lot of the underlying code. 
 
 **Version 2.0**
 
@@ -302,7 +298,7 @@ Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying co
 - [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
 - [x] Server auto-updating
 - [ ] Upgraded Chat Relay w/ webhooks. 
-- [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+- [x] Upgraded autosave / backup system allowing rollback of multiple saves.
 - [ ] Slash commands
 
 
