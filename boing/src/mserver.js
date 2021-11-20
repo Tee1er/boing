@@ -3,19 +3,17 @@ const child_process = require("child_process");
 const bot = require("./bot.js");
 const EventEmitter = require("events");
 const { SERVER_JAR, SERVER_DIR, regexes } = require("./globals");
-const { appendFileSync, appendFile, existsSync, createWriteStream } = require("fs");
+// const { appendFileSync, appendFile, existsSync, createWriteStream } = require("fs");
 
 //Use "mserver" to avoid confusion with Discord servers.
 
-let mserver = child_process.spawn(
-    `cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`, [], {
-        shell: true,
-    },
-);
+let mserver = child_process.spawn(`cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`, [], {
+    shell: true,
+});
 
 var mserver_io = readline.createInterface({
     output: mserver.stdin,
-    input: mserver.stdout
+    input: mserver.stdout,
 });
 
 // child_process.exec("cd ../boing/src"); // Go back to normal working directory so relative paths don't get messed up
@@ -27,22 +25,27 @@ mserver.stdout.pipe(process.stdout);
  * @param {string} text Text to send to the server's standard input
  * @param {Function} poll_return Function that given the output buffer and number of lines received determines whether the function should yield
  * @param {Function} transform Function that transforms a line before appending it to the buffer
- * 
+ *
  * @returns {string} Output buffer accumulated from the server's output, return triggered by `poll_return`
  */
-let write_poll = function(text, poll_return = function(line, lines, nlines) { return true }, transform = (line, line_idx) => line) {
+let write_poll = function (
+    text,
+    poll_return = function (line, lines, nlines) {
+        return true;
+    },
+    transform = (line, line_idx) => line,
+) {
     mserver.stdin.write(`${text} \n`);
 
     let buf = "";
     let nlines = 0;
     let listener_idx = mserver_io.listenerCount();
-    
+
     return new Promise(resolve => {
-        mserver_io.on("line", (data) => {
+        mserver_io.on("line", data => {
             let line = data.toString();
             let transformed_line = transform(cleanServerOutput(line), nlines);
-            if (transformed_line)
-                buf += transformed_line + "\n";
+            if (transformed_line) buf += transformed_line + "\n";
 
             if (line.trim() != "" && poll_return(buf, nlines)) {
                 mserver_io.removeListener("line", mserver_io.listeners("line")[listener_idx]);
@@ -54,10 +57,10 @@ let write_poll = function(text, poll_return = function(line, lines, nlines) { re
     });
 };
 
-let write_recv = function(text) {
+let write_recv = function (text) {
     mserver.stdin.write(`${text} \n`);
     let listener_idx = mserver_io.listenerCount();
-    
+
     return new Promise(resolve => {
         mserver_io.on("line", data => {
             resolve(cleanServerOutput(data.toString().trim()));
@@ -66,7 +69,7 @@ let write_recv = function(text) {
     });
 };
 
-let write = function(text) {
+let write = function (text) {
     mserver.stdin.write(`${text} \n`);
 };
 
@@ -97,7 +100,7 @@ mserver_io.on("line", line => {
  */
 function cleanServerOutput(output) {
     let cleaned = output.replace(/\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])/g, "");
-    
+
     return cleaned;
 }
 
