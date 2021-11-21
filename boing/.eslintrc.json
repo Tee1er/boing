@@ -1,0 +1,52 @@
+{
+    "env": {
+        "browser": false,
+        "commonjs": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+        "indent": [
+            "warn",
+            4
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "double"
+        ],
+        "semi": [
+            "warn",
+            "always",
+            {
+                "omitLastInOneLineBlock": true
+            }
+        ],
+        "no-unused-vars": "off",
+        "no-extra-semi": "warn",
+        "arrow-spacing": "warn",
+        "arrow-body-style": "off",
+        "default-case": "error",
+        "valid-jsdoc": "error",
+        "max-len": [
+            "warn",
+            {
+                "code": 140,
+                "ignoreComments": true,
+                "ignoreStrings": true,
+                "ignoreTemplateLiterals": true
+            }
+        ],
+        "no-unreachable": "warn",
+        "newline-before-return": "warn",
+        "no-control-regex": "off",
+        "space-before-blocks": "warn"
+    }
+}

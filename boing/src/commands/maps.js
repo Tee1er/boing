@@ -1,5 +1,4 @@
-const mserver = require("../mserver.js");
-const { MessageEmbed } = require("discord.js")
+const { MessageEmbed } = require("discord.js");
 
 let execute = function() {
 
@@ -29,7 +28,7 @@ let execute = function() {
 
     return Promise.resolve(mapEmbed);
 
-}
+};
 
 module.exports = {
     execute,
@@ -38,4 +37,4 @@ module.exports = {
         descrip: "Lists available (default) maps.",
         longDescrip: "Lists available maps. Includes only built-in ones. Map names are case-sensitive."
     }
-}
+};

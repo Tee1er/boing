@@ -16,3 +16,5 @@ boing/src/settings.json
 
 # Server files
 data/
+
+**/.vscode

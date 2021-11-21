@@ -8,9 +8,7 @@
 
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
   
-  
-  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily.
-  
+  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily. 
 ****
 
 #### Table of Contents
@@ -40,10 +38,6 @@ First, we'll begin by setting up the Discord bot.
 
 First, we'll begin by going to the Discord Developer Portal, at https://discord.com/developers/applications.
 
-You should see a page that looks something like this:
-
-![](media\discord-dev-applications.jpg)
-
 Create a new project by clicking on the blue button in the top right corner (**New Application**)
 
 That should take you to the control panel for your new application. 
@@ -54,13 +48,9 @@ Create for yourself a new bot using the button on the right. (**Add Bot**) Next,
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
-![](media\discord-dev-bot.jpg)
-
 You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server. 
 
 In the box **Scopes**, check off the permission **Bot**.
-
-![](media\discord-dev-permissions.jpg)
 
 Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box (**Send Messages**), too. You're almost done!
 
@@ -83,7 +73,7 @@ Download the file and extract it to where you'd like your Boing instance to go.
 
 Open the folder that Boing is in, and move it somewhere safe.
 
-Double-click `run.bat` , which should start Boing.
+Run `run.bat` (or `run.sh` if you are on a *NIX system), which should start Boing.
 
 When you start Boing for the first time, you will be asked to answer some questions. 
 
@@ -94,6 +84,10 @@ When you start Boing for the first time, you will be asked to answer some questi
   ```
 
 - For more information on Chat Relay & Service Mode, please see the [Features](#-features) section below. I highly encourage you to enable Service Mode - Chat Relay is up to you.
+
+- The notifications channel is where Boing will send messages when users join, leave, and when a game ends. 
+
+- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. 
 
 If you enabled Service Mode, you'll need to accept multiple prompts from your operating system in order to complete service installation.  There are a *lot*, but please accept all of them.
 
@@ -112,7 +106,7 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
 
 ## Features
 
-- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way.
+- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way. (Service Mode is currently not working properly and actual support will come soon.)
 - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
 - **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
@@ -278,7 +272,7 @@ The channel blacklist is not included in the setup wizard currently - therefore,
 
 ## Roadmap
 
-Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying code. 
+Currently, Boing is on **Version 2.1**, which rewrote a lot of the underlying code. 
 
 **Version 2.0**
 
@@ -307,9 +301,11 @@ Currently, Boing is on **Version 2.0**, which rewrote a lot of the underlying co
 - [x] Role permissions, so only authorized users can use certain commands. 
 - [ ] Ban, pardon, and kick commands, for administrators only.
 - [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
-- [ ] Server auto-updating
+- [x] Server auto-updating
 - [ ] Upgraded Chat Relay w/ webhooks. 
-- [ ] Upgraded autosave / backup system allowing rollback of multiple saves.
+- [x] Upgraded autosave / backup system allowing rollback of multiple saves.
+- [ ] Slash commands
+
 
 **Version 2.3**
 

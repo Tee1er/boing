@@ -1,10 +1,10 @@
 const mserver = require("../mserver.js");
 
 let execute = function() {
-    return mserver.write("stop").then(result => {
-        return `Game stopped. \`\`\`js\n${result} \`\`\` `
-    })
-}
+    return mserver.write_recv("stop").then(result => {
+        return "Game stopped.";
+    });
+};
 
 module.exports = {
     execute,
@@ -13,4 +13,4 @@ module.exports = {
         descrip: "Stops hosting the map.",
         longDescrip: "Stops the map the server is currently hosting. Does *not* stop Boing altogether."
     }
-}
+};

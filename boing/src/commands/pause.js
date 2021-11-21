@@ -1,10 +1,10 @@
 const mserver = require("../mserver.js");
 
 let execute = function() {
-    return mserver.write("pause on").then(result => {
-        return `Game paused. \`\`\`js\n${result} \`\`\` `
-    })
-}
+    return mserver.write_recv("pause on").then(result => {
+        return "Game paused. ";
+    });
+};
 
 module.exports = {
     execute,
@@ -13,4 +13,4 @@ module.exports = {
         descrip: "Pauses the game.",
         longDescrip: "Pauses the game. To unpause it, use `<prefix> unpause`."
     }
-}
+};
