@@ -78,6 +78,9 @@ You are now finished with Part 1 of installation 🎉.
 
 In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life.
 
+First, select the latest release from the **Releases** sidebar. (as of writing, this is v2.1)
+Download the file and extract it to where you'd like your Boing instance to go.
+
 Open the folder that Boing is in, and move it somewhere safe.
 
 Double-click `run.bat` , which should start Boing.
