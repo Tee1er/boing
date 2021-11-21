@@ -6,13 +6,13 @@ const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SE
 
 let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
 
-if (!setupOccurred) {
-    console.log("Installing dependencies.");
+// if (!setupOccurred) {
+//     console.log("Installing dependencies.");
 
-    child_process.execSync("cd .. && npm install");
+//     child_process.execSync("cd .. && npm install");
 
-    console.log("Dependencies downloaded. Continuing with setup.");
-}
+//     console.log("Dependencies downloaded. Continuing with setup.");
+// }
 
 // Load config files
 loadSettings();
