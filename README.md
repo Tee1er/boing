@@ -99,7 +99,7 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
 
 ## Features
 
-- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way.
+- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way. (Service Mode is currently not working properly and actual support will come soon.)
 - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
 - **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
