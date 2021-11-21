@@ -9,8 +9,6 @@
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
   
   Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily. 
-  
-  >  ***Note: Boing works best on Windows; on Linux there may be some bugs. We're working on better Linux support, to come in the v2.2 release***
 ****
 
 #### Table of Contents
@@ -22,8 +20,8 @@
 - [Features](#features)
 - [Commands](#commands)
 - [Troubleshooting & Additional Information](#troubleshooting--additional-information)
-     - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
-     - [The service installation failed for some reason. Now Boing won't work in Service Mode anymore.](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
+      - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
+      - [**The service installation failed for some reason. Now Boing won't work in Service Mode anymore.**](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
 - [Roadmap](#roadmap)
 
 ## Getting Started
@@ -68,7 +66,7 @@ In the last step, you created a bot and added it to a server. In this step, you'
 
 Open the folder that Boing is in, and move it somewhere safe.
 
-Double-click `run.bat` , which should start Boing.
+Run `run.bat` (or `run.sh` if you are on a *NIX system), which should start Boing.
 
 When you start Boing for the first time, you will be asked to answer some questions. 
 

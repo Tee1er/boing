@@ -27,23 +27,24 @@ if (service_win32) {
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.1 --"));
 console.log("Please see https://www.github.com/Tee1er/boing for more information.\n");
 
-let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
+(async function() {let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
+    if (!setupOccurred) {
+        console.log("Starting setup.");
+        await setup();
+        setupOccurred = true;
+    } else {
+        console.log(`Setup has already occured. Service Mode is ${colors.bold(data.SETTINGS.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
+        setupOccurred = true;
+    }
 
-if (!setupOccurred) {
-    console.log("Starting setup.");
-    setup();
-} else {
-    console.log(`Setup has already occured. Service Mode is ${colors.bold(data.SETTINGS.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
-    setupOccurred = true;
-}
-
-if (!data.SETTINGS.serviceMode && setupOccurred) {
-    deps_resolver.get_server().then(_ => {
-        console.log(colors.bold("Starting Boing ... \n"));
-        // FIXME: Make bot into a class to make boing one unified process
-        let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true, stdio: "inherit" });
-    });
-}
+    if (!data.SETTINGS.serviceMode && setupOccurred) {
+        deps_resolver.get_server().then(_ => {
+            console.log(colors.bold("Starting Boing ... \n"));
+            // FIXME: Make bot into a class to make boing one unified process
+            let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true, stdio: "inherit" });
+        });
+    }
+})();
 
 async function setup() {
     // Create data directory
@@ -52,7 +53,7 @@ async function setup() {
 
     //todo, replace w/ template string
     console.log(`${colors.bold.blue("Welcome to setup. ")} For setup instructions, please visit ${colors.blue("https://github.com/Tee1er/boing/blob/main/README.md")} \n`);
-    const prompts = [
+    let prompts = [
         {
             type: "input",
             name: "token",
@@ -71,12 +72,6 @@ async function setup() {
             initial: "",
         },
         {
-            type: "toggle",
-            name: "serviceMode",
-            message: "Enable Service Mode?",
-            initial: false,
-        },
-        {
             type: "input",
             name: "adminRole",
             message: "Name of a role to grant administrator permissions (leave blank for none)",
@@ -92,6 +87,16 @@ async function setup() {
             message: "Select channels to blacklist - leave blank if you have none.",
         },
     ];
+
+    if (service_win32) {
+        prompts.push({
+            type: "toggle",
+            name: "serviceMode",
+            message: "Enable Service Mode?",
+            // @ts-ignore
+            initial: false,
+        });
+    }
 
     const response = await enquirer.prompt(prompts);
     console.log(
@@ -134,6 +139,7 @@ automatically the next time you restart your computer. \n`,
         console.log(colors.bold("Beginning the service installation process now. You may have to accept multiple prompts from your operating system in order to install correctly. \n"));
         await new Promise(resolve => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
         serviceUtil.install();
+        // @ts-ignore
     } else if (response.serviceMode !== true) {
         if (service_win32) serviceUtil.uninstall();
     }
