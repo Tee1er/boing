@@ -9,8 +9,6 @@
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
   
   Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily. 
-  
-  >  ***Note: Boing works best on Windows; on Linux there may be some bugs. We're working on better Linux support, to come in the v2.2 release***
 ****
 
 #### Table of Contents
@@ -101,7 +99,7 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
 
 ## Features
 
-- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way.
+- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way. (Service Mode is currently not working properly and actual support will come soon.)
 - **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
 - **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
