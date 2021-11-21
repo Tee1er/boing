@@ -4,6 +4,16 @@ const child_process = require("child_process");
 const { mkdirSync } = require("fs");
 const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SERVER_DIR } = require("./globals.js");
 
+let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
+
+if (!setupOccurred) {
+    console.log("Installing dependencies.");
+
+    child_process.execSync("cd .. && npm install");
+
+    console.log("Dependencies downloaded. Continuing with setup.");
+}
+
 // Load config files
 loadSettings();
 loadSessionData();
@@ -26,8 +36,6 @@ if (service_win32) {
 
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.1 --"));
 console.log("Please see https://www.github.com/Tee1er/boing for more information.\n");
-
-let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
 
 if (!setupOccurred) {
     console.log("Starting setup.");
