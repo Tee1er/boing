@@ -1,13 +1,15 @@
 let { clearInterval, setInterval } = require("timers");
 let fs = require("fs");
+const { DATA_DIR, SERVER_CONFIG_DIR } = require("./globals");
+const { resolve } = require("path");
 
 let timer;
 let current;
 
 function startBackups(server) {
-    const BACKUPPATH = "../../data/server/config/saves/boing-backups";
+    const BACKUPPATH = resolve(SERVER_CONFIG_DIR, "./saves/boing-backups/");
     if (!fs.existsSync(BACKUPPATH)) {
-        fs.mkdirSync(BACKUPPATH);
+        fs.mkdirSync(BACKUPPATH, { recursive: true });
     }
     let backups = fs.readdirSync(BACKUPPATH);
     let backupNums = backups.map(backup => Number(backup.split(".")[0]).sort((a, b) => a - b));

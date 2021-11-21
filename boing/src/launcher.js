@@ -37,7 +37,8 @@ if (service_win32) {
 console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.1 --"));
 console.log("Please see https://www.github.com/Tee1er/boing for more information.\n");
 
-(async function() {let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
+(async function() {
+    let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
     if (!setupOccurred) {
         console.log("Starting setup.");
         await setup();
@@ -63,8 +64,7 @@ async function setup() {
 
     //todo, replace w/ template string
     console.log(`${colors.bold.blue("Welcome to setup. ")} For setup instructions, please visit ${colors.blue("https://github.com/Tee1er/boing/blob/main/README.md")} \n`);
-    let prompts = [
-        {
+    let prompts = [{
             type: "input",
             name: "token",
             message: "Please enter your bot's token.",
@@ -111,7 +111,7 @@ async function setup() {
     const response = await enquirer.prompt(prompts);
     console.log(
         colors.bold.green("\nSetup is now complete. ") +
-            `In the future, if you do not have Service Mode enabled, the Boing launcher 
+        `In the future, if you do not have Service Mode enabled, the Boing launcher 
 will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
 automatically the next time you restart your computer. \n`,
     );
