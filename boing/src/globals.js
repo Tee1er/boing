@@ -1,17 +1,17 @@
 const fs = require("fs");
 const { resolve } = require("path");
 
-const BASE_DIR = "../../";
-const SRC_DIR = resolve(BASE_DIR, "boing/src/");
-const COMMANDS_DIR = resolve(SRC_DIR, "commands/");
-const BOING_DIR = resolve(BASE_DIR, "boing/");
-const DATA_DIR = "../../data/";
+const BASE_DIR = "../..";
+const SRC_DIR = resolve(BASE_DIR, "./boing/src");
+const COMMANDS_DIR = resolve(SRC_DIR, "./commands");
+const BOING_DIR = resolve(BASE_DIR, "./boing");
+const DATA_DIR = "../../data";
 
-const SETTINGS_FILE = resolve(DATA_DIR, "settings.json");
-const DATA_FILE = resolve(DATA_DIR, "data.json");
-const SERVER_DIR = resolve(DATA_DIR, "server/");
-const SERVER_CONFIG_DIR = resolve(SERVER_DIR, "config/");
-const SERVER_JAR = resolve(SERVER_DIR, "server.jar");
+const SETTINGS_FILE = resolve(DATA_DIR, "./settings.json");
+const DATA_FILE = resolve(DATA_DIR, "./data.json");
+const SERVER_DIR = resolve(DATA_DIR, "./server");
+const SERVER_CONFIG_DIR = resolve(SERVER_DIR, "./config");
+const SERVER_JAR = resolve(SERVER_DIR, "./server.jar");
 
 // Regexes for filtering server output, ignore
 const regexes = Object.freeze({
