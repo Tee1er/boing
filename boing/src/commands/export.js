@@ -10,7 +10,7 @@ let execute = async function(ARGUMENTS, message) {
     let fileName = `E-${crypto.randomBytes(4).toString("hex")}`;
     let result = await mserver.write_recv(`save ${fileName}`);
     if (!result.includes("Saved to")) {
-        return `An error occured. The save could not be exported. \`\`\`js\n${result} \`\`\``;
+        return "An error occured. The save could not be exported.";
     } else if (result.includes("Not hosting")) {
         return "Error, The server is not hosting a map.";
     }

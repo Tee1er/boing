@@ -6,13 +6,10 @@ const VALID_CONFIGS = data.SETTINGS.exposedConfigs;
 
 let execute = async function (ARGUMENTS) {
     const cfg_opt = ARGUMENTS.length >= 1 ? ARGUMENTS[1] : null;
-    const cfg_val = ARGUMENTS.length >= 2 ? ARGUMENTS[2] : null;
-    console.log(cfg_opt);
-    console.log(cfg_val);
+    const cfg_val = ARGUMENTS.length >= 2 ? (ARGUMENTS.slice(2).join(" ")) : null;
 
     if (cfg_opt) {
-        if (!VALID_CONFIGS.includes(cfg_opt)) return Promise.reject(`Option ${cfg_opt} not found. Use the config command with no arguments to display all configuration options.`);
-        console.log(VALID_CONFIGS.includes(cfg_opt));
+        if (!VALID_CONFIGS.includes(cfg_opt)) return Promise.reject(`Option ${cfg_opt} not found or disabled. Use the config command with no arguments to display all enabled configuration options.`);
 
         if (cfg_val) {
             return mserver.write_recv(`config ${cfg_opt} ${cfg_val}`).then(res => `Server option ${res.match(regexes.message)}`);
@@ -49,8 +46,6 @@ let execute = async function (ARGUMENTS) {
                 ),
             );
 
-        console.log(parsed_config);
-
         let embed = new Discord.MessageEmbed().setColor("#E67B29").setTitle("Configuration values").setFooter("Boing - github.com/Tee1er/boing");
 
         for (let chunk of parsed_config) {
@@ -60,8 +55,6 @@ let execute = async function (ARGUMENTS) {
                 inline: true,
             });
         }
-
-        console.log(embed);
 
         return embed;
     }
@@ -75,6 +68,5 @@ module.exports = {
         longDescrip:
             "Modify the server's internal configuration. Running with no arguments lists all server configuration options. Running with one argument displays the value of the configuration option specified by the argument. Running with two arguments sets the configuration value *argument one* to *argument two*",
         adminOnly: true,
-        disabled: true,
     },
 };

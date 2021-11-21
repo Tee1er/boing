@@ -13,7 +13,7 @@ let execute = function(ARGUMENTS) {
         rmSync(filePath);
     } catch (err) {
         return Promise.resolve(
-            `An error occured. The map couldn't be deleted. \`\`\`${err}\`\`\``,
+            "An error occured. The map couldn't be deleted.",
         );
     }
     

@@ -24,7 +24,7 @@ let execute = async function(ARGUMENTS, message) {
     if (result.includes("Save loaded")) {
         return `Loaded save. \`${fileName} \` `;
     } else {
-        return `An error occured & the save was likely not successfully loaded. \`\`\`js\n${result} \`\`\``;
+        return "An error occured & the save was likely not successfully loaded.";
     }
 };
 
