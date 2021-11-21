@@ -5,11 +5,11 @@ let execute = function(ARGUMENTS) {
         return mserver.write_recv(`host ${ARGUMENTS[1]}`)
             .then(result => {
                 if (result.includes("Loading map")) {
-                    return `Hosting map. \`\`\`js\n${result} \`\`\` `;
+                    return `Hosting map. '${ARGUMENTS[1]}' `;
                 } else if (result.includes("Already hosting")) {
                     return `**An error occured.** The server may be already hosting a map. \`\`\`js\n${result} \`\`\` `;
                 } else {
-                    return `**An error occured.** Did you misspell the map name? \`\`\`js\n${result} \`\`\` `;
+                    return "**An error occured.** Did you misspell the map name?";
                 }
             });
     } else {

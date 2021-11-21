@@ -2,7 +2,8 @@ const mserver = require("../mserver.js");
 const crypto = require("crypto");
 const { writeFileSync} = require("fs");
 const { resolve } = require("path");
-const { get } = require("axios");
+const { get } = require("axios").default;
+const { SERVER_CONFIG_DIR } = require("../globals.js");
 
 let execute = async function(ARGUMENTS, message) {
     if (!ARGUMENTS[1]) {
@@ -10,7 +11,7 @@ let execute = async function(ARGUMENTS, message) {
     } 
     let attachment = message.attachments.array()[0];
     let fileName = ARGUMENTS[1];
-    let filePath = resolve(`../../server/config/saves/boing-library/${fileName}.msav`);
+    let filePath = resolve(`${SERVER_CONFIG_DIR}/saves/boing-library/${fileName}.msav`);
     let file = await get(attachment.url, {responseType: "arraybuffer"}).then(result => {
         // eslint-disable-next-line no-undef
         let data = Buffer.from(result.data);

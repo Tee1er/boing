@@ -28,7 +28,7 @@ const regexes = Object.freeze({
 
 function loadSettings() {
     if (fs.existsSync(SETTINGS_FILE)) {
-        module.exports.data.SETTINGS = JSON.parse(fs.readFileSync(SETTINGS_FILE));
+        module.exports.data.SETTINGS = JSON.parse(fs.readFileSync(SETTINGS_FILE).toString());
     }
     console.log("Loaded settings.");
 }
@@ -37,7 +37,7 @@ function saveSettings() { fs.writeFileSync(SETTINGS_FILE, JSON.stringify(module.
 
 function loadSessionData() {
     if (fs.existsSync(DATA_FILE))
-        module.exports.data.SESSION_DATA = JSON.parse(fs.readFileSync(DATA_FILE));
+        module.exports.data.SESSION_DATA = JSON.parse(fs.readFileSync(DATA_FILE).toString());
     console.log("Loaded data.");
 }
 

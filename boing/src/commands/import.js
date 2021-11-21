@@ -3,12 +3,13 @@ const { writeFileSync, rmSync } = require("fs");
 const crypto = require("crypto");
 const axios = require("axios");
 const path = require("path");
+const { SERVER_CONFIG_DIR } = require("../globals.js");
 
 let execute = async function(ARGUMENTS, message) {
     let attachment = message.attachments.array()[0];
     let fileName = "I-" + crypto.randomBytes(4).toString("hex");
-    let filePath = path.resolve(`../../server/config/saves/${fileName}.msav`);
-    let file = await axios.get(attachment.url, { responseType: "arraybuffer" }).then(result => {
+    let filePath = path.resolve(`${SERVER_CONFIG_DIR}/saves/${fileName}.msav`);
+    let file = await axios.default.get(attachment.url, { responseType: "arraybuffer" }).then(result => {
         let data = Buffer.from(result.data);
         //open & write to file
         writeFileSync(filePath, data, { encoding: null });
@@ -21,7 +22,7 @@ let execute = async function(ARGUMENTS, message) {
     // SO: https://stackoverflow.com/questions/15905221/javascript-callback-function-throws-error-callback-is-not-a-function-in-firefo/15905411
 
     if (result.includes("Save loaded")) {
-        return `Loaded save. \`\`\`js\n${result} \`\`\` `;
+        return `Loaded save. \`${fileName} \` `;
     } else {
         return `An error occured & the save was likely not successfully loaded. \`\`\`js\n${result} \`\`\``;
     }

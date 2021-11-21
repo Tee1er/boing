@@ -19,6 +19,7 @@ let execute = async function (ARGUMENTS) {
         } else {
             let value = await mserver.write_recv(`config ${cfg_opt}`);
             value = value.match(regexes.message);
+            
             return Promise.resolve(`Server option ${value}`);
         }
     } else {

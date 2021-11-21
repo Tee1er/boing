@@ -4,7 +4,7 @@ let execute = async function() {
     await mserver.write_recv("stop");
     let result = await mserver.write_recv("load boing-backups/latest");
     if (result.includes("Save loaded")) {
-        return `Loaded backup. \`\`\`js\n${result} \`\`\` `;
+        return "Loaded backup.result";
     } else {
         return `An error occured and the save was likely not successfuly loaded. \`\`\`js\n${result} \`\`\``;
     }

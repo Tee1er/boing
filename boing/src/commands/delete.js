@@ -1,13 +1,14 @@
 const mserver = require("../mserver.js");
 const { rmSync } = require("fs");
 const { resolve } = require("path");
+const { SERVER_CONFIG_DIR } = require("../globals.js");
 
 let execute = function(ARGUMENTS) {
     let fileName = ARGUMENTS[1];
     let filePath;
     try {
         filePath = resolve(
-            `../../server/config/saves/boing-library/${fileName}.msav`,
+            `${SERVER_CONFIG_DIR}/saves/boing-library/${fileName}.msav`,
         );
         rmSync(filePath);
     } catch (err) {

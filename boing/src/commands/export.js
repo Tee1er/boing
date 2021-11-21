@@ -4,6 +4,7 @@ const { server } = require("../mserver.js");
 const { MessageAttachment } = require("discord.js");
 const { resolve } = require("path");
 const { rm } = require("fs/promises");
+const { DATA_DIR } = require("../globals.js");
 
 let execute = async function(ARGUMENTS, message) {
     let fileName = `E-${crypto.randomBytes(4).toString("hex")}`;
@@ -11,10 +12,10 @@ let execute = async function(ARGUMENTS, message) {
     if (!result.includes("Saved to")) {
         return `An error occured. The save could not be exported. \`\`\`js\n${result} \`\`\``;
     } else if (result.includes("Not hosting")) {
-        return `An error occured. The server is not hosting a map. \`\`\`js\n${result} \`\`\``;
+        return "Error, The server is not hosting a map.";
     }
     let attachment;
-    let filePath = resolve(`../../server/config/saves/${fileName}.msav`);
+    let filePath = resolve(`${DATA_DIR}/server/config/saves/${fileName}.msav`);
     if (ARGUMENTS[1]) {
         attachment = new MessageAttachment(filePath, ARGUMENTS[1] + ".msav");
     } else {

@@ -2,7 +2,7 @@ const mserver = require("../mserver.js");
 
 let execute = function() {
     return mserver.write_recv("pause on").then(result => {
-        return `Game paused. \`\`\`js\n${result} \`\`\` `;
+        return "Game paused. ";
     });
 };
 

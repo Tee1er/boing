@@ -11,6 +11,12 @@ let mserver = child_process.spawn(`cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`,
     shell: true,
 });
 
+// Make sure to kill on Ctrl-C
+process.on("SIGINT", function() {
+    console.log("Interrupt, killing server.");
+    mserver.kill();
+});
+
 var mserver_io = readline.createInterface({
     output: mserver.stdin,
     input: mserver.stdout,
@@ -26,7 +32,7 @@ mserver.stdout.pipe(process.stdout);
  * @param {Function} poll_return Function that given the output buffer and number of lines received determines whether the function should yield
  * @param {Function} transform Function that transforms a line before appending it to the buffer
  *
- * @returns {string} Output buffer accumulated from the server's output, return triggered by `poll_return`
+ * @returns {Promise<string>} Output buffer accumulated from the server's output, return triggered by `poll_return`
  */
 let write_poll = function (
     text,
@@ -39,7 +45,7 @@ let write_poll = function (
 
     let buf = "";
     let nlines = 0;
-    let listener_idx = mserver_io.listenerCount();
+    let listener_idx = mserver_io.listenerCount("line");
 
     return new Promise(resolve => {
         mserver_io.on("line", data => {
@@ -59,7 +65,7 @@ let write_poll = function (
 
 let write_recv = function (text) {
     mserver.stdin.write(`${text} \n`);
-    let listener_idx = mserver_io.listenerCount();
+    let listener_idx = mserver_io.listenerCount("line");
 
     return new Promise(resolve => {
         mserver_io.on("line", data => {

@@ -1,4 +1,4 @@
-const { get } = require("axios");
+const { get } = require("axios").default;
 
 let execute = async function() {
     let response = await get("https://api.ipify.org", {params: {format:"json"}});
