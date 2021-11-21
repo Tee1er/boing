@@ -15,6 +15,7 @@ let mserver = child_process.spawn(`cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`,
 process.on("SIGINT", function() {
     console.log("Interrupt, killing server.");
     mserver.kill();
+    process.exit();
 });
 
 var mserver_io = readline.createInterface({
