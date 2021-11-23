@@ -52,6 +52,7 @@ client.on("message", message => {
                 .then(result => {
                     // Allows for passing of either an array of arguments, or simply a regular string.
                     if (result) {
+                        console.log(`TEST`);
                         if (Array.isArray(result)) {
                             message.channel.send(...result);
                         } else {
@@ -59,7 +60,10 @@ client.on("message", message => {
                         }
                     }
                 })
-                .catch(err => message.channel.send(err));
+                .catch(err => {
+                    console.log(`TEST`);
+                    message.channel.send(`Boing error: js\`\`\`${err}\n\`\`\``);
+                });
         } else {
             message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
         }
