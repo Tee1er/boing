@@ -1,5 +1,5 @@
 const mserver = require("../mserver.js");
-const { writeFileSync, rmSync, fstat, mkdi, mkdirSync } = require("fs");
+const { writeFileSync, rmSync, fstat, mkdi, mkdirSync, existsSync } = require("fs");
 const crypto = require("crypto");
 const axios = require("axios");
 const path = require("path");
@@ -8,7 +8,10 @@ const { SERVER_CONFIG_DIR } = require("../globals.js");
 let execute = async function (ARGUMENTS, message) {
     let attachment = message.attachments.array()[0];
     let fileName = "I-" + crypto.randomBytes(4).toString("hex");
-    mkdirSync(path.resolve(`${SERVER_CONFIG_DIR}/saves/`));
+    let folderPath = path.resolve(`${SERVER_CONFIG_DIR}/saves/`);
+    if (!existsSync(folderPath)) {
+        mkdirSync(folderPath);
+    }
     let filePath = path.resolve(`${SERVER_CONFIG_DIR}/saves/${fileName}.msav`);
     let file = await axios.default.get(attachment.url, { responseType: "arraybuffer" }).then(result => {
         let data = Buffer.from(result.data);

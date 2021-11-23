@@ -61,7 +61,6 @@ client.on("message", message => {
                     }
                 })
                 .catch(err => {
-                    console.log(`TEST`);
                     message.channel.send(`Boing error: js\`\`\`${err}\n\`\`\``);
                 });
         } else {
