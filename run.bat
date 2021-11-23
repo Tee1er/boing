@@ -1,4 +1,4 @@
-if not exist ./boing/src/package-lock.json (
+if not exist ./boing/package-lock.json (
     cd ./boing/
     npm i --no-bin-links
     cd ..
