@@ -12,7 +12,7 @@ function startBackups(server) {
         fs.mkdirSync(BACKUPPATH, { recursive: true });
     }
     let backups = fs.readdirSync(BACKUPPATH);
-    let backupNums = backups.map(backup => Number(backup.split(".")[0]).sort((a, b) => a - b));
+    let backupNums = backups.map(backup => Number(backup.split(".")[0])).sort((a, b) => a - b);
     current = backupNums.length > 0 ? backupNums[backupNums.length - 1] : 0;
     if (current > 12) {
         for (let i = current - 12; i >= 0; i--) {
