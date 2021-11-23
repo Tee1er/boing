@@ -1,13 +1,14 @@
 const mserver = require("../mserver.js");
-const { writeFileSync, rmSync } = require("fs");
+const { writeFileSync, rmSync, fstat, mkdi, mkdirSync } = require("fs");
 const crypto = require("crypto");
 const axios = require("axios");
 const path = require("path");
 const { SERVER_CONFIG_DIR } = require("../globals.js");
 
-let execute = async function(ARGUMENTS, message) {
+let execute = async function (ARGUMENTS, message) {
     let attachment = message.attachments.array()[0];
     let fileName = "I-" + crypto.randomBytes(4).toString("hex");
+    mkdirSync(path.resolve(`${SERVER_CONFIG_DIR}/saves/`));
     let filePath = path.resolve(`${SERVER_CONFIG_DIR}/saves/${fileName}.msav`);
     let file = await axios.default.get(attachment.url, { responseType: "arraybuffer" }).then(result => {
         let data = Buffer.from(result.data);
@@ -33,6 +34,6 @@ module.exports = {
     info: {
         name: "import",
         descrip: "Imports a map.",
-        longDescrip: "Imports a user-provided map. Attach the file to the message & comment `<prefix> import` to use. `import` deletes the file after it has been loaded."
-    }
+        longDescrip: "Imports a user-provided map. Attach the file to the message & comment `<prefix> import` to use. `import` deletes the file after it has been loaded.",
+    },
 };
