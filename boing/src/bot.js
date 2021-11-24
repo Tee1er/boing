@@ -52,7 +52,6 @@ client.on("message", message => {
                 .then(result => {
                     // Allows for passing of either an array of arguments, or simply a regular string.
                     if (result) {
-                        console.log(`TEST`);
                         if (Array.isArray(result)) {
                             message.channel.send(...result);
                         } else {
@@ -76,7 +75,6 @@ function sendNotification(message) {
     if (!channel) {
         return;
     }
-    console.log(`Sending notification ${message}`);
     channel.send(message);
 }
 
@@ -88,12 +86,17 @@ mserver.events.on("playerConnected", result => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
     numPlayers++;
     updateStatus();
-    backups.startBackups(mserver);
+    if (numPlayers == 1) {
+        backups.startBackups(mserver);
+    }
 });
 mserver.events.on("playerDisconnected", result => {
     sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
     numPlayers--;
     updateStatus();
+    if (numPlayers == 0) {
+        backups.stopBackups();
+    }
 });
 
 function updateStatus() {
@@ -109,7 +112,7 @@ function updateStatus() {
 
 mserver.events.on("stopped", result => {
     numPlayers = 0;
-    // backups.stopBackups();
+    backups.stopBackups();
 });
 
 module.exports = {
