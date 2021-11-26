@@ -59,7 +59,9 @@ client.on("message", message => {
                         }
                     }
                 })
-                .catch(err => message.channel.send(err));
+                .catch(err => {
+                    message.channel.send(`Boing error: js\`\`\`${err}\n\`\`\``);
+                });
         } else {
             message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
         }
@@ -73,7 +75,6 @@ function sendNotification(message) {
     if (!channel) {
         return;
     }
-    console.log(`Sending notification ${message}`);
     channel.send(message);
 }
 
@@ -85,12 +86,17 @@ mserver.events.on("playerConnected", result => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
     numPlayers++;
     updateStatus();
-    backups.startBackups(mserver);
+    if (numPlayers == 1) {
+        backups.startBackups(mserver);
+    }
 });
 mserver.events.on("playerDisconnected", result => {
     sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
     numPlayers--;
     updateStatus();
+    if (numPlayers == 0) {
+        backups.stopBackups();
+    }
 });
 
 function updateStatus() {
@@ -106,7 +112,7 @@ function updateStatus() {
 
 mserver.events.on("stopped", result => {
     numPlayers = 0;
-    // backups.stopBackups();
+    backups.stopBackups();
 });
 
 module.exports = {
