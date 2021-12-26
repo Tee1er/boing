@@ -10,9 +10,10 @@ loadSettings(); // Needs to be loaded here because this is run as a separate pro
 loadSessionData();
 
 const client = new Discord.Client();
+const rest = new REST({ version: "9" }).setToken(data.SETTINGS.token);
+
 
 try {
-    const rest = new REST({ version: "9" }).setToken(data.SETTINGS.token);
     client.login(data.SETTINGS.token);
 } catch (e) {
     console.log(colors.bold.red("Could not connect to Discord. Please check your token again."));
