@@ -20,8 +20,9 @@
 - [Features](#features)
 - [Commands](#commands)
 - [Troubleshooting & Additional Information](#troubleshooting--additional-information)
-    - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
-    - [The service installation failed for some reason. Now Boing won't work in Service Mode anymore.](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
+    - [Fixing Incorrect Information ](#fixing-incorrect-information)
+    - [Administrator Permissions](#administrator-permissions)
+    - ["config" and allowed settings](#"config"-and-allowed-settings)
 - [Roadmap](#roadmap)
 
 ## Getting Started
@@ -43,7 +44,7 @@ That should take you to the control panel for your new application.
 
 Switch to the **Add Bot** tab - the **General Information** tab is of no interest to us right now.
 
-Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](github.com/Tee1er/boing) if you'd like to use those, but of course, you can always upload your own, or even just leave it as it is right now.
+Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](https://github.com/Tee1er/boing/tree/main/media) if you'd like to use those, but of course, you can always upload your own, or even just leave it as the default.
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
@@ -65,13 +66,13 @@ You are now finished with Part 1 of installation 🎉.
 
 #### Boing Setup
 
-In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life.
+In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life by connecting Boing.
 
 Open the folder that Boing is in, and move it somewhere safe.
 
 Run `run.bat` (or `run.sh` if you are on a *NIX system), which should start Boing.
 
-When you start Boing for the first time, you will be asked to answer some questions. 
+When you start Boing for the first time, you will be asked to provide some information.
 
 - When you are asked to enter your token, that's the one we copied from Discord earlier, and that I asked you to save. Paste that in now.
 
@@ -81,7 +82,7 @@ When you start Boing for the first time, you will be asked to answer some questi
 
 - The notifications channel is where Boing will send messages when users join, leave, and when a game ends. 
 
-- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. 
+- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. (See the [Additional Information](#troubleshooting-&-additional-information))
 
 If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
@@ -228,6 +229,9 @@ Some other details — with all of these you'll need to provide a command to be 
   > **b rollback**
   >
   > → Stops the server & loads the latest backup.
+  > **b rollback 6**
+  > 
+  > → Stops the server and loads the 6th latest backup (meaning it should go back roughly 30 minutes, or 6 * 5.)
 
 - **config**: Allows users w/ the administrator role (specified during setup) to change some server configuration options.
 
@@ -243,8 +247,8 @@ Some other details — with all of these you'll need to provide a command to be 
 
 #### Fixing Incorrect Information 
 
-Boing stores that information in a JSON file, which can be found under `boing/data/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. If you are using a service for
-Boing you'll need to restart it for the changes to take effect. 
+Boing stores that information in a JSON file, which can be found under `boing/data/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. If you are using a service for Boing you'll need to restart it for the changes to take effect. 
+
 
 ```json
 {
@@ -255,6 +259,13 @@ Boing you'll need to restart it for the changes to take effect.
 
     ... 
 }
+```
+
+Also of note: if you just want to redo all of the setup, you can reset it by deleting everything in the JSON file *except* for the enclosing two curly brackets. Your file should
+look like this now:
+
+```json
+{}
 ```
 
 
@@ -277,7 +288,9 @@ most the name should be more or less self explanatory.
 
 To prevent usage of any of these settings, just remove it from the list. (including the comma following it)
 
+#### Need help?
 
+Submit an issue with the **help** label.
 
 ****
 
