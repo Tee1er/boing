@@ -30,11 +30,8 @@
 Installation of Boing should be relatively straightforward - the wrapper takes care of much, if anything technical and leaves you with a nice, pretty, Discord bot at the end. However, if anything goes wrong, please feel free to open a issue with the problem you're encountering.
 
 Before we begin the actual setup, **please make sure you have both of the following installed:**
-- Node.js v16.6+: required to run Boing itself.
-- Java JRE & JDK 8+: required to run the Mindustry server.
 
-(For those on Linux: see the instructions [here](docs/linux-install.md))
-
+>**Linux users:** See guide [here](docs/raspi-install.md)
 
 #### Bot Setup
 
@@ -69,6 +66,9 @@ You are now finished with Part 1 of installation 🎉.
 #### Boing Setup
 
 In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life by connecting Boing.
+
+First, select the latest release from the **Releases** sidebar. (as of writing, this is v2.1)
+Download the file and extract it to where you'd like your Boing instance to go.
 
 Open the folder that Boing is in, and move it somewhere safe.
 
