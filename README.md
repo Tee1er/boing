@@ -25,13 +25,22 @@
     - ["config" and allowed settings](#"config"-and-allowed-settings)
 - [Roadmap](#roadmap)
 
+<hr>
+Last updated for <b>v2.3</b> ⚙️
+<hr>
+
 ## Getting Started
 
 Installation of Boing should be relatively straightforward - the wrapper takes care of much, if anything technical and leaves you with a nice, pretty, Discord bot at the end. However, if anything goes wrong, please feel free to open a issue with the problem you're encountering.
 
 Before we begin the actual setup, **please make sure you have both of the following installed:**
 
->**Linux users:** See guide [here](docs/raspi-install.md)
+- Java JRE 8+
+- Node.js 16.6+
+
+> This README guide is tailored mostly towards Windows users. For those on Linux, see the link below.
+
+> **Linux users:** See guide [here.](docs/linux-install.md)
 
 #### Bot Setup
 
@@ -59,9 +68,7 @@ Finally, scroll back up and copy the URL in the **Scopes** box. If you did every
 https://discord.com/api/oauth2/authorize?client_id=XXXXXXXXXXXXXXXXXX&permissions=2048&scope=bot
 ```
 
-Paste that URL into your web browser of choice, and follow the prompts to add Boing to your server. To do this, you need the **Manage Server** permission. 
-
-You are now finished with Part 1 of installation 🎉.
+Paste that URL into your web browser of choice, and follow the prompts to add Boing to your server. To do this, you need the **Manage Server** permission.
 
 #### Boing Setup
 
@@ -93,6 +100,10 @@ If you encounter any problems during this entire process, please consult the [he
 If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you _do_ plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
 
 The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for more on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
+
+<hr>
+You're now done with Boing installation! ✅ 
+<hr>
 
 #### Notes
 
@@ -130,7 +141,7 @@ Some other details — with all of these you'll need to provide a command to be 
 
 ## Commands
 
- A quick note: this README is liable to be outdated. This commands list was last updated on June 10th, 2021, with Boing 2.0. Therefore, the actual help command will likely provide for more up-to-date stuff.
+ A quick note: this README is liable to be outdated. This commands list was last updated for v2.3. Therefore, the actual help command will likely provide for more up-to-date stuff.
 
  All of these examples assume you are using 'b' as the prefix. If this is not the case, then simply substitute the prefix you are using.
 
@@ -147,10 +158,10 @@ Some other details — with all of these you'll need to provide a command to be 
   > **b host**
   > 
   > → Hosts a new map, randomly selected from the default maps. (see the 'maps' command for a list)
-  > 
+  >  
   > **b host Ancient_Caldera or b host ancient_caldera**
   > 
-  > → Hosts the map "Ancient_Caldera". Map names are not case-sensitive, both "Ancient_Caldera" and "ancient_caldera" would work.
+  > → Hosts the map "Ancient_Caldera". Map names are not case-sensitive, both "Ancient_Caldera" and "ancient_caldera" would work. However, the underscores in the name *are* required.
 
 - **pause/unpause**: Pauses or unpauses the game. This stops all player movement, as well as conveyor belts, production, etc.
 
