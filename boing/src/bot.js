@@ -53,11 +53,11 @@ client.on("message", message => {
     let allowed = (c.info.adminOnly === true && isAdmin) || c.info.adminOnly === false || c.info.adminOnly === undefined;
 
     if (allowed) {
+    	if (c.preExecuteMsg) {
+    		message.channel.send(c.preExecuteMsg)
+    	}
         let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
         if (cmd_execution) {
-            if (c.info.preExecuteMsg) {
-                message.channel.send(c.info.preExecuteMsg);
-            }
             cmd_execution
                 .then(result => {
                     // Allows for passing of either an array of arguments, or simply a regular string.
