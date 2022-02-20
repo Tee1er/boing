@@ -249,6 +249,11 @@ Some other details — with all of these you'll need to provide a command to be 
   > 
   > → Returns information on server status. 
 
+- **status**: Returns the server's status.
+  > **b status**
+  > 
+  > → Returns information on server status. 
+
 ## Troubleshooting & Additional Information
 
 
