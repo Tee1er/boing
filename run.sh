@@ -1,4 +1,4 @@
-# /bin/env sh
+# /bin/bash
 
 # Install node modules
 echo "Checking / installing dependencies."
