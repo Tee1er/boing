@@ -59,7 +59,9 @@ See the docs below for information on installing Java. The dedicated server requ
 Consult documentation for your specific distro ("how to install Java on [MY DISTRO]")
 
 ### Boing Installation
-Installing Boing is similar to on Windows — return to the [README](../README.md).
+**4.** Installing Boing is similar to on Windows — return to the [README](../README.md).
+
+> **4a.** Don't forget to make `run.sh` executable. `chmod +x run.sh`
 
 ### Running in the Background
 
