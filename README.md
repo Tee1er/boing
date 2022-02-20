@@ -33,6 +33,8 @@ Before we begin the actual setup, **please make sure you have both of the follow
 - Node.js v16.6+: required to run Boing itself.
 - Java JRE & JDK 8+: required to run the Mindustry server.
 
+(For those on Linux: see the instructions [here](docs/raspi-install.md))
+
 
 #### Bot Setup
 
@@ -241,6 +243,11 @@ Some other details — with all of these you'll need to provide a command to be 
   > **b config name myserver**
   > 
   > → Sets the configuration option "name" to "myserver"
+
+- **status**: Returns the server's status.
+  > **b status**
+  > 
+  > → Returns information on server status. 
 
 ## Troubleshooting & Additional Information
 

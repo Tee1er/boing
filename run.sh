@@ -1,7 +1,7 @@
 # /bin/env sh
 
 # Install node modules
-echo "Checking required NPM dependencies."
+echo "Checking / installing dependencies."
 if [ ! -f ./boing/package-lock.json ]; then
     echo "Installing dependencies. This may take a while. "
     (cd ./boing && npm i --no-bin-links)
