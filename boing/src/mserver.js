@@ -97,6 +97,8 @@ mserver.stdout.on("data", line => {
         gameEvents.emit("playerDisconnected", message);
     } else if (message.includes("Stopped server.")) {
         gameEvents.emit("stopped", message);
+    } else if (message.includes("Server loaded.")) {
+        gameEvents.emit("loaded", message);
     }
 });
 

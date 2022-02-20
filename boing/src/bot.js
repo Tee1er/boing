@@ -106,6 +106,10 @@ mserver.events.on("playerDisconnected", result => {
     }
 });
 
+mserver.events.on("loaded", result => {
+    sendNotification(`Server loaded. \`\`\`js\n${result}\`\`\``)
+})
+
 function updateStatus() {
     console.log("Player update");
     if (numPlayers >= 0) {
