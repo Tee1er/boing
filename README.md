@@ -33,7 +33,7 @@ Before we begin the actual setup, **please make sure you have both of the follow
 - Node.js v16.6+: required to run Boing itself.
 - Java JRE & JDK 8+: required to run the Mindustry server.
 
-(For those on Linux: see the instructions [here](docs/raspi-install.md))
+(For those on Linux: see the instructions [here](docs/linux-install.md))
 
 
 #### Bot Setup
