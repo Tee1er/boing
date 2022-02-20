@@ -29,13 +29,8 @@ const colors = require("ansi-colors");
 const enquirer = require("enquirer");
 const deps_resolver = require("./get_deps");
 
-// Service mode only on windows
-if (service_win32) {
-    const serviceUtil = require("./service.js");
-}
-
-console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.1 --"));
-console.log("Please see https://www.github.com/Tee1er/boing for more information.\n");
+console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.3 --"));
+console.log("https://www.github.com/Tee1er/boing \n");
 
 (async function () {
     let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
@@ -43,15 +38,12 @@ console.log("Please see https://www.github.com/Tee1er/boing for more information
         console.log("Starting setup.");
         await setup();
         setupOccurred = true;
-    } else {
-        console.log(`Setup has already occured. Service Mode is ${colors.bold(data.SETTINGS.serviceMode ? colors.green("on.") : colors.red("off."))} \n`);
-        setupOccurred = true;
     }
 
-    if (!data.SETTINGS.serviceMode && setupOccurred) {
+    if (setupOccurred) {
         deps_resolver.get_server().then(_ => {
             console.log(colors.bold("Starting Boing ... \n"));
-            // FIXME: Make bot into a class to make boing one unified process
+            // TODO: Make bot into a class to make boing one unified process
             let boing = child_process.spawn(`node ${SRC_DIR}/bot.js`, [], { shell: true, stdio: "inherit" });
         });
     }
@@ -78,14 +70,8 @@ async function setup() {
         },
         {
             type: "input",
-            name: "chatChannel",
-            message: "Enter the channel you would like the server's chat to be relayed through. Leave blank to disable Chat Relay. (This feature is not functional as of Boing v1.1)",
-            initial: "",
-        },
-        {
-            type: "input",
             name: "adminRole",
-            message: "Name of a role to grant administrator permissions (leave blank for none)",
+            message: "Name of a role to grant administrator permissions. Case-sensitive. (Leave blank for none.)",
         },
         {
             type: "input",
@@ -95,30 +81,13 @@ async function setup() {
         {
             type: "list",
             name: "channelBlacklist",
-            message: "Select channels to blacklist - leave blank if you have none.",
+            message: "Select channels to blacklist, separated by commas. (Leave blank for none.)",
         },
     ];
 
-    try {
-        if (service_win32) {
-            prompts.push({
-                type: "toggle",
-                name: "serviceMode",
-                message: "Enable Service Mode?",
-                // @ts-ignore
-                initial: false,
-            });
-        }
-    } catch (e) {
-        console.log(e + "\n An error occured - please try reloading Boing.");
-    }
-
     const response = await enquirer.prompt(prompts);
     console.log(
-        colors.bold.green("\nSetup is now complete. ") +
-            `In the future, if you do not have Service Mode enabled, the Boing launcher 
-will instead start Boing instead of prompting you for setup. If you have Service Mode enabled, it will start
-automatically the next time you restart your computer. \n`,
+        colors.bold.green("\nSetup is now complete. ")
     );
 
     var user_settings = response;
@@ -149,13 +118,4 @@ automatically the next time you restart your computer. \n`,
 
     data.SETTINGS = user_settings;
     saveSettings();
-
-    if (data.SETTINGS.serviceMode === true && service_win32) {
-        console.log(colors.bold("Beginning the service installation process now. You may have to accept multiple prompts from your operating system in order to install correctly. \n"));
-        await new Promise(resolve => setTimeout(resolve, 2500)); //Let the user have a couple seconds to read the message.
-        serviceUtil.install();
-        // @ts-ignore
-    } else if (response.serviceMode !== true) {
-        if (service_win32) serviceUtil.uninstall();
-    }
 }

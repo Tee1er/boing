@@ -33,7 +33,8 @@ module.exports = {
     execute,
     info: {
         name: "rollback",
-        descrip: "Loads the most recent backup.",
-        longDescrip: "Loads the most recent backup. Backups are taken automatically by Boing every 5 minutes and deleted with each new game.",
+        descrip: "Loads a backup.",
+        longDescrip: `Loads a backup. Backups are taken every 5 minutes, the command will load the *n*th backup — *n* being the number of saves to rollback. 
+        For example, \`<prefix> rollback 12\` will load the 12th backup. If no argument is given, the most recent backup will be loaded.`,
     },
 };

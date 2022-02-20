@@ -20,8 +20,9 @@
 - [Features](#features)
 - [Commands](#commands)
 - [Troubleshooting & Additional Information](#troubleshooting--additional-information)
-      - [I accidentally entered in wrong information.](#i-accidentally-entered-in-wrong-information)
-      - [**The service installation failed for some reason. Now Boing won't work in Service Mode anymore.**](#the-service-installation-failed-for-some-reason-now-boing-wont-work-in-service-mode-anymore)
+    - [Fixing Incorrect Information ](#fixing-incorrect-information)
+    - [Administrator Permissions](#administrator-permissions)
+    - ["config" and allowed settings](#"config"-and-allowed-settings)
 - [Roadmap](#roadmap)
 
 ## Getting Started
@@ -29,10 +30,8 @@
 Installation of Boing should be relatively straightforward - the wrapper takes care of much, if anything technical and leaves you with a nice, pretty, Discord bot at the end. However, if anything goes wrong, please feel free to open a issue with the problem you're encountering.
 
 Before we begin the actual setup, **please make sure you have both of the following installed:**
-- Node.js v16.6+ 
-- Java JRE & JDK 8+ (for more information, please see the Mindustry wiki's section on Dedicated Servers)
 
-First, we'll begin by setting up the Discord bot. 
+>**Linux users:** See guide [here](docs/raspi-install.md)
 
 #### Bot Setup
 
@@ -44,7 +43,7 @@ That should take you to the control panel for your new application.
 
 Switch to the **Add Bot** tab - the **General Information** tab is of no interest to us right now.
 
-Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](github.com/Tee1er/boing) if you'd like to use those, but of course, you can always upload your own, or even just leave it as it is right now.
+Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](https://github.com/Tee1er/boing/tree/main/media) if you'd like to use those, but of course, you can always upload your own, or even just leave it as the default.
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
@@ -66,7 +65,7 @@ You are now finished with Part 1 of installation 🎉.
 
 #### Boing Setup
 
-In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life.
+In the last step, you created a bot and added it to a server. In this step, you'll bring that bot to life by connecting Boing.
 
 First, select the latest release from the **Releases** sidebar. (as of writing, this is v2.1)
 Download the file and extract it to where you'd like your Boing instance to go.
@@ -75,7 +74,7 @@ Open the folder that Boing is in, and move it somewhere safe.
 
 Run `run.bat` (or `run.sh` if you are on a *NIX system), which should start Boing.
 
-When you start Boing for the first time, you will be asked to answer some questions. 
+When you start Boing for the first time, you will be asked to provide some information.
 
 - When you are asked to enter your token, that's the one we copied from Discord earlier, and that I asked you to save. Paste that in now.
 
@@ -83,17 +82,9 @@ When you start Boing for the first time, you will be asked to answer some questi
   Please enter your bot's token. » YOUR-TOKEN-HERE
   ```
 
-- For more information on Chat Relay & Service Mode, please see the [Features](#-features) section below. I highly encourage you to enable Service Mode - Chat Relay is up to you.
-
 - The notifications channel is where Boing will send messages when users join, leave, and when a game ends. 
 
-- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. 
-
-If you enabled Service Mode, you'll need to accept multiple prompts from your operating system in order to complete service installation.  There are a *lot*, but please accept all of them.
-
-If you have **not** enabled Service Mode, start Boing by double-clicking `run.bat` again. This will open the Boing launcher, which should now run Boing. Try it out!
-
-If you **have** enabled Service Mode, Boing should now be running in the background. In the future, then, `run.bat` will exit automatically. Verify this by opening Task Manager & checking the **Services** tab for `boingmdi.exe` or similar entry.
+- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. (See the [Additional Information](#troubleshooting-&-additional-information))
 
 If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
@@ -101,13 +92,35 @@ If you encounter any problems during this entire process, please consult the [he
 
 If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you _do_ plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
 
-The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for guides on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
+The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for more on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
+
+#### Notes
+
+As of version 2.3, Service Mode is no longer a part of Boing — its reliability and ease of setup left a lot to be desired. Instead, we reccomend you try using one of these tools instead.
+
+- [**nssm**](https://nssm.cc/download)
+<br>
+  NSSM is a pretty simple tool to create services on Windows; it's got a decent (if somewhat outdated) GUI and is really easy to use as long as you're comfortable working with a command line.
+
+- **Task Scheduler**
+<br>
+  This is a surprisngly good choice for creating a service, and it's built into Windows which is a *huge* plus. The only reason it's not listed first is because, as far as I can tell:
+  if you start programs using Task Scheduler they won't show up in Task Manager's Services tab. It's not a big deal — you'll know Boing is running if you can connect. 
+  
+  Great if you're not as comfortable using the command line.
+
+- [**sc**](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/sc-create)
+<br>
+  Another command line tool, but this one is built into Windows Powershell. Not as simple as NSSM, which is why it's last on this list, but if you're willing to go through some docs,
+  I'm sure it would work just as well.
+
+Some other details — with all of these you'll need to provide a command to be run: you should start either `run.bat` or, alternatively, if that doesn't work: try `launcher.js`, which is located in the 
+`boing/src` folder.
+
 
 
 ## Features
 
-- **Service Mode:** Boing can run in the background as a service, staying off your taskbar and out of your way. (Service Mode is currently not working properly and actual support will come soon.)
-- **Chat Relay**: (Coming Soon) Messages sent in-game and in a specific channel will be relayed. Players in-game can chat with users in Discord, and vice-versa!
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
 - **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
 - **Automatic backups:** Boing takes backups automatically every 5 minutes, adding an extra safety net if you mess up. 
@@ -218,12 +231,36 @@ The gist of it: forward **port 6567** to the local IP of the PC Boing is running
   > **b rollback**
   >
   > → Stops the server & loads the latest backup.
+  > **b rollback 6**
+  > 
+  > → Stops the server and loads the 6th latest backup (meaning it should go back roughly 30 minutes, or 6 * 5.)
+
+- **config**: Allows users w/ the administrator role (specified during setup) to change some server configuration options.
+
+  > **b config**
+  >
+  > → Lists all the available configuration options. 
+  > **b config name myserver**
+  > 
+  > → Sets the configuration option "name" to "myserver"
+
+- **status**: Returns the server's status.
+  > **b status**
+  > 
+  > → Returns information on server status. 
+
+- **status**: Returns the server's status.
+  > **b status**
+  > 
+  > → Returns information on server status. 
 
 ## Troubleshooting & Additional Information
 
-##### I accidentally entered in wrong information.
 
-Boing stores that information in a JSON file, which can be found under `boing/src/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. 
+#### Fixing Incorrect Information 
+
+Boing stores that information in a JSON file, which can be found under `boing/data/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. If you are using a service for Boing you'll need to restart it for the changes to take effect. 
+
 
 ```json
 {
@@ -231,48 +268,47 @@ Boing stores that information in a JSON file, which can be found under `boing/sr
     "prefix": "b",
     "chatChannel": "chat",
     "serviceMode": false
+
+    ... 
 }
 ```
 
-If you don't have Service Mode on, then simply change this information and start Boing up again using `run.bat`. If you do, its a little bit more tricky, but still doable. 
-
-
-
-Change the information & save the file. Now, open the Task Manager (you can use the Windows Search bar), and switch to the **Services** tab. 
-
-Scroll down till you find an entry that similar to this:
-
-| Name         | PID  | Description | Status  |
-| ------------ | ---- | ----------- | ------- |
-| boingmdi.exe | 1234 | BoingMDI    | Running |
-
-Right click, and then select **Restart.** Now, when the service finishes restarting, you should find yourself with something that works more like expected.
-
-##### **The service installation failed for some reason. Now Boing won't work in Service Mode anymore.**
-
-Because Service Mode installs the service right after setup, if anything goes wrong during that time, you need to setup Boing again. This can be a little bit of a pain, and is on the roadmap for v2.1. 
-
-Boing detects whether or not setup has occurred by checking for keys in the JSON. In practice, that means that simply deleting all of those pairs will allow you to enter setup mode again. If you just need to change some information, see above. 
-
-To reinstall the service, delete the entire file, but leave the enclosing curly brackets. Those need to stay, other Boing will throw an error.
-
-Your `settings.json` should look like this:
+Also of note: if you just want to redo all of the setup, you can reset it by deleting everything in the JSON file *except* for the enclosing two curly brackets. Your file should
+look like this now:
 
 ```json
 {}
 ```
 
-Now, if you start the launcher again, after being prompted for setup, Service Mode will activate and install the service, hopefully correctly this time.
 
-**How do I setup the channel blacklist feature?**
+#### Administrator Permissions
 
-The channel blacklist is not included in the setup wizard currently - therefore, you'll need to use a text editor to manually add those in. In the `src/settings.json` config file, you should find yourself with a couple key-value pairs. At the end, add the key `channelBlacklist` (with double quotes around it), and then two square brackets. Between these brackets, you should add the channel names you wish to blacklist, again, surrounded w/ double quotes & with commas separating each entry.
+Boing 2.2 introduced the ability to set an *administrator role,* which gives users with those roles special permissions.
+Currently the only command that takes advantage of this feature is `config`, but more might be come in the future.
+People with administrator permissions have a significant amount of power over the server using `config`, which is why you might
+want to edit the settings they can change. 
+
+#### "config" and allowed settings
+
+As detailed in the prev. section, the config command lets you change server settings. Some of these might be things you don't want
+people to be able to change, even administrators. In order to allow / disallow certain commands, we need to edit Boing's internal
+settings file — `settings.json`, located under `boing/data/settings.json`. Open it in your text editor of choice — preferably not
+Notepad, but it'd work in a pinch.
+
+You should see a key named `"exposedSettings"` and a long list of values in quotes after that. These are the allowed settings, and for
+most the name should be more or less self explanatory.
+
+To prevent usage of any of these settings, just remove it from the list. (including the comma following it)
+
+#### Need help?
+
+Submit an issue with the **help** label.
 
 ****
 
 ## Roadmap
 
-Currently, Boing is on **Version 2.1**, which rewrote a lot of the underlying code. 
+Currently, Boing is on **Version 2.3**.
 
 **Version 2.0**
 
@@ -309,6 +345,6 @@ Currently, Boing is on **Version 2.1**, which rewrote a lot of the underlying co
 
 **Version 2.3**
 
-- [ ] Rewrite portions of codebase to allow for hosting of multiple server instances.
-- [ ] Find a better way of making Boing a service / run in background.
+- [ ] Rewrite portions of codebase to allow for hosting of multiple server instances. ( pushed back to 2.4 or possibly shelved )
+- [ ] ~~Find a better way of making Boing a service / run in background.~~
 - [ ] A tray utility would be *nice* but isn't really necessary. If we have time.
