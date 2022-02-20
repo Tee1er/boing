@@ -65,11 +65,16 @@ Consult documentation for your specific distro ("how to install Java on [MY DIST
 
 ### Running in the Background
 
-If you SSH into your instance of Linux, to keep it running after you disconnect, simply use
+**5.** If you SSH into your instance of Linux, to keep it running after you disconnect, simply use
 
     nohup ./run.sh &
 
 This will keep it from terminating the program after you close your session.
+
+> **5a.** Alternatively, you can try `tmux` if that doesn't work. For those on Raspbian, 
+> you may or may not need to install it first.
+> However, once you have, simply type `tmux` to start a new session, and then start `run.sh` in > that way. Finally, use **Ctrl-Shift-B** to close the session. (Shift is required so that tmux interprets it instead of Boing)
+> See [this](https://askubuntu.com/questions/8653/how-to-keep-processes-running-after-ending-ssh-session) Stack Exchagne answer for more.
 
 Using tools / daemons like systemctl, forever, nodemon, etc, are possible. However, there is an issue where Boing itself will be started, but the 
 server either is not started or does not accept input. This is a known issue, but I'm not sure how to fix it. 
