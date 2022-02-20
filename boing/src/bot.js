@@ -55,6 +55,9 @@ client.on("message", message => {
     if (allowed) {
         let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
         if (cmd_execution) {
+            if (c.info.preExecuteMsg) {
+                message.channel.send(c.info.preExecuteMsg);
+            }
             cmd_execution
                 .then(result => {
                     // Allows for passing of either an array of arguments, or simply a regular string.

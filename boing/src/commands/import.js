@@ -37,6 +37,7 @@ module.exports = {
     info: {
         name: "import",
         descrip: "Imports a map.",
-        longDescrip: "Imports a user-provided map. Attach the file to the message & comment `<prefix> import` to use. `import` deletes the file after it has been loaded.",
+        longDescrip: "Imports a user-provided map. Attach the file to the message & comment `<prefix> import` to use. `import` deletes the file after it has been loaded. Big files may take a while to load.",
     },
+    preExecuteMsg: "Importing map...",
 };
