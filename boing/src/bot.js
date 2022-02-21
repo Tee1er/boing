@@ -4,7 +4,7 @@ const { REST } = require("@discordjs/rest");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
-const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
+const { data, loadSettings, loadSessionData, COMMANDS_DIR, SERVER_CONFIG_DIR } = require("./globals");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
@@ -29,6 +29,11 @@ client.once("ready", () => {
         type: "LISTENING",
     });
 });
+
+/** Create map library folder if not exist */
+if (!fs.existsSync(path.join(`${SERVER_CONFIG_DIR}/saves/boing-library`))) {
+    fs.mkdirSync(path.resolve(`${SERVER_CONFIG_DIR}/saves/boing-library`));
+}
 
 // On discord message callback
 client.on("message", message => {
