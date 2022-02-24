@@ -40,6 +40,8 @@ Before we begin the actual setup, **please make sure you have both of the follow
 
 > This README guide is tailored mostly towards Windows users. For those on Linux, see the link below.
 
+Note that both will have to be added to PATH (check the box when installing) for Boing to work properly.
+
 > **Linux users:** See guide [here.](docs/linux-install.md)
 
 #### Bot Setup
