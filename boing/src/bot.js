@@ -110,6 +110,13 @@ mserver.events.on("loaded", result => {
     sendNotification(`Server loaded. \`\`\`js\n${result}\`\`\``)
 })
 
+// Set # of players to 0 if game is stopped
+
+mserver.events.on("gameStarted", result => {
+    numPlayers = 0;
+    updateStatus();
+})
+
 function updateStatus() {
     console.log("Player update");
     if (numPlayers >= 0) {

@@ -12,7 +12,7 @@ let mserver = child_process.spawn(`cd ${SERVER_DIR} && java -jar ${SERVER_JAR}`,
 });
 
 // Make sure to kill on Ctrl-C
-process.on("SIGINT", function() {
+process.on("SIGINT", function () {
     console.log("Interrupt, killing server.");
     mserver.kill();
     process.exit();
@@ -35,9 +35,9 @@ mserver.stdout.pipe(process.stdout);
  *
  * @returns {Promise<string>} Output buffer accumulated from the server's output, return triggered by `poll_return`
  */
-let write_poll = function(
+let write_poll = function (
     text,
-    poll_return = function(line, lines, nlines) {
+    poll_return = function (line, lines, nlines) {
         return true;
     },
     transform = (line, line_idx) => line,
@@ -64,7 +64,7 @@ let write_poll = function(
     });
 };
 
-let write_recv = function(text) {
+let write_recv = function (text) {
     mserver.stdin.write(`${text} \n`);
     let listener_idx = mserver_io.listenerCount("line");
 
@@ -76,7 +76,7 @@ let write_recv = function(text) {
     });
 };
 
-let write = function(text) {
+let write = function (text) {
     mserver.stdin.write(`${text} \n`);
 };
 
@@ -99,6 +99,8 @@ mserver.stdout.on("data", line => {
         gameEvents.emit("stopped", message);
     } else if (message.includes("Server loaded.")) {
         gameEvents.emit("loaded", message);
+    } else if (message.includes("Stopped server.")) {
+        gameEvents.emit("stopped", message);
     }
 });
 

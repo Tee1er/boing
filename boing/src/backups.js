@@ -1,6 +1,7 @@
 let { clearInterval, setInterval } = require("timers");
 let fs = require("fs");
-const { DATA_DIR, SERVER_CONFIG_DIR } = require("./globals");
+const mserver = require("./mserver");
+const { DATA_DIR, SERVER_CONFIG_DIR, saveSessionData, data, loadSessionData } = require("./globals");
 const { resolve } = require("path");
 
 let timer;
@@ -31,7 +32,9 @@ function startBackups(server) {
         if (current > 12) {
             fs.rmSync(BACKUPPATH + `/${current - 12}.msav`); //delete old backups
         }
-    }, 300000); // 5 minutes
+        // Update backup data (for <prefix> backups cmd)
+        updateBackupData();
+    }, 3000); // 5 minutes
 }
 
 function getCurrent() {
@@ -45,6 +48,48 @@ function getCurrent() {
 
     current = backupNums.length > 0 ? backupNums[backupNums.length - 1] : 0;
     return current;
+}
+
+async function updateBackupData() {
+    // Get info about last backup
+    let result = await mserver.write_poll(
+        "status",
+        line => line.includes("server closed") || line.includes("0 players connected.") || (line.includes(" / ") && line.includes("==")),
+        line => line,
+    )
+
+    console.log(result.split("\n")[1])
+
+    result = result.split("\n")[1]
+        .split("map")[1]
+        .split("/") // theoretically, only the map name & wave # should be left
+        .map(str => str.trim()) // remove whitespace
+
+    let backupInfo = {
+        map: result[0],
+        wave: Number(result[1].split(" ")[1]),
+        time: new Date()
+    }
+
+    console.log(result);
+    console.log(backupInfo);
+
+    loadSessionData();
+
+    console.log(data)
+    console.log(data.SESSION_DATA)
+    console.log(data.SESSION_DATA.backups)
+
+    // if data.SESSION_DATA.backups is undefined, create it
+    if (data.SESSION_DATA.backups === undefined) {
+        data.SESSION_DATA.backups = [];
+    }
+
+    // Save backup info to `data.json`
+    data.SESSION_DATA.backups.unshift(backupInfo); // add to beginning of array
+
+    saveSessionData();
+
 }
 
 function stopBackups() {

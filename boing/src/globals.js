@@ -38,7 +38,6 @@ function saveSettings() { fs.writeFileSync(SETTINGS_FILE, JSON.stringify(module.
 function loadSessionData() {
     if (fs.existsSync(DATA_FILE))
         module.exports.data.SESSION_DATA = JSON.parse(fs.readFileSync(DATA_FILE).toString());
-    console.log("Loaded data.");
 }
 
 function saveSessionData() { fs.writeFileSync(DATA_FILE, JSON.stringify(module.exports.data.SESSION_DATA, null, 4)) }
