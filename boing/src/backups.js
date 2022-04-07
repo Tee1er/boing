@@ -1,6 +1,7 @@
 let { clearInterval, setInterval } = require("timers");
 let fs = require("fs");
-const { DATA_DIR, SERVER_CONFIG_DIR } = require("./globals");
+const mserver = require("./mserver");
+const { DATA_DIR, SERVER_CONFIG_DIR, saveSessionData, data, loadSessionData } = require("./globals");
 const { resolve } = require("path");
 
 let timer;
@@ -31,6 +32,8 @@ function startBackups(server) {
         if (current > 12) {
             fs.rmSync(BACKUPPATH + `/${current - 12}.msav`); //delete old backups
         }
+        // Update backup data (for <prefix> backups cmd)
+        updateBackupData();
     }, 300000); // 5 minutes
 }
 
@@ -45,6 +48,56 @@ function getCurrent() {
 
     current = backupNums.length > 0 ? backupNums[backupNums.length - 1] : 0;
     return current;
+}
+
+async function updateBackupData() {
+    // Get info about last backup
+    let result = await mserver.write_poll(
+        "status",
+        line => line.includes("server closed") || line.includes("0 players connected.") || (line.includes(" / ") && line.includes("==")),
+        line => line,
+    )
+
+    result = result.split("\n")[1]
+
+    result = result
+        .split("map")[1]
+        .split("/") // theoretically, only the map name & wave # should be left
+        .map(str => str.trim()) // remove whitespace
+
+    let backupInfo = {
+        map: result[0],
+        wave: Number(result[1].split(" ")[1]),
+        time: new Date()
+    }
+
+    loadSessionData();
+
+    // if data.SESSION_DATA.backups is undefined, create it
+    if (data.SESSION_DATA.backups === undefined) {
+        data.SESSION_DATA.backups = [];
+    }
+
+    /**
+     * TODO: this stuff should be optimized; there is really no need to do this on every backup
+     * performance impact probably minimal, but it's still unnecessary
+     */
+
+    // Save backup info to `data.json`
+    // Array of backups should be in DESCENDING order (newest to oldest, only 12 at a time)
+    data.SESSION_DATA.backups.unshift(backupInfo); // add to beginning of array
+
+    // Sort array to ensure correct order (just in case)
+    data.SESSION_DATA.backups.sort((a, b) => a.time.valueOf() - b.time.valueOf()); // ascending order
+    data.SESSION_DATA.backups.reverse() // descending order
+
+    // Limit array to 12 elements
+    if (data.SESSION_DATA.backups.length > 12) {
+        data.SESSION_DATA.backups = data.SESSION_DATA.backups.slice(11)
+    }
+
+    saveSessionData();
+
 }
 
 function stopBackups() {
