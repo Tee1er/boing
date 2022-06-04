@@ -58,7 +58,7 @@ async function updateBackupData() {
         line => line,
     )
 
-    result = result.split("\n")[1]
+    result = result.split("\n")[2] // change this to one or two?
 
     result = result
         .split("map")[1]
@@ -89,7 +89,6 @@ async function updateBackupData() {
 
     // Sort array to ensure correct order (just in case)
     data.SESSION_DATA.backups.sort((a, b) => a.time.valueOf() - b.time.valueOf()); // ascending order
-    data.SESSION_DATA.backups.reverse() // descending order
 
     // Limit array to 12 elements
     if (data.SESSION_DATA.backups.length > 12) {

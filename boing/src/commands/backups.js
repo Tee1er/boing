@@ -7,10 +7,12 @@ let execute = async function (ARGUMENTS, message) {
 
     loadSessionData();
 
-    for (let i = 0; i < data.SESSION_DATA.backups.length; i++) {
-        element = data.SESSION_DATA.backups[i];
+    backups = data.SESSION_DATA.backups.reverse()
+
+    for (let i = 0; i < backups.length; i++) {
+        element = backups[i];
         embed.addFields({
-            name: `[${i + 1}] ${element.map} - Wave ${element.wave}`,
+            name: `[${backups.length - i}] ${element.map} - Wave ${element.wave}`,
             value: `${new Date(element.time).getHours().toString().padStart(2, "0")}:${new Date(element.time).getMinutes().toString().padStart(2, "0")}, ${new Date(element.time).toDateString()}`,
         });
     }
