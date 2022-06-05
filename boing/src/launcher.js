@@ -1,8 +1,7 @@
 /* eslint-disable no-undef */
-const service_win32 = process.platform === "win32";
 const child_process = require("child_process");
 const { mkdirSync } = require("fs");
-const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SERVER_DIR } = require("./globals.js");
+const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SERVER_DIR, saveSessionData } = require("./globals.js");
 
 let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
 
@@ -38,6 +37,11 @@ console.log("https://www.github.com/Tee1er/boing \n");
         console.log("Starting setup.");
         await setup();
         setupOccurred = true;
+        console.log(colors.green("Starting Boing for the first time, starting uptime tracking."))
+        data.SESSION_DATA.uptime = {}
+        data.SESSION_DATA.uptime.firstStarted = Date.now();
+        data.SESSION_DATA.uptime.msRunning = 0;
+        saveSessionData();
     }
 
     if (setupOccurred) {
@@ -83,6 +87,12 @@ async function setup() {
             name: "channelBlacklist",
             message: "Select channels to blacklist, separated by commas. (Leave blank for none.)",
         },
+        {
+            type: "numeral",
+            name: "backupFrequency",
+            message: "How often should automatic backups be made? (in seconds, default is 5m)",
+            initial: 300,
+        }
     ];
 
     const response = await enquirer.prompt(prompts);

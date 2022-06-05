@@ -5,6 +5,7 @@ const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
 const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
+const uptime = require("./uptime");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
@@ -19,7 +20,6 @@ try {
     console.log(colors.bold.red("Could not connect to Discord. Please check your token again."));
 }
 
-
 // Command storage
 var command_instances = {};
 
@@ -28,6 +28,7 @@ client.once("ready", () => {
     client.user.setActivity(`${data.SETTINGS.prefix} help`, {
         type: "LISTENING",
     });
+    uptime.startUptimeTracking()
 });
 
 // On discord message callback
@@ -40,7 +41,7 @@ client.on("message", message => {
 
     const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
-    // Memoized loading of command
+    // Memorized loading of command
     if (fs.existsSync(`${COMMANDS_DIR}/${ARGUMENTS[0]}.js`)) {
         if (!command_instances[ARGUMENTS[0]]) {
             command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
@@ -88,6 +89,11 @@ function sendNotification(message) {
 let numPlayers = 0;
 mserver.events.on("gameOver", result => {
     sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
+    // Add the game to the high scores list. (each map should have a max of three games under it)
+    // if (data.SESSION_DATA.highScores === undefined) {
+    //     data.SESSION_DATA.highScores = [];
+
+    // }
 });
 mserver.events.on("playerConnected", result => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
