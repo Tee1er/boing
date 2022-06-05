@@ -5,7 +5,7 @@ const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
 
-const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
+const { data, loadSettings, loadSessionData, COMMANDS_DIR, SERVER_CONFIG_DIR } = require("./globals");
 const uptime = require("./uptime");
 const highScores = require("./high_scores");
 
