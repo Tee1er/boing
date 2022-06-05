@@ -33,8 +33,9 @@ function startBackups(server) {
             fs.rmSync(BACKUPPATH + `/${current - 12}.msav`); //delete old backups
         }
         // Update backup data (for <prefix> backups cmd)
+        console.log("Updating backup data.")
         updateBackupData();
-    }, 300000); // 5 minutes
+    }, data.SETTINGS.backupFrequency * 1000); // 300,000ms = 5 minutes
 }
 
 function getCurrent() {
@@ -58,7 +59,13 @@ async function updateBackupData() {
         line => line,
     )
 
-    result = result.split("\n")[1]
+    lines = result.split("\n");
+
+    /**
+     * On slower devices and/or with big maps it can take a while to save the backup, this can interfere with the next backup.
+     */
+
+    result = lines[0].includes("Status") ? lines[1] : lines[2] // change this to one or two?
 
     result = result
         .split("map")[1]
@@ -89,7 +96,6 @@ async function updateBackupData() {
 
     // Sort array to ensure correct order (just in case)
     data.SESSION_DATA.backups.sort((a, b) => a.time.valueOf() - b.time.valueOf()); // ascending order
-    data.SESSION_DATA.backups.reverse() // descending order
 
     // Limit array to 12 elements
     if (data.SESSION_DATA.backups.length > 12) {
@@ -97,7 +103,6 @@ async function updateBackupData() {
     }
 
     saveSessionData();
-
 }
 
 function stopBackups() {

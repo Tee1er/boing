@@ -29,8 +29,11 @@ const regexes = Object.freeze({
 function loadSettings() {
     if (fs.existsSync(SETTINGS_FILE)) {
         module.exports.data.SETTINGS = JSON.parse(fs.readFileSync(SETTINGS_FILE).toString());
+        console.log("Loaded settings.");
+    } else {
+        console.log("Failed to load settings.")
     }
-    console.log("Loaded settings.");
+
 }
 
 function saveSettings() { fs.writeFileSync(SETTINGS_FILE, JSON.stringify(module.exports.data.SETTINGS, null, 4)) }

@@ -4,7 +4,10 @@ const { REST } = require("@discordjs/rest");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
-const { data, loadSettings, loadSessionData, COMMANDS_DIR, SERVER_CONFIG_DIR } = require("./globals");
+
+const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
+const uptime = require("./uptime");
+const highScores = require("./high_scores");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
@@ -19,7 +22,6 @@ try {
     console.log(colors.bold.red("Could not connect to Discord. Please check your token again."));
 }
 
-
 // Command storage
 var command_instances = {};
 
@@ -28,6 +30,7 @@ client.once("ready", () => {
     client.user.setActivity(`${data.SETTINGS.prefix} help`, {
         type: "LISTENING",
     });
+    uptime.startUptimeTracking()
 });
 
 /** Create map library folder if not exist */
@@ -45,7 +48,7 @@ client.on("message", message => {
 
     const ARGUMENTS = message.content.trim().split(" ").slice(1);
 
-    // Memoized loading of command
+    // Memorized loading of command
     if (fs.existsSync(`${COMMANDS_DIR}/${ARGUMENTS[0]}.js`)) {
         if (!command_instances[ARGUMENTS[0]]) {
             command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
@@ -75,7 +78,7 @@ client.on("message", message => {
                     }
                 })
                 .catch(err => {
-                    message.channel.send(`Boing error: js\`\`\`${err}\n\`\`\``);
+                    message.channel.send(`Command error: \`\`\`${err}\n\`\`\``);
                 });
         } else {
             message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
@@ -96,6 +99,7 @@ function sendNotification(message) {
 let numPlayers = 0;
 mserver.events.on("gameOver", result => {
     sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
+    highScores.checkScore(result)
 });
 mserver.events.on("playerConnected", result => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);

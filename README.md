@@ -233,7 +233,7 @@ Some other details — with all of these you'll need to provide a command to be 
   >
   > → Deletes `a_map`. It will no longer show up in the Library.
 
-- **ip:** Returns the IP (Internet Protocol) address used to join the server. 'ip' uses www.ipify.org to get the address.
+- **ip:** Returns the IP (Internet Protocol) address used to join the server. 'ip' uses www.ipify.org to get the address. Boing is honestly mainly designed mostly for people to host games with friends, not really for someting more public, so if you'd like to disable this command you can simply delete its file in `boing/src/commands`. Probably not the most elegant solution, but it works.
 
   > **b ip**
   >
@@ -262,7 +262,7 @@ Some other details — with all of these you'll need to provide a command to be 
   > 
   > → Returns information on server status. 
 
-- **status**: Returns the server's status.
+- **status**: Returns the server's status. Now with uptime statistics as of v2.4.
   > **b status**
   > 
   > → Returns information on server status. 
@@ -313,6 +313,12 @@ most the name should be more or less self explanatory.
 
 To prevent usage of any of these settings, just remove it from the list. (including the comma following it)
 
+#### Boing crashed - what do I do now?
+Even though Boing as a whole is significantly more stable than before, it still does crash occasionally in edge cases, etc. It used to be
+that if this happened you would basically lose your entire save, but with the new auto-backups feature this is no longer the case. 
+If it does crash, simply restart and type `b rollback` (or with your unique prefix) to use the last backup taken. At most you should lose a couple
+minutes or so of progress. 
+
 #### Need help?
 
 Submit an issue with the **help** label.
@@ -321,7 +327,7 @@ Submit an issue with the **help** label.
 
 ## Roadmap
 
-Currently, Boing is on **Version 2.3**.
+Currently, Boing is on **Version 2.4**.
 
 **Version 2.0**
 
@@ -358,6 +364,9 @@ Currently, Boing is on **Version 2.3**.
 
 **Version 2.3**
 
-- [ ] Rewrite portions of codebase to allow for hosting of multiple server instances. ( pushed back to 2.4 or possibly shelved )
+- [ ] ~~Rewrite portions of codebase to allow for hosting of multiple server instances. ( pushed back to 2.4 or possibly shelved )~~
 - [ ] ~~Find a better way of making Boing a service / run in background.~~
-- [ ] A tray utility would be *nice* but isn't really necessary. If we have time.
+- [ ] ~~A tray utility would be *nice* but isn't really necessary. If we have time.~~
+
+**Version 2.4**
+- See release notes.
