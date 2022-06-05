@@ -6,6 +6,7 @@ const mserver = require("./mserver");
 const backups = require("./backups");
 const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
 const uptime = require("./uptime");
+const highScores = require("./high_scores");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
@@ -68,7 +69,7 @@ client.on("message", message => {
                     }
                 })
                 .catch(err => {
-                    message.channel.send(`Boing error: js\`\`\`${err}\n\`\`\``);
+                    message.channel.send(`Command error: \`\`\`${err}\n\`\`\``);
                 });
         } else {
             message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
@@ -89,11 +90,7 @@ function sendNotification(message) {
 let numPlayers = 0;
 mserver.events.on("gameOver", result => {
     sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
-    // Add the game to the high scores list. (each map should have a max of three games under it)
-    // if (data.SESSION_DATA.highScores === undefined) {
-    //     data.SESSION_DATA.highScores = [];
-
-    // }
+    highScores.checkScore(result)
 });
 mserver.events.on("playerConnected", result => {
     sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);

@@ -67,10 +67,6 @@ async function updateBackupData() {
 
     result = lines[0].includes("Status") ? lines[1] : lines[2] // change this to one or two?
 
-    console.log("RES" + result)
-
-    console.log("MAP " + result.split("map")[1])
-
     result = result
         .split("map")[1]
         .split("/") // theoretically, only the map name & wave # should be left
