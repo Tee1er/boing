@@ -4,6 +4,7 @@ const { REST } = require("@discordjs/rest");
 const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
+
 const { data, loadSettings, loadSessionData, COMMANDS_DIR } = require("./globals");
 const uptime = require("./uptime");
 const highScores = require("./high_scores");
@@ -32,6 +33,11 @@ client.once("ready", () => {
     uptime.startUptimeTracking()
 });
 
+/** Create map library folder if not exist */
+if (!fs.existsSync(path.join(`${SERVER_CONFIG_DIR}/saves/boing-library`))) {
+    fs.mkdirSync(path.resolve(`${SERVER_CONFIG_DIR}/saves/boing-library`));
+}
+
 // On discord message callback
 client.on("message", message => {
     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
@@ -55,6 +61,9 @@ client.on("message", message => {
     let allowed = (c.info.adminOnly === true && isAdmin) || c.info.adminOnly === false || c.info.adminOnly === undefined;
 
     if (allowed) {
+    	if (c.preExecuteMsg) {
+    		message.channel.send(c.preExecuteMsg)
+    	}
         let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
         if (cmd_execution) {
             cmd_execution

@@ -33,6 +33,5 @@ module.exports = {
         descrip: "Hosts a new map. Randomly selected if map name not given. See `b maps` for a list.",
         longDescrip: `Hosts a map. The map is randomly selected if a map is not given as an argument. See \`<prefix> maps\` for a list. 
             Note that if the server is already hosting a map, it will return an error.  Stop the server with \`<prefix> stop\` *first* before using \`host\`.`,
-
     }
 };

@@ -48,63 +48,38 @@ Finally, to confirm, run:
 
     sudo apt install default-jdk
 
-**RHEL/Fedora/CentOS/others**
-See the Fedora docs for information on installing Java. The dedicated server requires at least Java 8+. 
+**Fedora**
+
+See the docs below for information on installing Java. The dedicated server requires at least Java 8+.
 
 [https://docs.fedoraproject.org/en-US/quick-docs/installing-java/]()
 
+**Others**
+
+Consult documentation for your specific distro ("how to install Java on [MY DISTRO]")
+
 ### Boing Installation
-Installing Boing is similar to on Windows — return to the [README](../README.md).
+**4.** Installing Boing is similar to on Windows — return to the [README](../README.md).
 
-### Boing as a Service *(Debian only)*
+> **4a.** Don't forget to make `run.sh` executable. `chmod +x run.sh`
 
-**4.** For Linux, creating a service is relatively easy. This guide applies only to those with `systemd`, but that should be the vast majority of users.
+### Running in the Background
 
-On **Debian**:
+**5.** If you SSH into your instance of Linux, to keep it running after you disconnect, simply use
 
-Create a file called `boing.service` in `/etc/systemd/system`
+    nohup ./run.sh &
 
-    touch /etc/systemd/system
+This will keep it from terminating the program after you close your session.
 
-Paste in the following contents:
+> **5a.** Alternatively, you can try `tmux` if that doesn't work. For those on Raspbian, 
+> you may or may not need to install it first.
+> However, once you have, simply type `tmux` to start a new session, and then start `run.sh` in > that way. Finally, use **Ctrl-Shift-B** to close the session. (Shift is required so that tmux interprets it instead of Boing)
+> See [this](https://askubuntu.com/questions/8653/how-to-keep-processes-running-after-ending-ssh-session) Stack Exchagne answer for more.
 
-    [Unit]
-    Description=BoingMDI
-    After=network.target
+Using tools / daemons like systemctl, forever, nodemon, etc, are possible. However, there is an issue where Boing itself will be started, but the 
+server either is not started or does not accept input. This is a known issue, but I'm not sure how to fix it. 
 
-    [Service]
-    Type=simple
-    ExecStart=/bin/bash /your/path/here
-    Restart=on-failure
-
-    [Install]
-    WantedBy=default.target
-
-Replace `/your/path/here` with the path to `run.sh` in your Boing installation.
-Note that this needs to be an absolute path, not a relative one.
-
-Now, edit the `run.sh` file.
-
-Add the following line just below the shebang at the top (`#/bin/bash`) and
-before the "`# Install node modules`" comment.
-
-    cd /path/to/your/boing
-
-Replace `path/to/your/boing` with the path to the directory where Boing is located (*not* the "boing" folder in which source is located, the one in which `run.sh`, the `README`, etc are located)
-
-**5.** Finally, create your service.
-
-Test the service first by running:
-
-    sudo systemctl start boing
-
-Confirm everything is working properly:
-
-    systemctl status boing
-
-If everything seems to be OK, then enable the service so it will automatically start.
-
-    sudo systemctl enable boing
+In any case, this seems to be pretty simple and works relatively well. You *will* have to manually restart Boing when/if it crashes, though. 
 
 <hr>
 

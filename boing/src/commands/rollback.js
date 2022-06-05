@@ -37,4 +37,5 @@ module.exports = {
         longDescrip: `Loads a backup. Backups are taken every 5 minutes, the command will load the *n*th backup — *n* being the number of saves to rollback. 
         For example, \`<prefix> rollback 12\` will load the 12th backup. If no argument is given, the most recent backup will be loaded.`,
     },
+    preExecuteMsg: "Loading backup..."
 };

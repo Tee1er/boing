@@ -4,7 +4,7 @@ const { loadSessionData, data } = require("../globals.js")
 let execute = async function (ARGUMENTS, message) {
     let value = await mserver.write_poll(
         "status",
-        line => line.includes("server closed") || line.includes("0 players connected.") || (line.includes(" / ") && line.includes("==")),
+        line => line.includes("server closed") || line.includes("players connected.") || (line.includes(" / ") && line.includes("==")),
         line => line,
     );
     // Get server uptime information.

@@ -16,5 +16,6 @@ module.exports = {
         name: "load",
         descrip: "Loads a game from the Map Library. This is *not* the same as `import`.",
         longDescrip: "Loads a game from the Map Library."
-    }
+    },
+    preExecuteMsg: "Loading save..."
 };
