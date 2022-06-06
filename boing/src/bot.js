@@ -35,6 +35,7 @@ client.once("ready", () => {
 
 /** Create map library folder if not exist */
 if (!fs.existsSync(path.join(`${SERVER_CONFIG_DIR}/saves/boing-library`))) {
+    fs.mkdirSync(`${SERVER_CONFIG_DIR}/saves`);
     fs.mkdirSync(`${SERVER_CONFIG_DIR}/saves/boing-library`);
 }
 
