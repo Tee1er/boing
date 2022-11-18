@@ -1,24 +1,25 @@
-const mserver = require("../mserver.js");
+const { SlashCommandBuilder } = require("discord.js")
 
-let execute = function(ARGUMENTS) {
-    if (ARGUMENTS[1]) {
-        return mserver.write_recv(`host ${ARGUMENTS[1]}`)
+let execute = function (interaction) {
+    const mserver = require("../mserver.js");
+    if (interaction.options.getString("name")) {
+        return mserver.write_recv(`host ${interaction.options.getString("name")} ${interaction.options.getString("gamemode")}`)
             .then(result => {
                 if (result.includes("Loading map")) {
-                    return `Hosting map. \`\`\`js\n${result} \`\`\` `;
+                    interaction.reply(`Hosting map ${interaction.options.getString("name")} in mode \`${interaction.options.getString("gamemode")}\`. \`\`\`js\n${result} \`\`\` `);
                 } else if (result.includes("Already hosting")) {
-                    return `**An error occured.** The server may be already hosting a map. \`\`\`js\n${result} \`\`\` `;
+                    interaction.reply(`**An error occurred.** The server may be already hosting a map. \`\`\`js\n${result} \`\`\` `);
                 } else {
-                    return "**An error occured.** Did you misspell the map name?";
+                    interaction.reply("**An error occurred.** Did you misspell the map name?");
                 }
             });
     } else {
         return mserver.write_recv("host")
             .then(result => {
                 if (result.includes("Randomized next map")) {
-                    return `Hosting random map. \`\`\`js\n${result} \`\`\` `;
+                    interaction.reply(`Hosting random map. \`\`\`js\n${result} \`\`\` `);
                 } else {
-                    return `An error occured. \`\`\`js\n${result} \`\`\` `;
+                    interaction.reply(`An error occurred. \`\`\`js\n${result} \`\`\` `);
                 }
             });
     }
@@ -28,10 +29,21 @@ let execute = function(ARGUMENTS) {
 
 module.exports = {
     execute,
-    info: {
-        name: "host",
-        descrip: "Hosts a new map. Randomly selected if map name not given. See `b maps` for a list.",
-        longDescrip: `Hosts a map. The map is randomly selected if a map is not given as an argument. See \`<prefix> maps\` for a list. 
-            Note that if the server is already hosting a map, it will return an error.  Stop the server with \`<prefix> stop\` *first* before using \`host\`.`,
-    }
+    info: new SlashCommandBuilder()
+        .setName("host")
+        .setDescription("Hosts a map.")
+        .addStringOption(option =>
+            option.setName("name")
+                .setDescription("[optional] The name of the map to host. If left blank, the server will pick a random default map.")
+        )
+        .addStringOption(option =>
+            option.setName("gamemode")
+                .setDescription("[optional] The gamemode to host. If left blank, the server will default to survival.")
+                .addChoices(
+                    { name: "Survival", value: "survival" },
+                    { name: "PvP", value: "pvp" },
+                    { name: "Attack", value: "attack" },
+                    { name: "Sandbox", value: "sandbox" },
+                )
+        )
 };

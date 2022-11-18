@@ -1,6 +1,5 @@
 const readline = require("readline");
 const child_process = require("child_process");
-const bot = require("./bot.js");
 const EventEmitter = require("events");
 const { SERVER_JAR, SERVER_DIR, regexes } = require("./globals");
 // const { appendFileSync, appendFile, existsSync, createWriteStream } = require("fs");

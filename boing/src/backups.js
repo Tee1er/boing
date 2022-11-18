@@ -59,6 +59,8 @@ async function updateBackupData() {
         line => line,
     )
 
+
+
     lines = result.split("\n");
 
     /**
@@ -114,4 +116,5 @@ module.exports = {
     startBackups,
     stopBackups,
     getCurrent,
+    updateBackupData
 };

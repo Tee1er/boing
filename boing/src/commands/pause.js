@@ -1,16 +1,15 @@
-const mserver = require("../mserver.js");
+const { SlashCommandBuilder } = require("discord.js")
 
-let execute = function() {
+let execute = function (interaction) {
+    const mserver = require("../mserver.js");
     return mserver.write_recv("pause on").then(result => {
-        return "Game paused. ";
+        interaction.reply("Game paused.");
     });
 };
 
 module.exports = {
     execute,
-    info: {
-        name: "pause",
-        descrip: "Pauses the game.",
-        longDescrip: "Pauses the game. To unpause it, use `<prefix> unpause`."
-    }
+    info: new SlashCommandBuilder()
+        .setName("pause")
+        .setDescription("Pauses the game."),
 };

@@ -1,11 +1,18 @@
-const mserver = require("../mserver.js");
-const { data, loadSessionData } = require("../globals");
-const { MessageEmbed } = require("discord.js");
+const { EmbedBuilder, SlashCommandBuilder } = require("discord.js");
 
-let execute = async function (ARGUMENTS, message) {
-    let embed = new MessageEmbed().setColor("#E67B29").setTitle("Auto-backups").setFooter("Boing - github.com/Tee1er/boing");
+
+let execute = async function (interaction) {
+    const { data, loadSessionData, saveSessionData } = require("../globals");
 
     loadSessionData();
+
+    if (data.SESSION_DATA.backups === undefined) {
+        data.SESSION_DATA.backups = [];
+    }
+
+    saveSessionData();
+
+    let embed = new EmbedBuilder().setColor("#E67B29").setTitle("Auto-backups").setFooter({ text: "Boing - github.com/Tee1er/boing" });
 
     backups = data.SESSION_DATA.backups.reverse()
 
@@ -17,14 +24,12 @@ let execute = async function (ARGUMENTS, message) {
         });
     }
 
-    return Promise.resolve(embed)
+    interaction.reply({ embeds: [embed], ephemeral: true });
 };
 
 module.exports = {
     execute,
-    info: {
-        name: "backups",
-        descrip: "Returns information about the automatic backups taken by Boing. ",
-        longDescrip: "Returns information about the automatic backups taken by Boing, including the wave, time, and map. " // TODO
-    }
+    info: new SlashCommandBuilder()
+        .setName("backups")
+        .setDescription("Lists all available backups.")
 };

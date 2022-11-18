@@ -1,16 +1,15 @@
-const mserver = require("../mserver.js");
+const { SlashCommandBuilder } = require("discord.js")
 
-let execute = function() {
+let execute = function (interaction) {
+    const mserver = require("../mserver.js");
     return mserver.write_recv("stop").then(result => {
-        return "Game stopped.";
+        interaction.reply("Game stopped.");
     });
 };
 
 module.exports = {
     execute,
-    info: {
-        name: "stop",
-        descrip: "Stops hosting the map.",
-        longDescrip: "Stops the map the server is currently hosting. Does *not* stop Boing altogether."
-    }
+    info: new SlashCommandBuilder()
+        .setName("stop")
+        .setDescription("Stops hosting."),
 };

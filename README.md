@@ -8,21 +8,22 @@
 
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
   
-  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily. 
+  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily.
+
 ****
 
 #### Table of Contents
 
 - [Getting Started](#getting-started)
-    - [Bot Setup](#bot-setup)
-    - [Boing Setup](#boing-setup)
-    - [Network Setup](#network-setup)
+  - [Bot Setup](#bot-setup)
+  - [Boing Setup](#boing-setup)
+  - [Network Setup](#network-setup)
 - [Features](#features)
 - [Commands](#commands)
 - [Troubleshooting & Additional Information](#troubleshooting--additional-information)
-    - [Fixing Incorrect Information ](#fixing-incorrect-information)
-    - [Administrator Permissions](#administrator-permissions)
-    - ["config" and allowed settings](#"config"-and-allowed-settings)
+  - [Fixing Incorrect Information](#fixing-incorrect-information)
+  - [Administrator Permissions](#administrator-permissions)
+  - ["config" and allowed settings](#"config"-and-allowed-settings)
 - [Roadmap](#roadmap)
 
 <hr>
@@ -46,11 +47,11 @@ Note that both will have to be added to PATH (check the box when installing) for
 
 #### Bot Setup
 
-First, we'll begin by going to the Discord Developer Portal, at https://discord.com/developers/applications.
+First, we'll begin by going to the Discord Developer Portal, at <https://discord.com/developers/applications>.
 
 Create a new project by clicking on the blue button in the top right corner (**New Application**)
 
-That should take you to the control panel for your new application. 
+That should take you to the control panel for your new application.
 
 Switch to the **Add Bot** tab - the **General Information** tab is of no interest to us right now.
 
@@ -58,7 +59,7 @@ Create for yourself a new bot using the button on the right. (**Add Bot**) Next,
 
 Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
-You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server. 
+You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server.
 
 In the box **Scopes**, check off the permission **Bot**.
 
@@ -91,7 +92,7 @@ When you start Boing for the first time, you will be asked to provide some infor
   Please enter your bot's token. » YOUR-TOKEN-HERE
   ```
 
-- The notifications channel is where Boing will send messages when users join, leave, and when a game ends. 
+- The notifications channel is where Boing will send messages when users join, leave, and when a game ends.
 
 - Channel blacklisting is where Boing will be disabled in certain channels that you can specify. (See the [Additional Information](#troubleshooting-&-additional-information))
 
@@ -99,12 +100,12 @@ If you encounter any problems during this entire process, please consult the [he
 
 #### Network Setup
 
-If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you _do_ plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
+If you only plan to play with people in the same LAN as you, then you can stop here & skip this step. However, if you *do* plan to play with others outside of your local network, you'll need to set up port forwarding. Now, this step will likely not be the same for every router. Look under "Administratior" or "Advanced Setup" headers, and consult your router's manufacturer's website if you haven't already.
 
 The gist of it: forward **port 6567** to the local IP of the PC Boing is running on. Search up ["find my local IP"](https://www.google.com/search?q=find+my+local+IP) for more on how to find that. After you've completed the previous step, others should now be able to find the IP of the server using the command `b ip`; they can enter that in under the **Join Game** tab in-game.
 
 <hr>
-You're now done with Boing installation! ✅ 
+You're now done with Boing installation! ✅
 <hr>
 
 #### Notes
@@ -118,7 +119,7 @@ As of version 2.3, Service Mode is no longer a part of Boing — its reliability
 - **Task Scheduler**
 <br>
   This is a surprisngly good choice for creating a service, and it's built into Windows which is a *huge* plus. The only reason it's not listed first is because, as far as I can tell:
-  if you start programs using Task Scheduler they won't show up in Task Manager's Services tab. It's not a big deal — you'll know Boing is running if you can connect. 
+  if you start programs using Task Scheduler they won't show up in Task Manager's Services tab. It's not a big deal — you'll know Boing is running if you can connect.
   
   Great if you're not as comfortable using the command line.
 
@@ -127,18 +128,16 @@ As of version 2.3, Service Mode is no longer a part of Boing — its reliability
   Another command line tool, but this one is built into Windows Powershell. Not as simple as NSSM, which is why it's last on this list, but if you're willing to go through some docs,
   I'm sure it would work just as well.
 
-Some other details — with all of these you'll need to provide a command to be run: you should start either `run.bat` or, alternatively, if that doesn't work: try `launcher.js`, which is located in the 
+Some other details — with all of these you'll need to provide a command to be run: you should start either `run.bat` or, alternatively, if that doesn't work: try `launcher.js`, which is located in the
 `boing/src` folder.
-
-
 
 ## Features
 
 - **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
-- **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels. 
-- **Automatic backups:** Boing takes backups automatically every 5 minutes, adding an extra safety net if you mess up. 
-- **Map Library:** Store user-content server-side, and let users play those maps on-demand. 
-  - The Map Library stores uploaded maps & loads them when desired. These maps can be deleted, renamed, etc. 
+- **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels.
+- **Automatic backups:** Boing takes backups automatically every 5 minutes, adding an extra safety net if you mess up.
+- **Map Library:** Store user-content server-side, and let users play those maps on-demand.
+  - The Map Library stores uploaded maps & loads them when desired. These maps can be deleted, renamed, etc.
   - Maps are stored in `server/config/saves/boing-library`
 
 ## Commands
@@ -147,22 +146,20 @@ Some other details — with all of these you'll need to provide a command to be 
 
  All of these examples assume you are using 'b' as the prefix. If this is not the case, then simply substitute the prefix you are using.
 
-
- - **help:** Provides information on available commands.
+- **help:** Provides information on available commands.
 
    > **b help**
    >
    > → Returns an embed with descriptions of available commands.
 
-
-- **host:** Hosts a new map. Will select a random map if one is not given. 
+- **host:** Hosts a new map. Will select a random map if one is not given.
 
   > **b host**
-  > 
+  >
   > → Hosts a new map, randomly selected from the default maps. (see the 'maps' command for a list)
   >  
   > **b host Ancient_Caldera or b host ancient_caldera**
-  > 
+  >
   > → Hosts the map "Ancient_Caldera". Map names are not case-sensitive, both "Ancient_Caldera" and "ancient_caldera" would work. However, the underscores in the name *are* required.
 
 - **pause/unpause**: Pauses or unpauses the game. This stops all player movement, as well as conveyor belts, production, etc.
@@ -181,11 +178,11 @@ Some other details — with all of these you'll need to provide a command to be 
   >
   > → Stops hosting the map.
 
-- **export:** Posts the currently hosted map on Discord as an attachment in .msav format. You can specify a name - if you don't, then Boing will generate one automatically. No spaces are allowed in the name - try substituting underscores (_) or dashes (-) instead. 
+- **export:** Posts the currently hosted map on Discord as an attachment in .msav format. You can specify a name - if you don't, then Boing will generate one automatically. No spaces are allowed in the name - try substituting underscores (_) or dashes (-) instead.
 
   > **b export**
   >
-  > →  Exports the map to Discord as an .msav, with a random name. 
+  > →  Exports the map to Discord as an .msav, with a random name.
   >
   > **b export my_save**
   >
@@ -203,7 +200,7 @@ Some other details — with all of these you'll need to provide a command to be 
   >
   > →  Displays a list of the default maps.
 
-- **library:** Shows the maps in the Map Library. For more information on the Map Library, please see the Features section, above. 
+- **library:** Shows the maps in the Map Library. For more information on the Map Library, please see the Features section, above.
 
   > **b library**
   >
@@ -215,7 +212,7 @@ Some other details — with all of these you'll need to provide a command to be 
   >
   > → Adds this map to the Map Library, under the name my_map. (assuming a file was attached)
 
-- **load:** Hosts a map from the Map Library, using its case-sensitive name. 
+- **load:** Hosts a map from the Map Library, using its case-sensitive name.
 
   > **b load my_map**
   >
@@ -245,35 +242,33 @@ Some other details — with all of these you'll need to provide a command to be 
   >
   > → Stops the server & loads the latest backup.
   > **b rollback 6**
-  > 
+  >
   > → Stops the server and loads the 6th latest backup (meaning it should go back roughly 30 minutes, or 6 * 5.)
 
 - **config**: Allows users w/ the administrator role (specified during setup) to change some server configuration options.
 
   > **b config**
   >
-  > → Lists all the available configuration options. 
+  > → Lists all the available configuration options.
   > **b config name myserver**
-  > 
+  >
   > → Sets the configuration option "name" to "myserver"
 
 - **status**: Returns the server's status.
   > **b status**
-  > 
-  > → Returns information on server status. 
+  >
+  > → Returns information on server status.
 
 - **status**: Returns the server's status. Now with uptime statistics as of v2.4.
   > **b status**
-  > 
-  > → Returns information on server status. 
+  >
+  > → Returns information on server status.
 
 ## Troubleshooting & Additional Information
 
+#### Fixing Incorrect Information
 
-#### Fixing Incorrect Information 
-
-Boing stores that information in a JSON file, which can be found under `boing/data/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. If you are using a service for Boing you'll need to restart it for the changes to take effect. 
-
+Boing stores that information in a JSON file, which can be found under `boing/data/settings.json`. This file stores your preferences, including your token. Modifying the information in this file will modify Boing's settings. If you are using a service for Boing you'll need to restart it for the changes to take effect.
 
 ```json
 {
@@ -293,13 +288,12 @@ look like this now:
 {}
 ```
 
-
 #### Administrator Permissions
 
 Boing 2.2 introduced the ability to set an *administrator role,* which gives users with those roles special permissions.
 Currently the only command that takes advantage of this feature is `config`, but more might be come in the future.
 People with administrator permissions have a significant amount of power over the server using `config`, which is why you might
-want to edit the settings they can change. 
+want to edit the settings they can change.
 
 #### "config" and allowed settings
 
@@ -314,10 +308,11 @@ most the name should be more or less self explanatory.
 To prevent usage of any of these settings, just remove it from the list. (including the comma following it)
 
 #### Boing crashed - what do I do now?
+
 Even though Boing as a whole is significantly more stable than before, it still does crash occasionally in edge cases, etc. It used to be
-that if this happened you would basically lose your entire save, but with the new auto-backups feature this is no longer the case. 
+that if this happened you would basically lose your entire save, but with the new auto-backups feature this is no longer the case.
 If it does crash, simply restart and type `b rollback` (or with your unique prefix) to use the last backup taken. At most you should lose a couple
-minutes or so of progress. 
+minutes or so of progress.
 
 #### Need help?
 
@@ -341,26 +336,21 @@ Currently, Boing is on **Version 2.4**.
 - [x] Better README
 - [ ] ~~Chat Relay, w/ streams.~~
 
-
-
-**Version 2.1** 
+**Version 2.1**
 
 - [x] Autosaving.
 - [x] Rich presence statuses to show when Boing is online?
 
+**Version 2.2**
 
-
-**Version 2.2** 
-
-- [ ] ~~Add a web admin dashboard?~~ 
-- [x] Role permissions, so only authorized users can use certain commands. 
+- [ ] ~~Add a web admin dashboard?~~
+- [x] Role permissions, so only authorized users can use certain commands.
 - [ ] Ban, pardon, and kick commands, for administrators only.
 - [ ] Mechanism so that users can change settings *after* setup. (probably ties into some sort of Discord-based admin system, replacing the web-based one.)
 - [x] Server auto-updating
-- [ ] Upgraded Chat Relay w/ webhooks. 
+- [ ] Upgraded Chat Relay w/ webhooks.
 - [x] Upgraded autosave / backup system allowing rollback of multiple saves.
 - [ ] Slash commands
-
 
 **Version 2.3**
 
@@ -369,4 +359,5 @@ Currently, Boing is on **Version 2.4**.
 - [ ] ~~A tray utility would be *nice* but isn't really necessary. If we have time.~~
 
 **Version 2.4**
+
 - See release notes.

@@ -1,36 +1,40 @@
-const mserver = require("../mserver.js");
-const crypto = require("crypto");
-const { server } = require("../mserver.js");
-const { MessageAttachment } = require("discord.js");
-const { resolve } = require("path");
-const { rm } = require("fs/promises");
-const { DATA_DIR, SERVER_CONFIG_DIR } = require("../globals.js");
+const { AttachmentBuilder, SlashCommandBuilder } = require("discord.js");
 
-let execute = async function(ARGUMENTS, message) {
+
+let execute = async function (interaction) {
+    const mserver = require("../mserver.js");
+    const crypto = require("crypto");
+    const { resolve } = require("path");
+    const { rm } = require("fs/promises");
+    const { SERVER_CONFIG_DIR } = require("../globals.js");
+    await interaction.deferReply();
+
     let fileName = `E-${crypto.randomBytes(4).toString("hex")}`;
     let result = await mserver.write_recv(`save ${fileName}`);
-    if (!result.includes("Saved to")) {
-        return "An error occured. The save could not be exported.";
-    } else if (result.includes("Not hosting")) {
-        return "Error, The server is not hosting a map.";
+    if (result.includes("Not hosting")) {
+        await interaction.editReply("Could not export; the server is not hosting a map.");
+        return;
     }
     let attachment;
     let filePath = resolve(`${SERVER_CONFIG_DIR}/saves/${fileName}.msav`);
-    if (ARGUMENTS[1]) {
-        attachment = new MessageAttachment(filePath, ARGUMENTS[1] + ".msav");
+    if (interaction.options.getString("name")) {
+        attachment = new AttachmentBuilder(filePath, { name: interaction.options.getString("name") + ".msav" });
     } else {
-        attachment = new MessageAttachment(filePath, fileName + ".msav");
+        attachment = new AttachmentBuilder(filePath, { name: fileName + ".msav" });
     }
     rm(filePath);
 
-    return ["Here's your save file:", attachment];
+    interaction.editReply({ content: "Exported map.", files: [attachment] });
 };
 
 module.exports = {
     execute,
-    info: {
-        name: "export",
-        descrip: "Exports the game.",
-        longDescrip: "Saves the currently running game & posts it. A name can be specified; if not, Boing will automatically generate one. `export` automatically deletes the file after it has been exported."
-    }
+    info: new SlashCommandBuilder()
+        .setName("export")
+        .setDescription("Exports the current map to a file in '.msav' format.")
+        .addStringOption(option =>
+            option.setName("name")
+                .setDescription("[optional] The name of the exported map.")
+        ),
+
 };

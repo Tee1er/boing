@@ -1,16 +1,15 @@
 const { get } = require("axios").default;
+const { SlashCommandBuilder } = require('@discordjs/builders');
 
-let execute = async function() {
-    let response = await get("https://api.ipify.org", {params: {format:"json"}});
-    
-    return `The server's IP is **${response.data.ip}**`;
+let execute = async function (interaction) {
+    let response = await get("https://api.ipify.org", { params: { format: "json" } });
+
+    interaction.reply({ content: `The server's IP is **${response.data.ip}**`, ephemeral: true });
 };
 
 module.exports = {
     execute,
-    info: {
-        name: "ip",
-        descrip: "Provides the IP of the server.",
-        longDescrip: "Provides the IP of the server. This does *not* guarantee proper functionality."
-    }
+    info: new SlashCommandBuilder()
+        .setName("ip")
+        .setDescription("Get the server's IP address."),
 };
