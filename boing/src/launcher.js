@@ -69,12 +69,6 @@ async function setup() {
         },
         {
             type: "input",
-            name: "prefix",
-            message: "Please enter a prefix. (default is 'b')",
-            initial: "b",
-        },
-        {
-            type: "input",
             name: "clientId",
             message: "Please enter your bot's client ID.",
         },
