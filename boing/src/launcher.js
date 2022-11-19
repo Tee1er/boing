@@ -96,7 +96,7 @@ async function setup() {
         {
             type: "numeral",
             name: "backupFrequency",
-            message: "How often should automatic backups be made? (in seconds, default is 5m)",
+            message: "How often should automatic backups be made? (in seconds, default is 5m/300s)",
             initial: 300,
         }
     ];

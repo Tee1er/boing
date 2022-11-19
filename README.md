@@ -7,8 +7,10 @@
 - **Multiplayer:** Easily play together with friends --  no need to set up your own Dedicated Server.
 
 - **Easy to install:** Almost anyone should be able to get Boing working, with little to no technical knowledge required.
+
+- **Slash-commands:** Boing is now compatible with Discord's new slash commands system!
   
-  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together that much more easily.
+  Boing is an extra layer on top of the Mindustry Dedicated Server that allows you to control it remotely using a Discord bot. This enables you and your friends to play together much more easily.
 
 ****
 
@@ -27,7 +29,7 @@
 - [Roadmap](#roadmap)
 
 <hr>
-Last updated for <b>v2.3</b> ⚙️
+Last updated for <b>v2.4</b> ⚙️
 <hr>
 
 ## Getting Started
@@ -55,23 +57,24 @@ That should take you to the control panel for your new application.
 
 Switch to the **Add Bot** tab - the **General Information** tab is of no interest to us right now.
 
-Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](https://github.com/Tee1er/boing/tree/main/media) if you'd like to use those, but of course, you can always upload your own, or even just leave it as the default.
+Create for yourself a new bot using the button on the right. (**Add Bot**) Next, give it a username & profile picture. There are Boing logos available [here](https://github.com/Tee1er/boing/tree/main/docs/media) if you'd like to use those, but of course, you can always upload your own, or even just leave it as the default.
 
-Copy your token by clicking on the **Copy** button. Keep that safe somewhere, and make sure not to share it. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
+Copy your token by clicking on the **Copy** button. Note that down somewhere. You'll need it to set up Boing. (If you do share it by accident, scroll down to the Help section.)
 
 You're almost done! Now, navigate to the **OAuth 2** tab. In this step, we're going to have your bot join a server.
 
-In the box **Scopes**, check off the permission **Bot**.
+In the box **Scopes**, check off the permission **bot** & **application.commands**.
 
-Now, scroll down 'till you find **Bot Permissions**. Give your bot permission to send messages by checking that box (**Send Messages**), too. You're almost done!
-
-Finally, scroll back up and copy the URL in the **Scopes** box. If you did everything right, it *should* look something like this, with numbers in place of the X's here, obviously.
-
-```
-https://discord.com/api/oauth2/authorize?client_id=XXXXXXXXXXXXXXXXXX&permissions=2048&scope=bot
-```
+Finally, scroll back up and copy the URL in the **Generated URL** box.
 
 Paste that URL into your web browser of choice, and follow the prompts to add Boing to your server. To do this, you need the **Manage Server** permission.
+
+Finally, two more pieces of information we'll need to set up Boing later;
+
+**Client ID**: Select the **OAuth2 > General**  tab and copy the Client ID, which should be a long number with around 20 digits.
+
+**Guild (Server) ID**: Go to **User Settings > Advanced** in your Discord user settings & turn on **Developer Mode**. Then, find the server you want to
+use Boing in, right-click, and copy the ID.
 
 #### Boing Setup
 
@@ -86,15 +89,9 @@ Run `run.bat` (or `run.sh` if you are on a *NIX system), which should start Boin
 
 When you start Boing for the first time, you will be asked to provide some information.
 
-- When you are asked to enter your token, that's the one we copied from Discord earlier, and that I asked you to save. Paste that in now.
+- Note that the notifications channel is where Boing will send messages when users join, leave, and when a game ends.
 
-  ```
-  Please enter your bot's token. » YOUR-TOKEN-HERE
-  ```
-
-- The notifications channel is where Boing will send messages when users join, leave, and when a game ends.
-
-- Channel blacklisting is where Boing will be disabled in certain channels that you can specify. (See the [Additional Information](#troubleshooting-&-additional-information))
+- Administrator roles are required for use of the /modify-config command.
 
 If you encounter any problems during this entire process, please consult the [help](#-help) section below, and/or file an issue in the GitHub Issues tab.
 
@@ -110,7 +107,7 @@ You're now done with Boing installation! ✅
 
 #### Notes
 
-As of version 2.3, Service Mode is no longer a part of Boing — its reliability and ease of setup left a lot to be desired. Instead, we reccomend you try using one of these tools instead.
+As of version 2.3, Service Mode is no longer a part of Boing — its reliability and ease of setup left a lot to be desired. Instead, we recommend you try using one of these tools instead.
 
 - [**nssm**](https://nssm.cc/download)
 <br>
@@ -130,139 +127,6 @@ As of version 2.3, Service Mode is no longer a part of Boing — its reliability
 
 Some other details — with all of these you'll need to provide a command to be run: you should start either `run.bat` or, alternatively, if that doesn't work: try `launcher.js`, which is located in the
 `boing/src` folder.
-
-## Features
-
-- **Enhanced Help**: By adding 'help' to the end of any command, you can access detailed help information.
-- **Channel Blacklist**: Channels can be blacklisted, preventing users from using Boing in those channels.
-- **Automatic backups:** Boing takes backups automatically every 5 minutes, adding an extra safety net if you mess up.
-- **Map Library:** Store user-content server-side, and let users play those maps on-demand.
-  - The Map Library stores uploaded maps & loads them when desired. These maps can be deleted, renamed, etc.
-  - Maps are stored in `server/config/saves/boing-library`
-
-## Commands
-
- A quick note: this README is liable to be outdated. This commands list was last updated for v2.3. Therefore, the actual help command will likely provide for more up-to-date stuff.
-
- All of these examples assume you are using 'b' as the prefix. If this is not the case, then simply substitute the prefix you are using.
-
-- **help:** Provides information on available commands.
-
-   > **b help**
-   >
-   > → Returns an embed with descriptions of available commands.
-
-- **host:** Hosts a new map. Will select a random map if one is not given.
-
-  > **b host**
-  >
-  > → Hosts a new map, randomly selected from the default maps. (see the 'maps' command for a list)
-  >  
-  > **b host Ancient_Caldera or b host ancient_caldera**
-  >
-  > → Hosts the map "Ancient_Caldera". Map names are not case-sensitive, both "Ancient_Caldera" and "ancient_caldera" would work. However, the underscores in the name *are* required.
-
-- **pause/unpause**: Pauses or unpauses the game. This stops all player movement, as well as conveyor belts, production, etc.
-
-  > **b pause**
-  >
-  > → Pauses the game.
-  >
-  > **b unpause**
-  >
-  > → Unpauses the game
-
-- **stop:** Stops hosting the map. Players will not be able to join.
-
-  > b stop
-  >
-  > → Stops hosting the map.
-
-- **export:** Posts the currently hosted map on Discord as an attachment in .msav format. You can specify a name - if you don't, then Boing will generate one automatically. No spaces are allowed in the name - try substituting underscores (_) or dashes (-) instead.
-
-  > **b export**
-  >
-  > →  Exports the map to Discord as an .msav, with a random name.
-  >
-  > **b export my_save**
-  >
-  > →  Exports the map to Discord as my_save.msav
-
-- **import:** When used with a file attached to the message, and if the game is stopped (use `b stop`), 'import' will host the save attached to the message. Saves must be in .msav format, and cannot be image files.
-
-  > **b import**
-  >
-  > →  If a .msav file is attached, will host that save
-
-- **maps:** Displays a list of the default maps. Use 'library' to view the contents of the Map Library. These are the exact same maps you'd see when creating a new Custom Game.
-
-  > **b maps**
-  >
-  > →  Displays a list of the default maps.
-
-- **library:** Shows the maps in the Map Library. For more information on the Map Library, please see the Features section, above.
-
-  > **b library**
-  >
-  > → Returns an embed w/ the list of content in the Map Library
-
-- **add:** Allows you to *add* a map to the Map Library. Unlike most other commands in Boing, a name for the map is **required.** Using this is similar to 'import' - attach a file to your message. 'add' will happily overwrite existing maps if you aren't careful; therefore, please exercise caution.
-
-  > **b add my_map**
-  >
-  > → Adds this map to the Map Library, under the name my_map. (assuming a file was attached)
-
-- **load:** Hosts a map from the Map Library, using its case-sensitive name.
-
-  > **b load my_map**
-  >
-  > → Loads `my_map` from the Map Library.
-
-- **rename:** Renames a map from the Map Library. Accepts two arguments, the first being its current name, and the second being the new name.
-
-  > **b rename my_map a_map**
-  >
-  > → Renames `my_map` to `a_map`. It will now show up in 'library' as `a_map` instead.
-
-- **delete:** Permanently deletes a map from the Map Library. Accepts one argument, the name of the map.
-
-  > **b delete a_map**
-  >
-  > → Deletes `a_map`. It will no longer show up in the Library.
-
-- **ip:** Returns the IP (Internet Protocol) address used to join the server. 'ip' uses www.ipify.org to get the address. Boing is honestly mainly designed mostly for people to host games with friends, not really for someting more public, so if you'd like to disable this command you can simply delete its file in `boing/src/commands`. Probably not the most elegant solution, but it works.
-
-  > **b ip**
-  >
-  > → Returns the IP address of the server.
-  
-- **rollback**: Stops the server and loads the latest backup. Boing only stores a single save at a time, which currently persists until overwritten with a new one.
-
-  > **b rollback**
-  >
-  > → Stops the server & loads the latest backup.
-  > **b rollback 6**
-  >
-  > → Stops the server and loads the 6th latest backup (meaning it should go back roughly 30 minutes, or 6 * 5.)
-
-- **config**: Allows users w/ the administrator role (specified during setup) to change some server configuration options.
-
-  > **b config**
-  >
-  > → Lists all the available configuration options.
-  > **b config name myserver**
-  >
-  > → Sets the configuration option "name" to "myserver"
-
-- **status**: Returns the server's status.
-  > **b status**
-  >
-  > → Returns information on server status.
-
-- **status**: Returns the server's status. Now with uptime statistics as of v2.4.
-  > **b status**
-  >
-  > → Returns information on server status.
 
 ## Troubleshooting & Additional Information
 
@@ -292,14 +156,14 @@ look like this now:
 
 Boing 2.2 introduced the ability to set an *administrator role,* which gives users with those roles special permissions.
 Currently the only command that takes advantage of this feature is `config`, but more might be come in the future.
-People with administrator permissions have a significant amount of power over the server using `config`, which is why you might
+People with administrator permissions have a significant amount of power over the server using `/modify-config`, which is why you might
 want to edit the settings they can change.
 
-#### "config" and allowed settings
+#### "/modify-config" and allowed settings
 
-As detailed in the prev. section, the config command lets you change server settings. Some of these might be things you don't want
+As detailed in the prev. section, the `/modify-config` command lets you change server settings. Some of these might be things you don't want
 people to be able to change, even administrators. In order to allow / disallow certain commands, we need to edit Boing's internal
-settings file — `settings.json`, located under `boing/data/settings.json`. Open it in your text editor of choice — preferably not
+settings file — `settings.json`, located under `data/settings.json`. Open it in your text editor of choice — preferably not
 Notepad, but it'd work in a pinch.
 
 You should see a key named `"exposedSettings"` and a long list of values in quotes after that. These are the allowed settings, and for
