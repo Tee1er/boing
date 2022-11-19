@@ -12,9 +12,8 @@ const highScores = require("./high_scores");
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
 
-const client = new Discord.Client();
+const client = new Discord.Client({ intents: [Discord.GatewayIntentBits.Guilds] });
 const rest = new REST({ version: "9" }).setToken(data.SETTINGS.token);
-
 
 try {
     client.login(data.SETTINGS.token);
@@ -22,10 +21,7 @@ try {
     console.log(colors.bold.red("Could not connect to Discord. Please check your token again."));
 }
 
-// Command storage
-var command_instances = {};
-
-client.once("ready", () => {
+client.once(Discord.Events.ClientReady, () => {
     console.log("Connected to Discord. ");
     client.user.setActivity(`${data.SETTINGS.prefix} help`, {
         type: "LISTENING",
@@ -33,61 +29,97 @@ client.once("ready", () => {
     uptime.startUptimeTracking()
 });
 
-/** Create map library folder if not exist */
-if (!fs.existsSync(path.join(`${SERVER_CONFIG_DIR}/saves/boing-library`))) {
-    fs.mkdirSync(`${SERVER_CONFIG_DIR}/saves`);
-    fs.mkdirSync(`${SERVER_CONFIG_DIR}/saves/boing-library`);
-}
+// Command storage
+var commandInstances = {};
 
-// On discord message callback
-client.on("message", message => {
-    // Cancel command if the message was not sent with the prefix, or was sent by a bot.
-    if (!message.content.startsWith(data.SETTINGS.prefix) || message.author.bot) return;
+// Command handling
+client.on(Discord.Events.InteractionCreate, interaction => {
+    if (!interaction.isCommand()) return;
 
-    // Cancel command if the message was sent in a blacklisted channel.
-    if (data.SETTINGS.channelBlacklist.includes(message.channel.name)) return;
+    // Retrieve command
+    let command = commandInstances[interaction.commandName];
 
-    const ARGUMENTS = message.content.trim().split(" ").slice(1);
+    if (!command) {
+        if (fs.existsSync(`${COMMANDS_DIR}/${interaction.commandName}.js`)) {
+            command = require(`${COMMANDS_DIR}/${interaction.commandName}.js`);
 
-    // Memorized loading of command
-    if (fs.existsSync(`${COMMANDS_DIR}/${ARGUMENTS[0]}.js`)) {
-        if (!command_instances[ARGUMENTS[0]]) {
-            command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
+            // Store command for future use
+            commandInstances[interaction.commandName] = command;
         }
-        var c = command_instances[ARGUMENTS[0]];
-    } else return; // If the command doesn't exist
+        else {
+            interaction.reply({ content: "There was an error retrieving that command." });
+        }
+    }
 
-    let isAdmin = message.member.roles.cache.find(x => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "");
-
-    let allowed = (c.info.adminOnly === true && isAdmin) || c.info.adminOnly === false || c.info.adminOnly === undefined;
+    // Check permissions (for admin commands)
+    const isAdmin = interaction.member.roles.cache.find(x => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "");
+    const allowed = (command.adminOnly === true && isAdmin) || !command.adminOnly
 
     if (allowed) {
-    	if (c.preExecuteMsg) {
-    		message.channel.send(c.preExecuteMsg)
-    	}
-        let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
-        if (cmd_execution) {
-            cmd_execution
-                .then(result => {
-                    // Allows for passing of either an array of arguments, or simply a regular string.
-                    if (result) {
-                        if (Array.isArray(result)) {
-                            message.channel.send(...result);
-                        } else {
-                            message.channel.send(result);
-                        }
-                    }
-                })
-                .catch(err => {
-                    message.channel.send(`Command error: \`\`\`${err}\n\`\`\``);
-                });
-        } else {
-            message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
+        try {
+            command.execute(interaction);
+        }
+        catch (error) {
+            console.error(error);
+            interaction.reply({ content: "There was an error running that command. \`\`\`${err}\n\`\`\`" });
         }
     } else {
-        message.channel.send("You must be an administrator to use that command.");
+        interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
     }
-});
+
+
+
+})
+
+// On discord message callback
+// client.on("messageCreate", message => {
+//     // Cancel command if the message was not sent with the prefix, or was sent by a bot.
+//     if (!message.content.startsWith(data.SETTINGS.prefix) || message.author.bot) return;
+
+//     // Cancel command if the message was sent in a blacklisted channel.
+//     if (data.SETTINGS.channelBlacklist.includes(message.channel.name)) return;
+
+//     const ARGUMENTS = message.content.trim().split(" ").slice(1);
+
+//     // Memorized loading of command
+//     if (fs.existsSync(`${COMMANDS_DIR}/${ARGUMENTS[0]}.js`)) {
+//         if (!command_instances[ARGUMENTS[0]]) {
+//             command_instances[ARGUMENTS[0]] = require(`${COMMANDS_DIR}/${ARGUMENTS[0]}`);
+//         }
+//         var c = command_instances[ARGUMENTS[0]];
+//     } else return; // If the command doesn't exist
+
+//     let isAdmin = message.member.roles.cache.find(x => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "");
+
+//     let allowed = (c.info.adminOnly === true && isAdmin) || c.info.adminOnly === false || c.info.adminOnly === undefined;
+
+//     if (allowed) {
+//         if (c.preExecuteMsg) {
+//             message.channel.send(c.preExecuteMsg)
+//         }
+//         let cmd_execution = c.info.disabled ? false : c.execute(ARGUMENTS, message);
+//         if (cmd_execution) {
+//             cmd_execution
+//                 .then(result => {
+//                     // Allows for passing of either an array of arguments, or simply a regular string.
+//                     if (result) {
+//                         if (Array.isArray(result)) {
+//                             message.channel.send(...result);
+//                         } else {
+//                             message.channel.send(result);
+//                         }
+//                     }
+//                 })
+//                 .catch(err => {
+//                     message.channel.send(`Command error: \`\`\`${err}\n\`\`\``);
+//                 });
+//         } else {
+//             message.channel.send(`An unknown error occurred with the command \`${ARGUMENTS[0]}\`.`);
+//         }
+//     } else {
+//         message.channel.send("You must be an administrator to use that command.");
+//     }
+// });
 
 function sendNotification(message) {
     const channel = client.channels.cache.find(channel => channel.name == data.SETTINGS.notificationChannel);

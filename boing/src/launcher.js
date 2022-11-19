@@ -2,6 +2,7 @@
 const child_process = require("child_process");
 const { mkdirSync } = require("fs");
 const { data, loadSettings, loadSessionData, saveSettings, SRC_DIR, DATA_DIR, SERVER_DIR, saveSessionData } = require("./globals.js");
+const readline = require("readline");
 
 let setupOccurred = Object.keys(data.SETTINGS).length !== 0;
 
@@ -28,7 +29,7 @@ const colors = require("ansi-colors");
 const enquirer = require("enquirer");
 const deps_resolver = require("./get_deps");
 
-console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.3 --"));
+console.log(colors.bold.yellow("-- Boing Mindustry-Discord Interface v2.4 --"));
 console.log("https://www.github.com/Tee1er/boing \n");
 
 (async function () {
@@ -74,6 +75,16 @@ async function setup() {
         },
         {
             type: "input",
+            name: "clientId",
+            message: "Please enter your bot's client ID.",
+        },
+        {
+            type: "input",
+            name: "guildId",
+            message: "Please enter your server's ID.",
+        },
+        {
+            type: "input",
             name: "adminRole",
             message: "Name of a role to grant administrator permissions. Case-sensitive. (Leave blank for none.)",
         },
@@ -83,14 +94,9 @@ async function setup() {
             message: "Select a notifications channel. This is where Boing sends updates when a player joins, disconnects, etc. ",
         },
         {
-            type: "list",
-            name: "channelBlacklist",
-            message: "Select channels to blacklist, separated by commas. (Leave blank for none.)",
-        },
-        {
             type: "numeral",
             name: "backupFrequency",
-            message: "How often should automatic backups be made? (in seconds, default is 5m)",
+            message: "How often should automatic backups be made? (in seconds, default is 5m/300s)",
             initial: 300,
         }
     ];
@@ -128,4 +134,7 @@ async function setup() {
 
     data.SETTINGS = user_settings;
     saveSettings();
+
+    // Register slash commands
+    require("./register_commands.js").registerCommands();
 }
