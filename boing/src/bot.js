@@ -5,71 +5,90 @@ const path = require("path");
 const mserver = require("./mserver");
 const backups = require("./backups");
 
-const { data, loadSettings, loadSessionData, COMMANDS_DIR, SERVER_CONFIG_DIR } = require("./globals");
+const {
+	data,
+	loadSettings,
+	loadSessionData,
+	COMMANDS_DIR,
+	SERVER_CONFIG_DIR,
+} = require("./globals");
 const uptime = require("./uptime");
 const highScores = require("./high_scores");
 
 loadSettings(); // Needs to be loaded here because this is run as a separate process
 loadSessionData();
 
-const client = new Discord.Client({ intents: [Discord.GatewayIntentBits.Guilds] });
+const client = new Discord.Client({
+	intents: [Discord.GatewayIntentBits.Guilds],
+});
 const rest = new REST({ version: "9" }).setToken(data.SETTINGS.token);
 
 try {
-    client.login(data.SETTINGS.token);
+	client.login(data.SETTINGS.token);
 } catch (e) {
-    console.log(colors.bold.red("Could not connect to Discord. Please check your token again."));
+	console.log(
+		colors.bold.red(
+			"Could not connect to Discord. Please check your token again."
+		)
+	);
 }
 
 client.once(Discord.Events.ClientReady, () => {
-    console.log("Connected to Discord. ");
-    client.user.setActivity(`${data.SETTINGS.prefix} help`, {
-        type: "LISTENING",
-    });
-    uptime.startUptimeTracking()
+	console.log("Connected to Discord. ");
+	client.user.setActivity(`${data.SETTINGS.prefix} help`, {
+		type: "LISTENING",
+	});
+	uptime.startUptimeTracking();
 });
 
 // Command storage
 var commandInstances = {};
 
 // Command handling
-client.on(Discord.Events.InteractionCreate, interaction => {
-    if (!interaction.isCommand()) return;
+client.on(Discord.Events.InteractionCreate, (interaction) => {
+	if (!interaction.isCommand()) return;
 
-    // Retrieve command
-    let command = commandInstances[interaction.commandName];
+	// Retrieve command
+	let command = commandInstances[interaction.commandName];
 
-    if (!command) {
-        if (fs.existsSync(`${COMMANDS_DIR}/${interaction.commandName}.js`)) {
-            command = require(`${COMMANDS_DIR}/${interaction.commandName}.js`);
+	if (!command) {
+		if (fs.existsSync(`${COMMANDS_DIR}/${interaction.commandName}.js`)) {
+			command = require(`${COMMANDS_DIR}/${interaction.commandName}.js`);
 
-            // Store command for future use
-            commandInstances[interaction.commandName] = command;
-        }
-        else {
-            interaction.reply({ content: "There was an error retrieving that command." });
-        }
-    }
+			// Store command for future use
+			commandInstances[interaction.commandName] = command;
+		} else {
+			interaction.reply({
+				content: "There was an error retrieving that command.",
+			});
+		}
+	}
 
-    // Check permissions (for admin commands)
-    const isAdmin = interaction.member.roles.cache.find(x => data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== "");
-    const allowed = (command.adminOnly === true && isAdmin) || !command.adminOnly
+	// Check permissions (for admin commands)
+	const isAdmin = interaction.member.roles.cache.find(
+		(x) =>
+			data.SETTINGS.adminRole === x.name && data.SETTINGS.adminRole !== ""
+	);
+	const allowed =
+		(command.adminOnly === true && isAdmin) || !command.adminOnly;
 
-    if (allowed) {
-        try {
-            command.execute(interaction);
-        }
-        catch (error) {
-            console.error(error);
-            interaction.reply({ content: "There was an error running that command. \`\`\`${err}\n\`\`\`" });
-        }
-    } else {
-        interaction.reply({ content: "You do not have permission to use this command.", ephemeral: true });
-    }
-
-
-
-})
+	if (allowed) {
+		try {
+			command.execute(interaction);
+		} catch (error) {
+			console.error(error);
+			interaction.reply({
+				content:
+					"There was an error running that command. ```${err}\n```",
+			});
+		}
+	} else {
+		interaction.reply({
+			content: "You do not have permission to use this command.",
+			ephemeral: true,
+		});
+	}
+});
 
 // On discord message callback
 // client.on("messageCreate", message => {
@@ -122,63 +141,68 @@ client.on(Discord.Events.InteractionCreate, interaction => {
 // });
 
 function sendNotification(message) {
-    const channel = client.channels.cache.find(channel => channel.name == data.SETTINGS.notificationChannel);
-    if (!channel) {
-        return;
-    }
-    channel.send(message);
+	const channel = client.channels.cache.find(
+		(channel) => channel.name == data.SETTINGS.notificationChannel
+	);
+	if (!channel) {
+		return;
+	}
+	channel.send(message);
 }
 
 let numPlayers = 0;
-mserver.events.on("gameOver", result => {
-    sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
-    highScores.checkScore(result)
+mserver.events.on("gameOver", (result) => {
+	sendNotification(`Game over. \`\`\`js\n${result}\`\`\` `);
+	highScores.checkScore(result);
 });
-mserver.events.on("playerConnected", result => {
-    sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
-    numPlayers++;
-    updateStatus();
-    if (numPlayers == 1) {
-        backups.startBackups(mserver);
-    }
+mserver.events.on("playerConnected", (result) => {
+	sendNotification(`Player connected. \`\`\`js\n${result}\`\`\` `);
+	numPlayers++;
+	updateStatus();
+	if (numPlayers == 1) {
+		backups.startBackups(mserver);
+	}
 });
-mserver.events.on("playerDisconnected", result => {
-    sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
-    numPlayers--;
-    updateStatus();
-    if (numPlayers == 0) {
-        backups.stopBackups();
-    }
+mserver.events.on("playerDisconnected", (result) => {
+	sendNotification(`Player disconnected. \`\`\`js\n${result}\`\`\` `);
+	numPlayers--;
+	updateStatus();
+	if (numPlayers == 0) {
+		backups.stopBackups();
+	}
 });
 
-mserver.events.on("loaded", result => {
-    sendNotification(`Server loaded. \`\`\`js\n${result}\`\`\``)
-})
+mserver.events.on("loaded", (result) => {
+	sendNotification(`Server loaded. \`\`\`js\n${result}\`\`\``);
+});
 
 // Set # of players to 0 if game is stopped
 
-mserver.events.on("gameStarted", result => {
-    numPlayers = 0;
-    updateStatus();
-})
+mserver.events.on("gameStarted", (result) => {
+	numPlayers = 0;
+	updateStatus();
+});
 
 function updateStatus() {
-    console.log("Player update");
-    if (numPlayers >= 0) {
-        client.user.setActivity(`a Mindustry game with ${numPlayers} players.`, { type: "WATCHING" });
-    } else {
-        client.user.setActivity(`${data.SETTINGS.prefix} help`, {
-            type: "LISTENING",
-        });
-    }
+	console.log("Player update");
+	if (numPlayers >= 0) {
+		client.user.setActivity(
+			`a Mindustry game with ${numPlayers} players.`,
+			{ type: "WATCHING" }
+		);
+	} else {
+		client.user.setActivity(`${data.SETTINGS.prefix} help`, {
+			type: "LISTENING",
+		});
+	}
 }
 
-mserver.events.on("stopped", result => {
-    numPlayers = 0;
-    backups.stopBackups();
+mserver.events.on("stopped", (result) => {
+	numPlayers = 0;
+	backups.stopBackups();
 });
 
 module.exports = {
-    botClient: client,
-    restAPI: rest,
+	botClient: client,
+	restAPI: rest,
 };

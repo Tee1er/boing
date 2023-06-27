@@ -1,15 +1,16 @@
-const { SlashCommandBuilder } = require("discord.js")
+const { SlashCommandBuilder } = require("discord.js");
 
-let execute = function (interaction) {
-    const mserver = require("../mserver.js");
-    return mserver.write_recv("pause on").then(result => {
-        interaction.reply("Game paused.");
-    });
+let execute = async function (interaction) {
+	await interaction.deferReply();
+	const mserver = require("../mserver.js");
+	return mserver.write_recv("pause on").then((result) => {
+		interaction.editReply("Game paused.");
+	});
 };
 
 module.exports = {
-    execute,
-    info: new SlashCommandBuilder()
-        .setName("pause")
-        .setDescription("Pauses the game."),
+	execute,
+	info: new SlashCommandBuilder()
+		.setName("pause")
+		.setDescription("Pauses the game."),
 };
