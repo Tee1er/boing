@@ -2,12 +2,11 @@ const { get } = require("axios").default;
 const { SlashCommandBuilder } = require("@discordjs/builders");
 
 let execute = async function (interaction) {
-	await interaction.deferReply();
 	let response = await get("https://api.ipify.org", {
 		params: { format: "json" },
 	});
 
-	interaction.editReply({
+	interaction.reply({
 		content: `The server's IP is **${response.data.ip}**`,
 		ephemeral: true,
 	});
